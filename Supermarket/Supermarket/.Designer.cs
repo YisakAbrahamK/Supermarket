@@ -1,6 +1,6 @@
 ﻿namespace Supermarket
 {
-    partial class Form1
+    partial class LoginForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,27 +28,29 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginForm));
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtEmail = new System.Windows.Forms.TextBox();
+            this.txtPassword = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.lblForgotPassword = new System.Windows.Forms.Label();
+            this.pnlSignIn = new System.Windows.Forms.Panel();
             this.picClose = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pnlSignIn = new System.Windows.Forms.Panel();
+            this.pnlMainLogin = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            this.pnlSignIn.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picClose)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.pnlSignIn.SuspendLayout();
+            this.pnlMainLogin.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -74,7 +76,7 @@
             // 
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(197, 253);
+            this.label1.Location = new System.Drawing.Point(197, 236);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(231, 84);
             this.label1.TabIndex = 0;
@@ -84,35 +86,35 @@
             // 
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(130, 383);
+            this.label2.Location = new System.Drawing.Point(156, 360);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(163, 47);
+            this.label2.Size = new System.Drawing.Size(144, 47);
             this.label2.TabIndex = 1;
             this.label2.Text = "Email";
             // 
-            // textBox1
+            // txtEmail
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(313, 380);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(234, 40);
-            this.textBox1.TabIndex = 2;
+            this.txtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmail.Location = new System.Drawing.Point(315, 357);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(234, 40);
+            this.txtEmail.TabIndex = 2;
             // 
-            // textBox2
+            // txtPassword
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(313, 462);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(234, 40);
-            this.textBox2.TabIndex = 4;
+            this.txtPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPassword.Location = new System.Drawing.Point(315, 439);
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.Size = new System.Drawing.Size(234, 40);
+            this.txtPassword.TabIndex = 4;
             // 
             // label3
             // 
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(130, 465);
+            this.label3.Location = new System.Drawing.Point(156, 442);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(163, 47);
+            this.label3.Size = new System.Drawing.Size(144, 47);
             this.label3.TabIndex = 3;
             this.label3.Text = "Password";
             // 
@@ -126,6 +128,24 @@
             this.lblForgotPassword.TabIndex = 6;
             this.lblForgotPassword.Text = "Forgot password?";
             this.lblForgotPassword.Click += new System.EventHandler(this.lblForgotPassword_Click);
+            // 
+            // pnlSignIn
+            // 
+            this.pnlSignIn.Controls.Add(this.picClose);
+            this.pnlSignIn.Controls.Add(this.txtPassword);
+            this.pnlSignIn.Controls.Add(this.pictureBox4);
+            this.pnlSignIn.Controls.Add(this.label1);
+            this.pnlSignIn.Controls.Add(this.pictureBox2);
+            this.pnlSignIn.Controls.Add(this.label2);
+            this.pnlSignIn.Controls.Add(this.lblForgotPassword);
+            this.pnlSignIn.Controls.Add(this.txtEmail);
+            this.pnlSignIn.Controls.Add(this.pictureBox1);
+            this.pnlSignIn.Controls.Add(this.label3);
+            this.pnlSignIn.Location = new System.Drawing.Point(3, 3);
+            this.pnlSignIn.Name = "pnlSignIn";
+            this.pnlSignIn.Size = new System.Drawing.Size(656, 644);
+            this.pnlSignIn.TabIndex = 9;
+            this.pnlSignIn.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlSignIn_Paint);
             // 
             // picClose
             // 
@@ -145,7 +165,7 @@
             // pictureBox4
             // 
             this.pictureBox4.Image = global::Supermarket.Properties.Resources.email_;
-            this.pictureBox4.Location = new System.Drawing.Point(45, 383);
+            this.pictureBox4.Location = new System.Drawing.Point(71, 360);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(68, 37);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -155,7 +175,7 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = global::Supermarket.Properties.Resources.password1;
-            this.pictureBox2.Location = new System.Drawing.Point(45, 458);
+            this.pictureBox2.Location = new System.Drawing.Point(71, 435);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(68, 44);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -172,43 +192,36 @@
             this.pictureBox1.TabIndex = 5;
             this.pictureBox1.TabStop = false;
             // 
-            // pnlSignIn
+            // pnlMainLogin
             // 
-            this.pnlSignIn.Controls.Add(this.picClose);
-            this.pnlSignIn.Controls.Add(this.textBox2);
-            this.pnlSignIn.Controls.Add(this.pictureBox4);
-            this.pnlSignIn.Controls.Add(this.label1);
-            this.pnlSignIn.Controls.Add(this.pictureBox2);
-            this.pnlSignIn.Controls.Add(this.label2);
-            this.pnlSignIn.Controls.Add(this.lblForgotPassword);
-            this.pnlSignIn.Controls.Add(this.textBox1);
-            this.pnlSignIn.Controls.Add(this.pictureBox1);
-            this.pnlSignIn.Controls.Add(this.label3);
-            this.pnlSignIn.Location = new System.Drawing.Point(347, 0);
-            this.pnlSignIn.Name = "pnlSignIn";
-            this.pnlSignIn.Size = new System.Drawing.Size(656, 644);
-            this.pnlSignIn.TabIndex = 9;
+            this.pnlMainLogin.Controls.Add(this.pnlSignIn);
+            this.pnlMainLogin.Dock = System.Windows.Forms.DockStyle.Right;
+            this.pnlMainLogin.Location = new System.Drawing.Point(347, 0);
+            this.pnlMainLogin.Name = "pnlMainLogin";
+            this.pnlMainLogin.Size = new System.Drawing.Size(658, 644);
+            this.pnlMainLogin.TabIndex = 10;
             // 
-            // Form1
+            // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(1005, 644);
-            this.Controls.Add(this.pnlSignIn);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.pnlMainLogin);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Form1";
+            this.Name = "LoginForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            this.pnlSignIn.ResumeLayout(false);
+            this.pnlSignIn.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picClose)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.pnlSignIn.ResumeLayout(false);
-            this.pnlSignIn.PerformLayout();
+            this.pnlMainLogin.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -218,8 +231,8 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtEmail;
+        private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label lblForgotPassword;
@@ -228,6 +241,7 @@
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox picClose;
         private System.Windows.Forms.Panel pnlSignIn;
+        private System.Windows.Forms.Panel pnlMainLogin;
     }
 }
 

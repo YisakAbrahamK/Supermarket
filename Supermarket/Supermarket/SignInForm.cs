@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Supermarket.Panals;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,9 +11,9 @@ using System.Windows.Forms;
 
 namespace Supermarket
 {
-    public partial class Form1 : Form
+    public partial class LoginForm : Form
     {
-        public Form1()
+        public LoginForm()
         {
             InitializeComponent();
         }
@@ -38,6 +39,14 @@ namespace Supermarket
         }
 
         private void lblForgotPassword_Click(object sender, EventArgs e)
+        {
+            SendRecoveryCode enterEmail = new SendRecoveryCode(this,txtEmail.Text);
+            pnlSignIn.Hide();
+            enterEmail.Dock= DockStyle.Fill;
+            pnlMainLogin.Controls.Add(enterEmail);
+        }
+
+        private void pnlSignIn_Paint(object sender, PaintEventArgs e)
         {
 
         }
