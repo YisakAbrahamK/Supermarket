@@ -39,14 +39,33 @@
     <Reference Include="MailKit, Version=3.3.0.0, Culture=neutral, PublicKeyToken=4e064fe7c44a8f1b, processorArchitecture=MSIL">
       <HintPath>..\packages\MailKit.3.3.0\lib\net47\MailKit.dll</HintPath>
     </Reference>
+    <Reference Include="MaterialSkin, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MaterialSkin.0.2.1\lib\MaterialSkin.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ModernUI.2.0.0\lib\net20\MetroFramework.dll</HintPath>
+    </Reference>
     <Reference Include="MimeKit, Version=3.3.0.0, Culture=neutral, PublicKeyToken=bede1c8a46c66814, processorArchitecture=MSIL">
       <HintPath>..\packages\MimeKit.3.3.0\lib\net47\MimeKit.dll</HintPath>
+    </Reference>
+    <Reference Include="RJCodeAdvance.RJControls, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\RJCodeAdvance.RJControls.1.0.0\lib\net45\RJCodeAdvance.RJControls.dll</HintPath>
+    </Reference>
+    <Reference Include="SaaUI, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\SaaUI.Winforms.1.1.0\lib\net35\SaaUI.dll</HintPath>
+    </Reference>
+    <Reference Include="SunnyUI, Version=3.2.4.0, Culture=neutral, PublicKeyToken=27d7d2e821d97aeb, processorArchitecture=MSIL">
+      <HintPath>..\packages\SunnyUI.3.2.4\lib\net472\SunnyUI.dll</HintPath>
+    </Reference>
+    <Reference Include="SunnyUI.Common, Version=3.2.0.0, Culture=neutral, PublicKeyToken=5a271fb7ba597231, processorArchitecture=MSIL">
+      <HintPath>..\packages\SunnyUI.Common.3.2.0\lib\net40\SunnyUI.Common.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
     </Reference>
     <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
     <Reference Include="System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Memory.4.5.4\lib\net461\System.Memory.dll</HintPath>
     </Reference>
@@ -64,6 +83,7 @@
     <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
     </Reference>
+    <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -75,35 +95,112 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Panals\SendRecoveryCode.cs">
+    <Compile Include="View\Forms\Admin\AdminForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Forms\Admin\AdminForm.Designer.cs">
+      <DependentUpon>AdminForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Forms\Casher\CashierForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Forms\Casher\CashierForm.Designer.cs">
+      <DependentUpon>CashierForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Forms\Casher\Casher Form SubComponent\CashierTransactionHistoryForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Forms\Casher\Casher Form SubComponent\CashierTransactionHistoryForm.Designer.cs">
+      <DependentUpon>CashierTransactionHistoryForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Forms\Test\This is for test.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Forms\Test\This is for test.Designer.cs">
+      <DependentUpon>This is for test.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Forms\Casher\Casher Form SubComponent\InvoiceForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Forms\Casher\Casher Form SubComponent\InvoiceForm.Designer.cs">
+      <DependentUpon>InvoiceForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Forms\LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Forms\LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Forms\Test\This is for test RoundFormLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Forms\Test\This is for test RoundFormLogin.Designer.cs">
+      <DependentUpon>This is for test RoundFormLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\User Controls\CartView.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Panals\SendRecoveryCode.Designer.cs">
+    <Compile Include="View\User Controls\CartView.Designer.cs">
+      <DependentUpon>CartView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\User Controls\ProductViewCard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\User Controls\ProductViewCard.Designer.cs">
+      <DependentUpon>ProductViewCard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\User Controls\SignInControls\SendRecoveryCode.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\User Controls\SignInControls\SendRecoveryCode.Designer.cs">
       <DependentUpon>SendRecoveryCode.cs</DependentUpon>
     </Compile>
-    <Compile Include="Panals\EnterNewPass.cs">
+    <Compile Include="View\User Controls\SignInControls\EnterNewPass.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Panals\EnterNewPass.Designer.cs">
+    <Compile Include="View\User Controls\SignInControls\EnterNewPass.Designer.cs">
       <DependentUpon>EnterNewPass.cs</DependentUpon>
-    </Compile>
-    <Compile Include="SignInForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include=".Designer.cs">
-      <DependentUpon>SignInForm.cs</DependentUpon>
-      <SubType>Form</SubType>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Panals\SendRecoveryCode.resx">
+    <Compile Include="View\User Controls\SignInControls\SignIn.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\User Controls\SignInControls\SignIn.Designer.cs">
+      <DependentUpon>SignIn.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="View\Forms\Admin\AdminForm.resx">
+      <DependentUpon>AdminForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Forms\Casher\CashierForm.resx">
+      <DependentUpon>CashierForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Forms\Casher\Casher Form SubComponent\CashierTransactionHistoryForm.resx">
+      <DependentUpon>CashierTransactionHistoryForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Forms\Test\This is for test.resx">
+      <DependentUpon>This is for test.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Forms\Casher\Casher Form SubComponent\InvoiceForm.resx">
+      <DependentUpon>InvoiceForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Forms\LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Forms\Test\This is for test RoundFormLogin.resx">
+      <DependentUpon>This is for test RoundFormLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\User Controls\CartView.resx">
+      <DependentUpon>CartView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\User Controls\ProductViewCard.resx">
+      <DependentUpon>ProductViewCard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\User Controls\SignInControls\SendRecoveryCode.resx">
       <DependentUpon>SendRecoveryCode.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Panals\EnterNewPass.resx">
+    <EmbeddedResource Include="View\User Controls\SignInControls\EnterNewPass.resx">
       <DependentUpon>EnterNewPass.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="SignInForm.resx">
-      <DependentUpon>SignInForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -115,6 +212,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="View\User Controls\SignInControls\SignIn.resx">
+      <DependentUpon>SignIn.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -159,6 +259,71 @@
   <ItemGroup>
     <None Include="Resources\email_.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\User.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close21.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\see.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\seeBlack.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Card.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Card1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Card2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Card3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\eye-svgrepo-com.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\email-svgrepo-com.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\User green.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\User white.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\coin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\setting.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\catagory.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\signout.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MaximizeButton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MinimizeButton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MinimizeButtonWhite.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MinimizeButtonBlack.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pexels-pixabay-2645471.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Dashbord.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
