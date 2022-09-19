@@ -42,12 +42,18 @@
             this.picExit = new System.Windows.Forms.PictureBox();
             this.uiPanel5 = new Sunny.UI.UIPanel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.pnlInvoice = new Sunny.UI.UIPanel();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pnlDashbord = new Sunny.UI.UIPanel();
             this.pnlHistory = new Sunny.UI.UIPanel();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.uiSymbolLabel1 = new Sunny.UI.UISymbolLabel();
+            this.uiSymbolLabel2 = new Sunny.UI.UISymbolLabel();
+            this.pnlProduct = new Sunny.UI.UIPanel();
+            this.uiSymbolLabel6 = new Sunny.UI.UISymbolLabel();
+            this.pnlExpiringProduct = new Sunny.UI.UIPanel();
+            this.uiSymbolLabel3 = new Sunny.UI.UISymbolLabel();
+            this.pnlCasher = new Sunny.UI.UIPanel();
             this.pnlSetting = new Sunny.UI.UIPanel();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.uiSymbolLabel4 = new Sunny.UI.UISymbolLabel();
+            this.uiSymbolLabel5 = new Sunny.UI.UISymbolLabel();
             this.uiPanel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -59,12 +65,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.picExit)).BeginInit();
             this.uiPanel5.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
-            this.pnlInvoice.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.pnlDashbord.SuspendLayout();
             this.pnlHistory.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            this.pnlProduct.SuspendLayout();
+            this.pnlExpiringProduct.SuspendLayout();
+            this.pnlCasher.SuspendLayout();
             this.pnlSetting.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.SuspendLayout();
             // 
             // saaGlowing1
@@ -110,7 +116,7 @@
             this.lblActiveSelected.Name = "lblActiveSelected";
             this.lblActiveSelected.Size = new System.Drawing.Size(447, 77);
             this.lblActiveSelected.TabIndex = 44;
-            this.lblActiveSelected.Text = "Invoice";
+            this.lblActiveSelected.Text = "Dashbord";
             this.lblActiveSelected.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // pnlContainer
@@ -124,6 +130,7 @@
             // 
             // panel3
             // 
+            this.panel3.BackColor = System.Drawing.Color.White;
             this.panel3.Controls.Add(this.uiPanel1);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 0);
@@ -247,8 +254,11 @@
             | System.Windows.Forms.AnchorStyles.Left)));
             this.flowLayoutPanel1.AutoScroll = true;
             this.flowLayoutPanel1.BackColor = System.Drawing.SystemColors.Control;
-            this.flowLayoutPanel1.Controls.Add(this.pnlInvoice);
+            this.flowLayoutPanel1.Controls.Add(this.pnlDashbord);
             this.flowLayoutPanel1.Controls.Add(this.pnlHistory);
+            this.flowLayoutPanel1.Controls.Add(this.pnlProduct);
+            this.flowLayoutPanel1.Controls.Add(this.pnlExpiringProduct);
+            this.flowLayoutPanel1.Controls.Add(this.pnlCasher);
             this.flowLayoutPanel1.Controls.Add(this.pnlSetting);
             this.flowLayoutPanel1.Location = new System.Drawing.Point(7, 37);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
@@ -256,45 +266,38 @@
             this.flowLayoutPanel1.Size = new System.Drawing.Size(110, 308);
             this.flowLayoutPanel1.TabIndex = 0;
             // 
-            // pnlInvoice
+            // pnlDashbord
             // 
-            this.pnlInvoice.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.pnlDashbord.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.pnlInvoice.BackColor = System.Drawing.SystemColors.Control;
-            this.pnlInvoice.Controls.Add(this.pictureBox2);
-            this.pnlInvoice.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
-            this.pnlInvoice.Location = new System.Drawing.Point(12, 15);
-            this.pnlInvoice.Margin = new System.Windows.Forms.Padding(4, 15, 15, 15);
-            this.pnlInvoice.MinimumSize = new System.Drawing.Size(1, 1);
-            this.pnlInvoice.Name = "pnlInvoice";
-            this.pnlInvoice.Padding = new System.Windows.Forms.Padding(0, 0, 0, 3);
-            this.pnlInvoice.Radius = 70;
-            this.pnlInvoice.RadiusSides = ((Sunny.UI.UICornerRadiusSides)(((Sunny.UI.UICornerRadiusSides.LeftTop | Sunny.UI.UICornerRadiusSides.RightBottom) 
+            this.pnlDashbord.BackColor = System.Drawing.SystemColors.Control;
+            this.pnlDashbord.Controls.Add(this.uiSymbolLabel2);
+            this.pnlDashbord.FillColor = System.Drawing.Color.DarkSlateGray;
+            this.pnlDashbord.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
+            this.pnlDashbord.Location = new System.Drawing.Point(12, 15);
+            this.pnlDashbord.Margin = new System.Windows.Forms.Padding(4, 15, 15, 15);
+            this.pnlDashbord.MinimumSize = new System.Drawing.Size(1, 1);
+            this.pnlDashbord.Name = "pnlDashbord";
+            this.pnlDashbord.Padding = new System.Windows.Forms.Padding(0, 0, 0, 3);
+            this.pnlDashbord.Radius = 70;
+            this.pnlDashbord.RadiusSides = ((Sunny.UI.UICornerRadiusSides)(((Sunny.UI.UICornerRadiusSides.LeftTop | Sunny.UI.UICornerRadiusSides.RightBottom) 
             | Sunny.UI.UICornerRadiusSides.LeftBottom)));
-            this.pnlInvoice.Size = new System.Drawing.Size(74, 72);
-            this.pnlInvoice.Style = Sunny.UI.UIStyle.Custom;
-            this.pnlInvoice.TabIndex = 27;
-            this.pnlInvoice.Text = null;
-            this.pnlInvoice.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            this.pnlInvoice.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.pictureBox2.Image = global::Supermarket.Properties.Resources.coin;
-            this.pictureBox2.Location = new System.Drawing.Point(11, 14);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(51, 43);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 12;
-            this.pictureBox2.TabStop = false;
+            this.pnlDashbord.RectColor = System.Drawing.Color.DarkSlateGray;
+            this.pnlDashbord.Size = new System.Drawing.Size(74, 72);
+            this.pnlDashbord.Style = Sunny.UI.UIStyle.Custom;
+            this.pnlDashbord.StyleCustomMode = true;
+            this.pnlDashbord.TabIndex = 27;
+            this.pnlDashbord.Text = null;
+            this.pnlDashbord.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.pnlDashbord.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
             // pnlHistory
             // 
             this.pnlHistory.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlHistory.BackColor = System.Drawing.SystemColors.Control;
-            this.pnlHistory.Controls.Add(this.pictureBox3);
+            this.pnlHistory.Controls.Add(this.uiSymbolLabel1);
+            this.pnlHistory.FillColor = System.Drawing.Color.DarkSlateGray;
             this.pnlHistory.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
             this.pnlHistory.Location = new System.Drawing.Point(12, 117);
             this.pnlHistory.Margin = new System.Windows.Forms.Padding(4, 15, 15, 15);
@@ -302,53 +305,208 @@
             this.pnlHistory.Name = "pnlHistory";
             this.pnlHistory.Padding = new System.Windows.Forms.Padding(0, 0, 0, 3);
             this.pnlHistory.Radius = 70;
+            this.pnlHistory.RectColor = System.Drawing.Color.DarkSlateGray;
             this.pnlHistory.Size = new System.Drawing.Size(74, 72);
             this.pnlHistory.Style = Sunny.UI.UIStyle.Custom;
+            this.pnlHistory.StyleCustomMode = true;
             this.pnlHistory.TabIndex = 28;
             this.pnlHistory.Text = null;
             this.pnlHistory.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.pnlHistory.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
-            // pictureBox3
+            // uiSymbolLabel1
             // 
-            this.pictureBox3.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.pictureBox3.Image = global::Supermarket.Properties.Resources.catagory;
-            this.pictureBox3.Location = new System.Drawing.Point(11, 14);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(51, 43);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 12;
-            this.pictureBox3.TabStop = false;
+            this.uiSymbolLabel1.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.uiSymbolLabel1.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
+            this.uiSymbolLabel1.Location = new System.Drawing.Point(15, 18);
+            this.uiSymbolLabel1.MinimumSize = new System.Drawing.Size(1, 1);
+            this.uiSymbolLabel1.Name = "uiSymbolLabel1";
+            this.uiSymbolLabel1.Padding = new System.Windows.Forms.Padding(54, 0, 0, 0);
+            this.uiSymbolLabel1.Size = new System.Drawing.Size(42, 43);
+            this.uiSymbolLabel1.Style = Sunny.UI.UIStyle.Custom;
+            this.uiSymbolLabel1.StyleCustomMode = true;
+            this.uiSymbolLabel1.Symbol = 61914;
+            this.uiSymbolLabel1.SymbolColor = System.Drawing.Color.White;
+            this.uiSymbolLabel1.SymbolSize = 50;
+            this.uiSymbolLabel1.TabIndex = 0;
+            this.uiSymbolLabel1.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            // 
+            // uiSymbolLabel2
+            // 
+            this.uiSymbolLabel2.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.uiSymbolLabel2.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
+            this.uiSymbolLabel2.Location = new System.Drawing.Point(17, 18);
+            this.uiSymbolLabel2.MinimumSize = new System.Drawing.Size(1, 1);
+            this.uiSymbolLabel2.Name = "uiSymbolLabel2";
+            this.uiSymbolLabel2.Padding = new System.Windows.Forms.Padding(54, 0, 0, 0);
+            this.uiSymbolLabel2.Size = new System.Drawing.Size(42, 43);
+            this.uiSymbolLabel2.Style = Sunny.UI.UIStyle.Custom;
+            this.uiSymbolLabel2.StyleCustomMode = true;
+            this.uiSymbolLabel2.Symbol = 61952;
+            this.uiSymbolLabel2.SymbolColor = System.Drawing.Color.White;
+            this.uiSymbolLabel2.SymbolSize = 50;
+            this.uiSymbolLabel2.TabIndex = 1;
+            this.uiSymbolLabel2.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            // 
+            // pnlProduct
+            // 
+            this.pnlProduct.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pnlProduct.BackColor = System.Drawing.SystemColors.Control;
+            this.pnlProduct.Controls.Add(this.uiSymbolLabel6);
+            this.pnlProduct.FillColor = System.Drawing.Color.DarkSlateGray;
+            this.pnlProduct.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
+            this.pnlProduct.Location = new System.Drawing.Point(12, 219);
+            this.pnlProduct.Margin = new System.Windows.Forms.Padding(4, 15, 15, 15);
+            this.pnlProduct.MinimumSize = new System.Drawing.Size(1, 1);
+            this.pnlProduct.Name = "pnlProduct";
+            this.pnlProduct.Padding = new System.Windows.Forms.Padding(0, 0, 0, 3);
+            this.pnlProduct.Radius = 70;
+            this.pnlProduct.RectColor = System.Drawing.Color.DarkSlateGray;
+            this.pnlProduct.Size = new System.Drawing.Size(74, 72);
+            this.pnlProduct.Style = Sunny.UI.UIStyle.Custom;
+            this.pnlProduct.StyleCustomMode = true;
+            this.pnlProduct.TabIndex = 29;
+            this.pnlProduct.Text = null;
+            this.pnlProduct.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.pnlProduct.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            // 
+            // uiSymbolLabel6
+            // 
+            this.uiSymbolLabel6.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.uiSymbolLabel6.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
+            this.uiSymbolLabel6.Location = new System.Drawing.Point(15, 18);
+            this.uiSymbolLabel6.MinimumSize = new System.Drawing.Size(1, 1);
+            this.uiSymbolLabel6.Name = "uiSymbolLabel6";
+            this.uiSymbolLabel6.Padding = new System.Windows.Forms.Padding(54, 0, 0, 0);
+            this.uiSymbolLabel6.Size = new System.Drawing.Size(42, 43);
+            this.uiSymbolLabel6.Style = Sunny.UI.UIStyle.Custom;
+            this.uiSymbolLabel6.StyleCustomMode = true;
+            this.uiSymbolLabel6.Symbol = 362566;
+            this.uiSymbolLabel6.SymbolColor = System.Drawing.Color.White;
+            this.uiSymbolLabel6.SymbolSize = 50;
+            this.uiSymbolLabel6.TabIndex = 0;
+            this.uiSymbolLabel6.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            // 
+            // pnlExpiringProduct
+            // 
+            this.pnlExpiringProduct.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pnlExpiringProduct.BackColor = System.Drawing.SystemColors.Control;
+            this.pnlExpiringProduct.Controls.Add(this.uiSymbolLabel3);
+            this.pnlExpiringProduct.FillColor = System.Drawing.Color.DarkSlateGray;
+            this.pnlExpiringProduct.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
+            this.pnlExpiringProduct.Location = new System.Drawing.Point(12, 321);
+            this.pnlExpiringProduct.Margin = new System.Windows.Forms.Padding(4, 15, 15, 15);
+            this.pnlExpiringProduct.MinimumSize = new System.Drawing.Size(1, 1);
+            this.pnlExpiringProduct.Name = "pnlExpiringProduct";
+            this.pnlExpiringProduct.Padding = new System.Windows.Forms.Padding(0, 0, 0, 3);
+            this.pnlExpiringProduct.Radius = 70;
+            this.pnlExpiringProduct.RectColor = System.Drawing.Color.DarkSlateGray;
+            this.pnlExpiringProduct.Size = new System.Drawing.Size(74, 72);
+            this.pnlExpiringProduct.Style = Sunny.UI.UIStyle.Custom;
+            this.pnlExpiringProduct.StyleCustomMode = true;
+            this.pnlExpiringProduct.TabIndex = 30;
+            this.pnlExpiringProduct.Text = null;
+            this.pnlExpiringProduct.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.pnlExpiringProduct.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            // 
+            // uiSymbolLabel3
+            // 
+            this.uiSymbolLabel3.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.uiSymbolLabel3.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
+            this.uiSymbolLabel3.Location = new System.Drawing.Point(16, 15);
+            this.uiSymbolLabel3.MinimumSize = new System.Drawing.Size(1, 1);
+            this.uiSymbolLabel3.Name = "uiSymbolLabel3";
+            this.uiSymbolLabel3.Padding = new System.Windows.Forms.Padding(54, 0, 0, 0);
+            this.uiSymbolLabel3.Size = new System.Drawing.Size(42, 43);
+            this.uiSymbolLabel3.Style = Sunny.UI.UIStyle.Custom;
+            this.uiSymbolLabel3.StyleCustomMode = true;
+            this.uiSymbolLabel3.Symbol = 62067;
+            this.uiSymbolLabel3.SymbolColor = System.Drawing.Color.White;
+            this.uiSymbolLabel3.SymbolSize = 50;
+            this.uiSymbolLabel3.TabIndex = 3;
+            this.uiSymbolLabel3.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            // 
+            // pnlCasher
+            // 
+            this.pnlCasher.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pnlCasher.BackColor = System.Drawing.SystemColors.Control;
+            this.pnlCasher.Controls.Add(this.uiSymbolLabel4);
+            this.pnlCasher.FillColor = System.Drawing.Color.DarkSlateGray;
+            this.pnlCasher.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
+            this.pnlCasher.Location = new System.Drawing.Point(12, 423);
+            this.pnlCasher.Margin = new System.Windows.Forms.Padding(4, 15, 15, 15);
+            this.pnlCasher.MinimumSize = new System.Drawing.Size(1, 1);
+            this.pnlCasher.Name = "pnlCasher";
+            this.pnlCasher.Padding = new System.Windows.Forms.Padding(0, 0, 0, 3);
+            this.pnlCasher.Radius = 70;
+            this.pnlCasher.RectColor = System.Drawing.Color.DarkSlateGray;
+            this.pnlCasher.Size = new System.Drawing.Size(74, 72);
+            this.pnlCasher.Style = Sunny.UI.UIStyle.Custom;
+            this.pnlCasher.StyleCustomMode = true;
+            this.pnlCasher.TabIndex = 31;
+            this.pnlCasher.Text = null;
+            this.pnlCasher.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.pnlCasher.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
             // pnlSetting
             // 
+            this.pnlSetting.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlSetting.BackColor = System.Drawing.SystemColors.Control;
-            this.pnlSetting.Controls.Add(this.pictureBox5);
-            this.pnlSetting.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.pnlSetting.Controls.Add(this.uiSymbolLabel5);
+            this.pnlSetting.FillColor = System.Drawing.Color.DarkSlateGray;
             this.pnlSetting.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
-            this.pnlSetting.Location = new System.Drawing.Point(12, 219);
+            this.pnlSetting.Location = new System.Drawing.Point(12, 525);
             this.pnlSetting.Margin = new System.Windows.Forms.Padding(4, 15, 15, 15);
             this.pnlSetting.MinimumSize = new System.Drawing.Size(1, 1);
             this.pnlSetting.Name = "pnlSetting";
             this.pnlSetting.Padding = new System.Windows.Forms.Padding(0, 0, 0, 3);
             this.pnlSetting.Radius = 70;
+            this.pnlSetting.RectColor = System.Drawing.Color.DarkSlateGray;
             this.pnlSetting.Size = new System.Drawing.Size(74, 72);
             this.pnlSetting.Style = Sunny.UI.UIStyle.Custom;
-            this.pnlSetting.TabIndex = 29;
+            this.pnlSetting.StyleCustomMode = true;
+            this.pnlSetting.TabIndex = 32;
             this.pnlSetting.Text = null;
             this.pnlSetting.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.pnlSetting.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
-            // pictureBox5
+            // uiSymbolLabel4
             // 
-            this.pictureBox5.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.pictureBox5.Image = global::Supermarket.Properties.Resources.setting;
-            this.pictureBox5.Location = new System.Drawing.Point(11, 14);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(51, 43);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox5.TabIndex = 12;
-            this.pictureBox5.TabStop = false;
+            this.uiSymbolLabel4.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.uiSymbolLabel4.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
+            this.uiSymbolLabel4.Location = new System.Drawing.Point(14, 15);
+            this.uiSymbolLabel4.MinimumSize = new System.Drawing.Size(1, 1);
+            this.uiSymbolLabel4.Name = "uiSymbolLabel4";
+            this.uiSymbolLabel4.Padding = new System.Windows.Forms.Padding(54, 0, 0, 0);
+            this.uiSymbolLabel4.Size = new System.Drawing.Size(42, 43);
+            this.uiSymbolLabel4.Style = Sunny.UI.UIStyle.Custom;
+            this.uiSymbolLabel4.StyleCustomMode = true;
+            this.uiSymbolLabel4.Symbol = 61447;
+            this.uiSymbolLabel4.SymbolColor = System.Drawing.Color.White;
+            this.uiSymbolLabel4.SymbolSize = 50;
+            this.uiSymbolLabel4.TabIndex = 3;
+            this.uiSymbolLabel4.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            // 
+            // uiSymbolLabel5
+            // 
+            this.uiSymbolLabel5.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.uiSymbolLabel5.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
+            this.uiSymbolLabel5.Location = new System.Drawing.Point(12, 18);
+            this.uiSymbolLabel5.MinimumSize = new System.Drawing.Size(1, 1);
+            this.uiSymbolLabel5.Name = "uiSymbolLabel5";
+            this.uiSymbolLabel5.Padding = new System.Windows.Forms.Padding(47, 0, 0, 0);
+            this.uiSymbolLabel5.Size = new System.Drawing.Size(43, 43);
+            this.uiSymbolLabel5.Style = Sunny.UI.UIStyle.Custom;
+            this.uiSymbolLabel5.StyleCustomMode = true;
+            this.uiSymbolLabel5.Symbol = 361573;
+            this.uiSymbolLabel5.SymbolColor = System.Drawing.Color.White;
+            this.uiSymbolLabel5.SymbolSize = 43;
+            this.uiSymbolLabel5.TabIndex = 3;
+            this.uiSymbolLabel5.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
             // AdminForm
             // 
@@ -357,7 +515,9 @@
             this.ClientSize = new System.Drawing.Size(1384, 820);
             this.Controls.Add(this.tableLayoutPanel2);
             this.Name = "AdminForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AdminForm";
+            this.Load += new System.EventHandler(this.AdminForm_Load);
             this.uiPanel1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
@@ -369,12 +529,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.picExit)).EndInit();
             this.uiPanel5.ResumeLayout(false);
             this.flowLayoutPanel1.ResumeLayout(false);
-            this.pnlInvoice.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.pnlDashbord.ResumeLayout(false);
             this.pnlHistory.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            this.pnlProduct.ResumeLayout(false);
+            this.pnlExpiringProduct.ResumeLayout(false);
+            this.pnlCasher.ResumeLayout(false);
             this.pnlSetting.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -395,11 +555,17 @@
         private System.Windows.Forms.PictureBox picExit;
         private Sunny.UI.UIPanel uiPanel5;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
-        private Sunny.UI.UIPanel pnlInvoice;
-        private System.Windows.Forms.PictureBox pictureBox2;
+        private Sunny.UI.UIPanel pnlDashbord;
         private Sunny.UI.UIPanel pnlHistory;
-        private System.Windows.Forms.PictureBox pictureBox3;
+        private Sunny.UI.UISymbolLabel uiSymbolLabel1;
+        private Sunny.UI.UISymbolLabel uiSymbolLabel2;
+        private Sunny.UI.UIPanel pnlProduct;
+        private Sunny.UI.UISymbolLabel uiSymbolLabel6;
+        private Sunny.UI.UIPanel pnlExpiringProduct;
+        private Sunny.UI.UISymbolLabel uiSymbolLabel3;
+        private Sunny.UI.UIPanel pnlCasher;
+        private Sunny.UI.UISymbolLabel uiSymbolLabel4;
         private Sunny.UI.UIPanel pnlSetting;
-        private System.Windows.Forms.PictureBox pictureBox5;
+        private Sunny.UI.UISymbolLabel uiSymbolLabel5;
     }
 }

@@ -12,25 +12,25 @@ namespace Supermarket.View.User_Controls.SignInControls
 {
     public partial class CartView : UserControl
     {
+        private decimal _price;
+
+        public decimal price
+        {
+            get { return _price; }
+            set { _price = value; }
+        }
+
+        public int upc
+        {
+            get { return int.Parse(lblUPC.Text); }
+            set { lblUPC.Text = value.ToString(); }
+        }
+
         public CartView()
         {
             InitializeComponent();
         }
 
-        private void uiPanel1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnLogin_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label6_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void label5_Click(object sender, EventArgs e)
         {
@@ -95,6 +95,11 @@ namespace Supermarket.View.User_Controls.SignInControls
         private void saaCheckBox1_CheckChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void uiSymbolLabel2_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Dc");
         }
     }
 }

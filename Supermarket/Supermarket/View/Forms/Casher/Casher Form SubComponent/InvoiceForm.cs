@@ -20,22 +20,7 @@ namespace Supermarket.View.Forms
             this.ResizeRedraw = true;
             casherForm.SizeChanged += (Object o, EventArgs e) =>
             {
-                foreach (Control control in flowLayoutPanel2.Controls)
-                {
-                    control.Width = flowLayoutPanel2.Width - 40;
-                }
-                flowLayoutPanel2.HorizontalScroll.Maximum = 0;
-                flowLayoutPanel2.AutoScroll = false;
-                flowLayoutPanel2.VerticalScroll.Visible = false;
-                flowLayoutPanel2.AutoScroll = true;
-                foreach (Control control in flowLayoutPanel1.Controls)
-                {
-                    control.Width = flowLayoutPanel1.Width - 40;
-                }
-                flowLayoutPanel1.HorizontalScroll.Maximum = 0;
-                flowLayoutPanel1.AutoScroll = false;
-                flowLayoutPanel1.VerticalScroll.Visible = false;
-                flowLayoutPanel1.AutoScroll = true;
+                refreshSize();
             };
         }
 
@@ -47,26 +32,12 @@ namespace Supermarket.View.Forms
 
         private void flowLayoutPanel1_Resize(object sender, EventArgs e)
         {
-            foreach (Control control in flowLayoutPanel1.Controls)
-            {
-                control.Width = flowLayoutPanel1.Width - 40;
-            }
-            flowLayoutPanel1.HorizontalScroll.Maximum = 0;
-            flowLayoutPanel1.AutoScroll = false;
-            flowLayoutPanel1.VerticalScroll.Visible = false;
-            flowLayoutPanel1.AutoScroll = true;
+            refreshSize();
         }
 
         private void flowLayoutPanel2_Resize(object sender, EventArgs e)
         {
-            foreach (Control control in flowLayoutPanel2.Controls)
-            {
-                control.Width = flowLayoutPanel2.Width - 40;
-            }
-            flowLayoutPanel2.HorizontalScroll.Maximum = 0;
-            flowLayoutPanel2.AutoScroll = false;
-            flowLayoutPanel2.VerticalScroll.Visible = false;
-            flowLayoutPanel2.AutoScroll = true;
+            refreshSize();
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -82,6 +53,30 @@ namespace Supermarket.View.Forms
         private void btnLogin_Click(object sender, EventArgs e)
         {
 
+
+        }
+        public void refreshSize()
+        {
+            foreach (Control control in flowLayoutPanel2.Controls)
+            {
+                control.Width = flowLayoutPanel2.Width - 40;
+            }
+            flowLayoutPanel2.HorizontalScroll.Maximum = 0;
+            flowLayoutPanel2.AutoScroll = false;
+            flowLayoutPanel2.VerticalScroll.Visible = false;
+            flowLayoutPanel2.AutoScroll = true;
+            foreach (Control control in flowLayoutPanel1.Controls)
+            {
+                control.Width = flowLayoutPanel1.Width - 40;
+            }
+            flowLayoutPanel1.HorizontalScroll.Maximum = 0;
+            flowLayoutPanel1.AutoScroll = false;
+            flowLayoutPanel1.VerticalScroll.Visible = false;
+            flowLayoutPanel1.AutoScroll = true;
+        }
+
+        private void InvoiceForm_Load(object sender, EventArgs e)
+        {
 
         }
     }

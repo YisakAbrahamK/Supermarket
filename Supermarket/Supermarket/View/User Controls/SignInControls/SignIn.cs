@@ -1,5 +1,6 @@
 ﻿using Supermarket.Panals;
 using Supermarket.View.Forms;
+using Supermarket.View.Forms.Admin;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -47,6 +48,8 @@ namespace Supermarket.View.User_Controls.SignInControls
         {
             CashierForm cashierForm = new CashierForm();
             cashierForm.Show();
+            AdminForm adminForm = new AdminForm();
+            adminForm.Show();
         }
     }
 }

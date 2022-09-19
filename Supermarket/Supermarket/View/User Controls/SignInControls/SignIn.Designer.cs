@@ -32,16 +32,16 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.uiPanel1 = new Sunny.UI.UIPanel();
-            this.btnLogin = new Sunny.UI.UIButton();
+            this.txtPassword = new Sunny.UI.UITextBox();
             this.txtEmail = new Sunny.UI.UITextBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.txtPassword = new Sunny.UI.UITextBox();
+            this.btnLogin = new Sunny.UI.UIButton();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.uiPanel1.SuspendLayout();
+            this.txtPassword.SuspendLayout();
             this.txtEmail.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            this.txtPassword.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblForgotPassword
@@ -101,23 +101,28 @@
             this.uiPanel1.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.uiPanel1.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
-            // btnLogin
+            // txtPassword
             // 
-            this.btnLogin.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.btnLogin.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnLogin.FillColor = System.Drawing.Color.Green;
-            this.btnLogin.Font = new System.Drawing.Font("Microsoft YaHei", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogin.Location = new System.Drawing.Point(133, 443);
-            this.btnLogin.MinimumSize = new System.Drawing.Size(1, 1);
-            this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Radius = 40;
-            this.btnLogin.RectColor = System.Drawing.Color.Green;
-            this.btnLogin.Size = new System.Drawing.Size(128, 44);
-            this.btnLogin.Style = Sunny.UI.UIStyle.Custom;
-            this.btnLogin.TabIndex = 41;
-            this.btnLogin.Text = "Login";
-            this.btnLogin.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
-            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
+            this.txtPassword.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.txtPassword.Controls.Add(this.pictureBox3);
+            this.txtPassword.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPassword.Location = new System.Drawing.Point(51, 355);
+            this.txtPassword.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtPassword.MinimumSize = new System.Drawing.Size(1, 16);
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.Padding = new System.Windows.Forms.Padding(50, 0, 5, 0);
+            this.txtPassword.PasswordChar = '●';
+            this.txtPassword.Radius = 40;
+            this.txtPassword.ShowText = false;
+            this.txtPassword.Size = new System.Drawing.Size(291, 46);
+            this.txtPassword.Style = Sunny.UI.UIStyle.Custom;
+            this.txtPassword.TabIndex = 45;
+            this.txtPassword.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.txtPassword.Watermark = "Password";
+            this.txtPassword.WatermarkActiveColor = System.Drawing.Color.White;
+            this.txtPassword.WatermarkColor = System.Drawing.Color.DarkGray;
+            this.txtPassword.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
             // txtEmail
             // 
@@ -131,7 +136,6 @@
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Padding = new System.Windows.Forms.Padding(50, 0, 5, 0);
             this.txtEmail.Radius = 40;
-            this.txtEmail.RectColor = System.Drawing.Color.White;
             this.txtEmail.ShowText = false;
             this.txtEmail.Size = new System.Drawing.Size(291, 46);
             this.txtEmail.Style = Sunny.UI.UIStyle.Custom;
@@ -153,29 +157,21 @@
             this.pictureBox4.TabIndex = 44;
             this.pictureBox4.TabStop = false;
             // 
-            // txtPassword
+            // btnLogin
             // 
-            this.txtPassword.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.txtPassword.Controls.Add(this.pictureBox3);
-            this.txtPassword.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPassword.Location = new System.Drawing.Point(51, 355);
-            this.txtPassword.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtPassword.MinimumSize = new System.Drawing.Size(1, 16);
-            this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Padding = new System.Windows.Forms.Padding(50, 0, 5, 0);
-            this.txtPassword.PasswordChar = '●';
-            this.txtPassword.Radius = 40;
-            this.txtPassword.RectColor = System.Drawing.Color.White;
-            this.txtPassword.ShowText = false;
-            this.txtPassword.Size = new System.Drawing.Size(291, 46);
-            this.txtPassword.Style = Sunny.UI.UIStyle.Custom;
-            this.txtPassword.TabIndex = 45;
-            this.txtPassword.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
-            this.txtPassword.Watermark = "Password";
-            this.txtPassword.WatermarkActiveColor = System.Drawing.Color.White;
-            this.txtPassword.WatermarkColor = System.Drawing.Color.DarkGray;
-            this.txtPassword.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            this.btnLogin.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.btnLogin.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnLogin.Font = new System.Drawing.Font("Microsoft YaHei", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogin.Location = new System.Drawing.Point(133, 443);
+            this.btnLogin.MinimumSize = new System.Drawing.Size(1, 1);
+            this.btnLogin.Name = "btnLogin";
+            this.btnLogin.Radius = 40;
+            this.btnLogin.Size = new System.Drawing.Size(128, 44);
+            this.btnLogin.Style = Sunny.UI.UIStyle.Custom;
+            this.btnLogin.TabIndex = 41;
+            this.btnLogin.Text = "Login";
+            this.btnLogin.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // SignIn
             // 
@@ -190,9 +186,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.uiPanel1.ResumeLayout(false);
+            this.txtPassword.ResumeLayout(false);
             this.txtEmail.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            this.txtPassword.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

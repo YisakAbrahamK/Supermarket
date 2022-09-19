@@ -1,4 +1,5 @@
 ﻿using Sunny.UI;
+using Supermarket.View.Forms.Casher.Casher_Form_SubComponent;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,25 +15,19 @@ namespace Supermarket.View.Forms
     public partial class CashierForm : Form
     {
         InvoiceForm invoiceForm;
-        CashierTransactionHistoryForm cashierTransactionHistoryForm = new CashierTransactionHistoryForm();
+        CashierTransactionHistoryForm cashierTransactionHistoryForm;
+        SettingForm settingForm;
 
         public CashierForm()
         {
             InitializeComponent();
             invoiceForm = new InvoiceForm(this);
-        }
-
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
-
+            cashierTransactionHistoryForm = new CashierTransactionHistoryForm(this);
+            settingForm = new SettingForm(this);
         }
 
         private void CashierForm_Load(object sender, EventArgs e)
         {
-            if(pnlContainer.Controls.Count > 0)
-            {
-                pnlContainer.Controls.RemoveAt(0);
-            }
             invoiceForm.TopLevel = false;
             pnlContainer.Controls.Add(invoiceForm);
             invoiceForm.Dock = DockStyle.Fill;
@@ -42,29 +37,90 @@ namespace Supermarket.View.Forms
             //FOR PANEL INVOICE
 
             addEventForNavs(pnlInvoice);
-            pnlInvoice.RectColor = Color.DarkSlateGray;
-            pnlInvoice.FillColor = Color.DarkSlateGray;
+
             //FOR PANEL HISTORY
 
             addEventForNavs(pnlHistory);
-            pnlHistory.RectColor = Color.DarkSlateGray;
-            pnlHistory.FillColor = Color.DarkSlateGray;
+
 
             //FOR PANAL SETTING
 
             addEventForNavs(pnlSetting);
-            pnlSetting.RectColor = Color.DarkSlateGray;
-            pnlSetting.FillColor = Color.DarkSlateGray;
+
 
 
         }
 
+        private void addEventForNavs(UIPanel uiPanal)
+        {
+            uiPanal.Click += (Object s, EventArgs ee) =>
+            {
+                navClickEventAction(uiPanal);
+            };
+            uiPanal.MouseEnter += (Object s, EventArgs ee) =>
+            {
+                mouseEnterForNavs(uiPanal);
+            };
+            uiPanal.MouseLeave += (Object s, EventArgs ee) =>
+            {
+                mouseLeaveForNavs(uiPanal);
+            };
+            foreach (Control control in uiPanal.Controls)
+            {
+                control.Click += (Object s, EventArgs ee) =>
+                {
+                    navClickEventAction(uiPanal);
+                };
+                control.MouseLeave += (Object s, EventArgs ee) =>
+                {
+                    mouseLeaveForNavs(uiPanal);
+                };
+                control.MouseEnter += (Object s, EventArgs ee) =>
+                {
+                    mouseEnterForNavs(uiPanal);
+                };
+            }
+        }
+
+        private void navClickEventAction(UIPanel uiPanal)
+        {
+            selectOneChoice(uiPanal); //will change the radius values to indicate the change
+            if (uiPanal.Name == "pnlInvoice")
+            {
+                loadNavClickForm(this.invoiceForm);
+                lblActiveSelected.Text = "Invoice";
+                invoiceForm.refreshSize();
+            }
+            else if (uiPanal.Name == "pnlHistory")
+            {
+                loadNavClickForm(this.cashierTransactionHistoryForm);
+                lblActiveSelected.Text = "Transaction";
+                cashierTransactionHistoryForm.refrashSize();
+            }
+            else if (uiPanal.Name == "pnlSetting")
+            {
+                loadNavClickForm(this.settingForm);
+                lblActiveSelected.Text = "Setting";    
+            }
+        }
+
         private void selectOneChoice(UIPanel uiPanal)
         {
+            //this funvtion will change the RadiusSides values to indicate the user choice
             pnlInvoice.RadiusSides = UICornerRadiusSides.All;
             pnlHistory.RadiusSides = UICornerRadiusSides.All;
             pnlSetting.RadiusSides = UICornerRadiusSides.All;
             uiPanal.RadiusSides = UICornerRadiusSides.RightBottom | UICornerRadiusSides.LeftBottom | UICornerRadiusSides.LeftTop;
+        }
+
+        private void loadNavClickForm(Form form)
+        {
+            pnlContainer.Controls.RemoveAt(0);
+            if(form.TopLevel==true)
+                form.TopLevel = false;
+            pnlContainer.Controls.Add(form);
+            form.Dock = DockStyle.Fill;
+            form.Show();
         }
 
         private void mouseEnterForNavs(UIPanel uiPanal)
@@ -79,83 +135,10 @@ namespace Supermarket.View.Forms
         private void mouseLeaveForNavs(UIPanel uiPanal)
         {
             uiPanal.FillColor = Color.DarkSlateGray;
-            foreach(Control control in uiPanal.Controls)
-            {
-                control.BackColor= Color.DarkSlateGray;
-            }
-        }
-
-        private void addEventForNavs(UIPanel uiPanal)
-        {
-            uiPanal.Click += (Object s, EventArgs ee) =>
-            {
-                selectOneChoice(uiPanal);
-                if (uiPanal.Name == "pnlInvoice")
-                {
-                    loadNavClickForm(this.invoiceForm);
-                    lblActiveSelected.Text = "Invoice";
-                }else if(uiPanal.Name == "pnlHistory")
-                {
-                    loadNavClickForm(this.cashierTransactionHistoryForm);
-                    lblActiveSelected.Text = "Transaction";
-                }
-            };
-            uiPanal.MouseEnter += (Object s, EventArgs ee) =>
-            {
-                mouseEnterForNavs(uiPanal);
-            };
-            uiPanal.MouseLeave += (Object s, EventArgs ee) =>
-            {
-                mouseLeaveForNavs(uiPanal);
-            };
             foreach (Control control in uiPanal.Controls)
             {
-                control.Click += (Object s, EventArgs ee) =>
-                {
-                    selectOneChoice(uiPanal);
-                    if (uiPanal.Name == "pnlInvoice")
-                    {
-                        loadNavClickForm(this.invoiceForm);
-                        lblActiveSelected.Text = "Invoice";
-                    }
-                    else if (uiPanal.Name == "pnlHistory")
-                    {
-                        loadNavClickForm(this.cashierTransactionHistoryForm);
-                        lblActiveSelected.Text = "Transaction";
-                    }
-                };
-                control.MouseLeave += (Object s, EventArgs ee) =>
-                {
-                    mouseLeaveForNavs(uiPanal);
-                };
-                control.MouseEnter += (Object s, EventArgs ee) =>
-                {
-                    mouseEnterForNavs(uiPanal);
-                };
+                control.BackColor = Color.DarkSlateGray;
             }
-        }
-
-        private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void pnlHistory_Click(object sender, EventArgs e)
-        {
-            pnlContainer.Controls.RemoveAt(0);
-            cashierTransactionHistoryForm.TopLevel = false;
-            pnlContainer.Controls.Add(cashierTransactionHistoryForm);
-            cashierTransactionHistoryForm.Dock = DockStyle.Fill;
-            cashierTransactionHistoryForm.Show();
-        }
-
-        private void loadNavClickForm(Form form)
-        {
-            pnlContainer.Controls.RemoveAt(0);
-            form.TopLevel = false;
-            pnlContainer.Controls.Add(form);
-            form.Dock = DockStyle.Fill;
-            form.Show();
         }
     }
 }

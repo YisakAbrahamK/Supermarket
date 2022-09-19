@@ -1,6 +1,6 @@
-﻿namespace Supermarket.View.User_Controls.SignInControls
+﻿namespace Supermarket.View.User_Controls
 {
-    partial class ProductViewCard
+    partial class TransactionCard
     {
         /// <summary> 
         /// Required designer variable.
@@ -29,11 +29,10 @@
         private void InitializeComponent()
         {
             this.uiPanel1 = new Sunny.UI.UIPanel();
-            this.uiSymbolLabel2 = new Sunny.UI.UISymbolLabel();
-            this.btnLogin = new RJCodeAdvance.RJControls.RJButton();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.uiPanel1.SuspendLayout();
@@ -43,112 +42,78 @@
             // 
             this.uiPanel1.AutoSize = true;
             this.uiPanel1.BackColor = System.Drawing.Color.White;
-            this.uiPanel1.Controls.Add(this.uiSymbolLabel2);
-            this.uiPanel1.Controls.Add(this.btnLogin);
+            this.uiPanel1.Controls.Add(this.label3);
+            this.uiPanel1.Controls.Add(this.label4);
             this.uiPanel1.Controls.Add(this.label6);
             this.uiPanel1.Controls.Add(this.label5);
-            this.uiPanel1.Controls.Add(this.label3);
             this.uiPanel1.Controls.Add(this.label2);
             this.uiPanel1.Controls.Add(this.label1);
             this.uiPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.uiPanel1.FillColor = System.Drawing.SystemColors.Control;
             this.uiPanel1.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
             this.uiPanel1.Location = new System.Drawing.Point(0, 0);
-            this.uiPanel1.Margin = new System.Windows.Forms.Padding(0, 0, 0, 3);
+            this.uiPanel1.Margin = new System.Windows.Forms.Padding(0);
             this.uiPanel1.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiPanel1.Name = "uiPanel1";
             this.uiPanel1.Radius = 50;
             this.uiPanel1.RectColor = System.Drawing.Color.White;
-            this.uiPanel1.Size = new System.Drawing.Size(378, 180);
+            this.uiPanel1.Size = new System.Drawing.Size(368, 148);
             this.uiPanel1.Style = Sunny.UI.UIStyle.Custom;
             this.uiPanel1.StyleCustomMode = true;
-            this.uiPanel1.TabIndex = 29;
+            this.uiPanel1.TabIndex = 30;
             this.uiPanel1.Text = null;
             this.uiPanel1.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.uiPanel1.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
-            // uiSymbolLabel2
+            // label3
             // 
-            this.uiSymbolLabel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.uiSymbolLabel2.BackColor = System.Drawing.SystemColors.Control;
-            this.uiSymbolLabel2.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
-            this.uiSymbolLabel2.ForeColor = System.Drawing.Color.Black;
-            this.uiSymbolLabel2.Location = new System.Drawing.Point(331, 144);
-            this.uiSymbolLabel2.MinimumSize = new System.Drawing.Size(1, 1);
-            this.uiSymbolLabel2.Name = "uiSymbolLabel2";
-            this.uiSymbolLabel2.Padding = new System.Windows.Forms.Padding(39, 0, 0, 0);
-            this.uiSymbolLabel2.Size = new System.Drawing.Size(28, 25);
-            this.uiSymbolLabel2.Style = Sunny.UI.UIStyle.Custom;
-            this.uiSymbolLabel2.StyleCustomMode = true;
-            this.uiSymbolLabel2.Symbol = 61975;
-            this.uiSymbolLabel2.SymbolColor = System.Drawing.Color.Green;
-            this.uiSymbolLabel2.SymbolSize = 35;
-            this.uiSymbolLabel2.TabIndex = 54;
-            this.uiSymbolLabel2.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.SystemColors.Control;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Black;
+            this.label3.Location = new System.Drawing.Point(160, 17);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(156, 29);
+            this.label3.TabIndex = 44;
+            this.label3.Text = "45564541354";
             // 
-            // btnLogin
+            // label4
             // 
-            this.btnLogin.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnLogin.BackColor = System.Drawing.Color.Green;
-            this.btnLogin.BackgroundColor = System.Drawing.Color.Green;
-            this.btnLogin.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnLogin.BorderRadius = 10;
-            this.btnLogin.BorderSize = 0;
-            this.btnLogin.FlatAppearance.BorderSize = 0;
-            this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogin.ForeColor = System.Drawing.Color.White;
-            this.btnLogin.Location = new System.Drawing.Point(22, 141);
-            this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(303, 30);
-            this.btnLogin.TabIndex = 42;
-            this.btnLogin.Text = "Add";
-            this.btnLogin.TextColor = System.Drawing.Color.White;
-            this.btnLogin.UseVisualStyleBackColor = false;
+            this.label4.BackColor = System.Drawing.SystemColors.Control;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.DarkGray;
+            this.label4.Location = new System.Drawing.Point(14, 17);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(165, 32);
+            this.label4.TabIndex = 43;
+            this.label4.Text = "ID";
             // 
             // label6
             // 
             this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.SystemColors.Control;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label6.Location = new System.Drawing.Point(154, 53);
+            this.label6.Location = new System.Drawing.Point(160, 53);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(215, 29);
+            this.label6.Size = new System.Drawing.Size(131, 29);
             this.label6.TabIndex = 26;
-            this.label6.Text = "132456789";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label6.Text = "12/12/2020";
             // 
             // label5
             // 
             this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.SystemColors.Control;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label5.Location = new System.Drawing.Point(157, 89);
-            this.label5.Margin = new System.Windows.Forms.Padding(3, 0, 3, 2);
+            this.label5.Location = new System.Drawing.Point(164, 89);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(211, 29);
+            this.label5.Size = new System.Drawing.Size(65, 29);
             this.label5.TabIndex = 25;
             this.label5.Text = "$456";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // label3
-            // 
-            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label3.BackColor = System.Drawing.SystemColors.Control;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.Green;
-            this.label3.Location = new System.Drawing.Point(21, 3);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(328, 45);
-            this.label3.TabIndex = 24;
-            this.label3.Text = "Sun Chipse";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label2
             // 
@@ -159,7 +124,7 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(165, 32);
             this.label2.TabIndex = 23;
-            this.label2.Text = "UPC";
+            this.label2.Text = "Date";
             // 
             // label1
             // 
@@ -170,18 +135,17 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(113, 40);
             this.label1.TabIndex = 22;
-            this.label1.Text = "Price";
+            this.label1.Text = "Total";
             // 
-            // ProductViewCard
+            // TransactionCard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.AutoSize = true;
             this.Controls.Add(this.uiPanel1);
-            this.Margin = new System.Windows.Forms.Padding(0, 0, 0, 3);
-            this.Name = "ProductViewCard";
-            this.Size = new System.Drawing.Size(378, 180);
+            this.Name = "TransactionCard";
+            this.Size = new System.Drawing.Size(368, 148);
             this.uiPanel1.ResumeLayout(false);
+            this.uiPanel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -190,11 +154,10 @@
         #endregion
 
         private Sunny.UI.UIPanel uiPanel1;
-        private Sunny.UI.UISymbolLabel uiSymbolLabel2;
-        private RJCodeAdvance.RJControls.RJButton btnLogin;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
     }
