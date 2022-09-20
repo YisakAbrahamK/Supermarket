@@ -97,10 +97,10 @@ namespace Supermarket.Panals
         {
             if (recoveryCode.ToString() == txtCode.Text)
             {
-               // EnterNewPass enterNewPass = new EnterNewPass(sininForm);
-                this.Dispose();
-              //  pnlContainer.Controls.Add(enterNewPass);
-             //   enterNewPass.Dock = DockStyle.Fill;
+               EnterNewPass enterNewPass = new EnterNewPass(pnlContainer);
+               this.Dispose();
+               pnlContainer.Controls.Add(enterNewPass);
+               enterNewPass.Dock = DockStyle.Fill;
             }
             else
             {
@@ -118,6 +118,11 @@ namespace Supermarket.Panals
             {
                 txtCode.PasswordChar = '●';
             }
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Runtime.CompilerServices.RuntimeHelpers;
 
 namespace Supermarket.Panals
 {
@@ -29,6 +30,30 @@ namespace Supermarket.Panals
         private void btnSave_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnSee_Click(object sender, EventArgs e)
+        {
+            if (txtPassword.PasswordChar == '●')
+            {
+                txtPassword.PasswordChar = '\0';
+            }
+            else
+            {
+                txtPassword.PasswordChar = '●';
+            }
+        }
+
+        private void btnSeeConfirm_Click(object sender, EventArgs e)
+        {
+            if (txtCPassword.PasswordChar == '●')
+            {
+                txtCPassword.PasswordChar = '\0';
+            }
+            else
+            {
+                txtCPassword.PasswordChar = '●';
+            }
         }
     }
 }

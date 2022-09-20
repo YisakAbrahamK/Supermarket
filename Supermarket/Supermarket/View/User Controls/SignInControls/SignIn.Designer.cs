@@ -60,6 +60,7 @@
             // pictureBox3
             // 
             this.pictureBox3.BackColor = System.Drawing.Color.White;
+            this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox3.Image = global::Supermarket.Properties.Resources.eye_svgrepo_com;
             this.pictureBox3.Location = new System.Drawing.Point(11, 12);
             this.pictureBox3.Name = "pictureBox3";
@@ -114,9 +115,11 @@
             this.txtPassword.Padding = new System.Windows.Forms.Padding(50, 0, 5, 0);
             this.txtPassword.PasswordChar = '●';
             this.txtPassword.Radius = 40;
+            this.txtPassword.RectColor = System.Drawing.SystemColors.Control;
             this.txtPassword.ShowText = false;
             this.txtPassword.Size = new System.Drawing.Size(291, 46);
             this.txtPassword.Style = Sunny.UI.UIStyle.Custom;
+            this.txtPassword.StyleCustomMode = true;
             this.txtPassword.TabIndex = 45;
             this.txtPassword.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             this.txtPassword.Watermark = "Password";
@@ -136,9 +139,11 @@
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Padding = new System.Windows.Forms.Padding(50, 0, 5, 0);
             this.txtEmail.Radius = 40;
+            this.txtEmail.RectColor = System.Drawing.SystemColors.Control;
             this.txtEmail.ShowText = false;
             this.txtEmail.Size = new System.Drawing.Size(291, 46);
             this.txtEmail.Style = Sunny.UI.UIStyle.Custom;
+            this.txtEmail.StyleCustomMode = true;
             this.txtEmail.TabIndex = 42;
             this.txtEmail.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             this.txtEmail.Watermark = "Email";

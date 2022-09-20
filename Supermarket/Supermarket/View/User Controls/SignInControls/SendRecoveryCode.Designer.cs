@@ -39,16 +39,16 @@
             this.btnSend = new Sunny.UI.UIButton();
             this.btnVerify = new Sunny.UI.UIButton();
             this.uiPanel1 = new Sunny.UI.UIPanel();
+            this.txtCode = new Sunny.UI.UITextBox();
+            this.btnSee = new System.Windows.Forms.PictureBox();
             this.txtEmail = new Sunny.UI.UITextBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.btnSee = new System.Windows.Forms.PictureBox();
-            this.txtCode = new Sunny.UI.UITextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             this.uiPanel1.SuspendLayout();
+            this.txtCode.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnSee)).BeginInit();
             this.txtEmail.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnSee)).BeginInit();
-            this.txtCode.SuspendLayout();
             this.SuspendLayout();
             // 
             // label4
@@ -125,14 +125,11 @@
             // 
             this.btnSend.BackColor = System.Drawing.Color.DarkSlateGray;
             this.btnSend.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSend.FillColor = System.Drawing.Color.Green;
-            this.btnSend.FillColor2 = System.Drawing.Color.Green;
             this.btnSend.Font = new System.Drawing.Font("Microsoft YaHei", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSend.Location = new System.Drawing.Point(57, 312);
             this.btnSend.MinimumSize = new System.Drawing.Size(1, 1);
             this.btnSend.Name = "btnSend";
             this.btnSend.Radius = 40;
-            this.btnSend.RectColor = System.Drawing.Color.Green;
             this.btnSend.Size = new System.Drawing.Size(128, 44);
             this.btnSend.Style = Sunny.UI.UIStyle.Custom;
             this.btnSend.TabIndex = 51;
@@ -144,14 +141,11 @@
             // 
             this.btnVerify.BackColor = System.Drawing.Color.DarkSlateGray;
             this.btnVerify.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnVerify.FillColor = System.Drawing.Color.Green;
-            this.btnVerify.FillColor2 = System.Drawing.Color.Green;
             this.btnVerify.Font = new System.Drawing.Font("Microsoft YaHei", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVerify.Location = new System.Drawing.Point(137, 513);
             this.btnVerify.MinimumSize = new System.Drawing.Size(1, 1);
             this.btnVerify.Name = "btnVerify";
             this.btnVerify.Radius = 40;
-            this.btnVerify.RectColor = System.Drawing.Color.Green;
             this.btnVerify.Size = new System.Drawing.Size(128, 44);
             this.btnVerify.Style = Sunny.UI.UIStyle.Custom;
             this.btnVerify.TabIndex = 52;
@@ -177,8 +171,47 @@
             this.uiPanel1.Size = new System.Drawing.Size(375, 620);
             this.uiPanel1.Style = Sunny.UI.UIStyle.Custom;
             this.uiPanel1.TabIndex = 50;
+            this.uiPanel1.Text = null;
             this.uiPanel1.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.uiPanel1.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            // 
+            // txtCode
+            // 
+            this.txtCode.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.txtCode.Controls.Add(this.btnSee);
+            this.txtCode.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtCode.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCode.Location = new System.Drawing.Point(50, 435);
+            this.txtCode.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtCode.MinimumSize = new System.Drawing.Size(1, 16);
+            this.txtCode.Name = "txtCode";
+            this.txtCode.Padding = new System.Windows.Forms.Padding(50, 0, 5, 0);
+            this.txtCode.PasswordChar = '●';
+            this.txtCode.Radius = 40;
+            this.txtCode.RectColor = System.Drawing.SystemColors.Control;
+            this.txtCode.ShowText = false;
+            this.txtCode.Size = new System.Drawing.Size(291, 46);
+            this.txtCode.Style = Sunny.UI.UIStyle.Custom;
+            this.txtCode.StyleCustomMode = true;
+            this.txtCode.TabIndex = 51;
+            this.txtCode.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.txtCode.Watermark = "Code";
+            this.txtCode.WatermarkActiveColor = System.Drawing.Color.White;
+            this.txtCode.WatermarkColor = System.Drawing.Color.DarkGray;
+            this.txtCode.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            // 
+            // btnSee
+            // 
+            this.btnSee.BackColor = System.Drawing.Color.White;
+            this.btnSee.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSee.Image = global::Supermarket.Properties.Resources.eye_svgrepo_com;
+            this.btnSee.Location = new System.Drawing.Point(12, 12);
+            this.btnSee.Name = "btnSee";
+            this.btnSee.Size = new System.Drawing.Size(37, 25);
+            this.btnSee.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnSee.TabIndex = 41;
+            this.btnSee.TabStop = false;
+            this.btnSee.Click += new System.EventHandler(this.btnSee_Click);
             // 
             // txtEmail
             // 
@@ -192,10 +225,11 @@
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Padding = new System.Windows.Forms.Padding(50, 0, 5, 0);
             this.txtEmail.Radius = 40;
-            this.txtEmail.RectColor = System.Drawing.Color.White;
+            this.txtEmail.RectColor = System.Drawing.SystemColors.Control;
             this.txtEmail.ShowText = false;
             this.txtEmail.Size = new System.Drawing.Size(291, 46);
             this.txtEmail.Style = Sunny.UI.UIStyle.Custom;
+            this.txtEmail.StyleCustomMode = true;
             this.txtEmail.TabIndex = 51;
             this.txtEmail.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             this.txtEmail.Watermark = "Email";
@@ -213,42 +247,7 @@
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox4.TabIndex = 44;
             this.pictureBox4.TabStop = false;
-            // 
-            // btnSee
-            // 
-            this.btnSee.BackColor = System.Drawing.Color.White;
-            this.btnSee.Image = global::Supermarket.Properties.Resources.eye_svgrepo_com;
-            this.btnSee.Location = new System.Drawing.Point(12, 12);
-            this.btnSee.Name = "btnSee";
-            this.btnSee.Size = new System.Drawing.Size(37, 25);
-            this.btnSee.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnSee.TabIndex = 41;
-            this.btnSee.TabStop = false;
-            this.btnSee.Click += new System.EventHandler(this.btnSee_Click);
-            // 
-            // txtCode
-            // 
-            this.txtCode.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.txtCode.Controls.Add(this.btnSee);
-            this.txtCode.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtCode.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCode.Location = new System.Drawing.Point(50, 435);
-            this.txtCode.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtCode.MinimumSize = new System.Drawing.Size(1, 16);
-            this.txtCode.Name = "txtCode";
-            this.txtCode.Padding = new System.Windows.Forms.Padding(50, 0, 5, 0);
-            this.txtCode.PasswordChar = '●';
-            this.txtCode.Radius = 40;
-            this.txtCode.RectColor = System.Drawing.Color.White;
-            this.txtCode.ShowText = false;
-            this.txtCode.Size = new System.Drawing.Size(291, 46);
-            this.txtCode.Style = Sunny.UI.UIStyle.Custom;
-            this.txtCode.TabIndex = 51;
-            this.txtCode.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
-            this.txtCode.Watermark = "Code";
-            this.txtCode.WatermarkActiveColor = System.Drawing.Color.White;
-            this.txtCode.WatermarkColor = System.Drawing.Color.DarkGray;
-            this.txtCode.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
             // 
             // SendRecoveryCode
             // 
@@ -265,10 +264,10 @@
             this.Size = new System.Drawing.Size(397, 624);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             this.uiPanel1.ResumeLayout(false);
+            this.txtCode.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.btnSee)).EndInit();
             this.txtEmail.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnSee)).EndInit();
-            this.txtCode.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
