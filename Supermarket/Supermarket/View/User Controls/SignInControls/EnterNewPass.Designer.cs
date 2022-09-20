@@ -29,42 +29,27 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EnterNewPass));
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.txtPassword = new RJCodeAdvance.RJControls.RJTextBox();
-            this.rjTextBox1 = new RJCodeAdvance.RJControls.RJTextBox();
-            this.btnSave = new RJCodeAdvance.RJControls.RJButton();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
+            this.uiPanel1 = new Sunny.UI.UIPanel();
+            this.txtCPassword = new Sunny.UI.UITextBox();
+            this.btnSeeConfirm = new System.Windows.Forms.PictureBox();
+            this.txtPassword = new Sunny.UI.UITextBox();
+            this.btnSee = new System.Windows.Forms.PictureBox();
+            this.btnSend = new Sunny.UI.UIButton();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
+            this.uiPanel1.SuspendLayout();
+            this.txtCPassword.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnSeeConfirm)).BeginInit();
+            this.txtPassword.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnSee)).BeginInit();
             this.SuspendLayout();
-            // 
-            // pictureBox6
-            // 
-            this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
-            this.pictureBox6.Location = new System.Drawing.Point(17, 300);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(68, 44);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox6.TabIndex = 20;
-            this.pictureBox6.TabStop = false;
-            // 
-            // pictureBox7
-            // 
-            this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
-            this.pictureBox7.Location = new System.Drawing.Point(17, 382);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(68, 44);
-            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox7.TabIndex = 13;
-            this.pictureBox7.TabStop = false;
             // 
             // pictureBox8
             // 
+            this.pictureBox8.BackColor = System.Drawing.Color.DarkSlateGray;
             this.pictureBox8.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox8.Image")));
-            this.pictureBox8.Location = new System.Drawing.Point(135, 59);
+            this.pictureBox8.Location = new System.Drawing.Point(124, 59);
             this.pictureBox8.Name = "pictureBox8";
             this.pictureBox8.Size = new System.Drawing.Size(139, 90);
             this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -73,106 +58,151 @@
             // 
             // label4
             // 
+            this.label4.BackColor = System.Drawing.Color.DarkSlateGray;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(64, 163);
+            this.label4.Location = new System.Drawing.Point(53, 163);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(309, 48);
             this.label4.TabIndex = 30;
             this.label4.Text = "Recover password";
             // 
+            // uiPanel1
+            // 
+            this.uiPanel1.BackColor = System.Drawing.Color.Blue;
+            this.uiPanel1.Controls.Add(this.txtCPassword);
+            this.uiPanel1.Controls.Add(this.txtPassword);
+            this.uiPanel1.Controls.Add(this.btnSend);
+            this.uiPanel1.FillColor = System.Drawing.Color.DarkSlateGray;
+            this.uiPanel1.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
+            this.uiPanel1.Location = new System.Drawing.Point(9, 0);
+            this.uiPanel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.uiPanel1.MinimumSize = new System.Drawing.Size(1, 1);
+            this.uiPanel1.Name = "uiPanel1";
+            this.uiPanel1.Radius = 70;
+            this.uiPanel1.RectColor = System.Drawing.SystemColors.Control;
+            this.uiPanel1.Size = new System.Drawing.Size(375, 620);
+            this.uiPanel1.Style = Sunny.UI.UIStyle.Custom;
+            this.uiPanel1.TabIndex = 51;
+            this.uiPanel1.Text = null;
+            this.uiPanel1.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.uiPanel1.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            // 
+            // txtCPassword
+            // 
+            this.txtCPassword.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.txtCPassword.Controls.Add(this.btnSeeConfirm);
+            this.txtCPassword.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtCPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCPassword.Location = new System.Drawing.Point(33, 361);
+            this.txtCPassword.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtCPassword.MinimumSize = new System.Drawing.Size(1, 16);
+            this.txtCPassword.Name = "txtCPassword";
+            this.txtCPassword.Padding = new System.Windows.Forms.Padding(50, 0, 5, 0);
+            this.txtCPassword.PasswordChar = '●';
+            this.txtCPassword.Radius = 40;
+            this.txtCPassword.ShowText = false;
+            this.txtCPassword.Size = new System.Drawing.Size(311, 46);
+            this.txtCPassword.Style = Sunny.UI.UIStyle.Custom;
+            this.txtCPassword.TabIndex = 53;
+            this.txtCPassword.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.txtCPassword.Watermark = "Comfirm password";
+            this.txtCPassword.WatermarkActiveColor = System.Drawing.Color.White;
+            this.txtCPassword.WatermarkColor = System.Drawing.Color.DarkGray;
+            this.txtCPassword.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            // 
+            // btnSeeConfirm
+            // 
+            this.btnSeeConfirm.BackColor = System.Drawing.Color.White;
+            this.btnSeeConfirm.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSeeConfirm.Image = global::Supermarket.Properties.Resources.eye_svgrepo_com;
+            this.btnSeeConfirm.Location = new System.Drawing.Point(12, 12);
+            this.btnSeeConfirm.Name = "btnSeeConfirm";
+            this.btnSeeConfirm.Size = new System.Drawing.Size(37, 25);
+            this.btnSeeConfirm.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnSeeConfirm.TabIndex = 41;
+            this.btnSeeConfirm.TabStop = false;
+            this.btnSeeConfirm.Click += new System.EventHandler(this.btnSeeConfirm_Click);
+            // 
             // txtPassword
             // 
-            this.txtPassword.BackColor = System.Drawing.SystemColors.Window;
-            this.txtPassword.BorderColor = System.Drawing.Color.White;
-            this.txtPassword.BorderFocusColor = System.Drawing.Color.Green;
-            this.txtPassword.BorderRadius = 20;
-            this.txtPassword.BorderSize = 2;
+            this.txtPassword.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.txtPassword.Controls.Add(this.btnSee);
+            this.txtPassword.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtPassword.Location = new System.Drawing.Point(135, 300);
-            this.txtPassword.Margin = new System.Windows.Forms.Padding(4);
-            this.txtPassword.Multiline = false;
+            this.txtPassword.Location = new System.Drawing.Point(33, 291);
+            this.txtPassword.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtPassword.MinimumSize = new System.Drawing.Size(1, 16);
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.txtPassword.PasswordChar = true;
-            this.txtPassword.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.txtPassword.PlaceholderText = "New Password";
-            this.txtPassword.Size = new System.Drawing.Size(262, 46);
-            this.txtPassword.TabIndex = 42;
-            this.txtPassword.Texts = "";
-            this.txtPassword.UnderlinedStyle = false;
+            this.txtPassword.Padding = new System.Windows.Forms.Padding(50, 0, 5, 0);
+            this.txtPassword.PasswordChar = '●';
+            this.txtPassword.Radius = 40;
+            this.txtPassword.ShowText = false;
+            this.txtPassword.Size = new System.Drawing.Size(311, 46);
+            this.txtPassword.Style = Sunny.UI.UIStyle.Custom;
+            this.txtPassword.TabIndex = 52;
+            this.txtPassword.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.txtPassword.Watermark = "New password";
+            this.txtPassword.WatermarkActiveColor = System.Drawing.Color.White;
+            this.txtPassword.WatermarkColor = System.Drawing.Color.DarkGray;
+            this.txtPassword.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
-            // rjTextBox1
+            // btnSee
             // 
-            this.rjTextBox1.BackColor = System.Drawing.SystemColors.Window;
-            this.rjTextBox1.BorderColor = System.Drawing.Color.White;
-            this.rjTextBox1.BorderFocusColor = System.Drawing.Color.Green;
-            this.rjTextBox1.BorderRadius = 20;
-            this.rjTextBox1.BorderSize = 2;
-            this.rjTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjTextBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.rjTextBox1.Location = new System.Drawing.Point(135, 382);
-            this.rjTextBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.rjTextBox1.Multiline = false;
-            this.rjTextBox1.Name = "rjTextBox1";
-            this.rjTextBox1.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.rjTextBox1.PasswordChar = true;
-            this.rjTextBox1.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.rjTextBox1.PlaceholderText = "Conform Password";
-            this.rjTextBox1.Size = new System.Drawing.Size(262, 46);
-            this.rjTextBox1.TabIndex = 43;
-            this.rjTextBox1.Texts = "";
-            this.rjTextBox1.UnderlinedStyle = false;
+            this.btnSee.BackColor = System.Drawing.Color.White;
+            this.btnSee.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSee.Image = global::Supermarket.Properties.Resources.eye_svgrepo_com;
+            this.btnSee.Location = new System.Drawing.Point(12, 12);
+            this.btnSee.Name = "btnSee";
+            this.btnSee.Size = new System.Drawing.Size(37, 25);
+            this.btnSee.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnSee.TabIndex = 41;
+            this.btnSee.TabStop = false;
+            this.btnSee.Click += new System.EventHandler(this.btnSee_Click);
             // 
-            // btnSave
+            // btnSend
             // 
-            this.btnSave.BackColor = System.Drawing.Color.Green;
-            this.btnSave.BackgroundColor = System.Drawing.Color.Green;
-            this.btnSave.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnSave.BorderRadius = 20;
-            this.btnSave.BorderSize = 0;
-            this.btnSave.FlatAppearance.BorderSize = 0;
-            this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSave.ForeColor = System.Drawing.Color.White;
-            this.btnSave.Location = new System.Drawing.Point(135, 548);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(135, 47);
-            this.btnSave.TabIndex = 44;
-            this.btnSave.Text = "Save";
-            this.btnSave.TextColor = System.Drawing.Color.White;
-            this.btnSave.UseVisualStyleBackColor = false;
+            this.btnSend.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.btnSend.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSend.Font = new System.Drawing.Font("Microsoft YaHei", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSend.Location = new System.Drawing.Point(126, 516);
+            this.btnSend.MinimumSize = new System.Drawing.Size(1, 1);
+            this.btnSend.Name = "btnSend";
+            this.btnSend.Radius = 40;
+            this.btnSend.Size = new System.Drawing.Size(128, 44);
+            this.btnSend.Style = Sunny.UI.UIStyle.Custom;
+            this.btnSend.TabIndex = 53;
+            this.btnSend.Text = "Save";
+            this.btnSend.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
             // EnterNewPass
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Black;
-            this.Controls.Add(this.btnSave);
-            this.Controls.Add(this.rjTextBox1);
-            this.Controls.Add(this.txtPassword);
+            this.BackColor = System.Drawing.Color.Blue;
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.pictureBox6);
-            this.Controls.Add(this.pictureBox7);
             this.Controls.Add(this.pictureBox8);
+            this.Controls.Add(this.uiPanel1);
             this.Name = "EnterNewPass";
-            this.Size = new System.Drawing.Size(410, 650);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
+            this.Size = new System.Drawing.Size(397, 624);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
+            this.uiPanel1.ResumeLayout(false);
+            this.txtCPassword.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.btnSeeConfirm)).EndInit();
+            this.txtPassword.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.btnSee)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.PictureBox pictureBox6;
-        private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.PictureBox pictureBox8;
         private System.Windows.Forms.Label label4;
-        private RJCodeAdvance.RJControls.RJTextBox txtPassword;
-        private RJCodeAdvance.RJControls.RJTextBox rjTextBox1;
-        private RJCodeAdvance.RJControls.RJButton btnSave;
+        private Sunny.UI.UIPanel uiPanel1;
+        private Sunny.UI.UITextBox txtCPassword;
+        private System.Windows.Forms.PictureBox btnSeeConfirm;
+        private Sunny.UI.UITextBox txtPassword;
+        private System.Windows.Forms.PictureBox btnSee;
+        private Sunny.UI.UIButton btnSend;
     }
 }
