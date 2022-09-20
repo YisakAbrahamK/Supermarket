@@ -95,6 +95,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Model\Product.cs" />
     <Compile Include="View\Forms\Admin\AdminForm.cs">
       <SubType>Form</SubType>
     </Compile>

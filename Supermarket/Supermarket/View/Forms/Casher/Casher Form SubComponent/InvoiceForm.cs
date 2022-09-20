@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Supermarket.Model;
+using Supermarket.View.User_Controls.SignInControls;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -77,6 +79,20 @@ namespace Supermarket.View.Forms
 
         private void InvoiceForm_Load(object sender, EventArgs e)
         {
+
+            Product.lodeTestdata();
+            foreach (Product product in Product.getAllProduct())
+            {
+                ProductViewCard productViewCard = new ProductViewCard(product);
+                flowLayoutPanel1.Controls.Add(productViewCard);
+                productViewCard.Show();
+                productViewCard.ButtonAdd.Click += (object se, EventArgs ee) =>
+                {
+
+                };
+
+            }
+
 
         }
     }

@@ -30,25 +30,21 @@
         {
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.uiSymbolLabel3 = new Sunny.UI.UISymbolLabel();
             this.txtSearch = new RJCodeAdvance.RJControls.RJTextBox();
             this.panel7 = new System.Windows.Forms.Panel();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
+            this.cartView1 = new Supermarket.View.User_Controls.SignInControls.CartView();
+            this.cartView2 = new Supermarket.View.User_Controls.SignInControls.CartView();
+            this.cartView3 = new Supermarket.View.User_Controls.SignInControls.CartView();
+            this.cartView4 = new Supermarket.View.User_Controls.SignInControls.CartView();
+            this.cartView5 = new Supermarket.View.User_Controls.SignInControls.CartView();
+            this.cartView6 = new Supermarket.View.User_Controls.SignInControls.CartView();
+            this.cartView7 = new Supermarket.View.User_Controls.SignInControls.CartView();
             this.panel8 = new System.Windows.Forms.Panel();
             this.uiSymbolLabel2 = new Sunny.UI.UISymbolLabel();
-            this.uiSymbolLabel3 = new Sunny.UI.UISymbolLabel();
-            this.uiSymbolLabel1 = new Sunny.UI.UISymbolLabel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.productViewCard1 = new Supermarket.View.User_Controls.SignInControls.ProductViewCard();
-            this.productViewCard2 = new Supermarket.View.User_Controls.SignInControls.ProductViewCard();
-            this.productViewCard3 = new Supermarket.View.User_Controls.SignInControls.ProductViewCard();
-            this.productViewCard4 = new Supermarket.View.User_Controls.SignInControls.ProductViewCard();
-            this.productViewCard5 = new Supermarket.View.User_Controls.SignInControls.ProductViewCard();
-            this.productViewCard6 = new Supermarket.View.User_Controls.SignInControls.ProductViewCard();
-            this.productViewCard7 = new Supermarket.View.User_Controls.SignInControls.ProductViewCard();
-            this.productViewCard8 = new Supermarket.View.User_Controls.SignInControls.ProductViewCard();
-            this.productViewCard9 = new Supermarket.View.User_Controls.SignInControls.ProductViewCard();
             this.uiPanel2 = new Sunny.UI.UIPanel();
             this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel5 = new System.Windows.Forms.Panel();
@@ -77,16 +73,10 @@
             this.saaLine6 = new SaaUI.SaaLine();
             this.label8 = new System.Windows.Forms.Label();
             this.btnLogin = new RJCodeAdvance.RJControls.RJButton();
-            this.cartView1 = new Supermarket.View.User_Controls.SignInControls.CartView();
-            this.cartView2 = new Supermarket.View.User_Controls.SignInControls.CartView();
-            this.cartView3 = new Supermarket.View.User_Controls.SignInControls.CartView();
-            this.cartView4 = new Supermarket.View.User_Controls.SignInControls.CartView();
-            this.cartView5 = new Supermarket.View.User_Controls.SignInControls.CartView();
-            this.cartView6 = new Supermarket.View.User_Controls.SignInControls.CartView();
-            this.cartView7 = new Supermarket.View.User_Controls.SignInControls.CartView();
+            this.uiSymbolLabel1 = new Sunny.UI.UISymbolLabel();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel4.SuspendLayout();
-            this.flowLayoutPanel1.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel7.SuspendLayout();
             this.flowLayoutPanel2.SuspendLayout();
@@ -132,26 +122,6 @@
             this.panel4.Size = new System.Drawing.Size(439, 747);
             this.panel4.TabIndex = 0;
             // 
-            // flowLayoutPanel1
-            // 
-            this.flowLayoutPanel1.AutoScroll = true;
-            this.flowLayoutPanel1.AutoSize = true;
-            this.flowLayoutPanel1.Controls.Add(this.productViewCard1);
-            this.flowLayoutPanel1.Controls.Add(this.productViewCard2);
-            this.flowLayoutPanel1.Controls.Add(this.productViewCard3);
-            this.flowLayoutPanel1.Controls.Add(this.productViewCard4);
-            this.flowLayoutPanel1.Controls.Add(this.productViewCard5);
-            this.flowLayoutPanel1.Controls.Add(this.productViewCard6);
-            this.flowLayoutPanel1.Controls.Add(this.productViewCard7);
-            this.flowLayoutPanel1.Controls.Add(this.productViewCard8);
-            this.flowLayoutPanel1.Controls.Add(this.productViewCard9);
-            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 100);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Padding = new System.Windows.Forms.Padding(10);
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(439, 647);
-            this.flowLayoutPanel1.TabIndex = 47;
-            // 
             // panel6
             // 
             this.panel6.Controls.Add(this.uiSymbolLabel3);
@@ -161,6 +131,25 @@
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(439, 100);
             this.panel6.TabIndex = 0;
+            // 
+            // uiSymbolLabel3
+            // 
+            this.uiSymbolLabel3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.uiSymbolLabel3.BackColor = System.Drawing.SystemColors.Control;
+            this.uiSymbolLabel3.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
+            this.uiSymbolLabel3.ForeColor = System.Drawing.Color.White;
+            this.uiSymbolLabel3.Location = new System.Drawing.Point(365, 34);
+            this.uiSymbolLabel3.MinimumSize = new System.Drawing.Size(1, 1);
+            this.uiSymbolLabel3.Name = "uiSymbolLabel3";
+            this.uiSymbolLabel3.Padding = new System.Windows.Forms.Padding(44, 0, 0, 0);
+            this.uiSymbolLabel3.Size = new System.Drawing.Size(35, 34);
+            this.uiSymbolLabel3.Style = Sunny.UI.UIStyle.Custom;
+            this.uiSymbolLabel3.StyleCustomMode = true;
+            this.uiSymbolLabel3.Symbol = 61442;
+            this.uiSymbolLabel3.SymbolColor = System.Drawing.Color.Black;
+            this.uiSymbolLabel3.SymbolSize = 40;
+            this.uiSymbolLabel3.TabIndex = 57;
+            this.uiSymbolLabel3.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
             // txtSearch
             // 
@@ -214,6 +203,97 @@
             this.flowLayoutPanel2.Size = new System.Drawing.Size(439, 647);
             this.flowLayoutPanel2.TabIndex = 48;
             // 
+            // cartView1
+            // 
+            this.cartView1.Location = new System.Drawing.Point(8, 13);
+            this.cartView1.Name = "cartView1";
+            this.cartView1.price = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.cartView1.Size = new System.Drawing.Size(386, 174);
+            this.cartView1.TabIndex = 0;
+            this.cartView1.upc = 132456789;
+            // 
+            // cartView2
+            // 
+            this.cartView2.Location = new System.Drawing.Point(8, 193);
+            this.cartView2.Name = "cartView2";
+            this.cartView2.price = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.cartView2.Size = new System.Drawing.Size(386, 174);
+            this.cartView2.TabIndex = 1;
+            this.cartView2.upc = 132456789;
+            // 
+            // cartView3
+            // 
+            this.cartView3.Location = new System.Drawing.Point(8, 373);
+            this.cartView3.Name = "cartView3";
+            this.cartView3.price = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.cartView3.Size = new System.Drawing.Size(386, 174);
+            this.cartView3.TabIndex = 2;
+            this.cartView3.upc = 132456789;
+            // 
+            // cartView4
+            // 
+            this.cartView4.Location = new System.Drawing.Point(8, 553);
+            this.cartView4.Name = "cartView4";
+            this.cartView4.price = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.cartView4.Size = new System.Drawing.Size(386, 174);
+            this.cartView4.TabIndex = 3;
+            this.cartView4.upc = 132456789;
+            // 
+            // cartView5
+            // 
+            this.cartView5.Location = new System.Drawing.Point(8, 733);
+            this.cartView5.Name = "cartView5";
+            this.cartView5.price = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.cartView5.Size = new System.Drawing.Size(386, 174);
+            this.cartView5.TabIndex = 4;
+            this.cartView5.upc = 132456789;
+            // 
+            // cartView6
+            // 
+            this.cartView6.Location = new System.Drawing.Point(8, 913);
+            this.cartView6.Name = "cartView6";
+            this.cartView6.price = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.cartView6.Size = new System.Drawing.Size(386, 174);
+            this.cartView6.TabIndex = 5;
+            this.cartView6.upc = 132456789;
+            // 
+            // cartView7
+            // 
+            this.cartView7.Location = new System.Drawing.Point(8, 1093);
+            this.cartView7.Name = "cartView7";
+            this.cartView7.price = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.cartView7.Size = new System.Drawing.Size(386, 174);
+            this.cartView7.TabIndex = 6;
+            this.cartView7.upc = 132456789;
+            // 
             // panel8
             // 
             this.panel8.Controls.Add(this.uiSymbolLabel2);
@@ -242,44 +322,6 @@
             this.uiSymbolLabel2.TabIndex = 55;
             this.uiSymbolLabel2.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
-            // uiSymbolLabel3
-            // 
-            this.uiSymbolLabel3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.uiSymbolLabel3.BackColor = System.Drawing.SystemColors.Control;
-            this.uiSymbolLabel3.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
-            this.uiSymbolLabel3.ForeColor = System.Drawing.Color.White;
-            this.uiSymbolLabel3.Location = new System.Drawing.Point(365, 34);
-            this.uiSymbolLabel3.MinimumSize = new System.Drawing.Size(1, 1);
-            this.uiSymbolLabel3.Name = "uiSymbolLabel3";
-            this.uiSymbolLabel3.Padding = new System.Windows.Forms.Padding(44, 0, 0, 0);
-            this.uiSymbolLabel3.Size = new System.Drawing.Size(35, 34);
-            this.uiSymbolLabel3.Style = Sunny.UI.UIStyle.Custom;
-            this.uiSymbolLabel3.StyleCustomMode = true;
-            this.uiSymbolLabel3.Symbol = 61442;
-            this.uiSymbolLabel3.SymbolColor = System.Drawing.Color.Black;
-            this.uiSymbolLabel3.SymbolSize = 40;
-            this.uiSymbolLabel3.TabIndex = 57;
-            this.uiSymbolLabel3.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
-            // 
-            // uiSymbolLabel1
-            // 
-            this.uiSymbolLabel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.uiSymbolLabel1.BackColor = System.Drawing.Color.White;
-            this.uiSymbolLabel1.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
-            this.uiSymbolLabel1.ForeColor = System.Drawing.Color.White;
-            this.uiSymbolLabel1.Location = new System.Drawing.Point(132, 5);
-            this.uiSymbolLabel1.MinimumSize = new System.Drawing.Size(1, 1);
-            this.uiSymbolLabel1.Name = "uiSymbolLabel1";
-            this.uiSymbolLabel1.Padding = new System.Windows.Forms.Padding(64, 0, 0, 0);
-            this.uiSymbolLabel1.Size = new System.Drawing.Size(89, 83);
-            this.uiSymbolLabel1.Style = Sunny.UI.UIStyle.Custom;
-            this.uiSymbolLabel1.StyleCustomMode = true;
-            this.uiSymbolLabel1.Symbol = 104;
-            this.uiSymbolLabel1.SymbolColor = System.Drawing.Color.Black;
-            this.uiSymbolLabel1.SymbolSize = 60;
-            this.uiSymbolLabel1.TabIndex = 56;
-            this.uiSymbolLabel1.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
-            // 
             // panel1
             // 
             this.panel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
@@ -290,87 +332,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(349, 747);
             this.panel1.TabIndex = 3;
-            // 
-            // productViewCard1
-            // 
-            this.productViewCard1.AutoSize = true;
-            this.productViewCard1.Location = new System.Drawing.Point(10, 10);
-            this.productViewCard1.Margin = new System.Windows.Forms.Padding(0, 0, 0, 3);
-            this.productViewCard1.Name = "productViewCard1";
-            this.productViewCard1.Size = new System.Drawing.Size(378, 180);
-            this.productViewCard1.TabIndex = 0;
-            // 
-            // productViewCard2
-            // 
-            this.productViewCard2.AutoSize = true;
-            this.productViewCard2.Location = new System.Drawing.Point(10, 193);
-            this.productViewCard2.Margin = new System.Windows.Forms.Padding(0, 0, 0, 3);
-            this.productViewCard2.Name = "productViewCard2";
-            this.productViewCard2.Size = new System.Drawing.Size(378, 180);
-            this.productViewCard2.TabIndex = 1;
-            // 
-            // productViewCard3
-            // 
-            this.productViewCard3.AutoSize = true;
-            this.productViewCard3.Location = new System.Drawing.Point(10, 376);
-            this.productViewCard3.Margin = new System.Windows.Forms.Padding(0, 0, 0, 3);
-            this.productViewCard3.Name = "productViewCard3";
-            this.productViewCard3.Size = new System.Drawing.Size(378, 180);
-            this.productViewCard3.TabIndex = 2;
-            // 
-            // productViewCard4
-            // 
-            this.productViewCard4.AutoSize = true;
-            this.productViewCard4.Location = new System.Drawing.Point(10, 559);
-            this.productViewCard4.Margin = new System.Windows.Forms.Padding(0, 0, 0, 3);
-            this.productViewCard4.Name = "productViewCard4";
-            this.productViewCard4.Size = new System.Drawing.Size(378, 180);
-            this.productViewCard4.TabIndex = 3;
-            // 
-            // productViewCard5
-            // 
-            this.productViewCard5.AutoSize = true;
-            this.productViewCard5.Location = new System.Drawing.Point(10, 742);
-            this.productViewCard5.Margin = new System.Windows.Forms.Padding(0, 0, 0, 3);
-            this.productViewCard5.Name = "productViewCard5";
-            this.productViewCard5.Size = new System.Drawing.Size(378, 180);
-            this.productViewCard5.TabIndex = 4;
-            // 
-            // productViewCard6
-            // 
-            this.productViewCard6.AutoSize = true;
-            this.productViewCard6.Location = new System.Drawing.Point(10, 925);
-            this.productViewCard6.Margin = new System.Windows.Forms.Padding(0, 0, 0, 3);
-            this.productViewCard6.Name = "productViewCard6";
-            this.productViewCard6.Size = new System.Drawing.Size(378, 180);
-            this.productViewCard6.TabIndex = 5;
-            // 
-            // productViewCard7
-            // 
-            this.productViewCard7.AutoSize = true;
-            this.productViewCard7.Location = new System.Drawing.Point(10, 1108);
-            this.productViewCard7.Margin = new System.Windows.Forms.Padding(0, 0, 0, 3);
-            this.productViewCard7.Name = "productViewCard7";
-            this.productViewCard7.Size = new System.Drawing.Size(378, 180);
-            this.productViewCard7.TabIndex = 6;
-            // 
-            // productViewCard8
-            // 
-            this.productViewCard8.AutoSize = true;
-            this.productViewCard8.Location = new System.Drawing.Point(10, 1291);
-            this.productViewCard8.Margin = new System.Windows.Forms.Padding(0, 0, 0, 3);
-            this.productViewCard8.Name = "productViewCard8";
-            this.productViewCard8.Size = new System.Drawing.Size(378, 180);
-            this.productViewCard8.TabIndex = 7;
-            // 
-            // productViewCard9
-            // 
-            this.productViewCard9.AutoSize = true;
-            this.productViewCard9.Location = new System.Drawing.Point(10, 1474);
-            this.productViewCard9.Margin = new System.Windows.Forms.Padding(0, 0, 0, 3);
-            this.productViewCard9.Name = "productViewCard9";
-            this.productViewCard9.Size = new System.Drawing.Size(378, 180);
-            this.productViewCard9.TabIndex = 8;
             // 
             // uiPanel2
             // 
@@ -799,54 +760,35 @@
             this.btnLogin.TextColor = System.Drawing.Color.White;
             this.btnLogin.UseVisualStyleBackColor = false;
             // 
-            // cartView1
+            // uiSymbolLabel1
             // 
-            this.cartView1.Location = new System.Drawing.Point(8, 13);
-            this.cartView1.Name = "cartView1";
-            this.cartView1.Size = new System.Drawing.Size(386, 174);
-            this.cartView1.TabIndex = 0;
+            this.uiSymbolLabel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.uiSymbolLabel1.BackColor = System.Drawing.Color.White;
+            this.uiSymbolLabel1.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
+            this.uiSymbolLabel1.ForeColor = System.Drawing.Color.White;
+            this.uiSymbolLabel1.Location = new System.Drawing.Point(132, 5);
+            this.uiSymbolLabel1.MinimumSize = new System.Drawing.Size(1, 1);
+            this.uiSymbolLabel1.Name = "uiSymbolLabel1";
+            this.uiSymbolLabel1.Padding = new System.Windows.Forms.Padding(64, 0, 0, 0);
+            this.uiSymbolLabel1.Size = new System.Drawing.Size(89, 83);
+            this.uiSymbolLabel1.Style = Sunny.UI.UIStyle.Custom;
+            this.uiSymbolLabel1.StyleCustomMode = true;
+            this.uiSymbolLabel1.Symbol = 104;
+            this.uiSymbolLabel1.SymbolColor = System.Drawing.Color.Black;
+            this.uiSymbolLabel1.SymbolSize = 60;
+            this.uiSymbolLabel1.TabIndex = 56;
+            this.uiSymbolLabel1.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
-            // cartView2
+            // flowLayoutPanel1
             // 
-            this.cartView2.Location = new System.Drawing.Point(8, 193);
-            this.cartView2.Name = "cartView2";
-            this.cartView2.Size = new System.Drawing.Size(386, 174);
-            this.cartView2.TabIndex = 1;
-            // 
-            // cartView3
-            // 
-            this.cartView3.Location = new System.Drawing.Point(8, 373);
-            this.cartView3.Name = "cartView3";
-            this.cartView3.Size = new System.Drawing.Size(386, 174);
-            this.cartView3.TabIndex = 2;
-            // 
-            // cartView4
-            // 
-            this.cartView4.Location = new System.Drawing.Point(8, 553);
-            this.cartView4.Name = "cartView4";
-            this.cartView4.Size = new System.Drawing.Size(386, 174);
-            this.cartView4.TabIndex = 3;
-            // 
-            // cartView5
-            // 
-            this.cartView5.Location = new System.Drawing.Point(8, 733);
-            this.cartView5.Name = "cartView5";
-            this.cartView5.Size = new System.Drawing.Size(386, 174);
-            this.cartView5.TabIndex = 4;
-            // 
-            // cartView6
-            // 
-            this.cartView6.Location = new System.Drawing.Point(8, 913);
-            this.cartView6.Name = "cartView6";
-            this.cartView6.Size = new System.Drawing.Size(386, 174);
-            this.cartView6.TabIndex = 5;
-            // 
-            // cartView7
-            // 
-            this.cartView7.Location = new System.Drawing.Point(8, 1093);
-            this.cartView7.Name = "cartView7";
-            this.cartView7.Size = new System.Drawing.Size(386, 174);
-            this.cartView7.TabIndex = 6;
+            this.flowLayoutPanel1.AutoScroll = true;
+            this.flowLayoutPanel1.AutoSize = true;
+            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 100);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Padding = new System.Windows.Forms.Padding(10);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(439, 647);
+            this.flowLayoutPanel1.TabIndex = 47;
             // 
             // InvoiceForm
             // 
@@ -863,8 +805,6 @@
             this.tableLayoutPanel1.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
-            this.flowLayoutPanel1.ResumeLayout(false);
-            this.flowLayoutPanel1.PerformLayout();
             this.panel6.ResumeLayout(false);
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
@@ -893,7 +833,6 @@
 
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Panel panel6;
         private RJCodeAdvance.RJControls.RJTextBox txtSearch;
         private System.Windows.Forms.Panel panel7;
@@ -903,15 +842,6 @@
         private Sunny.UI.UISymbolLabel uiSymbolLabel3;
         private System.Windows.Forms.Panel panel1;
         private Sunny.UI.UISymbolLabel uiSymbolLabel1;
-        private User_Controls.SignInControls.ProductViewCard productViewCard1;
-        private User_Controls.SignInControls.ProductViewCard productViewCard2;
-        private User_Controls.SignInControls.ProductViewCard productViewCard3;
-        private User_Controls.SignInControls.ProductViewCard productViewCard4;
-        private User_Controls.SignInControls.ProductViewCard productViewCard5;
-        private User_Controls.SignInControls.ProductViewCard productViewCard6;
-        private User_Controls.SignInControls.ProductViewCard productViewCard7;
-        private User_Controls.SignInControls.ProductViewCard productViewCard8;
-        private User_Controls.SignInControls.ProductViewCard productViewCard9;
         private Sunny.UI.UIPanel uiPanel2;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel3;
         private System.Windows.Forms.Panel panel5;
@@ -947,5 +877,6 @@
         private User_Controls.SignInControls.CartView cartView5;
         private User_Controls.SignInControls.CartView cartView6;
         private User_Controls.SignInControls.CartView cartView7;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
     }
 }

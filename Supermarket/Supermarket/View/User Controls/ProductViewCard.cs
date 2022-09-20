@@ -1,4 +1,6 @@
-﻿using System;
+﻿using RJCodeAdvance.RJControls;
+using Supermarket.Model;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,10 +14,25 @@ namespace Supermarket.View.User_Controls.SignInControls
 {
     public partial class ProductViewCard : UserControl
     {
-        public ProductViewCard()
+       
+
+        private RJButton _ButtonAdd;
+
+        public RJButton ButtonAdd
         {
-            InitializeComponent();
+            get { return btnAdd; }
+            
         }
+
+        public ProductViewCard(Product product)
+        {
+              
+            InitializeComponent();
+
+            lblUPC.Text = product.UPC.ToString();
+            lblPrice.Text = product.Price.ToString();
+        }
+
 
         private void label3_Click(object sender, EventArgs e)
         {

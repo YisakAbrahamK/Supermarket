@@ -30,12 +30,13 @@
         {
             this.uiPanel1 = new Sunny.UI.UIPanel();
             this.uiSymbolLabel2 = new Sunny.UI.UISymbolLabel();
-            this.btnLogin = new RJCodeAdvance.RJControls.RJButton();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.btnAdd = new RJCodeAdvance.RJControls.RJButton();
+            this.lblUPC = new System.Windows.Forms.Label();
+            this.lblPrice = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.uiPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -44,12 +45,13 @@
             this.uiPanel1.AutoSize = true;
             this.uiPanel1.BackColor = System.Drawing.Color.White;
             this.uiPanel1.Controls.Add(this.uiSymbolLabel2);
-            this.uiPanel1.Controls.Add(this.btnLogin);
-            this.uiPanel1.Controls.Add(this.label6);
-            this.uiPanel1.Controls.Add(this.label5);
+            this.uiPanel1.Controls.Add(this.btnAdd);
+            this.uiPanel1.Controls.Add(this.lblUPC);
+            this.uiPanel1.Controls.Add(this.lblPrice);
             this.uiPanel1.Controls.Add(this.label3);
             this.uiPanel1.Controls.Add(this.label2);
             this.uiPanel1.Controls.Add(this.label1);
+            this.uiPanel1.Controls.Add(this.label4);
             this.uiPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.uiPanel1.FillColor = System.Drawing.SystemColors.Control;
             this.uiPanel1.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
@@ -86,55 +88,55 @@
             this.uiSymbolLabel2.TabIndex = 54;
             this.uiSymbolLabel2.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
-            // btnLogin
+            // btnAdd
             // 
-            this.btnLogin.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            this.btnAdd.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnLogin.BackColor = System.Drawing.Color.Green;
-            this.btnLogin.BackgroundColor = System.Drawing.Color.Green;
-            this.btnLogin.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnLogin.BorderRadius = 10;
-            this.btnLogin.BorderSize = 0;
-            this.btnLogin.FlatAppearance.BorderSize = 0;
-            this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogin.ForeColor = System.Drawing.Color.White;
-            this.btnLogin.Location = new System.Drawing.Point(22, 141);
-            this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(303, 30);
-            this.btnLogin.TabIndex = 42;
-            this.btnLogin.Text = "Add";
-            this.btnLogin.TextColor = System.Drawing.Color.White;
-            this.btnLogin.UseVisualStyleBackColor = false;
+            this.btnAdd.BackColor = System.Drawing.Color.Green;
+            this.btnAdd.BackgroundColor = System.Drawing.Color.Green;
+            this.btnAdd.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnAdd.BorderRadius = 10;
+            this.btnAdd.BorderSize = 0;
+            this.btnAdd.FlatAppearance.BorderSize = 0;
+            this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdd.ForeColor = System.Drawing.Color.White;
+            this.btnAdd.Location = new System.Drawing.Point(22, 141);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(303, 30);
+            this.btnAdd.TabIndex = 42;
+            this.btnAdd.Text = "Add";
+            this.btnAdd.TextColor = System.Drawing.Color.White;
+            this.btnAdd.UseVisualStyleBackColor = false;
             // 
-            // label6
+            // lblUPC
             // 
-            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label6.BackColor = System.Drawing.SystemColors.Control;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label6.Location = new System.Drawing.Point(154, 53);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(215, 29);
-            this.label6.TabIndex = 26;
-            this.label6.Text = "132456789";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lblUPC.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblUPC.BackColor = System.Drawing.SystemColors.Control;
+            this.lblUPC.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUPC.ForeColor = System.Drawing.Color.Black;
+            this.lblUPC.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lblUPC.Location = new System.Drawing.Point(154, 53);
+            this.lblUPC.Name = "lblUPC";
+            this.lblUPC.Size = new System.Drawing.Size(215, 29);
+            this.lblUPC.TabIndex = 26;
+            this.lblUPC.Text = "132456789";
+            this.lblUPC.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // label5
+            // lblPrice
             // 
-            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label5.BackColor = System.Drawing.SystemColors.Control;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label5.Location = new System.Drawing.Point(157, 89);
-            this.label5.Margin = new System.Windows.Forms.Padding(3, 0, 3, 2);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(211, 29);
-            this.label5.TabIndex = 25;
-            this.label5.Text = "$456";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lblPrice.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblPrice.BackColor = System.Drawing.SystemColors.Control;
+            this.lblPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPrice.ForeColor = System.Drawing.Color.Black;
+            this.lblPrice.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lblPrice.Location = new System.Drawing.Point(144, 89);
+            this.lblPrice.Margin = new System.Windows.Forms.Padding(3, 0, 3, 2);
+            this.lblPrice.Name = "lblPrice";
+            this.lblPrice.Size = new System.Drawing.Size(202, 29);
+            this.lblPrice.TabIndex = 25;
+            this.lblPrice.Text = "456";
+            this.lblPrice.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label3
             // 
@@ -172,6 +174,21 @@
             this.label1.TabIndex = 22;
             this.label1.Text = "Price";
             // 
+            // label4
+            // 
+            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label4.BackColor = System.Drawing.SystemColors.Control;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.Black;
+            this.label4.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label4.Location = new System.Drawing.Point(346, 89);
+            this.label4.Margin = new System.Windows.Forms.Padding(3, 0, 3, 2);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(28, 29);
+            this.label4.TabIndex = 55;
+            this.label4.Text = "$";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
             // ProductViewCard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -191,11 +208,12 @@
 
         private Sunny.UI.UIPanel uiPanel1;
         private Sunny.UI.UISymbolLabel uiSymbolLabel2;
-        private RJCodeAdvance.RJControls.RJButton btnLogin;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
+        private RJCodeAdvance.RJControls.RJButton btnAdd;
+        private System.Windows.Forms.Label lblUPC;
+        private System.Windows.Forms.Label lblPrice;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label4;
     }
 }
