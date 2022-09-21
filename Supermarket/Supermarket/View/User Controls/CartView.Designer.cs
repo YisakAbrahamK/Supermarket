@@ -38,6 +38,8 @@
             this.lblUPC = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.uiSymbolLabel1 = new Sunny.UI.UISymbolLabel();
             this.uiPanel2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -45,6 +47,8 @@
             // 
             this.uiPanel2.AutoSize = true;
             this.uiPanel2.BackColor = System.Drawing.Color.White;
+            this.uiPanel2.Controls.Add(this.uiSymbolLabel1);
+            this.uiPanel2.Controls.Add(this.label1);
             this.uiPanel2.Controls.Add(this.uiSymbolLabel2);
             this.uiPanel2.Controls.Add(this.saaCheckBox1);
             this.uiPanel2.Controls.Add(this.lblProductName);
@@ -156,6 +160,7 @@
             this.iudQuantity.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.iudQuantity.Value = 1;
             this.iudQuantity.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            this.iudQuantity.ValueChanged += new Sunny.UI.UIIntegerUpDown.OnValueChanged(this.iudQuantity_ValueChanged);
             // 
             // lblTotal
             // 
@@ -165,9 +170,9 @@
             this.lblTotal.ForeColor = System.Drawing.Color.Black;
             this.lblTotal.Location = new System.Drawing.Point(132, 136);
             this.lblTotal.Name = "lblTotal";
-            this.lblTotal.Size = new System.Drawing.Size(240, 29);
+            this.lblTotal.Size = new System.Drawing.Size(210, 29);
             this.lblTotal.TabIndex = 28;
-            this.lblTotal.Text = "456 $";
+            this.lblTotal.Text = "456";
             this.lblTotal.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // label7
@@ -217,6 +222,38 @@
             this.label11.TabIndex = 22;
             this.label11.Text = "Quantity";
             // 
+            // label1
+            // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label1.BackColor = System.Drawing.SystemColors.Control;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.Location = new System.Drawing.Point(345, 136);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(27, 29);
+            this.label1.TabIndex = 54;
+            this.label1.Text = "$";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // uiSymbolLabel1
+            // 
+            this.uiSymbolLabel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.uiSymbolLabel1.BackColor = System.Drawing.SystemColors.Control;
+            this.uiSymbolLabel1.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
+            this.uiSymbolLabel1.Location = new System.Drawing.Point(168, 67);
+            this.uiSymbolLabel1.MinimumSize = new System.Drawing.Size(1, 1);
+            this.uiSymbolLabel1.Name = "uiSymbolLabel1";
+            this.uiSymbolLabel1.Padding = new System.Windows.Forms.Padding(39, 0, 0, 0);
+            this.uiSymbolLabel1.Size = new System.Drawing.Size(51, 40);
+            this.uiSymbolLabel1.Style = Sunny.UI.UIStyle.Custom;
+            this.uiSymbolLabel1.StyleCustomMode = true;
+            this.uiSymbolLabel1.Symbol = 361944;
+            this.uiSymbolLabel1.SymbolColor = System.Drawing.Color.Red;
+            this.uiSymbolLabel1.SymbolSize = 35;
+            this.uiSymbolLabel1.TabIndex = 55;
+            this.uiSymbolLabel1.UseDoubleClick = true;
+            this.uiSymbolLabel1.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            // 
             // CartView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -242,5 +279,7 @@
         private System.Windows.Forms.Label lblUPC;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label1;
+        private Sunny.UI.UISymbolLabel uiSymbolLabel1;
     }
 }

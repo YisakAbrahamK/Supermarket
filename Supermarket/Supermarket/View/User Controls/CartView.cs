@@ -1,4 +1,8 @@
-﻿using System;
+﻿using RJCodeAdvance.RJControls;
+using SaaUI;
+using Sunny.UI;
+using Supermarket.Model;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,94 +16,39 @@ namespace Supermarket.View.User_Controls.SignInControls
 {
     public partial class CartView : UserControl
     {
-        private decimal _price;
+       
+        Product product;
 
-        public decimal price
+        private UISymbolLabel _LabelDelete;
+
+        public UISymbolLabel LabelDelete
         {
-            get { return _price; }
-            set { _price = value; }
+            get { return uiSymbolLabel2; }
         }
 
-        public int upc
+        private SaaCheckBox _CartCheckBox;
+        public SaaCheckBox CartCheckBox
         {
-            get { return int.Parse(lblUPC.Text); }
-            set { lblUPC.Text = value.ToString(); }
+            get { return saaCheckBox1;}
         }
 
-        public CartView()
+
+
+        public CartView(Product product)
         {
+            
             InitializeComponent();
-        }
-
-
-        private void label5_Click(object sender, EventArgs e)
-        {
+            this.product = product;
+            lblProductName.Text = product.Name;
+            lblUPC.Text = product.UPC.ToString();
 
         }
 
-        private void label3_Click(object sender, EventArgs e)
+
+        private void iudQuantity_ValueChanged(object sender, int value)
         {
+            lblTotal.Text = (iudQuantity.Value * product.Price).ToString();
 
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void uiIntegerUpDown1_ValueChanged(object sender, int value)
-        {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label7_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label8_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label10_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label11_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void rjButton1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label9_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void saaCheckBox1_CheckChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void uiSymbolLabel2_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("Dc");
         }
     }
 }

@@ -35,13 +35,7 @@
             this.txtSearch = new RJCodeAdvance.RJControls.RJTextBox();
             this.panel7 = new System.Windows.Forms.Panel();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
-            this.cartView1 = new Supermarket.View.User_Controls.SignInControls.CartView();
-            this.cartView2 = new Supermarket.View.User_Controls.SignInControls.CartView();
-            this.cartView3 = new Supermarket.View.User_Controls.SignInControls.CartView();
-            this.cartView4 = new Supermarket.View.User_Controls.SignInControls.CartView();
-            this.cartView5 = new Supermarket.View.User_Controls.SignInControls.CartView();
-            this.cartView6 = new Supermarket.View.User_Controls.SignInControls.CartView();
-            this.cartView7 = new Supermarket.View.User_Controls.SignInControls.CartView();
+
             this.panel8 = new System.Windows.Forms.Panel();
             this.uiSymbolLabel2 = new Sunny.UI.UISymbolLabel();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -189,110 +183,13 @@
             // 
             this.flowLayoutPanel2.AutoScroll = true;
             this.flowLayoutPanel2.AutoSize = true;
-            this.flowLayoutPanel2.Controls.Add(this.cartView1);
-            this.flowLayoutPanel2.Controls.Add(this.cartView2);
-            this.flowLayoutPanel2.Controls.Add(this.cartView3);
-            this.flowLayoutPanel2.Controls.Add(this.cartView4);
-            this.flowLayoutPanel2.Controls.Add(this.cartView5);
-            this.flowLayoutPanel2.Controls.Add(this.cartView6);
-            this.flowLayoutPanel2.Controls.Add(this.cartView7);
             this.flowLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel2.Location = new System.Drawing.Point(0, 100);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
             this.flowLayoutPanel2.Padding = new System.Windows.Forms.Padding(5, 10, 10, 10);
             this.flowLayoutPanel2.Size = new System.Drawing.Size(439, 647);
             this.flowLayoutPanel2.TabIndex = 48;
-            // 
-            // cartView1
-            // 
-            this.cartView1.Location = new System.Drawing.Point(8, 13);
-            this.cartView1.Name = "cartView1";
-            this.cartView1.price = new decimal(new int[] {
-            0,
-            0,
-            0,
-            0});
-            this.cartView1.Size = new System.Drawing.Size(386, 174);
-            this.cartView1.TabIndex = 0;
-            this.cartView1.upc = 132456789;
-            // 
-            // cartView2
-            // 
-            this.cartView2.Location = new System.Drawing.Point(8, 193);
-            this.cartView2.Name = "cartView2";
-            this.cartView2.price = new decimal(new int[] {
-            0,
-            0,
-            0,
-            0});
-            this.cartView2.Size = new System.Drawing.Size(386, 174);
-            this.cartView2.TabIndex = 1;
-            this.cartView2.upc = 132456789;
-            // 
-            // cartView3
-            // 
-            this.cartView3.Location = new System.Drawing.Point(8, 373);
-            this.cartView3.Name = "cartView3";
-            this.cartView3.price = new decimal(new int[] {
-            0,
-            0,
-            0,
-            0});
-            this.cartView3.Size = new System.Drawing.Size(386, 174);
-            this.cartView3.TabIndex = 2;
-            this.cartView3.upc = 132456789;
-            // 
-            // cartView4
-            // 
-            this.cartView4.Location = new System.Drawing.Point(8, 553);
-            this.cartView4.Name = "cartView4";
-            this.cartView4.price = new decimal(new int[] {
-            0,
-            0,
-            0,
-            0});
-            this.cartView4.Size = new System.Drawing.Size(386, 174);
-            this.cartView4.TabIndex = 3;
-            this.cartView4.upc = 132456789;
-            // 
-            // cartView5
-            // 
-            this.cartView5.Location = new System.Drawing.Point(8, 733);
-            this.cartView5.Name = "cartView5";
-            this.cartView5.price = new decimal(new int[] {
-            0,
-            0,
-            0,
-            0});
-            this.cartView5.Size = new System.Drawing.Size(386, 174);
-            this.cartView5.TabIndex = 4;
-            this.cartView5.upc = 132456789;
-            // 
-            // cartView6
-            // 
-            this.cartView6.Location = new System.Drawing.Point(8, 913);
-            this.cartView6.Name = "cartView6";
-            this.cartView6.price = new decimal(new int[] {
-            0,
-            0,
-            0,
-            0});
-            this.cartView6.Size = new System.Drawing.Size(386, 174);
-            this.cartView6.TabIndex = 5;
-            this.cartView6.upc = 132456789;
-            // 
-            // cartView7
-            // 
-            this.cartView7.Location = new System.Drawing.Point(8, 1093);
-            this.cartView7.Name = "cartView7";
-            this.cartView7.price = new decimal(new int[] {
-            0,
-            0,
-            0,
-            0});
-            this.cartView7.Size = new System.Drawing.Size(386, 174);
-            this.cartView7.TabIndex = 6;
-            this.cartView7.upc = 132456789;
+
             // 
             // panel8
             // 

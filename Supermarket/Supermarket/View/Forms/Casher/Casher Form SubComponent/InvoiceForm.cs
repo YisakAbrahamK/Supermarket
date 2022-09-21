@@ -88,7 +88,13 @@ namespace Supermarket.View.Forms
                 productViewCard.Show();
                 productViewCard.ButtonAdd.Click += (object se, EventArgs ee) =>
                 {
-
+                    CartView cartView = new CartView(product);
+                    flowLayoutPanel2.Controls.Add(cartView);
+                    cartView.Show();
+                    cartView.LabelDelete.Click += (object see, EventArgs eee) =>
+                    {
+                        cartView.Dispose();
+                    };
                 };
 
             }
