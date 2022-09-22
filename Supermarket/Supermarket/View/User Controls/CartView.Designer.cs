@@ -29,31 +29,32 @@
         private void InitializeComponent()
         {
             this.uiPanel2 = new Sunny.UI.UIPanel();
-            this.uiSymbolLabel2 = new Sunny.UI.UISymbolLabel();
+            this.lblTotal = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.picDelete = new System.Windows.Forms.PictureBox();
             this.saaCheckBox1 = new SaaUI.SaaCheckBox();
             this.lblProductName = new System.Windows.Forms.Label();
             this.iudQuantity = new Sunny.UI.UIIntegerUpDown();
-            this.lblTotal = new System.Windows.Forms.Label();
+            this.lblSubtotal = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.lblUPC = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.uiSymbolLabel1 = new Sunny.UI.UISymbolLabel();
             this.uiPanel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picDelete)).BeginInit();
             this.SuspendLayout();
             // 
             // uiPanel2
             // 
             this.uiPanel2.AutoSize = true;
             this.uiPanel2.BackColor = System.Drawing.Color.White;
-            this.uiPanel2.Controls.Add(this.uiSymbolLabel1);
-            this.uiPanel2.Controls.Add(this.label1);
-            this.uiPanel2.Controls.Add(this.uiSymbolLabel2);
+            this.uiPanel2.Controls.Add(this.lblTotal);
+            this.uiPanel2.Controls.Add(this.label2);
+            this.uiPanel2.Controls.Add(this.picDelete);
             this.uiPanel2.Controls.Add(this.saaCheckBox1);
             this.uiPanel2.Controls.Add(this.lblProductName);
             this.uiPanel2.Controls.Add(this.iudQuantity);
-            this.uiPanel2.Controls.Add(this.lblTotal);
+            this.uiPanel2.Controls.Add(this.lblSubtotal);
             this.uiPanel2.Controls.Add(this.label7);
             this.uiPanel2.Controls.Add(this.lblUPC);
             this.uiPanel2.Controls.Add(this.label10);
@@ -67,32 +68,49 @@
             this.uiPanel2.Name = "uiPanel2";
             this.uiPanel2.Radius = 50;
             this.uiPanel2.RectColor = System.Drawing.SystemColors.Control;
-            this.uiPanel2.Size = new System.Drawing.Size(386, 174);
+            this.uiPanel2.Size = new System.Drawing.Size(386, 212);
             this.uiPanel2.Style = Sunny.UI.UIStyle.Custom;
             this.uiPanel2.StyleCustomMode = true;
-            this.uiPanel2.TabIndex = 45;
+            this.uiPanel2.TabIndex = 47;
             this.uiPanel2.Text = null;
             this.uiPanel2.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.uiPanel2.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
-            // uiSymbolLabel2
+            // lblTotal
             // 
-            this.uiSymbolLabel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.uiSymbolLabel2.BackColor = System.Drawing.SystemColors.Control;
-            this.uiSymbolLabel2.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
-            this.uiSymbolLabel2.Location = new System.Drawing.Point(321, 11);
-            this.uiSymbolLabel2.MinimumSize = new System.Drawing.Size(1, 1);
-            this.uiSymbolLabel2.Name = "uiSymbolLabel2";
-            this.uiSymbolLabel2.Padding = new System.Windows.Forms.Padding(39, 0, 0, 0);
-            this.uiSymbolLabel2.Size = new System.Drawing.Size(51, 40);
-            this.uiSymbolLabel2.Style = Sunny.UI.UIStyle.Custom;
-            this.uiSymbolLabel2.StyleCustomMode = true;
-            this.uiSymbolLabel2.Symbol = 361944;
-            this.uiSymbolLabel2.SymbolColor = System.Drawing.Color.Red;
-            this.uiSymbolLabel2.SymbolSize = 35;
-            this.uiSymbolLabel2.TabIndex = 53;
-            this.uiSymbolLabel2.UseDoubleClick = true;
-            this.uiSymbolLabel2.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            this.lblTotal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblTotal.BackColor = System.Drawing.SystemColors.Control;
+            this.lblTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotal.ForeColor = System.Drawing.Color.Black;
+            this.lblTotal.Location = new System.Drawing.Point(131, 173);
+            this.lblTotal.Name = "lblTotal";
+            this.lblTotal.Size = new System.Drawing.Size(240, 29);
+            this.lblTotal.TabIndex = 50;
+            this.lblTotal.Text = "$490";
+            this.lblTotal.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // label2
+            // 
+            this.label2.BackColor = System.Drawing.SystemColors.Control;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.DarkGray;
+            this.label2.Location = new System.Drawing.Point(14, 175);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(113, 40);
+            this.label2.TabIndex = 49;
+            this.label2.Text = "Total";
+            // 
+            // picDelete
+            // 
+            this.picDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.picDelete.BackColor = System.Drawing.SystemColors.Control;
+            this.picDelete.Image = global::Supermarket.Properties.Resources.DELETE;
+            this.picDelete.Location = new System.Drawing.Point(337, 9);
+            this.picDelete.Name = "picDelete";
+            this.picDelete.Size = new System.Drawing.Size(30, 35);
+            this.picDelete.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picDelete.TabIndex = 48;
+            this.picDelete.TabStop = false;
             // 
             // saaCheckBox1
             // 
@@ -162,18 +180,18 @@
             this.iudQuantity.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             this.iudQuantity.ValueChanged += new Sunny.UI.UIIntegerUpDown.OnValueChanged(this.iudQuantity_ValueChanged);
             // 
-            // lblTotal
+            // lblSubtotal
             // 
-            this.lblTotal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblTotal.BackColor = System.Drawing.SystemColors.Control;
-            this.lblTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotal.ForeColor = System.Drawing.Color.Black;
-            this.lblTotal.Location = new System.Drawing.Point(132, 136);
-            this.lblTotal.Name = "lblTotal";
-            this.lblTotal.Size = new System.Drawing.Size(210, 29);
-            this.lblTotal.TabIndex = 28;
-            this.lblTotal.Text = "456";
-            this.lblTotal.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.lblSubtotal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblSubtotal.BackColor = System.Drawing.SystemColors.Control;
+            this.lblSubtotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSubtotal.ForeColor = System.Drawing.Color.Black;
+            this.lblSubtotal.Location = new System.Drawing.Point(132, 136);
+            this.lblSubtotal.Name = "lblSubtotal";
+            this.lblSubtotal.Size = new System.Drawing.Size(240, 29);
+            this.lblSubtotal.TabIndex = 28;
+            this.lblSubtotal.Text = "$456";
+            this.lblSubtotal.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // label7
             // 
@@ -184,7 +202,7 @@
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(113, 40);
             this.label7.TabIndex = 27;
-            this.label7.Text = "Total";
+            this.label7.Text = "Subtotal";
             // 
             // lblUPC
             // 
@@ -222,46 +240,15 @@
             this.label11.TabIndex = 22;
             this.label11.Text = "Quantity";
             // 
-            // label1
-            // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label1.BackColor = System.Drawing.SystemColors.Control;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(345, 136);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(27, 29);
-            this.label1.TabIndex = 54;
-            this.label1.Text = "$";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            // 
-            // uiSymbolLabel1
-            // 
-            this.uiSymbolLabel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.uiSymbolLabel1.BackColor = System.Drawing.SystemColors.Control;
-            this.uiSymbolLabel1.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
-            this.uiSymbolLabel1.Location = new System.Drawing.Point(168, 67);
-            this.uiSymbolLabel1.MinimumSize = new System.Drawing.Size(1, 1);
-            this.uiSymbolLabel1.Name = "uiSymbolLabel1";
-            this.uiSymbolLabel1.Padding = new System.Windows.Forms.Padding(39, 0, 0, 0);
-            this.uiSymbolLabel1.Size = new System.Drawing.Size(51, 40);
-            this.uiSymbolLabel1.Style = Sunny.UI.UIStyle.Custom;
-            this.uiSymbolLabel1.StyleCustomMode = true;
-            this.uiSymbolLabel1.Symbol = 361944;
-            this.uiSymbolLabel1.SymbolColor = System.Drawing.Color.Red;
-            this.uiSymbolLabel1.SymbolSize = 35;
-            this.uiSymbolLabel1.TabIndex = 55;
-            this.uiSymbolLabel1.UseDoubleClick = true;
-            this.uiSymbolLabel1.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
-            // 
             // CartView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.uiPanel2);
             this.Name = "CartView";
-            this.Size = new System.Drawing.Size(386, 174);
+            this.Size = new System.Drawing.Size(386, 212);
             this.uiPanel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.picDelete)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -270,16 +257,16 @@
         #endregion
 
         private Sunny.UI.UIPanel uiPanel2;
-        private Sunny.UI.UISymbolLabel uiSymbolLabel2;
+        private System.Windows.Forms.Label lblTotal;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.PictureBox picDelete;
         private SaaUI.SaaCheckBox saaCheckBox1;
         private System.Windows.Forms.Label lblProductName;
         private Sunny.UI.UIIntegerUpDown iudQuantity;
-        private System.Windows.Forms.Label lblTotal;
+        private System.Windows.Forms.Label lblSubtotal;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label lblUPC;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label1;
-        private Sunny.UI.UISymbolLabel uiSymbolLabel1;
     }
 }

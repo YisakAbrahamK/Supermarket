@@ -140,5 +140,7 @@ namespace Supermarket.View.Forms
                 control.BackColor = Color.DarkSlateGray;
             }
         }
+
+
     }
 }

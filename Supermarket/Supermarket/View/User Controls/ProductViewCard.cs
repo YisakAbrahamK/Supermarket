@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -28,9 +29,9 @@ namespace Supermarket.View.User_Controls.SignInControls
         {
               
             InitializeComponent();
-
             lblUPC.Text = product.UPC.ToString();
-            lblPrice.Text = product.Price.ToString();
+            lblPrice.Text = string.Format("{0:C}", product.Price);
+            lblTax.Text = (product.Tax/100).ToString("P",CultureInfo.CurrentCulture);
         }
 
 

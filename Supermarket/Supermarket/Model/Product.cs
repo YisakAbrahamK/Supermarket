@@ -26,10 +26,8 @@ namespace Supermarket.Model
 
         public static void lodeTestdata()
         {
-            for (int i = 0; i < 40; i++)
+            for (int i = 0; i < 10; i++)
             {
-
-
                 Product p = new Product();
 
                 p.Name = $"Product { i + 1}";

@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -16,14 +17,17 @@ namespace Supermarket.View.User_Controls.SignInControls
 {
     public partial class CartView : UserControl
     {
-       
-        Product product;
 
-        private UISymbolLabel _LabelDelete;
+        public double total { get; set; } = 0;
+        public double tax { get; set; } = 0;
+        public double subtotal { get; set; } = 0;
 
-        public UISymbolLabel LabelDelete
+        public Product product;
+
+        private PictureBox _PictureBoxDelete;
+        public PictureBox PictureBoxDelete
         {
-            get { return uiSymbolLabel2; }
+            get { return picDelete; }
         }
 
         private SaaCheckBox _CartCheckBox;
@@ -32,6 +36,12 @@ namespace Supermarket.View.User_Controls.SignInControls
             get { return saaCheckBox1;}
         }
 
+        private UIIntegerUpDown _UpDownQuantity { get; set; }
+
+        public UIIntegerUpDown UpDownQuantity
+        {
+            get { return iudQuantity; }
+        }
 
 
         public CartView(Product product)
@@ -41,14 +51,24 @@ namespace Supermarket.View.User_Controls.SignInControls
             this.product = product;
             lblProductName.Text = product.Name;
             lblUPC.Text = product.UPC.ToString();
-
+            lblTotal.Text = string.Format("{0:C}", ((product.Price) + (product.Price * (product.Tax / 100))));
+            lblSubtotal.Text = string.Format("{0:C}", product.Price);
+            calculateValues();
         }
 
 
         private void iudQuantity_ValueChanged(object sender, int value)
         {
-            lblTotal.Text = (iudQuantity.Value * product.Price).ToString();
+            calculateValues();
+        }
 
+        private void calculateValues()
+        {
+            subtotal = (iudQuantity.Value * product.Price);
+            lblSubtotal.Text = string.Format("{0:C}", subtotal);
+            tax = subtotal * (product.Tax / 100);
+            total = subtotal + tax;
+            lblTotal.Text = string.Format("{0:C}", total);
         }
     }
 }

@@ -1,10 +1,12 @@
-﻿using Supermarket.Model;
+﻿using Sunny.UI;
+using Supermarket.Model;
 using Supermarket.View.User_Controls.SignInControls;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -22,6 +24,7 @@ namespace Supermarket.View.Forms
             this.ResizeRedraw = true;
             casherForm.SizeChanged += (Object o, EventArgs e) =>
             {
+                //Reduce Graphics Flicker with Double Buffering for Forms and Controls
                 refreshSize();
             };
         }
@@ -42,21 +45,6 @@ namespace Supermarket.View.Forms
             refreshSize();
         }
 
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel2_Resize(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnLogin_Click(object sender, EventArgs e)
-        {
-
-
-        }
         public void refreshSize()
         {
             foreach (Control control in flowLayoutPanel2.Controls)
@@ -91,15 +79,57 @@ namespace Supermarket.View.Forms
                     CartView cartView = new CartView(product);
                     flowLayoutPanel2.Controls.Add(cartView);
                     cartView.Show();
-                    cartView.LabelDelete.Click += (object see, EventArgs eee) =>
+                    cartView.PictureBoxDelete.Click += (object see, EventArgs eee) =>
                     {
                         cartView.Dispose();
+                        calculateSummary();
                     };
+                    cartView.UpDownQuantity.ValueChanged += (object see, int value) =>
+                    {
+                        calculateSummary();
+                    };
+                    calculateSummary();
+                    refreshSize();
                 };
+            }
+        }
 
+        private void calculateSummary()
+        {
+            double summaryTotal=0;
+            double summarySubtotal=0;
+            double summaryTax = 0;
+            double change=0;
+            foreach (CartView cartView in flowLayoutPanel2.Controls)
+            {
+                summaryTotal += cartView.total;
+                summarySubtotal += cartView.subtotal;
+                summaryTax += cartView.tax;
+            }
+            lblTotal.Text=string.Format("{0:C}",Math.Round(summaryTotal));
+            lblSubtotal.Text = string.Format("{0:C}", summarySubtotal);
+            lblTax.Text = string.Format("{0:C}", summaryTax);
+            change = ((txtCash.Texts == "") ? 0 : Math.Round(double.Parse(txtCash.Texts))) - Math.Round(summaryTotal);
+            if (change < 0)
+            {
+                lblChange.Text = "-ve change";
+            }
+            else
+            {
+                lblChange.Text = string.Format("{0:C}", change);
             }
 
+            int numberOfTotalQuantity = 0;
+            foreach (CartView cart in flowLayoutPanel2.Controls)
+            {
+                numberOfTotalQuantity += cart.UpDownQuantity.Value;
+            }
+            lblTotalQuantity.Text = numberOfTotalQuantity.ToString();
+        }
 
+        private void txtCash__TextChanged(object sender, EventArgs e)
+        {
+            calculateSummary();
         }
     }
 }
