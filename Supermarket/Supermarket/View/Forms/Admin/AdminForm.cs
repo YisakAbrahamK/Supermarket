@@ -1,4 +1,6 @@
 ﻿using Sunny.UI;
+using Supermarket.View.Forms.Admin.Admin_Form_Subcomponents;
+using Supermarket.View.Forms.Casher.Casher_Form_SubComponent;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,14 +15,27 @@ namespace Supermarket.View.Forms.Admin
 {
     public partial class AdminForm : Form
     {
+        CasherForm casherForm;
+        SettingForm settingForm;
+        TransactionHistoryForm transactionHistoryForm;
+        ProductForm productForm;
+        ExpdateForm expdateForm;
+        DashbordForm dashbordForm;
+
         public AdminForm()
         {
             InitializeComponent();
+            casherForm = new CasherForm(this);
+            settingForm = new SettingForm(this);
+            transactionHistoryForm = new TransactionHistoryForm(this);
+            productForm = new ProductForm(this);
+            expdateForm = new ExpdateForm(this);
+            dashbordForm = new DashbordForm(this);  
         }
 
         private void AdminForm_Load(object sender, EventArgs e)
         {
-            //FOR PANEL INVOICE
+            //FOR PANEL Dashbord
 
             addEventForNavs(pnlDashbord);
 
@@ -84,39 +99,38 @@ namespace Supermarket.View.Forms.Admin
             selectOneChoice(uiPanal); //will change the radius values to indicate the change
             if (uiPanal.Name == "pnlDashbord")
             {
-                //loadNavClickForm(this.invoiceForm);
+                loadNavClickForm(this.dashbordForm);
                 lblActiveSelected.Text = "Dashbord";
                 //invoiceForm.refreshSize();
             }
             else if (uiPanal.Name == "pnlHistory")
             {
-                //loadNavClickForm(this.cashierTransactionHistoryForm);
+                loadNavClickForm(this.transactionHistoryForm);
                 lblActiveSelected.Text = "Transaction";
-                //cashierTransactionHistoryForm.refrashSize();
+                transactionHistoryForm.refrashSize();
             }
             else if (uiPanal.Name == "pnlProduct")
             {
-                //loadNavClickForm(this.cashierTransactionHistoryForm);
+                loadNavClickForm(this.productForm);
                 lblActiveSelected.Text = "Product";
-                //cashierTransactionHistoryForm.refrashSize();
+                productForm.refrashSize();
             }
             else if (uiPanal.Name == "pnlSetting")
             {
-                //loadNavClickForm(this.cashierTransactionHistoryForm);
+                loadNavClickForm(this.settingForm);
                 lblActiveSelected.Text = "Setting";
-                //cashierTransactionHistoryForm.refrashSize();
             }
             else if (uiPanal.Name == "pnlCasher")
             {
-                //loadNavClickForm(this.cashierTransactionHistoryForm);
+                loadNavClickForm(this.casherForm);
                 lblActiveSelected.Text = "Casher";
-                //cashierTransactionHistoryForm.refrashSize();
+                casherForm.refrashSize();
             }
-            else if (uiPanal.Name == "pnlpnlExpiringProduct")
+            else if (uiPanal.Name == "pnlExpiringProduct")
             {
-                //loadNavClickForm(this.cashierTransactionHistoryForm);
-                lblActiveSelected.Text = "Exp";
-                //cashierTransactionHistoryForm.refrashSize();
+                loadNavClickForm(this.expdateForm);
+                lblActiveSelected.Text = "Exp Date Lookup";
+                expdateForm.refrashSize();
             }
         }
 
@@ -134,7 +148,8 @@ namespace Supermarket.View.Forms.Admin
 
         private void loadNavClickForm(Form form)
         {
-            pnlContainer.Controls.RemoveAt(0);
+            if(pnlContainer.Controls.Count==1)
+                pnlContainer.Controls.RemoveAt(0);
             form.TopLevel = false;
             pnlContainer.Controls.Add(form);
             form.Dock = DockStyle.Fill;
@@ -157,6 +172,11 @@ namespace Supermarket.View.Forms.Admin
             {
                 control.BackColor = Color.DarkSlateGray;
             }
+        }
+
+        private void pnlContainer_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

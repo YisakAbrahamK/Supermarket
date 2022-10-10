@@ -12,6 +12,7 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>false</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -96,16 +97,40 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Model\Product.cs" />
+    <Compile Include="View\Forms\Admin\Admin Form Subcomponents\CasherForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Forms\Admin\Admin Form Subcomponents\CasherForm.Designer.cs">
+      <DependentUpon>CasherForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Forms\Admin\Admin Form Subcomponents\DashbordForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Forms\Admin\Admin Form Subcomponents\DashbordForm.Designer.cs">
+      <DependentUpon>DashbordForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Forms\Admin\Admin Form Subcomponents\ExpdateForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Forms\Admin\Admin Form Subcomponents\ExpdateForm.Designer.cs">
+      <DependentUpon>ExpdateForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Forms\Admin\Admin Form Subcomponents\ProductForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Forms\Admin\Admin Form Subcomponents\ProductForm.Designer.cs">
+      <DependentUpon>ProductForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\Forms\Admin\AdminForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="View\Forms\Admin\AdminForm.Designer.cs">
       <DependentUpon>AdminForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\Forms\Casher\Casher Form SubComponent\SettingForm.cs">
+    <Compile Include="View\Forms\Common Forms\SettingForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\Forms\Casher\Casher Form SubComponent\SettingForm.Designer.cs">
+    <Compile Include="View\Forms\Common Forms\SettingForm.Designer.cs">
       <DependentUpon>SettingForm.cs</DependentUpon>
     </Compile>
     <Compile Include="View\Forms\Casher\CashierForm.cs">
@@ -114,11 +139,11 @@
     <Compile Include="View\Forms\Casher\CashierForm.Designer.cs">
       <DependentUpon>CashierForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\Forms\Casher\Casher Form SubComponent\CashierTransactionHistoryForm.cs">
+    <Compile Include="View\Forms\Common Forms\TransactionHistoryForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\Forms\Casher\Casher Form SubComponent\CashierTransactionHistoryForm.Designer.cs">
-      <DependentUpon>CashierTransactionHistoryForm.cs</DependentUpon>
+    <Compile Include="View\Forms\Common Forms\TransactionHistoryForm.Designer.cs">
+      <DependentUpon>TransactionHistoryForm.cs</DependentUpon>
     </Compile>
     <Compile Include="View\Forms\Test\This is for test.cs">
       <SubType>Form</SubType>
@@ -126,10 +151,10 @@
     <Compile Include="View\Forms\Test\This is for test.Designer.cs">
       <DependentUpon>This is for test.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\Forms\Casher\Casher Form SubComponent\InvoiceForm.cs">
+    <Compile Include="View\Forms\Casher\Casher Form Subcomponents\InvoiceForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\Forms\Casher\Casher Form SubComponent\InvoiceForm.Designer.cs">
+    <Compile Include="View\Forms\Casher\Casher Form Subcomponents\InvoiceForm.Designer.cs">
       <DependentUpon>InvoiceForm.cs</DependentUpon>
     </Compile>
     <Compile Include="View\Forms\LoginForm.cs">
@@ -149,6 +174,36 @@
     </Compile>
     <Compile Include="View\User Controls\CartView.Designer.cs">
       <DependentUpon>CartView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\User Controls\CasherCard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\User Controls\CasherCard.Designer.cs">
+      <DependentUpon>CasherCard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\User Controls\Dashbord Cards\DashSimpleCard2.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\User Controls\Dashbord Cards\DashSimpleCard2.Designer.cs">
+      <DependentUpon>DashSimpleCard2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\User Controls\Dashbord Cards\DashSimpleCard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\User Controls\Dashbord Cards\DashSimpleCard.Designer.cs">
+      <DependentUpon>DashSimpleCard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\User Controls\ExpCard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\User Controls\ExpCard.Designer.cs">
+      <DependentUpon>ExpCard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\User Controls\ProductCard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\User Controls\ProductCard.Designer.cs">
+      <DependentUpon>ProductCard.cs</DependentUpon>
     </Compile>
     <Compile Include="View\User Controls\ProductViewCard.cs">
       <SubType>UserControl</SubType>
@@ -188,22 +243,34 @@
     <Compile Include="View\User Controls\TransactionCard.Designer.cs">
       <DependentUpon>TransactionCard.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="View\Forms\Admin\Admin Form Subcomponents\CasherForm.resx">
+      <DependentUpon>CasherForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Forms\Admin\Admin Form Subcomponents\DashbordForm.resx">
+      <DependentUpon>DashbordForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Forms\Admin\Admin Form Subcomponents\ExpdateForm.resx">
+      <DependentUpon>ExpdateForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Forms\Admin\Admin Form Subcomponents\ProductForm.resx">
+      <DependentUpon>ProductForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\Forms\Admin\AdminForm.resx">
       <DependentUpon>AdminForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\Forms\Casher\Casher Form SubComponent\SettingForm.resx">
+    <EmbeddedResource Include="View\Forms\Common Forms\SettingForm.resx">
       <DependentUpon>SettingForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Forms\Casher\CashierForm.resx">
       <DependentUpon>CashierForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\Forms\Casher\Casher Form SubComponent\CashierTransactionHistoryForm.resx">
-      <DependentUpon>CashierTransactionHistoryForm.cs</DependentUpon>
+    <EmbeddedResource Include="View\Forms\Common Forms\TransactionHistoryForm.resx">
+      <DependentUpon>TransactionHistoryForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Forms\Test\This is for test.resx">
       <DependentUpon>This is for test.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\Forms\Casher\Casher Form SubComponent\InvoiceForm.resx">
+    <EmbeddedResource Include="View\Forms\Casher\Casher Form Subcomponents\InvoiceForm.resx">
       <DependentUpon>InvoiceForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Forms\LoginForm.resx">
@@ -214,6 +281,21 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\User Controls\CartView.resx">
       <DependentUpon>CartView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\User Controls\CasherCard.resx">
+      <DependentUpon>CasherCard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\User Controls\Dashbord Cards\DashSimpleCard2.resx">
+      <DependentUpon>DashSimpleCard2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\User Controls\Dashbord Cards\DashSimpleCard.resx">
+      <DependentUpon>DashSimpleCard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\User Controls\ExpCard.resx">
+      <DependentUpon>ExpCard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\User Controls\ProductCard.resx">
+      <DependentUpon>ProductCard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\User Controls\ProductViewCard.resx">
       <DependentUpon>ProductViewCard.cs</DependentUpon>
@@ -359,5 +441,6 @@
   <ItemGroup>
     <None Include="Resources\DELETE.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

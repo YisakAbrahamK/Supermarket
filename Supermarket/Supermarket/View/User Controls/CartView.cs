@@ -30,12 +30,6 @@ namespace Supermarket.View.User_Controls.SignInControls
             get { return picDelete; }
         }
 
-        private SaaCheckBox _CartCheckBox;
-        public SaaCheckBox CartCheckBox
-        {
-            get { return saaCheckBox1;}
-        }
-
         private UIIntegerUpDown _UpDownQuantity { get; set; }
 
         public UIIntegerUpDown UpDownQuantity
@@ -43,6 +37,12 @@ namespace Supermarket.View.User_Controls.SignInControls
             get { return iudQuantity; }
         }
 
+        public CartView()
+        {
+
+            InitializeComponent();
+            calculateValues();
+        }
 
         public CartView(Product product)
         {

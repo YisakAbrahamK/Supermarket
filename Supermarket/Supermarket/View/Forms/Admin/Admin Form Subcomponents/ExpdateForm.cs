@@ -8,34 +8,20 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Supermarket.View.Forms
+namespace Supermarket.View.Forms.Admin.Admin_Form_Subcomponents
 {
-    public partial class CashierTransactionHistoryForm : Form
+    public partial class ExpdateForm : Form
     {
-        Form casherForm;
-        public CashierTransactionHistoryForm(Form casherForm)
+        Form parentForm;
+        public ExpdateForm(Form parentForm)
         {
             InitializeComponent();
-            this.casherForm = casherForm;
-
-            casherForm.SizeChanged += (Object o, EventArgs e) =>
+            this.parentForm = parentForm;
+            parentForm.Resize += (Object sender, EventArgs e) =>
             {
                 refrashSize();
             };
         }
-    
-
-        private void CashierTransactionHistoryForm_Load(object sender, EventArgs e)
-        {
-            refrashSize();
-        }
-
-        private void txtSearch_Resize(object sender, EventArgs e)
-        {
-            txtSearch.Invalidate();
-            txtSearch.Refresh();
-        }
-
         public void refrashSize()
         {
             foreach (Control control in flowLayoutPanel1.Controls)
@@ -48,9 +34,10 @@ namespace Supermarket.View.Forms
             flowLayoutPanel1.AutoScroll = true;
         }
 
-        private void uiSymbolLabel3_Click(object sender, EventArgs e)
+        private void ExpdateForm_Resize(object sender, EventArgs e)
         {
-
+            txtSearch.Invalidate();
+            txtSearch.Refresh();
         }
     }
 }

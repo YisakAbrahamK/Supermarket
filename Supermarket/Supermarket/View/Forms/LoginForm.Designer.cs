@@ -35,12 +35,11 @@
             this.uiPanel1 = new Sunny.UI.UIPanel();
             this.saaGlowing3 = new SaaUI.SaaGlowing();
             this.saaGlowing2 = new SaaUI.SaaGlowing();
-            this.picClose = new System.Windows.Forms.PictureBox();
             this.saaGlowing1 = new SaaUI.SaaGlowing();
+            this.picClose = new Sunny.UI.UISymbolLabel();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.uiPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picClose)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlContainer
@@ -80,9 +79,9 @@
             // uiPanel1
             // 
             this.uiPanel1.BackColor = System.Drawing.Color.Blue;
+            this.uiPanel1.Controls.Add(this.picClose);
             this.uiPanel1.Controls.Add(this.saaGlowing3);
             this.uiPanel1.Controls.Add(this.saaGlowing2);
-            this.uiPanel1.Controls.Add(this.picClose);
             this.uiPanel1.Controls.Add(this.saaGlowing1);
             this.uiPanel1.FillColor = System.Drawing.Color.DarkSlateGray;
             this.uiPanel1.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
@@ -95,6 +94,7 @@
             this.uiPanel1.Size = new System.Drawing.Size(388, 60);
             this.uiPanel1.Style = Sunny.UI.UIStyle.Custom;
             this.uiPanel1.TabIndex = 2;
+            this.uiPanel1.Text = null;
             this.uiPanel1.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.uiPanel1.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
@@ -105,7 +105,7 @@
             this.saaGlowing3.ForceTransparence = true;
             this.saaGlowing3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.saaGlowing3.GrowingSpeed = 5;
-            this.saaGlowing3.Location = new System.Drawing.Point(96, 3);
+            this.saaGlowing3.Location = new System.Drawing.Point(100, 6);
             this.saaGlowing3.Name = "saaGlowing3";
             this.saaGlowing3.Size = new System.Drawing.Size(47, 47);
             this.saaGlowing3.Stop = false;
@@ -119,26 +119,12 @@
             this.saaGlowing2.ForceTransparence = true;
             this.saaGlowing2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.saaGlowing2.GrowingSpeed = 4;
-            this.saaGlowing2.Location = new System.Drawing.Point(50, 4);
+            this.saaGlowing2.Location = new System.Drawing.Point(54, 7);
             this.saaGlowing2.Name = "saaGlowing2";
             this.saaGlowing2.Size = new System.Drawing.Size(47, 47);
             this.saaGlowing2.Stop = false;
             this.saaGlowing2.TabIndex = 11;
             this.saaGlowing2.Text = "saaGlowing2";
-            // 
-            // picClose
-            // 
-            this.picClose.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.picClose.Image = global::Supermarket.Properties.Resources.close;
-            this.picClose.Location = new System.Drawing.Point(325, 9);
-            this.picClose.MaximumSize = new System.Drawing.Size(52, 52);
-            this.picClose.MinimumSize = new System.Drawing.Size(49, 42);
-            this.picClose.Name = "picClose";
-            this.picClose.Size = new System.Drawing.Size(49, 42);
-            this.picClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picClose.TabIndex = 10;
-            this.picClose.TabStop = false;
-            this.picClose.Click += new System.EventHandler(this.picClose_Click);
             // 
             // saaGlowing1
             // 
@@ -147,12 +133,32 @@
             this.saaGlowing1.ForceTransparence = true;
             this.saaGlowing1.ForeColor = System.Drawing.Color.Red;
             this.saaGlowing1.GrowingSpeed = 3;
-            this.saaGlowing1.Location = new System.Drawing.Point(3, 4);
+            this.saaGlowing1.Location = new System.Drawing.Point(7, 7);
             this.saaGlowing1.Name = "saaGlowing1";
             this.saaGlowing1.Size = new System.Drawing.Size(47, 47);
             this.saaGlowing1.Stop = false;
             this.saaGlowing1.TabIndex = 0;
             this.saaGlowing1.Text = "saaGlowing1";
+            // 
+            // picClose
+            // 
+            this.picClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.picClose.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.picClose.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
+            this.picClose.ForeColor = System.Drawing.Color.PaleGreen;
+            this.picClose.Location = new System.Drawing.Point(317, 9);
+            this.picClose.MinimumSize = new System.Drawing.Size(1, 1);
+            this.picClose.Name = "picClose";
+            this.picClose.Padding = new System.Windows.Forms.Padding(54, 0, 0, 0);
+            this.picClose.Size = new System.Drawing.Size(51, 45);
+            this.picClose.Style = Sunny.UI.UIStyle.Custom;
+            this.picClose.StyleCustomMode = true;
+            this.picClose.Symbol = 61527;
+            this.picClose.SymbolColor = System.Drawing.Color.Red;
+            this.picClose.SymbolSize = 50;
+            this.picClose.TabIndex = 59;
+            this.picClose.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            this.picClose.Click += new System.EventHandler(this.picClose_Click);
             // 
             // LoginForm
             // 
@@ -170,7 +176,6 @@
             this.tableLayoutPanel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.uiPanel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.picClose)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -183,7 +188,7 @@
         private Sunny.UI.UIPanel uiPanel1;
         private SaaUI.SaaGlowing saaGlowing3;
         private SaaUI.SaaGlowing saaGlowing2;
-        private System.Windows.Forms.PictureBox picClose;
         private SaaUI.SaaGlowing saaGlowing1;
+        private Sunny.UI.UISymbolLabel picClose;
     }
 }

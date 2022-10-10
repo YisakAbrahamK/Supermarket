@@ -8,7 +8,10 @@ namespace Supermarket.Model
 {
     public class Product
     {
+        public int id;
+
         public string Name { get; set; }
+
         public double Price { get; set; }
 
         public DateTime  ExpiredDate { get; set; }
@@ -17,12 +20,12 @@ namespace Supermarket.Model
 
         public int UPC { get; set; }
 
+        public int ShelfNumber { get; set; }
+
         static List<Product> Products=new List<Product>();
 
-
-
-
         public static List<Product> getAllProduct() { return Products; }
+
 
         public static void lodeTestdata()
         {

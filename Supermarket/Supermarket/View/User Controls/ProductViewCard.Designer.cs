@@ -29,15 +29,15 @@
         private void InitializeComponent()
         {
             this.uiPanel1 = new Sunny.UI.UIPanel();
+            this.lblTax = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.uiSymbolLabel2 = new Sunny.UI.UISymbolLabel();
             this.btnAdd = new RJCodeAdvance.RJControls.RJButton();
             this.lblUPC = new System.Windows.Forms.Label();
             this.lblPrice = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.lblTax = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.uiSymbolLabel2 = new Sunny.UI.UISymbolLabel();
             this.uiPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -70,6 +70,51 @@
             this.uiPanel1.Text = null;
             this.uiPanel1.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.uiPanel1.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            // 
+            // lblTax
+            // 
+            this.lblTax.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblTax.BackColor = System.Drawing.SystemColors.Control;
+            this.lblTax.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTax.ForeColor = System.Drawing.Color.Black;
+            this.lblTax.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lblTax.Location = new System.Drawing.Point(144, 126);
+            this.lblTax.Margin = new System.Windows.Forms.Padding(3, 0, 3, 2);
+            this.lblTax.Name = "lblTax";
+            this.lblTax.Size = new System.Drawing.Size(215, 29);
+            this.lblTax.TabIndex = 56;
+            this.lblTax.Text = "1.2%";
+            this.lblTax.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label5
+            // 
+            this.label5.BackColor = System.Drawing.SystemColors.Control;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.DarkGray;
+            this.label5.Location = new System.Drawing.Point(13, 127);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(113, 40);
+            this.label5.TabIndex = 55;
+            this.label5.Text = "Tax";
+            // 
+            // uiSymbolLabel2
+            // 
+            this.uiSymbolLabel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.uiSymbolLabel2.BackColor = System.Drawing.SystemColors.Control;
+            this.uiSymbolLabel2.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
+            this.uiSymbolLabel2.ForeColor = System.Drawing.Color.Black;
+            this.uiSymbolLabel2.Location = new System.Drawing.Point(331, 176);
+            this.uiSymbolLabel2.MinimumSize = new System.Drawing.Size(1, 1);
+            this.uiSymbolLabel2.Name = "uiSymbolLabel2";
+            this.uiSymbolLabel2.Padding = new System.Windows.Forms.Padding(39, 0, 0, 0);
+            this.uiSymbolLabel2.Size = new System.Drawing.Size(28, 25);
+            this.uiSymbolLabel2.Style = Sunny.UI.UIStyle.Custom;
+            this.uiSymbolLabel2.StyleCustomMode = true;
+            this.uiSymbolLabel2.Symbol = 61975;
+            this.uiSymbolLabel2.SymbolColor = System.Drawing.Color.Green;
+            this.uiSymbolLabel2.SymbolSize = 35;
+            this.uiSymbolLabel2.TabIndex = 54;
+            this.uiSymbolLabel2.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
             // btnAdd
             // 
@@ -157,58 +202,13 @@
             this.label1.TabIndex = 22;
             this.label1.Text = "Price";
             // 
-            // lblTax
-            // 
-            this.lblTax.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblTax.BackColor = System.Drawing.SystemColors.Control;
-            this.lblTax.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTax.ForeColor = System.Drawing.Color.Black;
-            this.lblTax.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.lblTax.Location = new System.Drawing.Point(144, 126);
-            this.lblTax.Margin = new System.Windows.Forms.Padding(3, 0, 3, 2);
-            this.lblTax.Name = "lblTax";
-            this.lblTax.Size = new System.Drawing.Size(215, 29);
-            this.lblTax.TabIndex = 56;
-            this.lblTax.Text = "1.2%";
-            this.lblTax.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // label5
-            // 
-            this.label5.BackColor = System.Drawing.SystemColors.Control;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.DarkGray;
-            this.label5.Location = new System.Drawing.Point(13, 127);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(113, 40);
-            this.label5.TabIndex = 55;
-            this.label5.Text = "Tax";
-            // 
-            // uiSymbolLabel2
-            // 
-            this.uiSymbolLabel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.uiSymbolLabel2.BackColor = System.Drawing.SystemColors.Control;
-            this.uiSymbolLabel2.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
-            this.uiSymbolLabel2.ForeColor = System.Drawing.Color.Black;
-            this.uiSymbolLabel2.Location = new System.Drawing.Point(331, 176);
-            this.uiSymbolLabel2.MinimumSize = new System.Drawing.Size(1, 1);
-            this.uiSymbolLabel2.Name = "uiSymbolLabel2";
-            this.uiSymbolLabel2.Padding = new System.Windows.Forms.Padding(39, 0, 0, 0);
-            this.uiSymbolLabel2.Size = new System.Drawing.Size(28, 25);
-            this.uiSymbolLabel2.Style = Sunny.UI.UIStyle.Custom;
-            this.uiSymbolLabel2.StyleCustomMode = true;
-            this.uiSymbolLabel2.Symbol = 61975;
-            this.uiSymbolLabel2.SymbolColor = System.Drawing.Color.Green;
-            this.uiSymbolLabel2.SymbolSize = 35;
-            this.uiSymbolLabel2.TabIndex = 54;
-            this.uiSymbolLabel2.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
-            // 
             // ProductViewCard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.Controls.Add(this.uiPanel1);
-            this.Margin = new System.Windows.Forms.Padding(0, 0, 0, 3);
+            this.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
             this.Name = "ProductViewCard";
             this.Size = new System.Drawing.Size(378, 212);
             this.uiPanel1.ResumeLayout(false);

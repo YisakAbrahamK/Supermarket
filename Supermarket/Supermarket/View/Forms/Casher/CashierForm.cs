@@ -15,14 +15,14 @@ namespace Supermarket.View.Forms
     public partial class CashierForm : Form
     {
         InvoiceForm invoiceForm;
-        CashierTransactionHistoryForm cashierTransactionHistoryForm;
+        TransactionHistoryForm cashierTransactionHistoryForm;
         SettingForm settingForm;
 
         public CashierForm()
         {
             InitializeComponent();
             invoiceForm = new InvoiceForm(this);
-            cashierTransactionHistoryForm = new CashierTransactionHistoryForm(this);
+            cashierTransactionHistoryForm = new TransactionHistoryForm(this);
             settingForm = new SettingForm(this);
         }
 

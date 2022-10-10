@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.uiPanel1 = new Sunny.UI.UIPanel();
-            this.uiPanel10 = new Sunny.UI.UIPanel();
             this.uiPanel2 = new Sunny.UI.UIPanel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.uiPanel10 = new Sunny.UI.UIPanel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.uiPanel3 = new Sunny.UI.UIPanel();
             this.uiTextBox1 = new Sunny.UI.UITextBox();
@@ -61,12 +61,12 @@
             this.uiTextBox7 = new Sunny.UI.UITextBox();
             this.uiSymbolLabel3 = new Sunny.UI.UISymbolLabel();
             this.label7 = new System.Windows.Forms.Label();
-            this.btnLogin = new Sunny.UI.UIButton();
             this.uiButton1 = new Sunny.UI.UIButton();
+            this.btnLogin = new Sunny.UI.UIButton();
             this.uiPanel1.SuspendLayout();
-            this.uiPanel10.SuspendLayout();
             this.uiPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.uiPanel10.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             this.uiPanel3.SuspendLayout();
             this.uiTextBox1.SuspendLayout();
@@ -112,28 +112,6 @@
             this.uiPanel1.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.uiPanel1.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
-            // uiPanel10
-            // 
-            this.uiPanel10.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.uiPanel10.BackColor = System.Drawing.SystemColors.Control;
-            this.uiPanel10.Controls.Add(this.flowLayoutPanel1);
-            this.uiPanel10.FillColor = System.Drawing.Color.White;
-            this.uiPanel10.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
-            this.uiPanel10.Location = new System.Drawing.Point(32, 45);
-            this.uiPanel10.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.uiPanel10.MinimumSize = new System.Drawing.Size(1, 1);
-            this.uiPanel10.Name = "uiPanel10";
-            this.uiPanel10.Radius = 70;
-            this.uiPanel10.RectColor = System.Drawing.SystemColors.Control;
-            this.uiPanel10.Size = new System.Drawing.Size(686, 572);
-            this.uiPanel10.Style = Sunny.UI.UIStyle.Custom;
-            this.uiPanel10.StyleCustomMode = true;
-            this.uiPanel10.TabIndex = 2;
-            this.uiPanel10.Text = null;
-            this.uiPanel10.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            this.uiPanel10.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
-            // 
             // uiPanel2
             // 
             this.uiPanel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -171,6 +149,28 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
+            // uiPanel10
+            // 
+            this.uiPanel10.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.uiPanel10.BackColor = System.Drawing.SystemColors.Control;
+            this.uiPanel10.Controls.Add(this.flowLayoutPanel1);
+            this.uiPanel10.FillColor = System.Drawing.Color.White;
+            this.uiPanel10.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
+            this.uiPanel10.Location = new System.Drawing.Point(32, 45);
+            this.uiPanel10.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.uiPanel10.MinimumSize = new System.Drawing.Size(1, 1);
+            this.uiPanel10.Name = "uiPanel10";
+            this.uiPanel10.Radius = 70;
+            this.uiPanel10.RectColor = System.Drawing.SystemColors.Control;
+            this.uiPanel10.Size = new System.Drawing.Size(686, 572);
+            this.uiPanel10.Style = Sunny.UI.UIStyle.Custom;
+            this.uiPanel10.StyleCustomMode = true;
+            this.uiPanel10.TabIndex = 2;
+            this.uiPanel10.Text = null;
+            this.uiPanel10.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.uiPanel10.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            // 
             // flowLayoutPanel1
             // 
             this.flowLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -205,7 +205,7 @@
             this.uiPanel3.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiPanel3.Name = "uiPanel3";
             this.uiPanel3.Radius = 10;
-            this.uiPanel3.RectColor = System.Drawing.SystemColors.Control;
+            this.uiPanel3.RectColor = System.Drawing.Color.White;
             this.uiPanel3.Size = new System.Drawing.Size(582, 62);
             this.uiPanel3.Style = Sunny.UI.UIStyle.Custom;
             this.uiPanel3.StyleCustomMode = true;
@@ -281,7 +281,7 @@
             this.uiPanel4.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiPanel4.Name = "uiPanel4";
             this.uiPanel4.Radius = 10;
-            this.uiPanel4.RectColor = System.Drawing.SystemColors.Control;
+            this.uiPanel4.RectColor = System.Drawing.Color.White;
             this.uiPanel4.Size = new System.Drawing.Size(582, 63);
             this.uiPanel4.Style = Sunny.UI.UIStyle.Custom;
             this.uiPanel4.StyleCustomMode = true;
@@ -358,7 +358,7 @@
             this.uiPanel5.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiPanel5.Name = "uiPanel5";
             this.uiPanel5.Radius = 10;
-            this.uiPanel5.RectColor = System.Drawing.SystemColors.Control;
+            this.uiPanel5.RectColor = System.Drawing.Color.White;
             this.uiPanel5.Size = new System.Drawing.Size(582, 63);
             this.uiPanel5.Style = Sunny.UI.UIStyle.Custom;
             this.uiPanel5.StyleCustomMode = true;
@@ -431,7 +431,7 @@
             this.uiPanel6.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiPanel6.Name = "uiPanel6";
             this.uiPanel6.Radius = 10;
-            this.uiPanel6.RectColor = System.Drawing.SystemColors.Control;
+            this.uiPanel6.RectColor = System.Drawing.Color.White;
             this.uiPanel6.Size = new System.Drawing.Size(582, 62);
             this.uiPanel6.Style = Sunny.UI.UIStyle.Custom;
             this.uiPanel6.StyleCustomMode = true;
@@ -504,7 +504,7 @@
             this.uiPanel7.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiPanel7.Name = "uiPanel7";
             this.uiPanel7.Radius = 10;
-            this.uiPanel7.RectColor = System.Drawing.SystemColors.Control;
+            this.uiPanel7.RectColor = System.Drawing.Color.White;
             this.uiPanel7.Size = new System.Drawing.Size(582, 62);
             this.uiPanel7.Style = Sunny.UI.UIStyle.Custom;
             this.uiPanel7.StyleCustomMode = true;
@@ -543,7 +543,7 @@
             // 
             // pictureBox7
             // 
-            this.pictureBox7.BackColor = System.Drawing.Color.White;
+            this.pictureBox7.BackColor = System.Drawing.SystemColors.Control;
             this.pictureBox7.Image = global::Supermarket.Properties.Resources.email_svgrepo_com;
             this.pictureBox7.Location = new System.Drawing.Point(9, 13);
             this.pictureBox7.Name = "pictureBox7";
@@ -577,7 +577,7 @@
             this.uiPanel8.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiPanel8.Name = "uiPanel8";
             this.uiPanel8.Radius = 10;
-            this.uiPanel8.RectColor = System.Drawing.SystemColors.Control;
+            this.uiPanel8.RectColor = System.Drawing.Color.White;
             this.uiPanel8.Size = new System.Drawing.Size(582, 62);
             this.uiPanel8.Style = Sunny.UI.UIStyle.Custom;
             this.uiPanel8.StyleCustomMode = true;
@@ -656,7 +656,7 @@
             this.uiPanel9.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiPanel9.Name = "uiPanel9";
             this.uiPanel9.Radius = 10;
-            this.uiPanel9.RectColor = System.Drawing.SystemColors.Control;
+            this.uiPanel9.RectColor = System.Drawing.Color.White;
             this.uiPanel9.Size = new System.Drawing.Size(582, 61);
             this.uiPanel9.Style = Sunny.UI.UIStyle.Custom;
             this.uiPanel9.StyleCustomMode = true;
@@ -720,22 +720,6 @@
             this.label7.TabIndex = 77;
             this.label7.Text = "Location";
             // 
-            // btnLogin
-            // 
-            this.btnLogin.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnLogin.BackColor = System.Drawing.SystemColors.Control;
-            this.btnLogin.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnLogin.Font = new System.Drawing.Font("Microsoft YaHei", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogin.Location = new System.Drawing.Point(392, 651);
-            this.btnLogin.MinimumSize = new System.Drawing.Size(1, 1);
-            this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Radius = 40;
-            this.btnLogin.Size = new System.Drawing.Size(140, 44);
-            this.btnLogin.Style = Sunny.UI.UIStyle.Custom;
-            this.btnLogin.TabIndex = 62;
-            this.btnLogin.Text = "Update";
-            this.btnLogin.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
-            // 
             // uiButton1
             // 
             this.uiButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
@@ -752,6 +736,22 @@
             this.uiButton1.Text = "Clear";
             this.uiButton1.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
+            // btnLogin
+            // 
+            this.btnLogin.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnLogin.BackColor = System.Drawing.SystemColors.Control;
+            this.btnLogin.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnLogin.Font = new System.Drawing.Font("Microsoft YaHei", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogin.Location = new System.Drawing.Point(392, 651);
+            this.btnLogin.MinimumSize = new System.Drawing.Size(1, 1);
+            this.btnLogin.Name = "btnLogin";
+            this.btnLogin.Radius = 40;
+            this.btnLogin.Size = new System.Drawing.Size(140, 44);
+            this.btnLogin.Style = Sunny.UI.UIStyle.Custom;
+            this.btnLogin.TabIndex = 62;
+            this.btnLogin.Text = "Update";
+            this.btnLogin.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            // 
             // SettingForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -764,9 +764,9 @@
             this.Text = "SettingForm";
             this.Load += new System.EventHandler(this.SettingForm_Load);
             this.uiPanel1.ResumeLayout(false);
-            this.uiPanel10.ResumeLayout(false);
             this.uiPanel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.uiPanel10.ResumeLayout(false);
             this.flowLayoutPanel1.ResumeLayout(false);
             this.flowLayoutPanel1.PerformLayout();
             this.uiPanel3.ResumeLayout(false);

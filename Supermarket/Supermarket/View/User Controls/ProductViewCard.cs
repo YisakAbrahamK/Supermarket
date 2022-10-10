@@ -34,6 +34,12 @@ namespace Supermarket.View.User_Controls.SignInControls
             lblTax.Text = (product.Tax/100).ToString("P",CultureInfo.CurrentCulture);
         }
 
+        public ProductViewCard()
+        {
+
+            InitializeComponent();
+        }
+
 
         private void label3_Click(object sender, EventArgs e)
         {

@@ -50,7 +50,7 @@
             this.lblForgotPassword.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblForgotPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblForgotPassword.ForeColor = System.Drawing.Color.LimeGreen;
-            this.lblForgotPassword.Location = new System.Drawing.Point(113, 560);
+            this.lblForgotPassword.Location = new System.Drawing.Point(108, 560);
             this.lblForgotPassword.Name = "lblForgotPassword";
             this.lblForgotPassword.Size = new System.Drawing.Size(230, 47);
             this.lblForgotPassword.TabIndex = 35;
@@ -74,7 +74,7 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.DarkSlateGray;
             this.pictureBox1.Image = global::Supermarket.Properties.Resources.WhiteUser;
-            this.pictureBox1.Location = new System.Drawing.Point(126, 41);
+            this.pictureBox1.Location = new System.Drawing.Point(117, 41);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(174, 180);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -84,6 +84,7 @@
             // uiPanel1
             // 
             this.uiPanel1.BackColor = System.Drawing.Color.Blue;
+            this.uiPanel1.Controls.Add(this.lblForgotPassword);
             this.uiPanel1.Controls.Add(this.txtPassword);
             this.uiPanel1.Controls.Add(this.txtEmail);
             this.uiPanel1.Controls.Add(this.btnLogin);
@@ -108,7 +109,7 @@
             this.txtPassword.Controls.Add(this.pictureBox3);
             this.txtPassword.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPassword.Location = new System.Drawing.Point(51, 355);
+            this.txtPassword.Location = new System.Drawing.Point(47, 355);
             this.txtPassword.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtPassword.MinimumSize = new System.Drawing.Size(1, 16);
             this.txtPassword.Name = "txtPassword";
@@ -133,7 +134,7 @@
             this.txtEmail.Controls.Add(this.pictureBox4);
             this.txtEmail.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmail.Location = new System.Drawing.Point(51, 288);
+            this.txtEmail.Location = new System.Drawing.Point(47, 288);
             this.txtEmail.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtEmail.MinimumSize = new System.Drawing.Size(1, 16);
             this.txtEmail.Name = "txtEmail";
@@ -167,7 +168,7 @@
             this.btnLogin.BackColor = System.Drawing.Color.DarkSlateGray;
             this.btnLogin.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnLogin.Font = new System.Drawing.Font("Microsoft YaHei", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogin.Location = new System.Drawing.Point(133, 443);
+            this.btnLogin.Location = new System.Drawing.Point(131, 442);
             this.btnLogin.MinimumSize = new System.Drawing.Size(1, 1);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Radius = 40;
@@ -183,7 +184,6 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Blue;
-            this.Controls.Add(this.lblForgotPassword);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.uiPanel1);
             this.Name = "SignIn";

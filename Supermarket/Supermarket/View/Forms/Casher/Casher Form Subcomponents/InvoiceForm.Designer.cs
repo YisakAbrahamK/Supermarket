@@ -46,7 +46,7 @@
             this.label10 = new System.Windows.Forms.Label();
             this.saaLine3 = new SaaUI.SaaLine();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.lblTotal = new System.Windows.Forms.Label();
+            this.lblSubtotal = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.saaLine5 = new SaaUI.SaaLine();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -54,10 +54,12 @@
             this.lblTax = new System.Windows.Forms.Label();
             this.saaLine2 = new SaaUI.SaaLine();
             this.panel9 = new System.Windows.Forms.Panel();
-            this.lblSubtotal = new System.Windows.Forms.Label();
+            this.lblTotal = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.saaLine1 = new SaaUI.SaaLine();
             this.panel10 = new System.Windows.Forms.Panel();
+            this.uiSymbolLabel4 = new Sunny.UI.UISymbolLabel();
+            this.txtCash = new RJCodeAdvance.RJControls.RJTextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.saaLine4 = new SaaUI.SaaLine();
             this.panel11 = new System.Windows.Forms.Panel();
@@ -67,8 +69,6 @@
             this.label8 = new System.Windows.Forms.Label();
             this.btnLogin = new RJCodeAdvance.RJControls.RJButton();
             this.uiSymbolLabel1 = new Sunny.UI.UISymbolLabel();
-            this.uiSymbolLabel4 = new Sunny.UI.UISymbolLabel();
-            this.txtCash = new RJCodeAdvance.RJControls.RJTextBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel6.SuspendLayout();
@@ -120,10 +120,10 @@
             this.flowLayoutPanel1.AutoScroll = true;
             this.flowLayoutPanel1.AutoSize = true;
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 100);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 77);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Padding = new System.Windows.Forms.Padding(10);
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(439, 647);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(439, 670);
             this.flowLayoutPanel1.TabIndex = 47;
             // 
             // panel6
@@ -133,7 +133,7 @@
             this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel6.Location = new System.Drawing.Point(0, 0);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(439, 100);
+            this.panel6.Size = new System.Drawing.Size(439, 77);
             this.panel6.TabIndex = 0;
             // 
             // uiSymbolLabel3
@@ -142,7 +142,7 @@
             this.uiSymbolLabel3.BackColor = System.Drawing.SystemColors.Control;
             this.uiSymbolLabel3.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
             this.uiSymbolLabel3.ForeColor = System.Drawing.Color.White;
-            this.uiSymbolLabel3.Location = new System.Drawing.Point(365, 34);
+            this.uiSymbolLabel3.Location = new System.Drawing.Point(365, 20);
             this.uiSymbolLabel3.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiSymbolLabel3.Name = "uiSymbolLabel3";
             this.uiSymbolLabel3.Padding = new System.Windows.Forms.Padding(44, 0, 0, 0);
@@ -166,7 +166,7 @@
             this.txtSearch.BorderSize = 2;
             this.txtSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSearch.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtSearch.Location = new System.Drawing.Point(10, 27);
+            this.txtSearch.Location = new System.Drawing.Point(10, 13);
             this.txtSearch.Margin = new System.Windows.Forms.Padding(4);
             this.txtSearch.Multiline = false;
             this.txtSearch.Name = "txtSearch";
@@ -194,10 +194,10 @@
             this.flowLayoutPanel2.AutoScroll = true;
             this.flowLayoutPanel2.AutoSize = true;
             this.flowLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(0, 100);
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(0, 77);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
             this.flowLayoutPanel2.Padding = new System.Windows.Forms.Padding(5, 10, 10, 10);
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(439, 647);
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(439, 670);
             this.flowLayoutPanel2.TabIndex = 48;
             // 
             // panel8
@@ -206,7 +206,7 @@
             this.panel8.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel8.Location = new System.Drawing.Point(0, 0);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(439, 100);
+            this.panel8.Size = new System.Drawing.Size(439, 77);
             this.panel8.TabIndex = 1;
             // 
             // uiSymbolLabel2
@@ -215,7 +215,7 @@
             this.uiSymbolLabel2.BackColor = System.Drawing.Color.White;
             this.uiSymbolLabel2.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
             this.uiSymbolLabel2.ForeColor = System.Drawing.Color.White;
-            this.uiSymbolLabel2.Location = new System.Drawing.Point(173, 17);
+            this.uiSymbolLabel2.Location = new System.Drawing.Point(173, 9);
             this.uiSymbolLabel2.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiSymbolLabel2.Name = "uiSymbolLabel2";
             this.uiSymbolLabel2.Padding = new System.Windows.Forms.Padding(79, 0, 0, 0);
@@ -250,13 +250,13 @@
             this.uiPanel2.Controls.Add(this.btnLogin);
             this.uiPanel2.FillColor = System.Drawing.SystemColors.Control;
             this.uiPanel2.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
-            this.uiPanel2.Location = new System.Drawing.Point(3, 100);
+            this.uiPanel2.Location = new System.Drawing.Point(3, 77);
             this.uiPanel2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.uiPanel2.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiPanel2.Name = "uiPanel2";
             this.uiPanel2.Radius = 70;
             this.uiPanel2.RectColor = System.Drawing.Color.White;
-            this.uiPanel2.Size = new System.Drawing.Size(343, 642);
+            this.uiPanel2.Size = new System.Drawing.Size(343, 665);
             this.uiPanel2.Style = Sunny.UI.UIStyle.Custom;
             this.uiPanel2.TabIndex = 57;
             this.uiPanel2.Text = null;
@@ -276,7 +276,7 @@
             this.flowLayoutPanel3.Controls.Add(this.panel11);
             this.flowLayoutPanel3.Location = new System.Drawing.Point(1, 98);
             this.flowLayoutPanel3.Name = "flowLayoutPanel3";
-            this.flowLayoutPanel3.Size = new System.Drawing.Size(343, 431);
+            this.flowLayoutPanel3.Size = new System.Drawing.Size(343, 454);
             this.flowLayoutPanel3.TabIndex = 46;
             // 
             // panel5
@@ -341,7 +341,7 @@
             // panel3
             // 
             this.panel3.AutoScroll = true;
-            this.panel3.Controls.Add(this.lblTotal);
+            this.panel3.Controls.Add(this.lblSubtotal);
             this.panel3.Controls.Add(this.label11);
             this.panel3.Controls.Add(this.saaLine5);
             this.panel3.Location = new System.Drawing.Point(3, 109);
@@ -349,18 +349,18 @@
             this.panel3.Size = new System.Drawing.Size(320, 100);
             this.panel3.TabIndex = 28;
             // 
-            // lblTotal
+            // lblSubtotal
             // 
-            this.lblTotal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblTotal.BackColor = System.Drawing.SystemColors.Control;
-            this.lblTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(80)))), ((int)(((byte)(48)))));
-            this.lblTotal.Location = new System.Drawing.Point(46, 55);
-            this.lblTotal.Name = "lblTotal";
-            this.lblTotal.Size = new System.Drawing.Size(271, 37);
-            this.lblTotal.TabIndex = 15;
-            this.lblTotal.Text = "$0";
-            this.lblTotal.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lblSubtotal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblSubtotal.BackColor = System.Drawing.SystemColors.Control;
+            this.lblSubtotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSubtotal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(80)))), ((int)(((byte)(48)))));
+            this.lblSubtotal.Location = new System.Drawing.Point(46, 55);
+            this.lblSubtotal.Name = "lblSubtotal";
+            this.lblSubtotal.Size = new System.Drawing.Size(271, 37);
+            this.lblSubtotal.TabIndex = 15;
+            this.lblSubtotal.Text = "$0";
+            this.lblSubtotal.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label11
             // 
@@ -371,7 +371,7 @@
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(285, 37);
             this.label11.TabIndex = 10;
-            this.label11.Text = "Total";
+            this.label11.Text = "Subtotal";
             this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // saaLine5
@@ -458,7 +458,7 @@
             // panel9
             // 
             this.panel9.AutoScroll = true;
-            this.panel9.Controls.Add(this.lblSubtotal);
+            this.panel9.Controls.Add(this.lblTotal);
             this.panel9.Controls.Add(this.label2);
             this.panel9.Controls.Add(this.saaLine1);
             this.panel9.Location = new System.Drawing.Point(3, 321);
@@ -466,18 +466,18 @@
             this.panel9.Size = new System.Drawing.Size(320, 100);
             this.panel9.TabIndex = 26;
             // 
-            // lblSubtotal
+            // lblTotal
             // 
-            this.lblSubtotal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblSubtotal.BackColor = System.Drawing.SystemColors.Control;
-            this.lblSubtotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSubtotal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(80)))), ((int)(((byte)(48)))));
-            this.lblSubtotal.Location = new System.Drawing.Point(39, 55);
-            this.lblSubtotal.Name = "lblSubtotal";
-            this.lblSubtotal.Size = new System.Drawing.Size(278, 37);
-            this.lblSubtotal.TabIndex = 15;
-            this.lblSubtotal.Text = "$0";
-            this.lblSubtotal.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lblTotal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblTotal.BackColor = System.Drawing.SystemColors.Control;
+            this.lblTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(80)))), ((int)(((byte)(48)))));
+            this.lblTotal.Location = new System.Drawing.Point(39, 55);
+            this.lblTotal.Name = "lblTotal";
+            this.lblTotal.Size = new System.Drawing.Size(278, 37);
+            this.lblTotal.TabIndex = 15;
+            this.lblTotal.Text = "$0";
+            this.lblTotal.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label2
             // 
@@ -488,7 +488,7 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(272, 37);
             this.label2.TabIndex = 10;
-            this.label2.Text = "Subtotal";
+            this.label2.Text = "Total";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // saaLine1
@@ -525,6 +525,51 @@
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(320, 100);
             this.panel10.TabIndex = 30;
+            // 
+            // uiSymbolLabel4
+            // 
+            this.uiSymbolLabel4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.uiSymbolLabel4.BackColor = System.Drawing.SystemColors.Control;
+            this.uiSymbolLabel4.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
+            this.uiSymbolLabel4.ForeColor = System.Drawing.Color.White;
+            this.uiSymbolLabel4.Location = new System.Drawing.Point(151, 65);
+            this.uiSymbolLabel4.MinimumSize = new System.Drawing.Size(1, 1);
+            this.uiSymbolLabel4.Name = "uiSymbolLabel4";
+            this.uiSymbolLabel4.Padding = new System.Windows.Forms.Padding(34, 0, 0, 0);
+            this.uiSymbolLabel4.Size = new System.Drawing.Size(32, 26);
+            this.uiSymbolLabel4.Style = Sunny.UI.UIStyle.Custom;
+            this.uiSymbolLabel4.StyleCustomMode = true;
+            this.uiSymbolLabel4.Symbol = 57587;
+            this.uiSymbolLabel4.SymbolColor = System.Drawing.Color.Black;
+            this.uiSymbolLabel4.SymbolSize = 30;
+            this.uiSymbolLabel4.TabIndex = 59;
+            this.uiSymbolLabel4.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            // 
+            // txtCash
+            // 
+            this.txtCash.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtCash.BackColor = System.Drawing.SystemColors.Control;
+            this.txtCash.BorderColor = System.Drawing.Color.Gray;
+            this.txtCash.BorderFocusColor = System.Drawing.Color.Green;
+            this.txtCash.BorderRadius = 20;
+            this.txtCash.BorderSize = 2;
+            this.txtCash.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCash.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtCash.Location = new System.Drawing.Point(138, 56);
+            this.txtCash.Margin = new System.Windows.Forms.Padding(4);
+            this.txtCash.Multiline = false;
+            this.txtCash.Name = "txtCash";
+            this.txtCash.Padding = new System.Windows.Forms.Padding(60, 7, 10, 7);
+            this.txtCash.PasswordChar = false;
+            this.txtCash.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txtCash.PlaceholderText = "0";
+            this.txtCash.Size = new System.Drawing.Size(182, 40);
+            this.txtCash.TabIndex = 58;
+            this.txtCash.Tag = "0";
+            this.txtCash.Texts = "";
+            this.txtCash.UnderlinedStyle = false;
+            this.txtCash._TextChanged += new System.EventHandler(this.txtCash__TextChanged);
             // 
             // label9
             // 
@@ -646,7 +691,7 @@
             this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogin.ForeColor = System.Drawing.Color.White;
-            this.btnLogin.Location = new System.Drawing.Point(69, 562);
+            this.btnLogin.Location = new System.Drawing.Point(69, 585);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(199, 52);
             this.btnLogin.TabIndex = 41;
@@ -660,11 +705,11 @@
             this.uiSymbolLabel1.BackColor = System.Drawing.Color.White;
             this.uiSymbolLabel1.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
             this.uiSymbolLabel1.ForeColor = System.Drawing.Color.White;
-            this.uiSymbolLabel1.Location = new System.Drawing.Point(132, 5);
+            this.uiSymbolLabel1.Location = new System.Drawing.Point(158, 9);
             this.uiSymbolLabel1.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiSymbolLabel1.Name = "uiSymbolLabel1";
             this.uiSymbolLabel1.Padding = new System.Windows.Forms.Padding(64, 0, 0, 0);
-            this.uiSymbolLabel1.Size = new System.Drawing.Size(89, 83);
+            this.uiSymbolLabel1.Size = new System.Drawing.Size(58, 54);
             this.uiSymbolLabel1.Style = Sunny.UI.UIStyle.Custom;
             this.uiSymbolLabel1.StyleCustomMode = true;
             this.uiSymbolLabel1.Symbol = 104;
@@ -672,51 +717,6 @@
             this.uiSymbolLabel1.SymbolSize = 60;
             this.uiSymbolLabel1.TabIndex = 56;
             this.uiSymbolLabel1.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
-            // 
-            // uiSymbolLabel4
-            // 
-            this.uiSymbolLabel4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.uiSymbolLabel4.BackColor = System.Drawing.SystemColors.Control;
-            this.uiSymbolLabel4.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
-            this.uiSymbolLabel4.ForeColor = System.Drawing.Color.White;
-            this.uiSymbolLabel4.Location = new System.Drawing.Point(151, 65);
-            this.uiSymbolLabel4.MinimumSize = new System.Drawing.Size(1, 1);
-            this.uiSymbolLabel4.Name = "uiSymbolLabel4";
-            this.uiSymbolLabel4.Padding = new System.Windows.Forms.Padding(34, 0, 0, 0);
-            this.uiSymbolLabel4.Size = new System.Drawing.Size(32, 26);
-            this.uiSymbolLabel4.Style = Sunny.UI.UIStyle.Custom;
-            this.uiSymbolLabel4.StyleCustomMode = true;
-            this.uiSymbolLabel4.Symbol = 57587;
-            this.uiSymbolLabel4.SymbolColor = System.Drawing.Color.Black;
-            this.uiSymbolLabel4.SymbolSize = 30;
-            this.uiSymbolLabel4.TabIndex = 59;
-            this.uiSymbolLabel4.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
-            // 
-            // txtCash
-            // 
-            this.txtCash.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtCash.BackColor = System.Drawing.SystemColors.Control;
-            this.txtCash.BorderColor = System.Drawing.Color.Gray;
-            this.txtCash.BorderFocusColor = System.Drawing.Color.Green;
-            this.txtCash.BorderRadius = 20;
-            this.txtCash.BorderSize = 2;
-            this.txtCash.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCash.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtCash.Location = new System.Drawing.Point(138, 56);
-            this.txtCash.Margin = new System.Windows.Forms.Padding(4);
-            this.txtCash.Multiline = false;
-            this.txtCash.Name = "txtCash";
-            this.txtCash.Padding = new System.Windows.Forms.Padding(60, 7, 10, 7);
-            this.txtCash.PasswordChar = false;
-            this.txtCash.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.txtCash.PlaceholderText = "0";
-            this.txtCash.Size = new System.Drawing.Size(182, 40);
-            this.txtCash.TabIndex = 58;
-            this.txtCash.Tag = "0";
-            this.txtCash.Texts = "";
-            this.txtCash.UnderlinedStyle = false;
-            this.txtCash._TextChanged += new System.EventHandler(this.txtCash__TextChanged);
             // 
             // InvoiceForm
             // 
@@ -776,7 +776,7 @@
         private System.Windows.Forms.Label label10;
         private SaaUI.SaaLine saaLine3;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Label lblTotal;
+        private System.Windows.Forms.Label lblSubtotal;
         private System.Windows.Forms.Label label11;
         private SaaUI.SaaLine saaLine5;
         private System.Windows.Forms.Panel panel2;
@@ -784,7 +784,7 @@
         private System.Windows.Forms.Label lblTax;
         private SaaUI.SaaLine saaLine2;
         private System.Windows.Forms.Panel panel9;
-        private System.Windows.Forms.Label lblSubtotal;
+        private System.Windows.Forms.Label lblTotal;
         private System.Windows.Forms.Label label2;
         private SaaUI.SaaLine saaLine1;
         private System.Windows.Forms.Panel panel10;

@@ -12,11 +12,11 @@ namespace Supermarket.View.Forms.Casher.Casher_Form_SubComponent
 {
     public partial class SettingForm : Form
     {
-        Form casherForm;
-        public SettingForm(Form casherForm)
+        Form parentForm;
+        public SettingForm(Form parentForm)
         {
             InitializeComponent();
-            this.casherForm = casherForm;
+            this.parentForm = parentForm;
         }
 
         private void SettingForm_Load(object sender, EventArgs e)

@@ -106,10 +106,10 @@ namespace Supermarket.View.Forms
                 summarySubtotal += cartView.subtotal;
                 summaryTax += cartView.tax;
             }
-            lblTotal.Text=string.Format("{0:C}",Math.Round(summaryTotal));
-            lblSubtotal.Text = string.Format("{0:C}", summarySubtotal);
+            lblSubtotal.Text= string.Format("{0:C}", summarySubtotal);
+            lblTotal.Text = string.Format("{0:C}", Math.Round(summaryTotal));
             lblTax.Text = string.Format("{0:C}", summaryTax);
-            change = ((txtCash.Texts == "") ? 0 : Math.Round(double.Parse(txtCash.Texts))) - Math.Round(summaryTotal);
+            change = ((txtCash.Texts == "") ? 0 : double.Parse(txtCash.Texts)) - Math.Round(summaryTotal);
             if (change < 0)
             {
                 lblChange.Text = "-ve change";

@@ -1,6 +1,6 @@
 ﻿namespace Supermarket.View.Forms
 {
-    partial class CashierTransactionHistoryForm
+    partial class TransactionHistoryForm
     {
         /// <summary>
         /// Required designer variable.
@@ -33,6 +33,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.pnlSearchTran = new System.Windows.Forms.Panel();
+            this.uiSymbolLabel3 = new Sunny.UI.UISymbolLabel();
             this.uiPanel4 = new Sunny.UI.UIPanel();
             this.rjDatePicker3 = new RJCodeAdvance.RJControls.RJDatePicker();
             this.uiPanel1 = new Sunny.UI.UIPanel();
@@ -42,16 +43,25 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.uiPanel2 = new Sunny.UI.UIPanel();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
-            this.label8 = new System.Windows.Forms.Label();
-            this.uiSymbolLabel3 = new Sunny.UI.UISymbolLabel();
-            this.transactionCard17 = new Supermarket.View.User_Controls.TransactionCard();
-            this.transactionCard18 = new Supermarket.View.User_Controls.TransactionCard();
-            this.transactionCard19 = new Supermarket.View.User_Controls.TransactionCard();
-            this.transactionCard20 = new Supermarket.View.User_Controls.TransactionCard();
             this.transactionDetailViewCard4 = new Supermarket.View.User_Controls.SignInControls.TransactionDetailViewCard();
             this.transactionDetailViewCard1 = new Supermarket.View.User_Controls.SignInControls.TransactionDetailViewCard();
             this.transactionDetailViewCard2 = new Supermarket.View.User_Controls.SignInControls.TransactionDetailViewCard();
             this.transactionDetailViewCard3 = new Supermarket.View.User_Controls.SignInControls.TransactionDetailViewCard();
+            this.label8 = new System.Windows.Forms.Label();
+            this.transactionCard1 = new Supermarket.View.User_Controls.TransactionCard();
+            this.transactionCard2 = new Supermarket.View.User_Controls.TransactionCard();
+            this.transactionCard3 = new Supermarket.View.User_Controls.TransactionCard();
+            this.transactionCard4 = new Supermarket.View.User_Controls.TransactionCard();
+            this.transactionCard5 = new Supermarket.View.User_Controls.TransactionCard();
+            this.transactionCard6 = new Supermarket.View.User_Controls.TransactionCard();
+            this.transactionCard7 = new Supermarket.View.User_Controls.TransactionCard();
+            this.transactionCard8 = new Supermarket.View.User_Controls.TransactionCard();
+            this.transactionCard9 = new Supermarket.View.User_Controls.TransactionCard();
+            this.transactionCard10 = new Supermarket.View.User_Controls.TransactionCard();
+            this.transactionCard11 = new Supermarket.View.User_Controls.TransactionCard();
+            this.transactionCard12 = new Supermarket.View.User_Controls.TransactionCard();
+            this.transactionCard13 = new Supermarket.View.User_Controls.TransactionCard();
+            this.transactionCard14 = new Supermarket.View.User_Controls.TransactionCard();
             this.panel1.SuspendLayout();
             this.uiTableLayoutPanel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -102,10 +112,20 @@
             // flowLayoutPanel1
             // 
             this.flowLayoutPanel1.AutoScroll = true;
-            this.flowLayoutPanel1.Controls.Add(this.transactionCard17);
-            this.flowLayoutPanel1.Controls.Add(this.transactionCard18);
-            this.flowLayoutPanel1.Controls.Add(this.transactionCard19);
-            this.flowLayoutPanel1.Controls.Add(this.transactionCard20);
+            this.flowLayoutPanel1.Controls.Add(this.transactionCard1);
+            this.flowLayoutPanel1.Controls.Add(this.transactionCard2);
+            this.flowLayoutPanel1.Controls.Add(this.transactionCard3);
+            this.flowLayoutPanel1.Controls.Add(this.transactionCard4);
+            this.flowLayoutPanel1.Controls.Add(this.transactionCard5);
+            this.flowLayoutPanel1.Controls.Add(this.transactionCard6);
+            this.flowLayoutPanel1.Controls.Add(this.transactionCard7);
+            this.flowLayoutPanel1.Controls.Add(this.transactionCard8);
+            this.flowLayoutPanel1.Controls.Add(this.transactionCard9);
+            this.flowLayoutPanel1.Controls.Add(this.transactionCard10);
+            this.flowLayoutPanel1.Controls.Add(this.transactionCard11);
+            this.flowLayoutPanel1.Controls.Add(this.transactionCard12);
+            this.flowLayoutPanel1.Controls.Add(this.transactionCard13);
+            this.flowLayoutPanel1.Controls.Add(this.transactionCard14);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 100);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
@@ -124,6 +144,26 @@
             this.pnlSearchTran.Name = "pnlSearchTran";
             this.pnlSearchTran.Size = new System.Drawing.Size(786, 100);
             this.pnlSearchTran.TabIndex = 1;
+            // 
+            // uiSymbolLabel3
+            // 
+            this.uiSymbolLabel3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.uiSymbolLabel3.BackColor = System.Drawing.SystemColors.Control;
+            this.uiSymbolLabel3.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
+            this.uiSymbolLabel3.ForeColor = System.Drawing.Color.White;
+            this.uiSymbolLabel3.Location = new System.Drawing.Point(366, 34);
+            this.uiSymbolLabel3.MinimumSize = new System.Drawing.Size(1, 1);
+            this.uiSymbolLabel3.Name = "uiSymbolLabel3";
+            this.uiSymbolLabel3.Padding = new System.Windows.Forms.Padding(44, 0, 0, 0);
+            this.uiSymbolLabel3.Size = new System.Drawing.Size(35, 34);
+            this.uiSymbolLabel3.Style = Sunny.UI.UIStyle.Custom;
+            this.uiSymbolLabel3.StyleCustomMode = true;
+            this.uiSymbolLabel3.Symbol = 61442;
+            this.uiSymbolLabel3.SymbolColor = System.Drawing.Color.Black;
+            this.uiSymbolLabel3.SymbolSize = 40;
+            this.uiSymbolLabel3.TabIndex = 58;
+            this.uiSymbolLabel3.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            this.uiSymbolLabel3.Click += new System.EventHandler(this.uiSymbolLabel3_Click);
             // 
             // uiPanel4
             // 
@@ -281,68 +321,6 @@
             this.flowLayoutPanel2.Size = new System.Drawing.Size(381, 574);
             this.flowLayoutPanel2.TabIndex = 46;
             // 
-            // label8
-            // 
-            this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label8.BackColor = System.Drawing.SystemColors.Control;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.DarkGray;
-            this.label8.Location = new System.Drawing.Point(17, 21);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(378, 60);
-            this.label8.TabIndex = 45;
-            this.label8.Text = "Detail";
-            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // uiSymbolLabel3
-            // 
-            this.uiSymbolLabel3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.uiSymbolLabel3.BackColor = System.Drawing.SystemColors.Control;
-            this.uiSymbolLabel3.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
-            this.uiSymbolLabel3.ForeColor = System.Drawing.Color.White;
-            this.uiSymbolLabel3.Location = new System.Drawing.Point(366, 34);
-            this.uiSymbolLabel3.MinimumSize = new System.Drawing.Size(1, 1);
-            this.uiSymbolLabel3.Name = "uiSymbolLabel3";
-            this.uiSymbolLabel3.Padding = new System.Windows.Forms.Padding(44, 0, 0, 0);
-            this.uiSymbolLabel3.Size = new System.Drawing.Size(35, 34);
-            this.uiSymbolLabel3.Style = Sunny.UI.UIStyle.Custom;
-            this.uiSymbolLabel3.StyleCustomMode = true;
-            this.uiSymbolLabel3.Symbol = 61442;
-            this.uiSymbolLabel3.SymbolColor = System.Drawing.Color.Black;
-            this.uiSymbolLabel3.SymbolSize = 40;
-            this.uiSymbolLabel3.TabIndex = 58;
-            this.uiSymbolLabel3.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
-            this.uiSymbolLabel3.Click += new System.EventHandler(this.uiSymbolLabel3_Click);
-            // 
-            // transactionCard17
-            // 
-            this.transactionCard17.Location = new System.Drawing.Point(3, 3);
-            this.transactionCard17.Name = "transactionCard17";
-            this.transactionCard17.Size = new System.Drawing.Size(762, 148);
-            this.transactionCard17.TabIndex = 17;
-            // 
-            // transactionCard18
-            // 
-            this.transactionCard18.Location = new System.Drawing.Point(3, 157);
-            this.transactionCard18.Name = "transactionCard18";
-            this.transactionCard18.Size = new System.Drawing.Size(762, 148);
-            this.transactionCard18.TabIndex = 18;
-            // 
-            // transactionCard19
-            // 
-            this.transactionCard19.Location = new System.Drawing.Point(3, 311);
-            this.transactionCard19.Name = "transactionCard19";
-            this.transactionCard19.Size = new System.Drawing.Size(762, 148);
-            this.transactionCard19.TabIndex = 19;
-            // 
-            // transactionCard20
-            // 
-            this.transactionCard20.Location = new System.Drawing.Point(3, 465);
-            this.transactionCard20.Name = "transactionCard20";
-            this.transactionCard20.Size = new System.Drawing.Size(762, 148);
-            this.transactionCard20.TabIndex = 20;
-            // 
             // transactionDetailViewCard4
             // 
             this.transactionDetailViewCard4.Location = new System.Drawing.Point(5, 5);
@@ -374,6 +352,118 @@
             this.transactionDetailViewCard3.Name = "transactionDetailViewCard3";
             this.transactionDetailViewCard3.Size = new System.Drawing.Size(346, 189);
             this.transactionDetailViewCard3.TabIndex = 2;
+            // 
+            // label8
+            // 
+            this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label8.BackColor = System.Drawing.SystemColors.Control;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.DarkGray;
+            this.label8.Location = new System.Drawing.Point(17, 21);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(378, 60);
+            this.label8.TabIndex = 45;
+            this.label8.Text = "Detail";
+            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // transactionCard1
+            // 
+            this.transactionCard1.Location = new System.Drawing.Point(3, 3);
+            this.transactionCard1.Name = "transactionCard1";
+            this.transactionCard1.Size = new System.Drawing.Size(780, 162);
+            this.transactionCard1.TabIndex = 0;
+            // 
+            // transactionCard2
+            // 
+            this.transactionCard2.Location = new System.Drawing.Point(3, 171);
+            this.transactionCard2.Name = "transactionCard2";
+            this.transactionCard2.Size = new System.Drawing.Size(780, 162);
+            this.transactionCard2.TabIndex = 1;
+            // 
+            // transactionCard3
+            // 
+            this.transactionCard3.Location = new System.Drawing.Point(3, 339);
+            this.transactionCard3.Name = "transactionCard3";
+            this.transactionCard3.Size = new System.Drawing.Size(780, 162);
+            this.transactionCard3.TabIndex = 2;
+            // 
+            // transactionCard4
+            // 
+            this.transactionCard4.Location = new System.Drawing.Point(3, 507);
+            this.transactionCard4.Name = "transactionCard4";
+            this.transactionCard4.Size = new System.Drawing.Size(780, 162);
+            this.transactionCard4.TabIndex = 3;
+            // 
+            // transactionCard5
+            // 
+            this.transactionCard5.Location = new System.Drawing.Point(3, 675);
+            this.transactionCard5.Name = "transactionCard5";
+            this.transactionCard5.Size = new System.Drawing.Size(780, 162);
+            this.transactionCard5.TabIndex = 4;
+            // 
+            // transactionCard6
+            // 
+            this.transactionCard6.Location = new System.Drawing.Point(3, 843);
+            this.transactionCard6.Name = "transactionCard6";
+            this.transactionCard6.Size = new System.Drawing.Size(780, 162);
+            this.transactionCard6.TabIndex = 5;
+            // 
+            // transactionCard7
+            // 
+            this.transactionCard7.Location = new System.Drawing.Point(3, 1011);
+            this.transactionCard7.Name = "transactionCard7";
+            this.transactionCard7.Size = new System.Drawing.Size(780, 162);
+            this.transactionCard7.TabIndex = 6;
+            // 
+            // transactionCard8
+            // 
+            this.transactionCard8.Location = new System.Drawing.Point(3, 1179);
+            this.transactionCard8.Name = "transactionCard8";
+            this.transactionCard8.Size = new System.Drawing.Size(780, 162);
+            this.transactionCard8.TabIndex = 7;
+            // 
+            // transactionCard9
+            // 
+            this.transactionCard9.Location = new System.Drawing.Point(3, 1347);
+            this.transactionCard9.Name = "transactionCard9";
+            this.transactionCard9.Size = new System.Drawing.Size(780, 162);
+            this.transactionCard9.TabIndex = 8;
+            // 
+            // transactionCard10
+            // 
+            this.transactionCard10.Location = new System.Drawing.Point(3, 1515);
+            this.transactionCard10.Name = "transactionCard10";
+            this.transactionCard10.Size = new System.Drawing.Size(780, 162);
+            this.transactionCard10.TabIndex = 9;
+            // 
+            // transactionCard11
+            // 
+            this.transactionCard11.Location = new System.Drawing.Point(3, 1683);
+            this.transactionCard11.Name = "transactionCard11";
+            this.transactionCard11.Size = new System.Drawing.Size(780, 162);
+            this.transactionCard11.TabIndex = 10;
+            // 
+            // transactionCard12
+            // 
+            this.transactionCard12.Location = new System.Drawing.Point(3, 1851);
+            this.transactionCard12.Name = "transactionCard12";
+            this.transactionCard12.Size = new System.Drawing.Size(780, 162);
+            this.transactionCard12.TabIndex = 11;
+            // 
+            // transactionCard13
+            // 
+            this.transactionCard13.Location = new System.Drawing.Point(3, 2019);
+            this.transactionCard13.Name = "transactionCard13";
+            this.transactionCard13.Size = new System.Drawing.Size(780, 162);
+            this.transactionCard13.TabIndex = 12;
+            // 
+            // transactionCard14
+            // 
+            this.transactionCard14.Location = new System.Drawing.Point(3, 2187);
+            this.transactionCard14.Name = "transactionCard14";
+            this.transactionCard14.Size = new System.Drawing.Size(780, 162);
+            this.transactionCard14.TabIndex = 13;
             // 
             // CashierTransactionHistoryForm
             // 
@@ -413,10 +503,6 @@
         private System.Windows.Forms.Panel panel3;
         private Sunny.UI.UIPanel uiPanel2;
         private System.Windows.Forms.Label label8;
-        private User_Controls.TransactionCard transactionCard17;
-        private User_Controls.TransactionCard transactionCard18;
-        private User_Controls.TransactionCard transactionCard19;
-        private User_Controls.TransactionCard transactionCard20;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
         private User_Controls.SignInControls.TransactionDetailViewCard transactionDetailViewCard1;
         private User_Controls.SignInControls.TransactionDetailViewCard transactionDetailViewCard4;
@@ -428,5 +514,19 @@
         private RJCodeAdvance.RJControls.RJDatePicker rjDatePicker3;
         private Sunny.UI.UIPanel uiPanel1;
         private Sunny.UI.UISymbolLabel uiSymbolLabel3;
+        private User_Controls.TransactionCard transactionCard1;
+        private User_Controls.TransactionCard transactionCard2;
+        private User_Controls.TransactionCard transactionCard3;
+        private User_Controls.TransactionCard transactionCard4;
+        private User_Controls.TransactionCard transactionCard5;
+        private User_Controls.TransactionCard transactionCard6;
+        private User_Controls.TransactionCard transactionCard7;
+        private User_Controls.TransactionCard transactionCard8;
+        private User_Controls.TransactionCard transactionCard9;
+        private User_Controls.TransactionCard transactionCard10;
+        private User_Controls.TransactionCard transactionCard11;
+        private User_Controls.TransactionCard transactionCard12;
+        private User_Controls.TransactionCard transactionCard13;
+        private User_Controls.TransactionCard transactionCard14;
     }
 }
