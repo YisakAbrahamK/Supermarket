@@ -55,5 +55,9 @@ namespace Supermarket.View.Forms.Admin.Admin_Form_Subcomponents
             txtSearch.Invalidate();
             txtSearch.Refresh();
         }
+
+        private void btnAddAndEdit_Click(object sender, EventArgs e)
+        {
+        }
     }
 }

@@ -65,6 +65,7 @@
     <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
     </Reference>
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Design" />
     <Reference Include="System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
@@ -96,35 +97,38 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DbService.cs" />
+    <Compile Include="Model\Admin.cs" />
+    <Compile Include="Model\Casher.cs" />
     <Compile Include="Model\Product.cs" />
-    <Compile Include="View\Forms\Admin\Admin Form Subcomponents\CasherForm.cs">
+    <Compile Include="View\Forms\AdminView\Admin Form Subcomponents\CasherForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\Forms\Admin\Admin Form Subcomponents\CasherForm.Designer.cs">
+    <Compile Include="View\Forms\AdminView\Admin Form Subcomponents\CasherForm.Designer.cs">
       <DependentUpon>CasherForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\Forms\Admin\Admin Form Subcomponents\DashbordForm.cs">
+    <Compile Include="View\Forms\AdminView\Admin Form Subcomponents\DashbordForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\Forms\Admin\Admin Form Subcomponents\DashbordForm.Designer.cs">
+    <Compile Include="View\Forms\AdminView\Admin Form Subcomponents\DashbordForm.Designer.cs">
       <DependentUpon>DashbordForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\Forms\Admin\Admin Form Subcomponents\ExpdateForm.cs">
+    <Compile Include="View\Forms\AdminView\Admin Form Subcomponents\ExpdateForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\Forms\Admin\Admin Form Subcomponents\ExpdateForm.Designer.cs">
+    <Compile Include="View\Forms\AdminView\Admin Form Subcomponents\ExpdateForm.Designer.cs">
       <DependentUpon>ExpdateForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\Forms\Admin\Admin Form Subcomponents\ProductForm.cs">
+    <Compile Include="View\Forms\AdminView\Admin Form Subcomponents\ProductForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\Forms\Admin\Admin Form Subcomponents\ProductForm.Designer.cs">
+    <Compile Include="View\Forms\AdminView\Admin Form Subcomponents\ProductForm.Designer.cs">
       <DependentUpon>ProductForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\Forms\Admin\AdminForm.cs">
+    <Compile Include="View\Forms\AdminView\AdminForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\Forms\Admin\AdminForm.Designer.cs">
+    <Compile Include="View\Forms\AdminView\AdminForm.Designer.cs">
       <DependentUpon>AdminForm.cs</DependentUpon>
     </Compile>
     <Compile Include="View\Forms\Common Forms\SettingForm.cs">
@@ -133,10 +137,10 @@
     <Compile Include="View\Forms\Common Forms\SettingForm.Designer.cs">
       <DependentUpon>SettingForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\Forms\Casher\CashierForm.cs">
+    <Compile Include="View\Forms\CasherView\CashierForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\Forms\Casher\CashierForm.Designer.cs">
+    <Compile Include="View\Forms\CasherView\CashierForm.Designer.cs">
       <DependentUpon>CashierForm.cs</DependentUpon>
     </Compile>
     <Compile Include="View\Forms\Common Forms\TransactionHistoryForm.cs">
@@ -151,10 +155,10 @@
     <Compile Include="View\Forms\Test\This is for test.Designer.cs">
       <DependentUpon>This is for test.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\Forms\Casher\Casher Form Subcomponents\InvoiceForm.cs">
+    <Compile Include="View\Forms\CasherView\Casher Form Subcomponents\InvoiceForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\Forms\Casher\Casher Form Subcomponents\InvoiceForm.Designer.cs">
+    <Compile Include="View\Forms\CasherView\Casher Form Subcomponents\InvoiceForm.Designer.cs">
       <DependentUpon>InvoiceForm.cs</DependentUpon>
     </Compile>
     <Compile Include="View\Forms\LoginForm.cs">
@@ -243,25 +247,25 @@
     <Compile Include="View\User Controls\TransactionCard.Designer.cs">
       <DependentUpon>TransactionCard.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="View\Forms\Admin\Admin Form Subcomponents\CasherForm.resx">
+    <EmbeddedResource Include="View\Forms\AdminView\Admin Form Subcomponents\CasherForm.resx">
       <DependentUpon>CasherForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\Forms\Admin\Admin Form Subcomponents\DashbordForm.resx">
+    <EmbeddedResource Include="View\Forms\AdminView\Admin Form Subcomponents\DashbordForm.resx">
       <DependentUpon>DashbordForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\Forms\Admin\Admin Form Subcomponents\ExpdateForm.resx">
+    <EmbeddedResource Include="View\Forms\AdminView\Admin Form Subcomponents\ExpdateForm.resx">
       <DependentUpon>ExpdateForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\Forms\Admin\Admin Form Subcomponents\ProductForm.resx">
+    <EmbeddedResource Include="View\Forms\AdminView\Admin Form Subcomponents\ProductForm.resx">
       <DependentUpon>ProductForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\Forms\Admin\AdminForm.resx">
+    <EmbeddedResource Include="View\Forms\AdminView\AdminForm.resx">
       <DependentUpon>AdminForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Forms\Common Forms\SettingForm.resx">
       <DependentUpon>SettingForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\Forms\Casher\CashierForm.resx">
+    <EmbeddedResource Include="View\Forms\CasherView\CashierForm.resx">
       <DependentUpon>CashierForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Forms\Common Forms\TransactionHistoryForm.resx">
@@ -270,7 +274,7 @@
     <EmbeddedResource Include="View\Forms\Test\This is for test.resx">
       <DependentUpon>This is for test.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\Forms\Casher\Casher Form Subcomponents\InvoiceForm.resx">
+    <EmbeddedResource Include="View\Forms\CasherView\Casher Form Subcomponents\InvoiceForm.resx">
       <DependentUpon>InvoiceForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Forms\LoginForm.resx">

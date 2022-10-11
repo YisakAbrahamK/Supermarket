@@ -32,6 +32,7 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.uiPanel1 = new Sunny.UI.UIPanel();
+            this.cbRole = new Sunny.UI.UIComboBox();
             this.txtPassword = new Sunny.UI.UITextBox();
             this.txtEmail = new Sunny.UI.UITextBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
@@ -84,6 +85,7 @@
             // uiPanel1
             // 
             this.uiPanel1.BackColor = System.Drawing.Color.Blue;
+            this.uiPanel1.Controls.Add(this.cbRole);
             this.uiPanel1.Controls.Add(this.lblForgotPassword);
             this.uiPanel1.Controls.Add(this.txtPassword);
             this.uiPanel1.Controls.Add(this.txtEmail);
@@ -99,9 +101,40 @@
             this.uiPanel1.Size = new System.Drawing.Size(375, 620);
             this.uiPanel1.Style = Sunny.UI.UIStyle.Custom;
             this.uiPanel1.TabIndex = 43;
-            this.uiPanel1.Text = "uiPanel1";
+            this.uiPanel1.Text = null;
             this.uiPanel1.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.uiPanel1.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            // 
+            // cbRole
+            // 
+            this.cbRole.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.cbRole.DataSource = null;
+            this.cbRole.FillColor = System.Drawing.Color.White;
+            this.cbRole.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
+            this.cbRole.ForeColor = System.Drawing.Color.Gray;
+            this.cbRole.ItemForeColor = System.Drawing.Color.Gray;
+            this.cbRole.ItemRectColor = System.Drawing.Color.DarkSlateGray;
+            this.cbRole.Items.AddRange(new object[] {
+            "Admin",
+            "Casher"});
+            this.cbRole.ItemSelectBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(249)))), ((int)(((byte)(255)))));
+            this.cbRole.ItemSelectForeColor = System.Drawing.Color.Gray;
+            this.cbRole.Location = new System.Drawing.Point(145, 246);
+            this.cbRole.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.cbRole.MinimumSize = new System.Drawing.Size(63, 0);
+            this.cbRole.Name = "cbRole";
+            this.cbRole.Padding = new System.Windows.Forms.Padding(10, 0, 30, 2);
+            this.cbRole.Radius = 15;
+            this.cbRole.RectColor = System.Drawing.SystemColors.Control;
+            this.cbRole.Size = new System.Drawing.Size(106, 28);
+            this.cbRole.Sorted = true;
+            this.cbRole.Style = Sunny.UI.UIStyle.Custom;
+            this.cbRole.StyleCustomMode = true;
+            this.cbRole.TabIndex = 46;
+            this.cbRole.Text = "Admin";
+            this.cbRole.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.cbRole.Watermark = "";
+            this.cbRole.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
             // txtPassword
             // 
@@ -109,7 +142,7 @@
             this.txtPassword.Controls.Add(this.pictureBox3);
             this.txtPassword.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPassword.Location = new System.Drawing.Point(47, 355);
+            this.txtPassword.Location = new System.Drawing.Point(50, 370);
             this.txtPassword.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtPassword.MinimumSize = new System.Drawing.Size(1, 16);
             this.txtPassword.Name = "txtPassword";
@@ -134,7 +167,7 @@
             this.txtEmail.Controls.Add(this.pictureBox4);
             this.txtEmail.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmail.Location = new System.Drawing.Point(47, 288);
+            this.txtEmail.Location = new System.Drawing.Point(50, 303);
             this.txtEmail.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtEmail.MinimumSize = new System.Drawing.Size(1, 16);
             this.txtEmail.Name = "txtEmail";
@@ -168,7 +201,7 @@
             this.btnLogin.BackColor = System.Drawing.Color.DarkSlateGray;
             this.btnLogin.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnLogin.Font = new System.Drawing.Font("Microsoft YaHei", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogin.Location = new System.Drawing.Point(131, 442);
+            this.btnLogin.Location = new System.Drawing.Point(127, 466);
             this.btnLogin.MinimumSize = new System.Drawing.Size(1, 1);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Radius = 40;
@@ -208,5 +241,6 @@
         private Sunny.UI.UITextBox txtEmail;
         private System.Windows.Forms.PictureBox pictureBox4;
         private Sunny.UI.UITextBox txtPassword;
+        private Sunny.UI.UIComboBox cbRole;
     }
 }

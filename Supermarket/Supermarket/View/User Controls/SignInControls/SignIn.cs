@@ -1,10 +1,13 @@
-﻿using Supermarket.Panals;
+﻿using Supermarket.Model;
+using Supermarket.Panals;
 using Supermarket.View.Forms;
 using Supermarket.View.Forms.Admin;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Configuration;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -23,9 +26,16 @@ namespace Supermarket.View.User_Controls.SignInControls
             this.pnlContainer = pnlContainer;
         }
 
+        public SignIn(Panel pnlContainer,string Email)
+        {
+            InitializeComponent();
+            this.pnlContainer = pnlContainer;
+            txtEmail.Text= Email;
+        }
+
         private void lblForgotPassword_Click(object sender, EventArgs e)
         {
-            SendRecoveryCode enterEmail = new SendRecoveryCode(pnlContainer, txtPassword.Text);
+            SendRecoveryCode enterEmail = new SendRecoveryCode(pnlContainer, txtEmail.Text,cbRole.SelectedItem.ToString());
             this.Dispose();
             pnlContainer.Controls.Add(enterEmail);
             enterEmail.Dock = DockStyle.Fill;
@@ -46,10 +56,84 @@ namespace Supermarket.View.User_Controls.SignInControls
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            CashierForm cashierForm = new CashierForm();
-            cashierForm.Show();
-            AdminForm adminForm = new AdminForm();
-            adminForm.Show();
+            if(cbRole.SelectedItem.ToString()!=null || cbRole.SelectedItem.ToString() != "")
+            {
+                if (cbRole.SelectedItem.ToString() == "Admin")
+                {
+                    SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["Admin"].ConnectionString);
+                    string cmdText = "SELECT * FROM Admins";
+                    SqlCommand cmd = new SqlCommand(cmdText,connection);
+                    connection.Open();
+                    SqlDataReader AdminData = cmd.ExecuteReader();
+                    Boolean UserExist=false;
+
+                    Admin admin = new Admin();
+                    while (AdminData.Read())
+                    {
+                        if (txtEmail.Text == AdminData["Email"].ToString() && txtPassword.Text == AdminData["Password"].ToString())
+                        {
+                            admin.Email = AdminData["Email"].ToString();
+                            admin.Gender = Boolean.Parse(AdminData["Gender"].ToString());
+                            admin.Id = int.Parse(AdminData["Id"].ToString());
+                            admin.Location = AdminData["Location"].ToString();
+                            admin.Password = AdminData["Password"].ToString();
+                            admin.FirstName = AdminData["FirstName"].ToString();
+                            admin.LastName = AdminData["LastName"].ToString();
+                            admin.Phone = AdminData["Phone"].ToString();
+
+                            AdminForm adminForm = new AdminForm(admin);
+                            adminForm.Show();
+                            UserExist = true;
+                            connection.Close();
+                            return;
+                        }
+                    }
+
+                    if (UserExist == false)
+                    {
+                        MessageBox.Show("The user does not exist.");
+                        connection.Close();
+                    }
+
+                }
+                else
+                {
+                    SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["Casher"].ConnectionString);
+                    string cmdText = "SELECT * FROM Cashers";
+                    SqlCommand cmd = new SqlCommand(cmdText, connection);
+                    connection.Open();
+                    SqlDataReader CasherData = cmd.ExecuteReader();
+                    Boolean UserExist = false;
+
+                    Casher casher = new Casher();
+                    while (CasherData.Read())
+                    {
+                        if (txtEmail.Text == CasherData["Email"].ToString() && txtPassword.Text == CasherData["Password"].ToString())
+                        {
+                            casher.Email = CasherData["Email"].ToString();
+                            casher.Gender = Boolean.Parse(CasherData["Gender"].ToString());
+                            casher.Id = int.Parse(CasherData["Id"].ToString());
+                            casher.Location = CasherData["Location"].ToString();
+                            casher.Password = CasherData["Password"].ToString();
+                            casher.FirstName = CasherData["FirstName"].ToString();
+                            casher.LastName = CasherData["LastName"].ToString();
+                            casher.Phone = CasherData["Phone"].ToString();
+                            CashierForm cashierForm = new CashierForm(casher);
+                            cashierForm.Show();
+                            UserExist = true;
+                            connection.Close();
+                            return;
+                        }
+                    }
+
+                    if (UserExist == false)
+                    {
+                        MessageBox.Show("The user does not exist.");
+                        connection.Close();
+                    }
+                }
+            }
+
         }
     }
 }

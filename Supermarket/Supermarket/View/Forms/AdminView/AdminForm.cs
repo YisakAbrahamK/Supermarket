@@ -1,4 +1,5 @@
 ﻿using Sunny.UI;
+using Supermarket.View.Forms.Admin.Admin_Form_Subcomponents;
 using Supermarket.View.Forms.Casher.Casher_Form_SubComponent;
 using System;
 using System.Collections.Generic;
@@ -10,45 +11,56 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Supermarket.View.Forms
+namespace Supermarket.View.Forms.Admin
 {
-    public partial class CashierForm : Form
+    public partial class AdminForm : Form
     {
-        InvoiceForm invoiceForm;
-        TransactionHistoryForm cashierTransactionHistoryForm;
+        CasherForm casherForm;
         SettingForm settingForm;
-
-        public CashierForm()
+        TransactionHistoryForm transactionHistoryForm;
+        ProductForm productForm;
+        ExpdateForm expdateForm;
+        DashbordForm dashbordForm;
+        Model.Admin LogedinAdmin;
+        public AdminForm(Model.Admin LogedinAdmin)
         {
             InitializeComponent();
-            invoiceForm = new InvoiceForm(this);
-            cashierTransactionHistoryForm = new TransactionHistoryForm(this);
+            casherForm = new CasherForm(this);
             settingForm = new SettingForm(this);
+            transactionHistoryForm = new TransactionHistoryForm(this);
+            productForm = new ProductForm(this);
+            expdateForm = new ExpdateForm(this);
+            dashbordForm = new DashbordForm(this);
+            this.LogedinAdmin = LogedinAdmin;
         }
 
-        private void CashierForm_Load(object sender, EventArgs e)
+        private void AdminForm_Load(object sender, EventArgs e)
         {
-            invoiceForm.TopLevel = false;
-            pnlContainer.Controls.Add(invoiceForm);
-            invoiceForm.Dock = DockStyle.Fill;
-            invoiceForm.Show();
+            //FOR PANEL Dashbord
 
-
-            //FOR PANEL INVOICE
-
-            addEventForNavs(pnlInvoice);
+            addEventForNavs(pnlDashbord);
 
             //FOR PANEL HISTORY
 
             addEventForNavs(pnlHistory);
 
+            //FOR PANEL PRODUCT
+
+            addEventForNavs(pnlProduct);
+
+            //FOR PANEL EXPPRODUCT
+
+            addEventForNavs(pnlExpiringProduct);
+
+
+            //FOR PANEL CASHER
+
+            addEventForNavs(pnlCasher);
+
 
             //FOR PANAL SETTING
 
             addEventForNavs(pnlSetting);
-
-
-
         }
 
         private void addEventForNavs(UIPanel uiPanal)
@@ -80,44 +92,66 @@ namespace Supermarket.View.Forms
                     mouseEnterForNavs(uiPanal);
                 };
             }
+
         }
 
         private void navClickEventAction(UIPanel uiPanal)
         {
             selectOneChoice(uiPanal); //will change the radius values to indicate the change
-            if (uiPanal.Name == "pnlInvoice")
+            if (uiPanal.Name == "pnlDashbord")
             {
-                loadNavClickForm(this.invoiceForm);
-                lblActiveSelected.Text = "Invoice";
-                invoiceForm.refreshSize();
+                loadNavClickForm(this.dashbordForm);
+                lblActiveSelected.Text = "Dashbord";
+                //invoiceForm.refreshSize();
             }
             else if (uiPanal.Name == "pnlHistory")
             {
-                loadNavClickForm(this.cashierTransactionHistoryForm);
+                loadNavClickForm(this.transactionHistoryForm);
                 lblActiveSelected.Text = "Transaction";
-                cashierTransactionHistoryForm.refrashSize();
+                transactionHistoryForm.refrashSize();
+            }
+            else if (uiPanal.Name == "pnlProduct")
+            {
+                loadNavClickForm(this.productForm);
+                lblActiveSelected.Text = "Product";
+                productForm.refrashSize();
             }
             else if (uiPanal.Name == "pnlSetting")
             {
                 loadNavClickForm(this.settingForm);
-                lblActiveSelected.Text = "Setting";    
+                lblActiveSelected.Text = "Setting";
+            }
+            else if (uiPanal.Name == "pnlCasher")
+            {
+                loadNavClickForm(this.casherForm);
+                lblActiveSelected.Text = "Casher";
+                casherForm.refrashSize();
+            }
+            else if (uiPanal.Name == "pnlExpiringProduct")
+            {
+                loadNavClickForm(this.expdateForm);
+                lblActiveSelected.Text = "Exp Date Lookup";
+                expdateForm.refrashSize();
             }
         }
 
         private void selectOneChoice(UIPanel uiPanal)
         {
             //this funvtion will change the RadiusSides values to indicate the user choice
-            pnlInvoice.RadiusSides = UICornerRadiusSides.All;
+            pnlDashbord.RadiusSides = UICornerRadiusSides.All;
+            pnlProduct.RadiusSides = UICornerRadiusSides.All;
+            pnlExpiringProduct.RadiusSides = UICornerRadiusSides.All;
             pnlHistory.RadiusSides = UICornerRadiusSides.All;
             pnlSetting.RadiusSides = UICornerRadiusSides.All;
+            pnlCasher.RadiusSides = UICornerRadiusSides.All;
             uiPanal.RadiusSides = UICornerRadiusSides.RightBottom | UICornerRadiusSides.LeftBottom | UICornerRadiusSides.LeftTop;
         }
 
         private void loadNavClickForm(Form form)
         {
-            pnlContainer.Controls.RemoveAt(0);
-            if(form.TopLevel==true)
-                form.TopLevel = false;
+            if(pnlContainer.Controls.Count==1)
+                pnlContainer.Controls.RemoveAt(0);
+            form.TopLevel = false;
             pnlContainer.Controls.Add(form);
             form.Dock = DockStyle.Fill;
             form.Show();
@@ -141,6 +175,9 @@ namespace Supermarket.View.Forms
             }
         }
 
+        private void pnlContainer_Paint(object sender, PaintEventArgs e)
+        {
 
+        }
     }
 }

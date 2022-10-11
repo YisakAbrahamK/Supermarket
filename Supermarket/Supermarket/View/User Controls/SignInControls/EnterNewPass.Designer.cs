@@ -36,7 +36,7 @@
             this.btnSeeConfirm = new System.Windows.Forms.PictureBox();
             this.txtPassword = new Sunny.UI.UITextBox();
             this.btnSee = new System.Windows.Forms.PictureBox();
-            this.btnSend = new Sunny.UI.UIButton();
+            this.btnSave = new Sunny.UI.UIButton();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             this.uiPanel1.SuspendLayout();
             this.txtCPassword.SuspendLayout();
@@ -72,7 +72,7 @@
             this.uiPanel1.BackColor = System.Drawing.Color.Blue;
             this.uiPanel1.Controls.Add(this.txtCPassword);
             this.uiPanel1.Controls.Add(this.txtPassword);
-            this.uiPanel1.Controls.Add(this.btnSend);
+            this.uiPanel1.Controls.Add(this.btnSave);
             this.uiPanel1.FillColor = System.Drawing.Color.DarkSlateGray;
             this.uiPanel1.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
             this.uiPanel1.Location = new System.Drawing.Point(9, 0);
@@ -160,20 +160,21 @@
             this.btnSee.TabStop = false;
             this.btnSee.Click += new System.EventHandler(this.btnSee_Click);
             // 
-            // btnSend
+            // btnSave
             // 
-            this.btnSend.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.btnSend.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSend.Font = new System.Drawing.Font("Microsoft YaHei", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSend.Location = new System.Drawing.Point(126, 516);
-            this.btnSend.MinimumSize = new System.Drawing.Size(1, 1);
-            this.btnSend.Name = "btnSend";
-            this.btnSend.Radius = 40;
-            this.btnSend.Size = new System.Drawing.Size(128, 44);
-            this.btnSend.Style = Sunny.UI.UIStyle.Custom;
-            this.btnSend.TabIndex = 53;
-            this.btnSend.Text = "Save";
-            this.btnSend.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            this.btnSave.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.btnSave.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSave.Font = new System.Drawing.Font("Microsoft YaHei", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSave.Location = new System.Drawing.Point(126, 516);
+            this.btnSave.MinimumSize = new System.Drawing.Size(1, 1);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Radius = 40;
+            this.btnSave.Size = new System.Drawing.Size(128, 44);
+            this.btnSave.Style = Sunny.UI.UIStyle.Custom;
+            this.btnSave.TabIndex = 53;
+            this.btnSave.Text = "Save";
+            this.btnSave.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click_1);
             // 
             // EnterNewPass
             // 
@@ -203,6 +204,6 @@
         private System.Windows.Forms.PictureBox btnSeeConfirm;
         private Sunny.UI.UITextBox txtPassword;
         private System.Windows.Forms.PictureBox btnSee;
-        private Sunny.UI.UIButton btnSend;
+        private Sunny.UI.UIButton btnSave;
     }
 }

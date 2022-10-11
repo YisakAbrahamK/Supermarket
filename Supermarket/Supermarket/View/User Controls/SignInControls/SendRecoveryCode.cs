@@ -12,12 +12,14 @@ namespace Supermarket.Panals
         int minute;
         int recoveryCode;
         Panel pnlContainer;
+        string role;
 
-        public SendRecoveryCode(Panel pnlContainer,string email)
+        public SendRecoveryCode(Panel pnlContainer,string email,string role)
         {
             this.pnlContainer = pnlContainer;
             InitializeComponent();
             txtEmail.Text = email;
+            this.role = role;
         }
 
         private void btnSendCode_Click(object sender, EventArgs e)
@@ -30,7 +32,8 @@ namespace Supermarket.Panals
             if (btnSend.Text == "Resend")
             {
                 txtCode.Enabled = true;
-                btnSend.Enabled = true;
+                btnSend.Enabled = false;
+                lblSent.Text = "Sent";
             }
             MimeMessage mimeMessage = new MimeMessage();
             mimeMessage.From.Add(new MailboxAddress("Supermarket Management System", "yisakabrahamk@gmail.com"));
@@ -60,8 +63,11 @@ namespace Supermarket.Panals
                 client.Disconnect(true);
                 client.Dispose();
             }
-            tVerifyPassword.Enabled = true;
-            tVerifyPassword.Start();
+            if (btnSend.Text != "Resend")
+            {
+                tVerifyPassword.Enabled = true;
+                tVerifyPassword.Start();
+            }
         }
 
         private void tVerifyPassword_Tick(object sender, EventArgs e)
@@ -97,7 +103,7 @@ namespace Supermarket.Panals
         {
             if (recoveryCode.ToString() == txtCode.Text)
             {
-               EnterNewPass enterNewPass = new EnterNewPass(pnlContainer);
+               EnterNewPass enterNewPass = new EnterNewPass(pnlContainer,txtEmail.Text,role);
                this.Dispose();
                pnlContainer.Controls.Add(enterNewPass);
                enterNewPass.Dock = DockStyle.Fill;
