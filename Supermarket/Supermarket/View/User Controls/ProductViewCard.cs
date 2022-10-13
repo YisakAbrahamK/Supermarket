@@ -32,6 +32,7 @@ namespace Supermarket.View.User_Controls.SignInControls
             lblUPC.Text = product.UPC.ToString();
             lblPrice.Text = string.Format("{0:C}", product.Price);
             lblTax.Text = (product.Tax/100).ToString("P",CultureInfo.CurrentCulture);
+            lblName.Text = product.Name;
         }
 
         public ProductViewCard()

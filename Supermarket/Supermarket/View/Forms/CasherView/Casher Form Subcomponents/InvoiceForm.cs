@@ -67,31 +67,31 @@ namespace Supermarket.View.Forms
 
         private void InvoiceForm_Load(object sender, EventArgs e)
         {
-
-            Product.lodeTestdata();
-            foreach (Product product in Product.getAllProduct())
-            {
-                ProductViewCard productViewCard = new ProductViewCard(product);
-                flowLayoutPanel1.Controls.Add(productViewCard);
-                productViewCard.Show();
-                productViewCard.ButtonAdd.Click += (object se, EventArgs ee) =>
-                {
-                    CartView cartView = new CartView(product);
-                    flowLayoutPanel2.Controls.Add(cartView);
-                    cartView.Show();
-                    cartView.PictureBoxDelete.Click += (object see, EventArgs eee) =>
-                    {
-                        cartView.Dispose();
-                        calculateSummary();
-                    };
-                    cartView.UpDownQuantity.ValueChanged += (object see, int value) =>
-                    {
-                        calculateSummary();
-                    };
-                    calculateSummary();
-                    refreshSize();
-                };
-            }
+            loadAllProduct();
+            //Product.lodeTestdata();
+            //foreach (Product product in Product.getAllProduct())
+            //{
+            //    ProductViewCard productViewCard = new ProductViewCard(product);
+            //    flowLayoutPanel1.Controls.Add(productViewCard);
+            //    productViewCard.Show();
+            //    productViewCard.ButtonAdd.Click += (object se, EventArgs ee) =>
+            //    {
+            //        CartView cartView = new CartView(product);
+            //        flowLayoutPanel2.Controls.Add(cartView);
+            //        cartView.Show();
+            //        cartView.PictureBoxDelete.Click += (object see, EventArgs eee) =>
+            //        {
+            //            cartView.Dispose();
+            //            calculateSummary();
+            //        };
+            //        cartView.UpDownQuantity.ValueChanged += (object see, int value) =>
+            //        {
+            //            calculateSummary();
+            //        };
+            //        calculateSummary();
+            //        refreshSize();
+            //    };
+            //}
         }
 
         private void calculateSummary()
@@ -130,6 +130,37 @@ namespace Supermarket.View.Forms
         private void txtCash__TextChanged(object sender, EventArgs e)
         {
             calculateSummary();
+        }
+
+        private void loadAllProduct()
+        {
+            using(Context context = new Context())
+            {
+                var products = context.products.ToList();
+                foreach (Product product in products)
+                {
+                    ProductViewCard productViewCard = new ProductViewCard(product);
+                    flowLayoutPanel1.Controls.Add(productViewCard);
+                    productViewCard.Show();
+                    productViewCard.ButtonAdd.Click += (object se, EventArgs ee) =>
+                    {
+                        CartView cartView = new CartView(product);
+                        flowLayoutPanel2.Controls.Add(cartView);
+                        cartView.Show();
+                        cartView.PictureBoxDelete.Click += (object see, EventArgs eee) =>
+                        {
+                            cartView.Dispose();
+                            calculateSummary();
+                        };
+                        cartView.UpDownQuantity.ValueChanged += (object see, int value) =>
+                        {
+                            calculateSummary();
+                        };
+                        calculateSummary();
+                        refreshSize();
+                    };
+                }
+            }
         }
     }
 }

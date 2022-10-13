@@ -22,6 +22,7 @@ namespace Supermarket.View.Forms
             signIn.Dock= DockStyle.Fill;
             signIn.Show();
             makeTheFormMovable();
+            UILocalizeHelper.SetEN();
         }
 
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]

@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Sunny.UI;
+using Supermarket.Model;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -51,6 +53,26 @@ namespace Supermarket.View.Forms.Admin.Admin_Form_Subcomponents
         private void ProductForm_Resize(object sender, EventArgs e)
         {
             refrashSize();
+        }
+
+        private void btnAddAndEdit_Click(object sender, EventArgs e)
+        {
+            if(btnAddAndEdit.Text == "Add")
+            {
+                Product product = new Product();
+                product.Tax = double.Parse(txtTax.Text);
+                product.Name = txtName.Text;
+                product.ExpiredDate=dtpExpDate.Value;
+                product.Price = double.Parse(txtPrice.Text);
+                product.UPC = txtUPC.Text;
+                product.ShelfNumber = int.Parse(txtShelfNumber.Text);
+                using(Context context = new Context())
+                {
+                    context.products.Add(product);
+                    context.SaveChanges();
+                    UIMessageBox.ShowInfo("Product Added.", true, true);
+                }
+            }
         }
     }
 }

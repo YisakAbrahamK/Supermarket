@@ -35,7 +35,7 @@
             this.btnAdd = new RJCodeAdvance.RJControls.RJButton();
             this.lblUPC = new System.Windows.Forms.Label();
             this.lblPrice = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lblName = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.uiPanel1.SuspendLayout();
@@ -51,7 +51,7 @@
             this.uiPanel1.Controls.Add(this.btnAdd);
             this.uiPanel1.Controls.Add(this.lblUPC);
             this.uiPanel1.Controls.Add(this.lblPrice);
-            this.uiPanel1.Controls.Add(this.label3);
+            this.uiPanel1.Controls.Add(this.lblName);
             this.uiPanel1.Controls.Add(this.label2);
             this.uiPanel1.Controls.Add(this.label1);
             this.uiPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -166,19 +166,19 @@
             this.lblPrice.Text = "$456";
             this.lblPrice.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // label3
+            // lblName
             // 
-            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.lblName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label3.BackColor = System.Drawing.SystemColors.Control;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.Green;
-            this.label3.Location = new System.Drawing.Point(21, 3);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(328, 45);
-            this.label3.TabIndex = 24;
-            this.label3.Text = "Sun Chipse";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblName.BackColor = System.Drawing.SystemColors.Control;
+            this.lblName.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblName.ForeColor = System.Drawing.Color.Green;
+            this.lblName.Location = new System.Drawing.Point(21, 3);
+            this.lblName.Name = "lblName";
+            this.lblName.Size = new System.Drawing.Size(328, 45);
+            this.lblName.TabIndex = 24;
+            this.lblName.Text = "Sun Chipse";
+            this.lblName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label2
             // 
@@ -225,7 +225,7 @@
         private RJCodeAdvance.RJControls.RJButton btnAdd;
         private System.Windows.Forms.Label lblUPC;
         private System.Windows.Forms.Label lblPrice;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lblName;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private Sunny.UI.UISymbolLabel uiSymbolLabel2;

@@ -25,7 +25,7 @@ namespace Supermarket.View.Forms
             InitializeComponent();
             invoiceForm = new InvoiceForm(this);
             cashierTransactionHistoryForm = new TransactionHistoryForm(this);
-            settingForm = new SettingForm(this);
+            settingForm = new SettingForm(this,LogedinCasher);
             this.LogedinCasher= LogedinCasher;
         }
 

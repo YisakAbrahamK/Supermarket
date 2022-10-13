@@ -26,7 +26,7 @@ namespace Supermarket.View.Forms.Admin
         {
             InitializeComponent();
             casherForm = new CasherForm(this);
-            settingForm = new SettingForm(this);
+            settingForm = new SettingForm(this,LogedinAdmin);
             transactionHistoryForm = new TransactionHistoryForm(this);
             productForm = new ProductForm(this);
             expdateForm = new ExpdateForm(this);

@@ -38,13 +38,13 @@
             SaaUI.Properties.Skewed skewed1 = new SaaUI.Properties.Skewed();
             SaaUI.Properties.ToggleSkewedCoordinates toggleSkewedCoordinates1 = new SaaUI.Properties.ToggleSkewedCoordinates();
             this.btnAddAndEdit = new RJCodeAdvance.RJControls.RJButton();
-            this.uiTextBox1 = new Sunny.UI.UITextBox();
+            this.txtName = new Sunny.UI.UITextBox();
             this.uiSymbolLabel1 = new Sunny.UI.UISymbolLabel();
             this.label1 = new System.Windows.Forms.Label();
-            this.uiTextBox2 = new Sunny.UI.UITextBox();
+            this.txtPrice = new Sunny.UI.UITextBox();
             this.uiSymbolLabel2 = new Sunny.UI.UISymbolLabel();
             this.label3 = new System.Windows.Forms.Label();
-            this.uiTextBox4 = new Sunny.UI.UITextBox();
+            this.txtTax = new Sunny.UI.UITextBox();
             this.uiSymbolLabel6 = new Sunny.UI.UISymbolLabel();
             this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
             this.uiPanel3 = new Sunny.UI.UIPanel();
@@ -52,16 +52,16 @@
             this.uiPanel5 = new Sunny.UI.UIPanel();
             this.label4 = new System.Windows.Forms.Label();
             this.uiPanel7 = new Sunny.UI.UIPanel();
-            this.uiTextBox5 = new Sunny.UI.UITextBox();
+            this.txtUPC = new Sunny.UI.UITextBox();
             this.uiSymbolLabel4 = new Sunny.UI.UISymbolLabel();
             this.label6 = new System.Windows.Forms.Label();
             this.uiPanel8 = new Sunny.UI.UIPanel();
-            this.uiTextBox6 = new Sunny.UI.UITextBox();
+            this.txtShelfNumber = new Sunny.UI.UITextBox();
             this.uiSymbolLabel5 = new Sunny.UI.UISymbolLabel();
             this.label7 = new System.Windows.Forms.Label();
             this.uiPanel9 = new Sunny.UI.UIPanel();
             this.uiPanel1 = new Sunny.UI.UIPanel();
-            this.rjDatePicker1 = new RJCodeAdvance.RJControls.RJDatePicker();
+            this.dtpExpDate = new RJCodeAdvance.RJControls.RJDatePicker();
             this.label12 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
@@ -92,17 +92,17 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.saaToggle1 = new SaaUI.SaaToggle();
-            this.uiTextBox1.SuspendLayout();
-            this.uiTextBox2.SuspendLayout();
-            this.uiTextBox4.SuspendLayout();
+            this.txtName.SuspendLayout();
+            this.txtPrice.SuspendLayout();
+            this.txtTax.SuspendLayout();
             this.flowLayoutPanel3.SuspendLayout();
             this.uiPanel3.SuspendLayout();
             this.uiPanel4.SuspendLayout();
             this.uiPanel5.SuspendLayout();
             this.uiPanel7.SuspendLayout();
-            this.uiTextBox5.SuspendLayout();
+            this.txtUPC.SuspendLayout();
             this.uiPanel8.SuspendLayout();
-            this.uiTextBox6.SuspendLayout();
+            this.txtShelfNumber.SuspendLayout();
             this.uiPanel9.SuspendLayout();
             this.uiPanel1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -135,31 +135,32 @@
             this.btnAddAndEdit.Text = "Update";
             this.btnAddAndEdit.TextColor = System.Drawing.Color.White;
             this.btnAddAndEdit.UseVisualStyleBackColor = false;
+            this.btnAddAndEdit.Click += new System.EventHandler(this.btnAddAndEdit_Click);
             // 
-            // uiTextBox1
+            // txtName
             // 
-            this.uiTextBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.uiTextBox1.BackColor = System.Drawing.SystemColors.Control;
-            this.uiTextBox1.Controls.Add(this.uiSymbolLabel1);
-            this.uiTextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.uiTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uiTextBox1.Location = new System.Drawing.Point(173, 11);
-            this.uiTextBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.uiTextBox1.MinimumSize = new System.Drawing.Size(1, 16);
-            this.uiTextBox1.Name = "uiTextBox1";
-            this.uiTextBox1.Padding = new System.Windows.Forms.Padding(50, 0, 5, 0);
-            this.uiTextBox1.Radius = 40;
-            this.uiTextBox1.RectColor = System.Drawing.SystemColors.Control;
-            this.uiTextBox1.ShowText = false;
-            this.uiTextBox1.Size = new System.Drawing.Size(237, 46);
-            this.uiTextBox1.Style = Sunny.UI.UIStyle.Custom;
-            this.uiTextBox1.StyleCustomMode = true;
-            this.uiTextBox1.TabIndex = 64;
-            this.uiTextBox1.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
-            this.uiTextBox1.Watermark = "";
-            this.uiTextBox1.WatermarkActiveColor = System.Drawing.Color.White;
-            this.uiTextBox1.WatermarkColor = System.Drawing.Color.DarkGray;
-            this.uiTextBox1.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            this.txtName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtName.BackColor = System.Drawing.SystemColors.Control;
+            this.txtName.Controls.Add(this.uiSymbolLabel1);
+            this.txtName.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtName.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtName.Location = new System.Drawing.Point(173, 11);
+            this.txtName.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtName.MinimumSize = new System.Drawing.Size(1, 16);
+            this.txtName.Name = "txtName";
+            this.txtName.Padding = new System.Windows.Forms.Padding(50, 0, 5, 0);
+            this.txtName.Radius = 40;
+            this.txtName.RectColor = System.Drawing.SystemColors.Control;
+            this.txtName.ShowText = false;
+            this.txtName.Size = new System.Drawing.Size(237, 46);
+            this.txtName.Style = Sunny.UI.UIStyle.Custom;
+            this.txtName.StyleCustomMode = true;
+            this.txtName.TabIndex = 64;
+            this.txtName.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.txtName.Watermark = "";
+            this.txtName.WatermarkActiveColor = System.Drawing.Color.White;
+            this.txtName.WatermarkColor = System.Drawing.Color.DarkGray;
+            this.txtName.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
             // uiSymbolLabel1
             // 
@@ -188,31 +189,31 @@
             this.label1.TabIndex = 65;
             this.label1.Text = "Name";
             // 
-            // uiTextBox2
+            // txtPrice
             // 
-            this.uiTextBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.txtPrice.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.uiTextBox2.BackColor = System.Drawing.SystemColors.Control;
-            this.uiTextBox2.Controls.Add(this.uiSymbolLabel2);
-            this.uiTextBox2.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.uiTextBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uiTextBox2.Location = new System.Drawing.Point(173, 12);
-            this.uiTextBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.uiTextBox2.MinimumSize = new System.Drawing.Size(1, 16);
-            this.uiTextBox2.Name = "uiTextBox2";
-            this.uiTextBox2.Padding = new System.Windows.Forms.Padding(50, 0, 5, 0);
-            this.uiTextBox2.Radius = 46;
-            this.uiTextBox2.RectColor = System.Drawing.SystemColors.Control;
-            this.uiTextBox2.ShowText = false;
-            this.uiTextBox2.Size = new System.Drawing.Size(237, 46);
-            this.uiTextBox2.Style = Sunny.UI.UIStyle.Custom;
-            this.uiTextBox2.StyleCustomMode = true;
-            this.uiTextBox2.TabIndex = 66;
-            this.uiTextBox2.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
-            this.uiTextBox2.Watermark = "";
-            this.uiTextBox2.WatermarkActiveColor = System.Drawing.Color.White;
-            this.uiTextBox2.WatermarkColor = System.Drawing.Color.DarkGray;
-            this.uiTextBox2.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            this.txtPrice.BackColor = System.Drawing.SystemColors.Control;
+            this.txtPrice.Controls.Add(this.uiSymbolLabel2);
+            this.txtPrice.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPrice.Location = new System.Drawing.Point(173, 12);
+            this.txtPrice.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtPrice.MinimumSize = new System.Drawing.Size(1, 16);
+            this.txtPrice.Name = "txtPrice";
+            this.txtPrice.Padding = new System.Windows.Forms.Padding(50, 0, 5, 0);
+            this.txtPrice.Radius = 46;
+            this.txtPrice.RectColor = System.Drawing.SystemColors.Control;
+            this.txtPrice.ShowText = false;
+            this.txtPrice.Size = new System.Drawing.Size(237, 46);
+            this.txtPrice.Style = Sunny.UI.UIStyle.Custom;
+            this.txtPrice.StyleCustomMode = true;
+            this.txtPrice.TabIndex = 66;
+            this.txtPrice.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.txtPrice.Watermark = "";
+            this.txtPrice.WatermarkActiveColor = System.Drawing.Color.White;
+            this.txtPrice.WatermarkColor = System.Drawing.Color.DarkGray;
+            this.txtPrice.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
             // uiSymbolLabel2
             // 
@@ -241,32 +242,31 @@
             this.label3.TabIndex = 67;
             this.label3.Text = "Price";
             // 
-            // uiTextBox4
+            // txtTax
             // 
-            this.uiTextBox4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.txtTax.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.uiTextBox4.BackColor = System.Drawing.SystemColors.Control;
-            this.uiTextBox4.Controls.Add(this.uiSymbolLabel6);
-            this.uiTextBox4.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.uiTextBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uiTextBox4.Location = new System.Drawing.Point(178, 12);
-            this.uiTextBox4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.uiTextBox4.MinimumSize = new System.Drawing.Size(1, 16);
-            this.uiTextBox4.Name = "uiTextBox4";
-            this.uiTextBox4.Padding = new System.Windows.Forms.Padding(50, 0, 5, 0);
-            this.uiTextBox4.PasswordChar = '●';
-            this.uiTextBox4.Radius = 46;
-            this.uiTextBox4.RectColor = System.Drawing.SystemColors.Control;
-            this.uiTextBox4.ShowText = false;
-            this.uiTextBox4.Size = new System.Drawing.Size(232, 46);
-            this.uiTextBox4.Style = Sunny.UI.UIStyle.Custom;
-            this.uiTextBox4.StyleCustomMode = true;
-            this.uiTextBox4.TabIndex = 69;
-            this.uiTextBox4.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
-            this.uiTextBox4.Watermark = "";
-            this.uiTextBox4.WatermarkActiveColor = System.Drawing.Color.White;
-            this.uiTextBox4.WatermarkColor = System.Drawing.Color.DarkGray;
-            this.uiTextBox4.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            this.txtTax.BackColor = System.Drawing.SystemColors.Control;
+            this.txtTax.Controls.Add(this.uiSymbolLabel6);
+            this.txtTax.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtTax.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTax.Location = new System.Drawing.Point(178, 12);
+            this.txtTax.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtTax.MinimumSize = new System.Drawing.Size(1, 16);
+            this.txtTax.Name = "txtTax";
+            this.txtTax.Padding = new System.Windows.Forms.Padding(50, 0, 5, 0);
+            this.txtTax.Radius = 46;
+            this.txtTax.RectColor = System.Drawing.SystemColors.Control;
+            this.txtTax.ShowText = false;
+            this.txtTax.Size = new System.Drawing.Size(232, 46);
+            this.txtTax.Style = Sunny.UI.UIStyle.Custom;
+            this.txtTax.StyleCustomMode = true;
+            this.txtTax.TabIndex = 69;
+            this.txtTax.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.txtTax.Watermark = "";
+            this.txtTax.WatermarkActiveColor = System.Drawing.Color.White;
+            this.txtTax.WatermarkColor = System.Drawing.Color.DarkGray;
+            this.txtTax.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
             // uiSymbolLabel6
             // 
@@ -304,7 +304,7 @@
             this.uiPanel3.AutoSize = true;
             this.uiPanel3.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.uiPanel3.BackColor = System.Drawing.SystemColors.Control;
-            this.uiPanel3.Controls.Add(this.uiTextBox1);
+            this.uiPanel3.Controls.Add(this.txtName);
             this.uiPanel3.Controls.Add(this.label1);
             this.uiPanel3.FillColor = System.Drawing.SystemColors.Control;
             this.uiPanel3.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
@@ -327,7 +327,7 @@
             // 
             this.uiPanel4.AutoSize = true;
             this.uiPanel4.BackColor = System.Drawing.SystemColors.Control;
-            this.uiPanel4.Controls.Add(this.uiTextBox2);
+            this.uiPanel4.Controls.Add(this.txtPrice);
             this.uiPanel4.Controls.Add(this.label3);
             this.uiPanel4.FillColor = System.Drawing.SystemColors.Control;
             this.uiPanel4.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
@@ -350,7 +350,7 @@
             // 
             this.uiPanel5.AutoSize = true;
             this.uiPanel5.BackColor = System.Drawing.SystemColors.Control;
-            this.uiPanel5.Controls.Add(this.uiTextBox4);
+            this.uiPanel5.Controls.Add(this.txtTax);
             this.uiPanel5.Controls.Add(this.label4);
             this.uiPanel5.FillColor = System.Drawing.SystemColors.Control;
             this.uiPanel5.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
@@ -385,7 +385,7 @@
             // 
             this.uiPanel7.AutoSize = true;
             this.uiPanel7.BackColor = System.Drawing.SystemColors.Control;
-            this.uiPanel7.Controls.Add(this.uiTextBox5);
+            this.uiPanel7.Controls.Add(this.txtUPC);
             this.uiPanel7.Controls.Add(this.label6);
             this.uiPanel7.FillColor = System.Drawing.SystemColors.Control;
             this.uiPanel7.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
@@ -404,31 +404,31 @@
             this.uiPanel7.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.uiPanel7.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
-            // uiTextBox5
+            // txtUPC
             // 
-            this.uiTextBox5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.txtUPC.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.uiTextBox5.BackColor = System.Drawing.SystemColors.Control;
-            this.uiTextBox5.Controls.Add(this.uiSymbolLabel4);
-            this.uiTextBox5.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.uiTextBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uiTextBox5.Location = new System.Drawing.Point(178, 11);
-            this.uiTextBox5.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.uiTextBox5.MinimumSize = new System.Drawing.Size(1, 16);
-            this.uiTextBox5.Name = "uiTextBox5";
-            this.uiTextBox5.Padding = new System.Windows.Forms.Padding(50, 0, 5, 0);
-            this.uiTextBox5.Radius = 40;
-            this.uiTextBox5.RectColor = System.Drawing.SystemColors.Control;
-            this.uiTextBox5.ShowText = false;
-            this.uiTextBox5.Size = new System.Drawing.Size(232, 46);
-            this.uiTextBox5.Style = Sunny.UI.UIStyle.Custom;
-            this.uiTextBox5.StyleCustomMode = true;
-            this.uiTextBox5.TabIndex = 72;
-            this.uiTextBox5.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
-            this.uiTextBox5.Watermark = "";
-            this.uiTextBox5.WatermarkActiveColor = System.Drawing.Color.White;
-            this.uiTextBox5.WatermarkColor = System.Drawing.Color.DarkGray;
-            this.uiTextBox5.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            this.txtUPC.BackColor = System.Drawing.SystemColors.Control;
+            this.txtUPC.Controls.Add(this.uiSymbolLabel4);
+            this.txtUPC.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtUPC.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUPC.Location = new System.Drawing.Point(178, 11);
+            this.txtUPC.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtUPC.MinimumSize = new System.Drawing.Size(1, 16);
+            this.txtUPC.Name = "txtUPC";
+            this.txtUPC.Padding = new System.Windows.Forms.Padding(50, 0, 5, 0);
+            this.txtUPC.Radius = 40;
+            this.txtUPC.RectColor = System.Drawing.SystemColors.Control;
+            this.txtUPC.ShowText = false;
+            this.txtUPC.Size = new System.Drawing.Size(232, 46);
+            this.txtUPC.Style = Sunny.UI.UIStyle.Custom;
+            this.txtUPC.StyleCustomMode = true;
+            this.txtUPC.TabIndex = 72;
+            this.txtUPC.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.txtUPC.Watermark = "";
+            this.txtUPC.WatermarkActiveColor = System.Drawing.Color.White;
+            this.txtUPC.WatermarkColor = System.Drawing.Color.DarkGray;
+            this.txtUPC.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
             // uiSymbolLabel4
             // 
@@ -461,7 +461,7 @@
             // 
             this.uiPanel8.AutoSize = true;
             this.uiPanel8.BackColor = System.Drawing.SystemColors.Control;
-            this.uiPanel8.Controls.Add(this.uiTextBox6);
+            this.uiPanel8.Controls.Add(this.txtShelfNumber);
             this.uiPanel8.Controls.Add(this.label7);
             this.uiPanel8.FillColor = System.Drawing.SystemColors.Control;
             this.uiPanel8.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
@@ -480,31 +480,31 @@
             this.uiPanel8.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.uiPanel8.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
-            // uiTextBox6
+            // txtShelfNumber
             // 
-            this.uiTextBox6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.txtShelfNumber.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.uiTextBox6.BackColor = System.Drawing.SystemColors.Control;
-            this.uiTextBox6.Controls.Add(this.uiSymbolLabel5);
-            this.uiTextBox6.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.uiTextBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uiTextBox6.Location = new System.Drawing.Point(173, 11);
-            this.uiTextBox6.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.uiTextBox6.MinimumSize = new System.Drawing.Size(1, 16);
-            this.uiTextBox6.Name = "uiTextBox6";
-            this.uiTextBox6.Padding = new System.Windows.Forms.Padding(50, 0, 5, 0);
-            this.uiTextBox6.Radius = 40;
-            this.uiTextBox6.RectColor = System.Drawing.SystemColors.Control;
-            this.uiTextBox6.ShowText = false;
-            this.uiTextBox6.Size = new System.Drawing.Size(237, 46);
-            this.uiTextBox6.Style = Sunny.UI.UIStyle.Custom;
-            this.uiTextBox6.StyleCustomMode = true;
-            this.uiTextBox6.TabIndex = 74;
-            this.uiTextBox6.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
-            this.uiTextBox6.Watermark = "";
-            this.uiTextBox6.WatermarkActiveColor = System.Drawing.Color.White;
-            this.uiTextBox6.WatermarkColor = System.Drawing.Color.DarkGray;
-            this.uiTextBox6.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            this.txtShelfNumber.BackColor = System.Drawing.SystemColors.Control;
+            this.txtShelfNumber.Controls.Add(this.uiSymbolLabel5);
+            this.txtShelfNumber.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtShelfNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtShelfNumber.Location = new System.Drawing.Point(173, 11);
+            this.txtShelfNumber.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtShelfNumber.MinimumSize = new System.Drawing.Size(1, 16);
+            this.txtShelfNumber.Name = "txtShelfNumber";
+            this.txtShelfNumber.Padding = new System.Windows.Forms.Padding(50, 0, 5, 0);
+            this.txtShelfNumber.Radius = 40;
+            this.txtShelfNumber.RectColor = System.Drawing.SystemColors.Control;
+            this.txtShelfNumber.ShowText = false;
+            this.txtShelfNumber.Size = new System.Drawing.Size(237, 46);
+            this.txtShelfNumber.Style = Sunny.UI.UIStyle.Custom;
+            this.txtShelfNumber.StyleCustomMode = true;
+            this.txtShelfNumber.TabIndex = 74;
+            this.txtShelfNumber.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.txtShelfNumber.Watermark = "";
+            this.txtShelfNumber.WatermarkActiveColor = System.Drawing.Color.White;
+            this.txtShelfNumber.WatermarkColor = System.Drawing.Color.DarkGray;
+            this.txtShelfNumber.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
             // uiSymbolLabel5
             // 
@@ -559,7 +559,7 @@
             // uiPanel1
             // 
             this.uiPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.uiPanel1.Controls.Add(this.rjDatePicker1);
+            this.uiPanel1.Controls.Add(this.dtpExpDate);
             this.uiPanel1.FillColor = System.Drawing.Color.DarkSlateGray;
             this.uiPanel1.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
             this.uiPanel1.Location = new System.Drawing.Point(173, 15);
@@ -576,21 +576,21 @@
             this.uiPanel1.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.uiPanel1.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
-            // rjDatePicker1
+            // dtpExpDate
             // 
-            this.rjDatePicker1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.rjDatePicker1.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.rjDatePicker1.BorderSize = 0;
-            this.rjDatePicker1.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjDatePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjDatePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.rjDatePicker1.Location = new System.Drawing.Point(55, 3);
-            this.rjDatePicker1.MinimumSize = new System.Drawing.Size(4, 35);
-            this.rjDatePicker1.Name = "rjDatePicker1";
-            this.rjDatePicker1.Size = new System.Drawing.Size(143, 35);
-            this.rjDatePicker1.SkinColor = System.Drawing.Color.DarkSlateGray;
-            this.rjDatePicker1.TabIndex = 46;
-            this.rjDatePicker1.TextColor = System.Drawing.Color.White;
+            this.dtpExpDate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.dtpExpDate.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.dtpExpDate.BorderSize = 0;
+            this.dtpExpDate.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpExpDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpExpDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpExpDate.Location = new System.Drawing.Point(55, 3);
+            this.dtpExpDate.MinimumSize = new System.Drawing.Size(4, 35);
+            this.dtpExpDate.Name = "dtpExpDate";
+            this.dtpExpDate.Size = new System.Drawing.Size(143, 35);
+            this.dtpExpDate.SkinColor = System.Drawing.Color.DarkSlateGray;
+            this.dtpExpDate.TabIndex = 46;
+            this.dtpExpDate.TextColor = System.Drawing.Color.White;
             // 
             // label12
             // 
@@ -1029,9 +1029,9 @@
             this.Name = "ProductForm";
             this.Text = "ProductForm";
             this.Resize += new System.EventHandler(this.ProductForm_Resize);
-            this.uiTextBox1.ResumeLayout(false);
-            this.uiTextBox2.ResumeLayout(false);
-            this.uiTextBox4.ResumeLayout(false);
+            this.txtName.ResumeLayout(false);
+            this.txtPrice.ResumeLayout(false);
+            this.txtTax.ResumeLayout(false);
             this.flowLayoutPanel3.ResumeLayout(false);
             this.flowLayoutPanel3.PerformLayout();
             this.uiPanel3.ResumeLayout(false);
@@ -1042,10 +1042,10 @@
             this.uiPanel5.PerformLayout();
             this.uiPanel7.ResumeLayout(false);
             this.uiPanel7.PerformLayout();
-            this.uiTextBox5.ResumeLayout(false);
+            this.txtUPC.ResumeLayout(false);
             this.uiPanel8.ResumeLayout(false);
             this.uiPanel8.PerformLayout();
-            this.uiTextBox6.ResumeLayout(false);
+            this.txtShelfNumber.ResumeLayout(false);
             this.uiPanel9.ResumeLayout(false);
             this.uiPanel9.PerformLayout();
             this.uiPanel1.ResumeLayout(false);
@@ -1067,23 +1067,23 @@
         #endregion
 
         private RJCodeAdvance.RJControls.RJButton btnAddAndEdit;
-        private Sunny.UI.UITextBox uiTextBox1;
+        private Sunny.UI.UITextBox txtName;
         private Sunny.UI.UISymbolLabel uiSymbolLabel1;
         private System.Windows.Forms.Label label1;
-        private Sunny.UI.UITextBox uiTextBox2;
+        private Sunny.UI.UITextBox txtPrice;
         private Sunny.UI.UISymbolLabel uiSymbolLabel2;
         private System.Windows.Forms.Label label3;
-        private Sunny.UI.UITextBox uiTextBox4;
+        private Sunny.UI.UITextBox txtTax;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel3;
         private Sunny.UI.UIPanel uiPanel3;
         private Sunny.UI.UIPanel uiPanel4;
         private Sunny.UI.UIPanel uiPanel5;
         private System.Windows.Forms.Label label4;
         private Sunny.UI.UIPanel uiPanel7;
-        private Sunny.UI.UITextBox uiTextBox5;
+        private Sunny.UI.UITextBox txtUPC;
         private System.Windows.Forms.Label label6;
         private Sunny.UI.UIPanel uiPanel8;
-        private Sunny.UI.UITextBox uiTextBox6;
+        private Sunny.UI.UITextBox txtShelfNumber;
         private Sunny.UI.UISymbolLabel uiSymbolLabel5;
         private System.Windows.Forms.Label label7;
         private Sunny.UI.UIPanel uiPanel9;
@@ -1104,7 +1104,7 @@
         private Sunny.UI.UISymbolLabel uiSymbolLabel6;
         private Sunny.UI.UISymbolLabel uiSymbolLabel4;
         private Sunny.UI.UIPanel uiPanel1;
-        private RJCodeAdvance.RJControls.RJDatePicker rjDatePicker1;
+        private RJCodeAdvance.RJControls.RJDatePicker dtpExpDate;
         private User_Controls.ProductCard productCard1;
         private User_Controls.ProductCard productCard2;
         private User_Controls.ProductCard productCard3;

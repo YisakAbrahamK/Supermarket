@@ -34,31 +34,31 @@
             this.uiPanel10 = new Sunny.UI.UIPanel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.uiPanel3 = new Sunny.UI.UIPanel();
-            this.uiTextBox1 = new Sunny.UI.UITextBox();
+            this.txtFirstName = new Sunny.UI.UITextBox();
             this.uiSymbolLabel1 = new Sunny.UI.UISymbolLabel();
             this.label1 = new System.Windows.Forms.Label();
             this.uiPanel4 = new Sunny.UI.UIPanel();
-            this.uiTextBox2 = new Sunny.UI.UITextBox();
+            this.txtLastName = new Sunny.UI.UITextBox();
             this.uiSymbolLabel2 = new Sunny.UI.UISymbolLabel();
             this.label2 = new System.Windows.Forms.Label();
             this.uiPanel5 = new Sunny.UI.UIPanel();
-            this.uiTextBox4 = new Sunny.UI.UITextBox();
+            this.txtNewPass = new Sunny.UI.UITextBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.uiPanel6 = new Sunny.UI.UIPanel();
             this.label4 = new System.Windows.Forms.Label();
-            this.uiTextBox3 = new Sunny.UI.UITextBox();
+            this.txtComPass = new Sunny.UI.UITextBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.uiPanel7 = new Sunny.UI.UIPanel();
-            this.uiTextBox5 = new Sunny.UI.UITextBox();
+            this.txtEmail = new Sunny.UI.UITextBox();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
             this.uiPanel8 = new Sunny.UI.UIPanel();
-            this.uiTextBox6 = new Sunny.UI.UITextBox();
+            this.txtPhone = new Sunny.UI.UITextBox();
             this.uiSymbolLabel4 = new Sunny.UI.UISymbolLabel();
             this.label6 = new System.Windows.Forms.Label();
             this.uiPanel9 = new Sunny.UI.UIPanel();
-            this.uiTextBox7 = new Sunny.UI.UITextBox();
+            this.txtLocation = new Sunny.UI.UITextBox();
             this.uiSymbolLabel3 = new Sunny.UI.UISymbolLabel();
             this.label7 = new System.Windows.Forms.Label();
             this.uiButton1 = new Sunny.UI.UIButton();
@@ -69,22 +69,22 @@
             this.uiPanel10.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             this.uiPanel3.SuspendLayout();
-            this.uiTextBox1.SuspendLayout();
+            this.txtFirstName.SuspendLayout();
             this.uiPanel4.SuspendLayout();
-            this.uiTextBox2.SuspendLayout();
+            this.txtLastName.SuspendLayout();
             this.uiPanel5.SuspendLayout();
-            this.uiTextBox4.SuspendLayout();
+            this.txtNewPass.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.uiPanel6.SuspendLayout();
-            this.uiTextBox3.SuspendLayout();
+            this.txtComPass.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.uiPanel7.SuspendLayout();
-            this.uiTextBox5.SuspendLayout();
+            this.txtEmail.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             this.uiPanel8.SuspendLayout();
-            this.uiTextBox6.SuspendLayout();
+            this.txtPhone.SuspendLayout();
             this.uiPanel9.SuspendLayout();
-            this.uiTextBox7.SuspendLayout();
+            this.txtLocation.SuspendLayout();
             this.SuspendLayout();
             // 
             // uiPanel1
@@ -196,7 +196,7 @@
             this.uiPanel3.AutoSize = true;
             this.uiPanel3.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.uiPanel3.BackColor = System.Drawing.SystemColors.Control;
-            this.uiPanel3.Controls.Add(this.uiTextBox1);
+            this.uiPanel3.Controls.Add(this.txtFirstName);
             this.uiPanel3.Controls.Add(this.label1);
             this.uiPanel3.FillColor = System.Drawing.Color.White;
             this.uiPanel3.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
@@ -214,32 +214,32 @@
             this.uiPanel3.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.uiPanel3.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
-            // uiTextBox1
+            // txtFirstName
             // 
-            this.uiTextBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.uiTextBox1.BackColor = System.Drawing.Color.White;
-            this.uiTextBox1.Controls.Add(this.uiSymbolLabel1);
-            this.uiTextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.uiTextBox1.FillColor = System.Drawing.SystemColors.Control;
-            this.uiTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uiTextBox1.Location = new System.Drawing.Point(205, 11);
-            this.uiTextBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.uiTextBox1.MinimumSize = new System.Drawing.Size(1, 16);
-            this.uiTextBox1.Name = "uiTextBox1";
-            this.uiTextBox1.Padding = new System.Windows.Forms.Padding(50, 0, 5, 0);
-            this.uiTextBox1.Radius = 40;
-            this.uiTextBox1.RectColor = System.Drawing.SystemColors.Control;
-            this.uiTextBox1.ShowText = false;
-            this.uiTextBox1.Size = new System.Drawing.Size(373, 46);
-            this.uiTextBox1.Style = Sunny.UI.UIStyle.Custom;
-            this.uiTextBox1.StyleCustomMode = true;
-            this.uiTextBox1.TabIndex = 64;
-            this.uiTextBox1.Text = "Solomon";
-            this.uiTextBox1.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
-            this.uiTextBox1.Watermark = "";
-            this.uiTextBox1.WatermarkActiveColor = System.Drawing.Color.White;
-            this.uiTextBox1.WatermarkColor = System.Drawing.Color.DarkGray;
-            this.uiTextBox1.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            this.txtFirstName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtFirstName.BackColor = System.Drawing.Color.White;
+            this.txtFirstName.Controls.Add(this.uiSymbolLabel1);
+            this.txtFirstName.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtFirstName.FillColor = System.Drawing.SystemColors.Control;
+            this.txtFirstName.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtFirstName.Location = new System.Drawing.Point(205, 11);
+            this.txtFirstName.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtFirstName.MinimumSize = new System.Drawing.Size(1, 16);
+            this.txtFirstName.Name = "txtFirstName";
+            this.txtFirstName.Padding = new System.Windows.Forms.Padding(50, 0, 5, 0);
+            this.txtFirstName.Radius = 40;
+            this.txtFirstName.RectColor = System.Drawing.SystemColors.Control;
+            this.txtFirstName.ShowText = false;
+            this.txtFirstName.Size = new System.Drawing.Size(373, 46);
+            this.txtFirstName.Style = Sunny.UI.UIStyle.Custom;
+            this.txtFirstName.StyleCustomMode = true;
+            this.txtFirstName.TabIndex = 64;
+            this.txtFirstName.Text = "Solomon";
+            this.txtFirstName.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.txtFirstName.Watermark = "";
+            this.txtFirstName.WatermarkActiveColor = System.Drawing.Color.White;
+            this.txtFirstName.WatermarkColor = System.Drawing.Color.DarkGray;
+            this.txtFirstName.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
             // uiSymbolLabel1
             // 
@@ -272,7 +272,7 @@
             // 
             this.uiPanel4.AutoSize = true;
             this.uiPanel4.BackColor = System.Drawing.SystemColors.Control;
-            this.uiPanel4.Controls.Add(this.uiTextBox2);
+            this.uiPanel4.Controls.Add(this.txtLastName);
             this.uiPanel4.Controls.Add(this.label2);
             this.uiPanel4.FillColor = System.Drawing.Color.White;
             this.uiPanel4.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
@@ -290,33 +290,33 @@
             this.uiPanel4.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.uiPanel4.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
-            // uiTextBox2
+            // txtLastName
             // 
-            this.uiTextBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.txtLastName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.uiTextBox2.BackColor = System.Drawing.Color.White;
-            this.uiTextBox2.Controls.Add(this.uiSymbolLabel2);
-            this.uiTextBox2.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.uiTextBox2.FillColor = System.Drawing.SystemColors.Control;
-            this.uiTextBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uiTextBox2.Location = new System.Drawing.Point(205, 12);
-            this.uiTextBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.uiTextBox2.MinimumSize = new System.Drawing.Size(1, 16);
-            this.uiTextBox2.Name = "uiTextBox2";
-            this.uiTextBox2.Padding = new System.Windows.Forms.Padding(50, 0, 5, 0);
-            this.uiTextBox2.Radius = 40;
-            this.uiTextBox2.RectColor = System.Drawing.SystemColors.Control;
-            this.uiTextBox2.ShowText = false;
-            this.uiTextBox2.Size = new System.Drawing.Size(373, 46);
-            this.uiTextBox2.Style = Sunny.UI.UIStyle.Custom;
-            this.uiTextBox2.StyleCustomMode = true;
-            this.uiTextBox2.TabIndex = 66;
-            this.uiTextBox2.Text = "Jonatan";
-            this.uiTextBox2.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
-            this.uiTextBox2.Watermark = "";
-            this.uiTextBox2.WatermarkActiveColor = System.Drawing.Color.White;
-            this.uiTextBox2.WatermarkColor = System.Drawing.Color.DarkGray;
-            this.uiTextBox2.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            this.txtLastName.BackColor = System.Drawing.Color.White;
+            this.txtLastName.Controls.Add(this.uiSymbolLabel2);
+            this.txtLastName.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtLastName.FillColor = System.Drawing.SystemColors.Control;
+            this.txtLastName.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtLastName.Location = new System.Drawing.Point(205, 12);
+            this.txtLastName.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtLastName.MinimumSize = new System.Drawing.Size(1, 16);
+            this.txtLastName.Name = "txtLastName";
+            this.txtLastName.Padding = new System.Windows.Forms.Padding(50, 0, 5, 0);
+            this.txtLastName.Radius = 40;
+            this.txtLastName.RectColor = System.Drawing.SystemColors.Control;
+            this.txtLastName.ShowText = false;
+            this.txtLastName.Size = new System.Drawing.Size(373, 46);
+            this.txtLastName.Style = Sunny.UI.UIStyle.Custom;
+            this.txtLastName.StyleCustomMode = true;
+            this.txtLastName.TabIndex = 66;
+            this.txtLastName.Text = "Jonatan";
+            this.txtLastName.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.txtLastName.Watermark = "";
+            this.txtLastName.WatermarkActiveColor = System.Drawing.Color.White;
+            this.txtLastName.WatermarkColor = System.Drawing.Color.DarkGray;
+            this.txtLastName.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
             // uiSymbolLabel2
             // 
@@ -349,7 +349,7 @@
             // 
             this.uiPanel5.AutoSize = true;
             this.uiPanel5.BackColor = System.Drawing.SystemColors.Control;
-            this.uiPanel5.Controls.Add(this.uiTextBox4);
+            this.uiPanel5.Controls.Add(this.txtNewPass);
             this.uiPanel5.Controls.Add(this.label3);
             this.uiPanel5.FillColor = System.Drawing.Color.White;
             this.uiPanel5.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
@@ -367,33 +367,33 @@
             this.uiPanel5.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.uiPanel5.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
-            // uiTextBox4
+            // txtNewPass
             // 
-            this.uiTextBox4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.txtNewPass.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.uiTextBox4.BackColor = System.Drawing.Color.White;
-            this.uiTextBox4.Controls.Add(this.pictureBox5);
-            this.uiTextBox4.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.uiTextBox4.FillColor = System.Drawing.SystemColors.Control;
-            this.uiTextBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uiTextBox4.Location = new System.Drawing.Point(210, 12);
-            this.uiTextBox4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.uiTextBox4.MinimumSize = new System.Drawing.Size(1, 16);
-            this.uiTextBox4.Name = "uiTextBox4";
-            this.uiTextBox4.Padding = new System.Windows.Forms.Padding(50, 0, 5, 0);
-            this.uiTextBox4.PasswordChar = '●';
-            this.uiTextBox4.Radius = 40;
-            this.uiTextBox4.RectColor = System.Drawing.SystemColors.Control;
-            this.uiTextBox4.ShowText = false;
-            this.uiTextBox4.Size = new System.Drawing.Size(368, 46);
-            this.uiTextBox4.Style = Sunny.UI.UIStyle.Custom;
-            this.uiTextBox4.StyleCustomMode = true;
-            this.uiTextBox4.TabIndex = 69;
-            this.uiTextBox4.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
-            this.uiTextBox4.Watermark = "";
-            this.uiTextBox4.WatermarkActiveColor = System.Drawing.Color.White;
-            this.uiTextBox4.WatermarkColor = System.Drawing.Color.DarkGray;
-            this.uiTextBox4.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            this.txtNewPass.BackColor = System.Drawing.Color.White;
+            this.txtNewPass.Controls.Add(this.pictureBox5);
+            this.txtNewPass.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtNewPass.FillColor = System.Drawing.SystemColors.Control;
+            this.txtNewPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNewPass.Location = new System.Drawing.Point(210, 12);
+            this.txtNewPass.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtNewPass.MinimumSize = new System.Drawing.Size(1, 16);
+            this.txtNewPass.Name = "txtNewPass";
+            this.txtNewPass.Padding = new System.Windows.Forms.Padding(50, 0, 5, 0);
+            this.txtNewPass.PasswordChar = '●';
+            this.txtNewPass.Radius = 40;
+            this.txtNewPass.RectColor = System.Drawing.SystemColors.Control;
+            this.txtNewPass.ShowText = false;
+            this.txtNewPass.Size = new System.Drawing.Size(368, 46);
+            this.txtNewPass.Style = Sunny.UI.UIStyle.Custom;
+            this.txtNewPass.StyleCustomMode = true;
+            this.txtNewPass.TabIndex = 69;
+            this.txtNewPass.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.txtNewPass.Watermark = "";
+            this.txtNewPass.WatermarkActiveColor = System.Drawing.Color.White;
+            this.txtNewPass.WatermarkColor = System.Drawing.Color.DarkGray;
+            this.txtNewPass.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
             // pictureBox5
             // 
@@ -423,7 +423,7 @@
             this.uiPanel6.AutoSize = true;
             this.uiPanel6.BackColor = System.Drawing.SystemColors.Control;
             this.uiPanel6.Controls.Add(this.label4);
-            this.uiPanel6.Controls.Add(this.uiTextBox3);
+            this.uiPanel6.Controls.Add(this.txtComPass);
             this.uiPanel6.FillColor = System.Drawing.Color.White;
             this.uiPanel6.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
             this.uiPanel6.Location = new System.Drawing.Point(4, 223);
@@ -452,33 +452,33 @@
             this.label4.TabIndex = 70;
             this.label4.Text = "Confirm Password";
             // 
-            // uiTextBox3
+            // txtComPass
             // 
-            this.uiTextBox3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.txtComPass.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.uiTextBox3.BackColor = System.Drawing.Color.White;
-            this.uiTextBox3.Controls.Add(this.pictureBox6);
-            this.uiTextBox3.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.uiTextBox3.FillColor = System.Drawing.SystemColors.Control;
-            this.uiTextBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uiTextBox3.Location = new System.Drawing.Point(207, 11);
-            this.uiTextBox3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.uiTextBox3.MinimumSize = new System.Drawing.Size(1, 16);
-            this.uiTextBox3.Name = "uiTextBox3";
-            this.uiTextBox3.Padding = new System.Windows.Forms.Padding(50, 0, 5, 0);
-            this.uiTextBox3.PasswordChar = '●';
-            this.uiTextBox3.Radius = 40;
-            this.uiTextBox3.RectColor = System.Drawing.SystemColors.Control;
-            this.uiTextBox3.ShowText = false;
-            this.uiTextBox3.Size = new System.Drawing.Size(371, 46);
-            this.uiTextBox3.Style = Sunny.UI.UIStyle.Custom;
-            this.uiTextBox3.StyleCustomMode = true;
-            this.uiTextBox3.TabIndex = 71;
-            this.uiTextBox3.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
-            this.uiTextBox3.Watermark = "";
-            this.uiTextBox3.WatermarkActiveColor = System.Drawing.Color.White;
-            this.uiTextBox3.WatermarkColor = System.Drawing.Color.DarkGray;
-            this.uiTextBox3.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            this.txtComPass.BackColor = System.Drawing.Color.White;
+            this.txtComPass.Controls.Add(this.pictureBox6);
+            this.txtComPass.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtComPass.FillColor = System.Drawing.SystemColors.Control;
+            this.txtComPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtComPass.Location = new System.Drawing.Point(207, 11);
+            this.txtComPass.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtComPass.MinimumSize = new System.Drawing.Size(1, 16);
+            this.txtComPass.Name = "txtComPass";
+            this.txtComPass.Padding = new System.Windows.Forms.Padding(50, 0, 5, 0);
+            this.txtComPass.PasswordChar = '●';
+            this.txtComPass.Radius = 40;
+            this.txtComPass.RectColor = System.Drawing.SystemColors.Control;
+            this.txtComPass.ShowText = false;
+            this.txtComPass.Size = new System.Drawing.Size(371, 46);
+            this.txtComPass.Style = Sunny.UI.UIStyle.Custom;
+            this.txtComPass.StyleCustomMode = true;
+            this.txtComPass.TabIndex = 71;
+            this.txtComPass.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.txtComPass.Watermark = "";
+            this.txtComPass.WatermarkActiveColor = System.Drawing.Color.White;
+            this.txtComPass.WatermarkColor = System.Drawing.Color.DarkGray;
+            this.txtComPass.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
             // pictureBox6
             // 
@@ -495,7 +495,7 @@
             // 
             this.uiPanel7.AutoSize = true;
             this.uiPanel7.BackColor = System.Drawing.SystemColors.Control;
-            this.uiPanel7.Controls.Add(this.uiTextBox5);
+            this.uiPanel7.Controls.Add(this.txtEmail);
             this.uiPanel7.Controls.Add(this.label5);
             this.uiPanel7.FillColor = System.Drawing.Color.White;
             this.uiPanel7.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
@@ -513,33 +513,33 @@
             this.uiPanel7.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.uiPanel7.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
-            // uiTextBox5
+            // txtEmail
             // 
-            this.uiTextBox5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.txtEmail.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.uiTextBox5.BackColor = System.Drawing.Color.White;
-            this.uiTextBox5.Controls.Add(this.pictureBox7);
-            this.uiTextBox5.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.uiTextBox5.FillColor = System.Drawing.SystemColors.Control;
-            this.uiTextBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uiTextBox5.Location = new System.Drawing.Point(210, 11);
-            this.uiTextBox5.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.uiTextBox5.MinimumSize = new System.Drawing.Size(1, 16);
-            this.uiTextBox5.Name = "uiTextBox5";
-            this.uiTextBox5.Padding = new System.Windows.Forms.Padding(50, 0, 5, 0);
-            this.uiTextBox5.Radius = 40;
-            this.uiTextBox5.RectColor = System.Drawing.SystemColors.Control;
-            this.uiTextBox5.ShowText = false;
-            this.uiTextBox5.Size = new System.Drawing.Size(368, 46);
-            this.uiTextBox5.Style = Sunny.UI.UIStyle.Custom;
-            this.uiTextBox5.StyleCustomMode = true;
-            this.uiTextBox5.TabIndex = 72;
-            this.uiTextBox5.Text = "yisakabrahamk@gemail.com";
-            this.uiTextBox5.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
-            this.uiTextBox5.Watermark = "";
-            this.uiTextBox5.WatermarkActiveColor = System.Drawing.Color.White;
-            this.uiTextBox5.WatermarkColor = System.Drawing.Color.DarkGray;
-            this.uiTextBox5.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            this.txtEmail.BackColor = System.Drawing.Color.White;
+            this.txtEmail.Controls.Add(this.pictureBox7);
+            this.txtEmail.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtEmail.FillColor = System.Drawing.SystemColors.Control;
+            this.txtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmail.Location = new System.Drawing.Point(210, 11);
+            this.txtEmail.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtEmail.MinimumSize = new System.Drawing.Size(1, 16);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Padding = new System.Windows.Forms.Padding(50, 0, 5, 0);
+            this.txtEmail.Radius = 40;
+            this.txtEmail.RectColor = System.Drawing.SystemColors.Control;
+            this.txtEmail.ShowText = false;
+            this.txtEmail.Size = new System.Drawing.Size(368, 46);
+            this.txtEmail.Style = Sunny.UI.UIStyle.Custom;
+            this.txtEmail.StyleCustomMode = true;
+            this.txtEmail.TabIndex = 72;
+            this.txtEmail.Text = "yisakabrahamk@gemail.com";
+            this.txtEmail.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.txtEmail.Watermark = "";
+            this.txtEmail.WatermarkActiveColor = System.Drawing.Color.White;
+            this.txtEmail.WatermarkColor = System.Drawing.Color.DarkGray;
+            this.txtEmail.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
             // pictureBox7
             // 
@@ -568,7 +568,7 @@
             // 
             this.uiPanel8.AutoSize = true;
             this.uiPanel8.BackColor = System.Drawing.SystemColors.Control;
-            this.uiPanel8.Controls.Add(this.uiTextBox6);
+            this.uiPanel8.Controls.Add(this.txtPhone);
             this.uiPanel8.Controls.Add(this.label6);
             this.uiPanel8.FillColor = System.Drawing.Color.White;
             this.uiPanel8.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
@@ -586,35 +586,35 @@
             this.uiPanel8.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.uiPanel8.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
-            // uiTextBox6
+            // txtPhone
             // 
-            this.uiTextBox6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.txtPhone.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.uiTextBox6.BackColor = System.Drawing.Color.White;
-            this.uiTextBox6.Controls.Add(this.uiSymbolLabel4);
-            this.uiTextBox6.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.uiTextBox6.DoubleValue = 932900261D;
-            this.uiTextBox6.FillColor = System.Drawing.SystemColors.Control;
-            this.uiTextBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uiTextBox6.IntValue = 932900261;
-            this.uiTextBox6.Location = new System.Drawing.Point(205, 11);
-            this.uiTextBox6.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.uiTextBox6.MinimumSize = new System.Drawing.Size(1, 16);
-            this.uiTextBox6.Name = "uiTextBox6";
-            this.uiTextBox6.Padding = new System.Windows.Forms.Padding(50, 0, 5, 0);
-            this.uiTextBox6.Radius = 40;
-            this.uiTextBox6.RectColor = System.Drawing.SystemColors.Control;
-            this.uiTextBox6.ShowText = false;
-            this.uiTextBox6.Size = new System.Drawing.Size(373, 46);
-            this.uiTextBox6.Style = Sunny.UI.UIStyle.Custom;
-            this.uiTextBox6.StyleCustomMode = true;
-            this.uiTextBox6.TabIndex = 74;
-            this.uiTextBox6.Text = "0932900261";
-            this.uiTextBox6.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
-            this.uiTextBox6.Watermark = "";
-            this.uiTextBox6.WatermarkActiveColor = System.Drawing.Color.White;
-            this.uiTextBox6.WatermarkColor = System.Drawing.Color.DarkGray;
-            this.uiTextBox6.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            this.txtPhone.BackColor = System.Drawing.Color.White;
+            this.txtPhone.Controls.Add(this.uiSymbolLabel4);
+            this.txtPhone.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtPhone.DoubleValue = 932900261D;
+            this.txtPhone.FillColor = System.Drawing.SystemColors.Control;
+            this.txtPhone.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPhone.IntValue = 932900261;
+            this.txtPhone.Location = new System.Drawing.Point(205, 11);
+            this.txtPhone.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtPhone.MinimumSize = new System.Drawing.Size(1, 16);
+            this.txtPhone.Name = "txtPhone";
+            this.txtPhone.Padding = new System.Windows.Forms.Padding(50, 0, 5, 0);
+            this.txtPhone.Radius = 40;
+            this.txtPhone.RectColor = System.Drawing.SystemColors.Control;
+            this.txtPhone.ShowText = false;
+            this.txtPhone.Size = new System.Drawing.Size(373, 46);
+            this.txtPhone.Style = Sunny.UI.UIStyle.Custom;
+            this.txtPhone.StyleCustomMode = true;
+            this.txtPhone.TabIndex = 74;
+            this.txtPhone.Text = "0932900261";
+            this.txtPhone.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.txtPhone.Watermark = "";
+            this.txtPhone.WatermarkActiveColor = System.Drawing.Color.White;
+            this.txtPhone.WatermarkColor = System.Drawing.Color.DarkGray;
+            this.txtPhone.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
             // uiSymbolLabel4
             // 
@@ -647,7 +647,7 @@
             // 
             this.uiPanel9.AutoSize = true;
             this.uiPanel9.BackColor = System.Drawing.SystemColors.Control;
-            this.uiPanel9.Controls.Add(this.uiTextBox7);
+            this.uiPanel9.Controls.Add(this.txtLocation);
             this.uiPanel9.Controls.Add(this.label7);
             this.uiPanel9.FillColor = System.Drawing.Color.White;
             this.uiPanel9.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
@@ -665,33 +665,33 @@
             this.uiPanel9.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.uiPanel9.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
-            // uiTextBox7
+            // txtLocation
             // 
-            this.uiTextBox7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.txtLocation.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.uiTextBox7.BackColor = System.Drawing.Color.White;
-            this.uiTextBox7.Controls.Add(this.uiSymbolLabel3);
-            this.uiTextBox7.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.uiTextBox7.FillColor = System.Drawing.SystemColors.Control;
-            this.uiTextBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uiTextBox7.Location = new System.Drawing.Point(205, 10);
-            this.uiTextBox7.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.uiTextBox7.MinimumSize = new System.Drawing.Size(1, 16);
-            this.uiTextBox7.Name = "uiTextBox7";
-            this.uiTextBox7.Padding = new System.Windows.Forms.Padding(50, 0, 5, 0);
-            this.uiTextBox7.Radius = 40;
-            this.uiTextBox7.RectColor = System.Drawing.SystemColors.Control;
-            this.uiTextBox7.ShowText = false;
-            this.uiTextBox7.Size = new System.Drawing.Size(373, 46);
-            this.uiTextBox7.Style = Sunny.UI.UIStyle.Custom;
-            this.uiTextBox7.StyleCustomMode = true;
-            this.uiTextBox7.TabIndex = 76;
-            this.uiTextBox7.Text = "Addis Abeba";
-            this.uiTextBox7.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
-            this.uiTextBox7.Watermark = "";
-            this.uiTextBox7.WatermarkActiveColor = System.Drawing.Color.White;
-            this.uiTextBox7.WatermarkColor = System.Drawing.Color.DarkGray;
-            this.uiTextBox7.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            this.txtLocation.BackColor = System.Drawing.Color.White;
+            this.txtLocation.Controls.Add(this.uiSymbolLabel3);
+            this.txtLocation.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtLocation.FillColor = System.Drawing.SystemColors.Control;
+            this.txtLocation.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtLocation.Location = new System.Drawing.Point(205, 10);
+            this.txtLocation.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtLocation.MinimumSize = new System.Drawing.Size(1, 16);
+            this.txtLocation.Name = "txtLocation";
+            this.txtLocation.Padding = new System.Windows.Forms.Padding(50, 0, 5, 0);
+            this.txtLocation.Radius = 40;
+            this.txtLocation.RectColor = System.Drawing.SystemColors.Control;
+            this.txtLocation.ShowText = false;
+            this.txtLocation.Size = new System.Drawing.Size(373, 46);
+            this.txtLocation.Style = Sunny.UI.UIStyle.Custom;
+            this.txtLocation.StyleCustomMode = true;
+            this.txtLocation.TabIndex = 76;
+            this.txtLocation.Text = "Addis Abeba";
+            this.txtLocation.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.txtLocation.Watermark = "";
+            this.txtLocation.WatermarkActiveColor = System.Drawing.Color.White;
+            this.txtLocation.WatermarkColor = System.Drawing.Color.DarkGray;
+            this.txtLocation.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
             // uiSymbolLabel3
             // 
@@ -762,7 +762,6 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "SettingForm";
             this.Text = "SettingForm";
-            this.Load += new System.EventHandler(this.SettingForm_Load);
             this.uiPanel1.ResumeLayout(false);
             this.uiPanel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -771,28 +770,28 @@
             this.flowLayoutPanel1.PerformLayout();
             this.uiPanel3.ResumeLayout(false);
             this.uiPanel3.PerformLayout();
-            this.uiTextBox1.ResumeLayout(false);
+            this.txtFirstName.ResumeLayout(false);
             this.uiPanel4.ResumeLayout(false);
             this.uiPanel4.PerformLayout();
-            this.uiTextBox2.ResumeLayout(false);
+            this.txtLastName.ResumeLayout(false);
             this.uiPanel5.ResumeLayout(false);
             this.uiPanel5.PerformLayout();
-            this.uiTextBox4.ResumeLayout(false);
+            this.txtNewPass.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.uiPanel6.ResumeLayout(false);
             this.uiPanel6.PerformLayout();
-            this.uiTextBox3.ResumeLayout(false);
+            this.txtComPass.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.uiPanel7.ResumeLayout(false);
             this.uiPanel7.PerformLayout();
-            this.uiTextBox5.ResumeLayout(false);
+            this.txtEmail.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             this.uiPanel8.ResumeLayout(false);
             this.uiPanel8.PerformLayout();
-            this.uiTextBox6.ResumeLayout(false);
+            this.txtPhone.ResumeLayout(false);
             this.uiPanel9.ResumeLayout(false);
             this.uiPanel9.PerformLayout();
-            this.uiTextBox7.ResumeLayout(false);
+            this.txtLocation.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -805,31 +804,31 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private Sunny.UI.UIPanel uiPanel3;
-        private Sunny.UI.UITextBox uiTextBox1;
+        private Sunny.UI.UITextBox txtFirstName;
         private Sunny.UI.UISymbolLabel uiSymbolLabel1;
         private System.Windows.Forms.Label label1;
         private Sunny.UI.UIPanel uiPanel4;
-        private Sunny.UI.UITextBox uiTextBox2;
+        private Sunny.UI.UITextBox txtLastName;
         private Sunny.UI.UISymbolLabel uiSymbolLabel2;
         private System.Windows.Forms.Label label2;
         private Sunny.UI.UIPanel uiPanel5;
-        private Sunny.UI.UITextBox uiTextBox4;
+        private Sunny.UI.UITextBox txtNewPass;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.Label label3;
         private Sunny.UI.UIPanel uiPanel6;
         private System.Windows.Forms.Label label4;
-        private Sunny.UI.UITextBox uiTextBox3;
+        private Sunny.UI.UITextBox txtComPass;
         private System.Windows.Forms.PictureBox pictureBox6;
         private Sunny.UI.UIPanel uiPanel7;
-        private Sunny.UI.UITextBox uiTextBox5;
+        private Sunny.UI.UITextBox txtEmail;
         private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.Label label5;
         private Sunny.UI.UIPanel uiPanel8;
-        private Sunny.UI.UITextBox uiTextBox6;
+        private Sunny.UI.UITextBox txtPhone;
         private Sunny.UI.UISymbolLabel uiSymbolLabel4;
         private System.Windows.Forms.Label label6;
         private Sunny.UI.UIPanel uiPanel9;
-        private Sunny.UI.UITextBox uiTextBox7;
+        private Sunny.UI.UITextBox txtLocation;
         private Sunny.UI.UISymbolLabel uiSymbolLabel3;
         private System.Windows.Forms.Label label7;
         private Sunny.UI.UIButton uiButton1;
