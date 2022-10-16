@@ -22,6 +22,7 @@ namespace Supermarket.View.Forms.Admin
         ExpdateForm expdateForm;
         DashbordForm dashbordForm;
         Model.Admin LogedinAdmin;
+
         public AdminForm(Model.Admin LogedinAdmin)
         {
             InitializeComponent();
@@ -36,6 +37,8 @@ namespace Supermarket.View.Forms.Admin
 
         private void AdminForm_Load(object sender, EventArgs e)
         {
+
+            loadNavClickForm(dashbordForm);
             //FOR PANEL Dashbord
 
             addEventForNavs(pnlDashbord);

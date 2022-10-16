@@ -63,6 +63,86 @@ namespace Supermarket.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _290673_rising_stats_graph {
+            get {
+                object obj = ResourceManager.GetObject("290673-rising-stats-graph", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _30882_circle_animation {
+            get {
+                object obj = ResourceManager.GetObject("30882-circle-animation", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _74499_circle {
+            get {
+                object obj = ResourceManager.GetObject("74499-circle", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _86539_shopping_cart_icon__2_ {
+            get {
+                object obj = ResourceManager.GetObject("86539-shopping-cart-icon (2)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _90673_rising_stats_graph {
+            get {
+                object obj = ResourceManager.GetObject("90673-rising-stats-graph", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _90673_rising_stats_graph1 {
+            get {
+                object obj = ResourceManager.GetObject("90673-rising-stats-graph1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _96634_circle_loader_black {
+            get {
+                object obj = ResourceManager.GetObject("96634-circle-loader-black", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _96693_circle {
+            get {
+                object obj = ResourceManager.GetObject("96693-circle", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Card {
             get {
                 object obj = ResourceManager.GetObject("Card", resourceCulture);
@@ -186,6 +266,16 @@ namespace Supermarket.Properties {
         internal static System.Drawing.Bitmap eye_svgrepo_com {
             get {
                 object obj = ResourceManager.GetObject("eye-svgrepo-com", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap fast96634_circle_loader_black {
+            get {
+                object obj = ResourceManager.GetObject("fast96634-circle-loader-black", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

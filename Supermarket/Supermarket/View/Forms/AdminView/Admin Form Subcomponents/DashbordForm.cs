@@ -18,5 +18,10 @@ namespace Supermarket.View.Forms.Admin.Admin_Form_Subcomponents
             InitializeComponent();
             this.ParentForm = ParentForm;
         }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

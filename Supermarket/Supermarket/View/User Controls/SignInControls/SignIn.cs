@@ -35,7 +35,8 @@ namespace Supermarket.View.User_Controls.SignInControls
 
         private void lblForgotPassword_Click(object sender, EventArgs e)
         {
-            SendRecoveryCode enterEmail = new SendRecoveryCode(pnlContainer, txtEmail.Text,cbRole.SelectedItem.ToString());
+            string role = tkRole.Checked == true ? "Admin" : "Casher";
+            SendRecoveryCode enterEmail = new SendRecoveryCode(pnlContainer, txtEmail.Text,role);
             this.Dispose();
             pnlContainer.Controls.Add(enterEmail);
             enterEmail.Dock = DockStyle.Fill;
@@ -56,9 +57,8 @@ namespace Supermarket.View.User_Controls.SignInControls
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            if(cbRole.SelectedItem.ToString()!=null || cbRole.SelectedItem.ToString() != "")
-            {
-                if (cbRole.SelectedItem.ToString() == "Admin")
+
+                if (tkRole.Checked == true)
                 {
                     SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["Admin"].ConnectionString);
                     string cmdText = "SELECT * FROM Admins";
@@ -132,7 +132,12 @@ namespace Supermarket.View.User_Controls.SignInControls
                         connection.Close();
                     }
                 }
-            }
+            
+
+        }
+
+        private void cbRole_SelectedIndexChanged(object sender, EventArgs e)
+        {
 
         }
     }

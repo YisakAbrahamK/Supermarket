@@ -30,13 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminForm));
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.uiPanel1 = new Sunny.UI.UIPanel();
-            this.saaGlowing1 = new SaaUI.SaaGlowing();
-            this.lblActiveSelected = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.lblName = new System.Windows.Forms.Panel();
-            this.pnlContainer = new System.Windows.Forms.Panel();
             this.uiPanel2 = new Sunny.UI.UIPanel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.uiPanel3 = new Sunny.UI.UIPanel();
@@ -55,10 +49,13 @@
             this.uiSymbolLabel4 = new Sunny.UI.UISymbolLabel();
             this.pnlSetting = new Sunny.UI.UIPanel();
             this.uiSymbolLabel5 = new Sunny.UI.UISymbolLabel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.pnlContainer = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.uiPanel1 = new Sunny.UI.UIPanel();
+            this.lblActiveSelected = new System.Windows.Forms.Label();
+            this.saaGlowing1 = new SaaUI.SaaGlowing();
             this.tableLayoutPanel2.SuspendLayout();
-            this.panel3.SuspendLayout();
-            this.uiPanel1.SuspendLayout();
-            this.panel2.SuspendLayout();
             this.lblName.SuspendLayout();
             this.uiPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -72,6 +69,9 @@
             this.pnlExpiringProduct.SuspendLayout();
             this.pnlCasher.SuspendLayout();
             this.pnlSetting.SuspendLayout();
+            this.panel2.SuspendLayout();
+            this.panel3.SuspendLayout();
+            this.uiPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel2
@@ -91,72 +91,6 @@
             this.tableLayoutPanel2.Size = new System.Drawing.Size(1384, 820);
             this.tableLayoutPanel2.TabIndex = 6;
             // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.White;
-            this.panel3.Controls.Add(this.uiPanel1);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel3.Location = new System.Drawing.Point(0, 0);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1188, 129);
-            this.panel3.TabIndex = 0;
-            // 
-            // uiPanel1
-            // 
-            this.uiPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.uiPanel1.Controls.Add(this.lblActiveSelected);
-            this.uiPanel1.Controls.Add(this.saaGlowing1);
-            this.uiPanel1.FillColor = System.Drawing.SystemColors.Control;
-            this.uiPanel1.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
-            this.uiPanel1.Location = new System.Drawing.Point(28, 11);
-            this.uiPanel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.uiPanel1.MinimumSize = new System.Drawing.Size(1, 1);
-            this.uiPanel1.Name = "uiPanel1";
-            this.uiPanel1.Radius = 40;
-            this.uiPanel1.RectColor = System.Drawing.Color.White;
-            this.uiPanel1.Size = new System.Drawing.Size(1130, 108);
-            this.uiPanel1.Style = Sunny.UI.UIStyle.Custom;
-            this.uiPanel1.TabIndex = 3;
-            this.uiPanel1.Text = null;
-            this.uiPanel1.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            this.uiPanel1.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
-            // 
-            // saaGlowing1
-            // 
-            this.saaGlowing1.BackColor = System.Drawing.SystemColors.Control;
-            this.saaGlowing1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(158)))), ((int)(((byte)(255)))));
-            this.saaGlowing1.ForceTransparence = false;
-            this.saaGlowing1.GrowingSpeed = 5;
-            this.saaGlowing1.Location = new System.Drawing.Point(34, 40);
-            this.saaGlowing1.Name = "saaGlowing1";
-            this.saaGlowing1.Size = new System.Drawing.Size(32, 32);
-            this.saaGlowing1.Stop = false;
-            this.saaGlowing1.TabIndex = 11;
-            this.saaGlowing1.Text = "saaGlowing1";
-            // 
-            // lblActiveSelected
-            // 
-            this.lblActiveSelected.BackColor = System.Drawing.SystemColors.Control;
-            this.lblActiveSelected.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblActiveSelected.ForeColor = System.Drawing.Color.DarkGray;
-            this.lblActiveSelected.Location = new System.Drawing.Point(95, 16);
-            this.lblActiveSelected.Name = "lblActiveSelected";
-            this.lblActiveSelected.Size = new System.Drawing.Size(447, 77);
-            this.lblActiveSelected.TabIndex = 44;
-            this.lblActiveSelected.Text = "Dashbord";
-            this.lblActiveSelected.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.pnlContainer);
-            this.panel2.Controls.Add(this.panel3);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(193, 3);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1188, 814);
-            this.panel2.TabIndex = 1;
-            // 
             // lblName
             // 
             this.lblName.BackColor = System.Drawing.Color.White;
@@ -167,15 +101,6 @@
             this.lblName.Name = "lblName";
             this.lblName.Size = new System.Drawing.Size(190, 820);
             this.lblName.TabIndex = 0;
-            // 
-            // pnlContainer
-            // 
-            this.pnlContainer.BackColor = System.Drawing.Color.White;
-            this.pnlContainer.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlContainer.Location = new System.Drawing.Point(0, 129);
-            this.pnlContainer.Name = "pnlContainer";
-            this.pnlContainer.Size = new System.Drawing.Size(1188, 685);
-            this.pnlContainer.TabIndex = 11;
             // 
             // uiPanel2
             // 
@@ -526,6 +451,81 @@
             this.uiSymbolLabel5.TabIndex = 3;
             this.uiSymbolLabel5.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.pnlContainer);
+            this.panel2.Controls.Add(this.panel3);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(193, 3);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1188, 814);
+            this.panel2.TabIndex = 1;
+            // 
+            // pnlContainer
+            // 
+            this.pnlContainer.BackColor = System.Drawing.Color.White;
+            this.pnlContainer.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlContainer.Location = new System.Drawing.Point(0, 129);
+            this.pnlContainer.Name = "pnlContainer";
+            this.pnlContainer.Size = new System.Drawing.Size(1188, 685);
+            this.pnlContainer.TabIndex = 11;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.White;
+            this.panel3.Controls.Add(this.uiPanel1);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(1188, 129);
+            this.panel3.TabIndex = 0;
+            // 
+            // uiPanel1
+            // 
+            this.uiPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.uiPanel1.Controls.Add(this.lblActiveSelected);
+            this.uiPanel1.Controls.Add(this.saaGlowing1);
+            this.uiPanel1.FillColor = System.Drawing.SystemColors.Control;
+            this.uiPanel1.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
+            this.uiPanel1.Location = new System.Drawing.Point(28, 11);
+            this.uiPanel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.uiPanel1.MinimumSize = new System.Drawing.Size(1, 1);
+            this.uiPanel1.Name = "uiPanel1";
+            this.uiPanel1.Radius = 40;
+            this.uiPanel1.RectColor = System.Drawing.Color.White;
+            this.uiPanel1.Size = new System.Drawing.Size(1130, 108);
+            this.uiPanel1.Style = Sunny.UI.UIStyle.Custom;
+            this.uiPanel1.TabIndex = 3;
+            this.uiPanel1.Text = null;
+            this.uiPanel1.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.uiPanel1.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            // 
+            // lblActiveSelected
+            // 
+            this.lblActiveSelected.BackColor = System.Drawing.SystemColors.Control;
+            this.lblActiveSelected.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblActiveSelected.ForeColor = System.Drawing.Color.DarkGray;
+            this.lblActiveSelected.Location = new System.Drawing.Point(95, 16);
+            this.lblActiveSelected.Name = "lblActiveSelected";
+            this.lblActiveSelected.Size = new System.Drawing.Size(447, 77);
+            this.lblActiveSelected.TabIndex = 44;
+            this.lblActiveSelected.Text = "Dashbord";
+            this.lblActiveSelected.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // saaGlowing1
+            // 
+            this.saaGlowing1.BackColor = System.Drawing.SystemColors.Control;
+            this.saaGlowing1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(158)))), ((int)(((byte)(255)))));
+            this.saaGlowing1.ForceTransparence = false;
+            this.saaGlowing1.GrowingSpeed = 5;
+            this.saaGlowing1.Location = new System.Drawing.Point(34, 40);
+            this.saaGlowing1.Name = "saaGlowing1";
+            this.saaGlowing1.Size = new System.Drawing.Size(32, 32);
+            this.saaGlowing1.Stop = false;
+            this.saaGlowing1.TabIndex = 11;
+            this.saaGlowing1.Text = "saaGlowing1";
+            // 
             // AdminForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -533,13 +533,11 @@
             this.ClientSize = new System.Drawing.Size(1384, 820);
             this.Controls.Add(this.tableLayoutPanel2);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MinimumSize = new System.Drawing.Size(1190, 793);
             this.Name = "AdminForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.AdminForm_Load);
             this.tableLayoutPanel2.ResumeLayout(false);
-            this.panel3.ResumeLayout(false);
-            this.uiPanel1.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
             this.lblName.ResumeLayout(false);
             this.uiPanel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -553,6 +551,9 @@
             this.pnlExpiringProduct.ResumeLayout(false);
             this.pnlCasher.ResumeLayout(false);
             this.pnlSetting.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
+            this.uiPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
