@@ -106,7 +106,7 @@
             this.txtCPassword.Style = Sunny.UI.UIStyle.Custom;
             this.txtCPassword.TabIndex = 53;
             this.txtCPassword.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
-            this.txtCPassword.Watermark = "Comfirm password";
+            this.txtCPassword.Watermark = "Confirm password";
             this.txtCPassword.WatermarkActiveColor = System.Drawing.Color.White;
             this.txtCPassword.WatermarkColor = System.Drawing.Color.DarkGray;
             this.txtCPassword.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);

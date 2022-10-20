@@ -107,7 +107,34 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DbService.cs" />
+    <Compile Include="Migrations\202210161117360_Transaction_TransactionDetail_Product.cs" />
+    <Compile Include="Migrations\202210161117360_Transaction_TransactionDetail_Product.designer.cs">
+      <DependentUpon>202210161117360_Transaction_TransactionDetail_Product.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202210161120209_Transaction_TransactionDetail_Product2.cs" />
+    <Compile Include="Migrations\202210161120209_Transaction_TransactionDetail_Product2.designer.cs">
+      <DependentUpon>202210161120209_Transaction_TransactionDetail_Product2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202210161330573_Transaction.cs" />
+    <Compile Include="Migrations\202210161330573_Transaction.designer.cs">
+      <DependentUpon>202210161330573_Transaction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202210170648410_Casher_Admin.cs" />
+    <Compile Include="Migrations\202210170648410_Casher_Admin.designer.cs">
+      <DependentUpon>202210170648410_Casher_Admin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202210170652458_Casher_Admin2.cs" />
+    <Compile Include="Migrations\202210170652458_Casher_Admin2.designer.cs">
+      <DependentUpon>202210170652458_Casher_Admin2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202210170815068_for_test.cs" />
+    <Compile Include="Migrations\202210170815068_for_test.designer.cs">
+      <DependentUpon>202210170815068_for_test.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202210170819437_for_test2.cs" />
+    <Compile Include="Migrations\202210170819437_for_test2.designer.cs">
+      <DependentUpon>202210170819437_for_test2.cs</DependentUpon>
+    </Compile>
     <Compile Include="Model\Admin.cs" />
     <Compile Include="Model\Casher.cs" />
     <Compile Include="Model\Product.cs" />
@@ -125,6 +152,7 @@
     <Compile Include="Model\Casher.cs" />
     <Compile Include="Model\Product.cs" />
     <Compile Include="Model\Transaction.cs" />
+    <Compile Include="Model\TransactionDetail.cs" />
     <Compile Include="UILocalizeHelper.cs" />
     <Compile Include="View\Forms\AdminView\Admin Form Subcomponents\CasherForm.cs">
       <SubType>Form</SubType>
@@ -277,6 +305,27 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202210110840555_changedUPCDataTypeToString.resx">
       <DependentUpon>202210110840555_changedUPCDataTypeToString.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202210161117360_Transaction_TransactionDetail_Product.resx">
+      <DependentUpon>202210161117360_Transaction_TransactionDetail_Product.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202210161120209_Transaction_TransactionDetail_Product2.resx">
+      <DependentUpon>202210161120209_Transaction_TransactionDetail_Product2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202210161330573_Transaction.resx">
+      <DependentUpon>202210161330573_Transaction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202210170648410_Casher_Admin.resx">
+      <DependentUpon>202210170648410_Casher_Admin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202210170652458_Casher_Admin2.resx">
+      <DependentUpon>202210170652458_Casher_Admin2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202210170815068_for_test.resx">
+      <DependentUpon>202210170815068_for_test.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202210170819437_for_test2.resx">
+      <DependentUpon>202210170819437_for_test2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Forms\AdminView\Admin Form Subcomponents\CasherForm.resx">
       <DependentUpon>CasherForm.cs</DependentUpon>

@@ -2,6 +2,7 @@
 using Supermarket.Panals;
 using Supermarket.View.Forms;
 using Supermarket.View.Forms.Admin;
+using Supermarket.View.Forms.Admin.Admin_Form_Subcomponents;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -58,82 +59,32 @@ namespace Supermarket.View.User_Controls.SignInControls
         private void btnLogin_Click(object sender, EventArgs e)
         {
 
-                if (tkRole.Checked == true)
+            if (tkRole.Checked == true)
+            {
+                Admin admin = Admin.CheckAdmin(txtEmail.Text, txtPassword.Text);
+                if(admin!=null)
                 {
-                    SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["Admin"].ConnectionString);
-                    string cmdText = "SELECT * FROM Admins";
-                    SqlCommand cmd = new SqlCommand(cmdText,connection);
-                    connection.Open();
-                    SqlDataReader AdminData = cmd.ExecuteReader();
-                    Boolean UserExist=false;
-
-                    Admin admin = new Admin();
-                    while (AdminData.Read())
-                    {
-                        if (txtEmail.Text == AdminData["Email"].ToString() && txtPassword.Text == AdminData["Password"].ToString())
-                        {
-                            admin.Email = AdminData["Email"].ToString();
-                            admin.Gender = Boolean.Parse(AdminData["Gender"].ToString());
-                            admin.Id = int.Parse(AdminData["Id"].ToString());
-                            admin.Location = AdminData["Location"].ToString();
-                            admin.Password = AdminData["Password"].ToString();
-                            admin.FirstName = AdminData["FirstName"].ToString();
-                            admin.LastName = AdminData["LastName"].ToString();
-                            admin.Phone = AdminData["Phone"].ToString();
-
-                            AdminForm adminForm = new AdminForm(admin);
-                            adminForm.Show();
-                            UserExist = true;
-                            connection.Close();
-                            return;
-                        }
-                    }
-
-                    if (UserExist == false)
-                    {
-                        MessageBox.Show("The user does not exist.");
-                        connection.Close();
-                    }
-
+                    AdminForm adminForm = new AdminForm(admin);
+                    adminForm.Show();
                 }
                 else
                 {
-                    SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["Casher"].ConnectionString);
-                    string cmdText = "SELECT * FROM Cashers";
-                    SqlCommand cmd = new SqlCommand(cmdText, connection);
-                    connection.Open();
-                    SqlDataReader CasherData = cmd.ExecuteReader();
-                    Boolean UserExist = false;
-
-                    Casher casher = new Casher();
-                    while (CasherData.Read())
-                    {
-                        if (txtEmail.Text == CasherData["Email"].ToString() && txtPassword.Text == CasherData["Password"].ToString())
-                        {
-                            casher.Email = CasherData["Email"].ToString();
-                            casher.Gender = Boolean.Parse(CasherData["Gender"].ToString());
-                            casher.Id = int.Parse(CasherData["Id"].ToString());
-                            casher.Location = CasherData["Location"].ToString();
-                            casher.Password = CasherData["Password"].ToString();
-                            casher.FirstName = CasherData["FirstName"].ToString();
-                            casher.LastName = CasherData["LastName"].ToString();
-                            casher.Phone = CasherData["Phone"].ToString();
-                            CashierForm cashierForm = new CashierForm(casher);
-                            cashierForm.Show();
-                            UserExist = true;
-                            connection.Close();
-                            return;
-                        }
-                    }
-
-                    if (UserExist == false)
-                    {
-                        MessageBox.Show("The user does not exist.");
-                        connection.Close();
-                    }
+                    MessageBox.Show("The user does not exist.");
                 }
-            
-
+            }
+            else
+            {
+                Casher casher = Casher.CheckCasher(txtEmail.Text, txtPassword.Text);
+                if (casher != null)
+                {
+                    View.Forms.CashierForm cashierForm = new CashierForm(casher);
+                    cashierForm.Show();
+                }
+                else
+                {
+                    MessageBox.Show("The user does not exist.");
+                }
+            }
         }
 
         private void cbRole_SelectedIndexChanged(object sender, EventArgs e)

@@ -24,6 +24,8 @@ namespace Supermarket.Model
 
         public int ShelfNumber { get; set; }
 
+        public int Quantity { get; set; }
+
         //static List<Product> Products=new List<Product>();
 
         //public static List<Product> getAllProduct() { return Products; }
