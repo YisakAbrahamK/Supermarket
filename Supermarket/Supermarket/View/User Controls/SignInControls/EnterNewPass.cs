@@ -79,5 +79,35 @@ namespace Supermarket.Panals
             signIn.Dock = DockStyle.Fill;
             signIn.Show();
         }
+
+        private void txtPassword_Validating(object sender, CancelEventArgs e)
+        {
+            if (txtPassword.Text != null && txtPassword.Text != String.Empty)
+            {
+                if (CustomValid.isValidPass(txtPassword.Text) == false)
+                {
+                    errorProvider1.SetError(txtPassword, "Any 7 char");
+                }
+                else
+                {
+                    errorProvider1.SetError(txtPassword, string.Empty);
+                }
+            }
+        }
+
+        private void txtCPassword_Validating(object sender, CancelEventArgs e)
+        {
+            if (txtCPassword.Text != null && txtCPassword.Text != String.Empty)
+            {
+                if (CustomValid.isValidPass(txtCPassword.Text) == false)
+                {
+                    errorProvider1.SetError(txtCPassword, "Any 7 char");
+                }
+                else
+                {
+                    errorProvider1.SetError(txtCPassword, string.Empty);
+                }
+            }
+        }
     }
-}
+ }

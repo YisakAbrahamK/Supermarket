@@ -203,7 +203,7 @@ namespace Supermarket
             Regex TheRegExpression;
 
 
-            string TheRegExTest = @"(^[0-9]{12}$)";
+            string TheRegExTest = @"(^[0-9]{13}$)";
 
 
             TheRegExpression = new Regex(TheRegExTest);

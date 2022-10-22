@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EnterNewPass));
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -37,12 +38,14 @@
             this.txtPassword = new Sunny.UI.UITextBox();
             this.btnSee = new System.Windows.Forms.PictureBox();
             this.btnSave = new Sunny.UI.UIButton();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             this.uiPanel1.SuspendLayout();
             this.txtCPassword.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnSeeConfirm)).BeginInit();
             this.txtPassword.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnSee)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox8
@@ -110,6 +113,7 @@
             this.txtCPassword.WatermarkActiveColor = System.Drawing.Color.White;
             this.txtCPassword.WatermarkColor = System.Drawing.Color.DarkGray;
             this.txtCPassword.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            this.txtCPassword.Validating += new System.ComponentModel.CancelEventHandler(this.txtCPassword_Validating);
             // 
             // btnSeeConfirm
             // 
@@ -146,6 +150,7 @@
             this.txtPassword.WatermarkActiveColor = System.Drawing.Color.White;
             this.txtPassword.WatermarkColor = System.Drawing.Color.DarkGray;
             this.txtPassword.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            this.txtPassword.Validating += new System.ComponentModel.CancelEventHandler(this.txtPassword_Validating);
             // 
             // btnSee
             // 
@@ -176,6 +181,10 @@
             this.btnSave.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click_1);
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // EnterNewPass
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -192,6 +201,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnSeeConfirm)).EndInit();
             this.txtPassword.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.btnSee)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -205,5 +215,6 @@
         private Sunny.UI.UITextBox txtPassword;
         private System.Windows.Forms.PictureBox btnSee;
         private Sunny.UI.UIButton btnSave;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

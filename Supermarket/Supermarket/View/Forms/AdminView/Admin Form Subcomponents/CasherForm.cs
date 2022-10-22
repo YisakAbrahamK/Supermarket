@@ -293,7 +293,7 @@ namespace Supermarket.View.Forms.Admin.Admin_Form_Subcomponents
         {
             if (txtmail.Text != null && txtmail.Text != String.Empty)
             {
-                if (CustomValid.isValidEmai(txtmail.Text) == false)
+                if (CustomValid.isValidEmail(txtmail.Text) == false)
                 {
                     errorProvider1.SetError(txtmail, "Eg fon@gmail.com");
                 }

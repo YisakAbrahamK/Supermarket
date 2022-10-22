@@ -1,4 +1,5 @@
-﻿using Supermarket.Model;
+﻿using Sunny.UI;
+using Supermarket.Model;
 using Supermarket.Panals;
 using Supermarket.View.Forms;
 using Supermarket.View.Forms.Admin;
@@ -71,7 +72,7 @@ namespace Supermarket.View.User_Controls.SignInControls
                 }
                 else
                 {
-                    MessageBox.Show("The user does not exist.");
+                    UIMessageBox.ShowInfo("The user does not exist.", true, true);
                 }
             }
             else
@@ -86,7 +87,7 @@ namespace Supermarket.View.User_Controls.SignInControls
                 }
                 else
                 {
-                    MessageBox.Show("The user does not exist.");
+                    UIMessageBox.ShowInfo("The user does not exist.", true, true);
                 }
             }
         }

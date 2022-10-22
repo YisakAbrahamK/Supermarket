@@ -33,7 +33,7 @@ namespace Supermarket.View.Forms.Admin.Admin_Form_Subcomponents
                 var TotalTransactions =context.Transactions.Count();
                 var TotalTransactionsAmount = (from t in context.Transactions select t.Total).Sum();
                 var itemsInStore = context.products.Count();
-                var numberOfExpiredItems =context.products.Where(a => (a.ExpiredDate >= DateTime.Now)).Count();
+                var numberOfExpiredItems =context.products.Where(a => (a.ExpiredDate <= DateTime.Now)).Count();
                 lblTransaction.Text = TotalTransactions.ToString();
                 lblTransactionAmount.Text = string.Format("{0:C}", TotalTransactionsAmount);
                 lblExpiredItem.Text = numberOfExpiredItems.ToString();

@@ -56,7 +56,7 @@ namespace Supermarket.View.Forms.Casher.Casher_Form_SubComponent
                         casherData.FirstName = txtFirstName.Text;
                         casherData.LastName = txtLastName.Text;
                         if(txtNewPass.Text != string.Empty || txtNewPass.Text != null)
-                            casherData.Password = txtCPass.Text;
+                            casherData.Password = txtNewPass.Text;
                         casherData.Email = txtEmail.Text;
                         casherData.Location = txtLocation.Text;
                         context.SaveChanges();
@@ -77,7 +77,7 @@ namespace Supermarket.View.Forms.Casher.Casher_Form_SubComponent
                         adminData.FirstName = txtFirstName.Text;
                         adminData.LastName = txtLastName.Text;
                         if (txtNewPass.Text != string.Empty || txtNewPass.Text != null)
-                            adminData.Password = txtCPass.Text;
+                            adminData.Password = txtNewPass.Text;
                         adminData.Email = txtEmail.Text;
                         adminData.Location = txtLocation.Text;
                         context.SaveChanges();
