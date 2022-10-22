@@ -30,17 +30,10 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CashierForm));
             this.lblName = new System.Windows.Forms.Panel();
-            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.pnlContainer = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.uiPanel1 = new Sunny.UI.UIPanel();
-            this.lblActiveSelected = new System.Windows.Forms.Label();
-            this.saaGlowing1 = new SaaUI.SaaGlowing();
             this.uiPanel2 = new Sunny.UI.UIPanel();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.uiPanel4 = new Sunny.UI.UIPanel();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pbBackToLogin = new System.Windows.Forms.PictureBox();
             this.uiPanel5 = new Sunny.UI.UIPanel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.pnlInvoice = new Sunny.UI.UIPanel();
@@ -49,15 +42,18 @@
             this.uiSymbolLabel1 = new Sunny.UI.UISymbolLabel();
             this.pnlSetting = new Sunny.UI.UIPanel();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.pnlContainer = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.uiPanel1 = new Sunny.UI.UIPanel();
+            this.lblActiveSelected = new System.Windows.Forms.Label();
+            this.saaGlowing1 = new SaaUI.SaaGlowing();
             this.lblName.SuspendLayout();
-            this.tableLayoutPanel2.SuspendLayout();
-            this.panel2.SuspendLayout();
-            this.panel3.SuspendLayout();
-            this.uiPanel1.SuspendLayout();
             this.uiPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.uiPanel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbBackToLogin)).BeginInit();
             this.uiPanel5.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             this.pnlInvoice.SuspendLayout();
@@ -65,6 +61,10 @@
             this.pnlHistory.SuspendLayout();
             this.pnlSetting.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            this.tableLayoutPanel2.SuspendLayout();
+            this.panel2.SuspendLayout();
+            this.panel3.SuspendLayout();
+            this.uiPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblName
@@ -77,96 +77,6 @@
             this.lblName.Name = "lblName";
             this.lblName.Size = new System.Drawing.Size(189, 820);
             this.lblName.TabIndex = 0;
-            // 
-            // tableLayoutPanel2
-            // 
-            this.tableLayoutPanel2.ColumnCount = 2;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.Controls.Add(this.lblName, 0, 0);
-            this.tableLayoutPanel2.Controls.Add(this.panel2, 1, 0);
-            this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-            this.tableLayoutPanel2.RowCount = 1;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 820F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(1384, 820);
-            this.tableLayoutPanel2.TabIndex = 5;
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.pnlContainer);
-            this.panel2.Controls.Add(this.panel3);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(192, 3);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1189, 814);
-            this.panel2.TabIndex = 1;
-            // 
-            // pnlContainer
-            // 
-            this.pnlContainer.BackColor = System.Drawing.Color.White;
-            this.pnlContainer.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlContainer.Location = new System.Drawing.Point(0, 129);
-            this.pnlContainer.Name = "pnlContainer";
-            this.pnlContainer.Size = new System.Drawing.Size(1189, 685);
-            this.pnlContainer.TabIndex = 11;
-            // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.uiPanel1);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel3.Location = new System.Drawing.Point(0, 0);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1189, 129);
-            this.panel3.TabIndex = 0;
-            // 
-            // uiPanel1
-            // 
-            this.uiPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.uiPanel1.Controls.Add(this.lblActiveSelected);
-            this.uiPanel1.Controls.Add(this.saaGlowing1);
-            this.uiPanel1.FillColor = System.Drawing.SystemColors.Control;
-            this.uiPanel1.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
-            this.uiPanel1.Location = new System.Drawing.Point(28, 11);
-            this.uiPanel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.uiPanel1.MinimumSize = new System.Drawing.Size(1, 1);
-            this.uiPanel1.Name = "uiPanel1";
-            this.uiPanel1.Radius = 40;
-            this.uiPanel1.RectColor = System.Drawing.Color.White;
-            this.uiPanel1.Size = new System.Drawing.Size(1131, 108);
-            this.uiPanel1.Style = Sunny.UI.UIStyle.Custom;
-            this.uiPanel1.TabIndex = 3;
-            this.uiPanel1.Text = null;
-            this.uiPanel1.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            this.uiPanel1.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
-            // 
-            // lblActiveSelected
-            // 
-            this.lblActiveSelected.BackColor = System.Drawing.SystemColors.Control;
-            this.lblActiveSelected.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblActiveSelected.ForeColor = System.Drawing.Color.DarkGray;
-            this.lblActiveSelected.Location = new System.Drawing.Point(95, 16);
-            this.lblActiveSelected.Name = "lblActiveSelected";
-            this.lblActiveSelected.Size = new System.Drawing.Size(447, 77);
-            this.lblActiveSelected.TabIndex = 44;
-            this.lblActiveSelected.Text = "Invoice";
-            this.lblActiveSelected.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // saaGlowing1
-            // 
-            this.saaGlowing1.BackColor = System.Drawing.SystemColors.Control;
-            this.saaGlowing1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(158)))), ((int)(((byte)(255)))));
-            this.saaGlowing1.ForceTransparence = false;
-            this.saaGlowing1.GrowingSpeed = 5;
-            this.saaGlowing1.Location = new System.Drawing.Point(34, 40);
-            this.saaGlowing1.Name = "saaGlowing1";
-            this.saaGlowing1.Size = new System.Drawing.Size(32, 32);
-            this.saaGlowing1.Stop = false;
-            this.saaGlowing1.TabIndex = 11;
-            this.saaGlowing1.Text = "saaGlowing1";
             // 
             // uiPanel2
             // 
@@ -205,7 +115,7 @@
             // 
             this.uiPanel4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.uiPanel4.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.uiPanel4.Controls.Add(this.pictureBox4);
+            this.uiPanel4.Controls.Add(this.pbBackToLogin);
             this.uiPanel4.FillColor = System.Drawing.Color.DarkSlateGray;
             this.uiPanel4.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
             this.uiPanel4.Location = new System.Drawing.Point(62, 743);
@@ -222,17 +132,18 @@
             this.uiPanel4.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.uiPanel4.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
-            // pictureBox4
+            // pbBackToLogin
             // 
-            this.pictureBox4.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.pictureBox4.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.pictureBox4.Image = global::Supermarket.Properties.Resources.signout;
-            this.pictureBox4.Location = new System.Drawing.Point(9, 19);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(56, 33);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox4.TabIndex = 9;
-            this.pictureBox4.TabStop = false;
+            this.pbBackToLogin.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.pbBackToLogin.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.pbBackToLogin.Image = global::Supermarket.Properties.Resources.signout;
+            this.pbBackToLogin.Location = new System.Drawing.Point(9, 19);
+            this.pbBackToLogin.Name = "pbBackToLogin";
+            this.pbBackToLogin.Size = new System.Drawing.Size(56, 33);
+            this.pbBackToLogin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbBackToLogin.TabIndex = 9;
+            this.pbBackToLogin.TabStop = false;
+            this.pbBackToLogin.Click += new System.EventHandler(this.pbBackToLogin_Click);
             // 
             // uiPanel5
             // 
@@ -381,6 +292,96 @@
             this.pictureBox5.TabIndex = 12;
             this.pictureBox5.TabStop = false;
             // 
+            // tableLayoutPanel2
+            // 
+            this.tableLayoutPanel2.ColumnCount = 2;
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel2.Controls.Add(this.lblName, 0, 0);
+            this.tableLayoutPanel2.Controls.Add(this.panel2, 1, 0);
+            this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
+            this.tableLayoutPanel2.RowCount = 1;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 820F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(1384, 820);
+            this.tableLayoutPanel2.TabIndex = 5;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.pnlContainer);
+            this.panel2.Controls.Add(this.panel3);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(192, 3);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1189, 814);
+            this.panel2.TabIndex = 1;
+            // 
+            // pnlContainer
+            // 
+            this.pnlContainer.BackColor = System.Drawing.Color.White;
+            this.pnlContainer.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlContainer.Location = new System.Drawing.Point(0, 129);
+            this.pnlContainer.Name = "pnlContainer";
+            this.pnlContainer.Size = new System.Drawing.Size(1189, 685);
+            this.pnlContainer.TabIndex = 11;
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.uiPanel1);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(1189, 129);
+            this.panel3.TabIndex = 0;
+            // 
+            // uiPanel1
+            // 
+            this.uiPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.uiPanel1.Controls.Add(this.lblActiveSelected);
+            this.uiPanel1.Controls.Add(this.saaGlowing1);
+            this.uiPanel1.FillColor = System.Drawing.SystemColors.Control;
+            this.uiPanel1.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
+            this.uiPanel1.Location = new System.Drawing.Point(28, 11);
+            this.uiPanel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.uiPanel1.MinimumSize = new System.Drawing.Size(1, 1);
+            this.uiPanel1.Name = "uiPanel1";
+            this.uiPanel1.Radius = 40;
+            this.uiPanel1.RectColor = System.Drawing.Color.White;
+            this.uiPanel1.Size = new System.Drawing.Size(1131, 108);
+            this.uiPanel1.Style = Sunny.UI.UIStyle.Custom;
+            this.uiPanel1.TabIndex = 3;
+            this.uiPanel1.Text = null;
+            this.uiPanel1.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.uiPanel1.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            // 
+            // lblActiveSelected
+            // 
+            this.lblActiveSelected.BackColor = System.Drawing.SystemColors.Control;
+            this.lblActiveSelected.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblActiveSelected.ForeColor = System.Drawing.Color.DarkGray;
+            this.lblActiveSelected.Location = new System.Drawing.Point(95, 16);
+            this.lblActiveSelected.Name = "lblActiveSelected";
+            this.lblActiveSelected.Size = new System.Drawing.Size(447, 77);
+            this.lblActiveSelected.TabIndex = 44;
+            this.lblActiveSelected.Text = "Invoice";
+            this.lblActiveSelected.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // saaGlowing1
+            // 
+            this.saaGlowing1.BackColor = System.Drawing.SystemColors.Control;
+            this.saaGlowing1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(158)))), ((int)(((byte)(255)))));
+            this.saaGlowing1.ForceTransparence = false;
+            this.saaGlowing1.GrowingSpeed = 5;
+            this.saaGlowing1.Location = new System.Drawing.Point(34, 40);
+            this.saaGlowing1.Name = "saaGlowing1";
+            this.saaGlowing1.Size = new System.Drawing.Size(32, 32);
+            this.saaGlowing1.Stop = false;
+            this.saaGlowing1.TabIndex = 11;
+            this.saaGlowing1.Text = "saaGlowing1";
+            // 
             // CashierForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -395,14 +396,10 @@
             this.TransparencyKey = System.Drawing.Color.Blue;
             this.Load += new System.EventHandler(this.CashierForm_Load);
             this.lblName.ResumeLayout(false);
-            this.tableLayoutPanel2.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
-            this.panel3.ResumeLayout(false);
-            this.uiPanel1.ResumeLayout(false);
             this.uiPanel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.uiPanel4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbBackToLogin)).EndInit();
             this.uiPanel5.ResumeLayout(false);
             this.flowLayoutPanel1.ResumeLayout(false);
             this.pnlInvoice.ResumeLayout(false);
@@ -410,6 +407,10 @@
             this.pnlHistory.ResumeLayout(false);
             this.pnlSetting.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            this.tableLayoutPanel2.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
+            this.uiPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -427,7 +428,7 @@
         private Sunny.UI.UIPanel uiPanel2;
         private System.Windows.Forms.PictureBox pictureBox3;
         private Sunny.UI.UIPanel uiPanel4;
-        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.PictureBox pbBackToLogin;
         private Sunny.UI.UIPanel uiPanel5;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private Sunny.UI.UIPanel pnlInvoice;

@@ -30,14 +30,14 @@
         {
             this.uiPanel1 = new Sunny.UI.UIPanel();
             this.label8 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lblName = new System.Windows.Forms.Label();
+            this.lblUpc = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.lblExpDate = new System.Windows.Forms.Label();
+            this.lblShelfNumber = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
+            this.lblRdate = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.uiPanel1.SuspendLayout();
             this.SuspendLayout();
@@ -46,14 +46,14 @@
             // 
             this.uiPanel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.uiPanel1.BackColor = System.Drawing.Color.White;
-            this.uiPanel1.Controls.Add(this.label9);
+            this.uiPanel1.Controls.Add(this.lblRdate);
             this.uiPanel1.Controls.Add(this.label10);
             this.uiPanel1.Controls.Add(this.label8);
-            this.uiPanel1.Controls.Add(this.label7);
-            this.uiPanel1.Controls.Add(this.label3);
+            this.uiPanel1.Controls.Add(this.lblName);
+            this.uiPanel1.Controls.Add(this.lblUpc);
             this.uiPanel1.Controls.Add(this.label4);
-            this.uiPanel1.Controls.Add(this.label6);
-            this.uiPanel1.Controls.Add(this.label5);
+            this.uiPanel1.Controls.Add(this.lblExpDate);
+            this.uiPanel1.Controls.Add(this.lblShelfNumber);
             this.uiPanel1.Controls.Add(this.label2);
             this.uiPanel1.Controls.Add(this.label1);
             this.uiPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -84,31 +84,31 @@
             this.label8.TabIndex = 47;
             this.label8.Text = "Name";
             // 
-            // label7
+            // lblName
             // 
-            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.SystemColors.Control;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.Black;
-            this.label7.Location = new System.Drawing.Point(207, 8);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(137, 29);
-            this.label7.TabIndex = 46;
-            this.label7.Text = "Sun Chipse";
+            this.lblName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblName.AutoSize = true;
+            this.lblName.BackColor = System.Drawing.SystemColors.Control;
+            this.lblName.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblName.ForeColor = System.Drawing.Color.Black;
+            this.lblName.Location = new System.Drawing.Point(207, 8);
+            this.lblName.Name = "lblName";
+            this.lblName.Size = new System.Drawing.Size(137, 29);
+            this.lblName.TabIndex = 46;
+            this.lblName.Text = "Sun Chipse";
             // 
-            // label3
+            // lblUpc
             // 
-            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.SystemColors.Control;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(207, 45);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(156, 29);
-            this.label3.TabIndex = 44;
-            this.label3.Text = "45564541354";
+            this.lblUpc.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblUpc.AutoSize = true;
+            this.lblUpc.BackColor = System.Drawing.SystemColors.Control;
+            this.lblUpc.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUpc.ForeColor = System.Drawing.Color.Black;
+            this.lblUpc.Location = new System.Drawing.Point(207, 45);
+            this.lblUpc.Name = "lblUpc";
+            this.lblUpc.Size = new System.Drawing.Size(156, 29);
+            this.lblUpc.TabIndex = 44;
+            this.lblUpc.Text = "45564541354";
             // 
             // label4
             // 
@@ -121,31 +121,31 @@
             this.label4.TabIndex = 43;
             this.label4.Text = "UPC";
             // 
-            // label6
+            // lblExpDate
             // 
-            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.SystemColors.Control;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(207, 81);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(131, 29);
-            this.label6.TabIndex = 26;
-            this.label6.Text = "12/12/2020";
+            this.lblExpDate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblExpDate.AutoSize = true;
+            this.lblExpDate.BackColor = System.Drawing.SystemColors.Control;
+            this.lblExpDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblExpDate.ForeColor = System.Drawing.Color.Black;
+            this.lblExpDate.Location = new System.Drawing.Point(207, 81);
+            this.lblExpDate.Name = "lblExpDate";
+            this.lblExpDate.Size = new System.Drawing.Size(131, 29);
+            this.lblExpDate.TabIndex = 26;
+            this.lblExpDate.Text = "12/12/2020";
             // 
-            // label5
+            // lblShelfNumber
             // 
-            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.SystemColors.Control;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(211, 118);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(65, 29);
-            this.label5.TabIndex = 25;
-            this.label5.Text = "6445";
+            this.lblShelfNumber.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblShelfNumber.AutoSize = true;
+            this.lblShelfNumber.BackColor = System.Drawing.SystemColors.Control;
+            this.lblShelfNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblShelfNumber.ForeColor = System.Drawing.Color.Black;
+            this.lblShelfNumber.Location = new System.Drawing.Point(211, 118);
+            this.lblShelfNumber.Name = "lblShelfNumber";
+            this.lblShelfNumber.Size = new System.Drawing.Size(65, 29);
+            this.lblShelfNumber.TabIndex = 25;
+            this.lblShelfNumber.Text = "6445";
             // 
             // label2
             // 
@@ -169,18 +169,18 @@
             this.label1.TabIndex = 22;
             this.label1.Text = "Shelf Number";
             // 
-            // label9
+            // lblRdate
             // 
-            this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label9.AutoSize = true;
-            this.label9.BackColor = System.Drawing.SystemColors.Control;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.Black;
-            this.label9.Location = new System.Drawing.Point(212, 153);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(39, 29);
-            this.label9.TabIndex = 49;
-            this.label9.Text = "45";
+            this.lblRdate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblRdate.AutoSize = true;
+            this.lblRdate.BackColor = System.Drawing.SystemColors.Control;
+            this.lblRdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRdate.ForeColor = System.Drawing.Color.Black;
+            this.lblRdate.Location = new System.Drawing.Point(212, 153);
+            this.lblRdate.Name = "lblRdate";
+            this.lblRdate.Size = new System.Drawing.Size(39, 29);
+            this.lblRdate.TabIndex = 49;
+            this.lblRdate.Text = "45";
             // 
             // label10
             // 
@@ -209,15 +209,15 @@
         #endregion
 
         private Sunny.UI.UIPanel uiPanel1;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lblName;
+        private System.Windows.Forms.Label lblUpc;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label lblExpDate;
+        private System.Windows.Forms.Label lblShelfNumber;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblRdate;
+        private System.Windows.Forms.Label label10;
     }
 }

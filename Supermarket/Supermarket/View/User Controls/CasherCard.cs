@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Supermarket.Model;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,19 +13,20 @@ namespace Supermarket.View.User_Controls
 {
     public partial class CasherCard : UserControl
     {
-        public CasherCard()
+        public Model.Casher casher { get; set; }
+
+        public PictureBox Delete
+        {
+            get { return picDelete; }
+        }
+
+        public CasherCard(Model.Casher casher)
         {
             InitializeComponent();
+            this.casher = casher;
+            lblEmail.Text = casher.Email;
+            lblName.Text = casher.FirstName + " " + casher.LastName;
         }
 
-        private void uiPanel1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void uiSymbolLabel2_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

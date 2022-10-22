@@ -36,7 +36,7 @@
             this.iudQuantity = new Sunny.UI.UIIntegerUpDown();
             this.lblSubtotal = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.lblUPC = new System.Windows.Forms.Label();
+            this.lblAQuantity = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.uiPanel2.SuspendLayout();
@@ -54,7 +54,7 @@
             this.uiPanel2.Controls.Add(this.iudQuantity);
             this.uiPanel2.Controls.Add(this.lblSubtotal);
             this.uiPanel2.Controls.Add(this.label7);
-            this.uiPanel2.Controls.Add(this.lblUPC);
+            this.uiPanel2.Controls.Add(this.lblAQuantity);
             this.uiPanel2.Controls.Add(this.label10);
             this.uiPanel2.Controls.Add(this.label11);
             this.uiPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -168,19 +168,19 @@
             this.label7.TabIndex = 27;
             this.label7.Text = "Subtotal";
             // 
-            // lblUPC
+            // lblAQuantity
             // 
-            this.lblUPC.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblUPC.BackColor = System.Drawing.SystemColors.Control;
-            this.lblUPC.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUPC.ForeColor = System.Drawing.Color.Black;
-            this.lblUPC.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.lblUPC.Location = new System.Drawing.Point(137, 60);
-            this.lblUPC.Name = "lblUPC";
-            this.lblUPC.Size = new System.Drawing.Size(235, 29);
-            this.lblUPC.TabIndex = 26;
-            this.lblUPC.Text = "132456789";
-            this.lblUPC.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lblAQuantity.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblAQuantity.BackColor = System.Drawing.SystemColors.Control;
+            this.lblAQuantity.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAQuantity.ForeColor = System.Drawing.Color.Black;
+            this.lblAQuantity.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lblAQuantity.Location = new System.Drawing.Point(137, 60);
+            this.lblAQuantity.Name = "lblAQuantity";
+            this.lblAQuantity.Size = new System.Drawing.Size(235, 29);
+            this.lblAQuantity.TabIndex = 26;
+            this.lblAQuantity.Text = "132456789";
+            this.lblAQuantity.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label10
             // 
@@ -189,9 +189,9 @@
             this.label10.ForeColor = System.Drawing.Color.DarkGray;
             this.label10.Location = new System.Drawing.Point(14, 61);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(165, 32);
+            this.label10.Size = new System.Drawing.Size(273, 32);
             this.label10.TabIndex = 23;
-            this.label10.Text = "UPC";
+            this.label10.Text = "Avail";
             // 
             // label11
             // 
@@ -229,7 +229,7 @@
         private Sunny.UI.UIIntegerUpDown iudQuantity;
         private System.Windows.Forms.Label lblSubtotal;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label lblUPC;
+        private System.Windows.Forms.Label lblAQuantity;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
     }

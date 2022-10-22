@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.uiPanel1 = new Sunny.UI.UIPanel();
             this.uiPanel2 = new Sunny.UI.UIPanel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -43,12 +44,12 @@
             this.label2 = new System.Windows.Forms.Label();
             this.uiPanel5 = new Sunny.UI.UIPanel();
             this.txtNewPass = new Sunny.UI.UITextBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.pbEye = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.uiPanel6 = new Sunny.UI.UIPanel();
+            this.txtCPass = new Sunny.UI.UITextBox();
+            this.pbEye2 = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.txtComPass = new Sunny.UI.UITextBox();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.uiPanel7 = new Sunny.UI.UIPanel();
             this.txtEmail = new Sunny.UI.UITextBox();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
@@ -61,8 +62,11 @@
             this.txtLocation = new Sunny.UI.UITextBox();
             this.uiSymbolLabel3 = new Sunny.UI.UISymbolLabel();
             this.label7 = new System.Windows.Forms.Label();
-            this.uiButton1 = new Sunny.UI.UIButton();
-            this.btnLogin = new Sunny.UI.UIButton();
+            this.btnClear = new Sunny.UI.UIButton();
+            this.btnUpdate = new Sunny.UI.UIButton();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.txtComPass = new Sunny.UI.UITextBox();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.uiPanel1.SuspendLayout();
             this.uiPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -74,10 +78,10 @@
             this.txtLastName.SuspendLayout();
             this.uiPanel5.SuspendLayout();
             this.txtNewPass.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbEye)).BeginInit();
             this.uiPanel6.SuspendLayout();
-            this.txtComPass.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            this.txtCPass.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbEye2)).BeginInit();
             this.uiPanel7.SuspendLayout();
             this.txtEmail.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
@@ -85,6 +89,9 @@
             this.txtPhone.SuspendLayout();
             this.uiPanel9.SuspendLayout();
             this.txtLocation.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            this.txtComPass.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // uiPanel1
@@ -94,8 +101,8 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.uiPanel1.Controls.Add(this.uiPanel2);
             this.uiPanel1.Controls.Add(this.uiPanel10);
-            this.uiPanel1.Controls.Add(this.uiButton1);
-            this.uiPanel1.Controls.Add(this.btnLogin);
+            this.uiPanel1.Controls.Add(this.btnClear);
+            this.uiPanel1.Controls.Add(this.btnUpdate);
             this.uiPanel1.FillColor = System.Drawing.SystemColors.Control;
             this.uiPanel1.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
             this.uiPanel1.Location = new System.Drawing.Point(11, 4);
@@ -193,7 +200,6 @@
             // 
             // uiPanel3
             // 
-            this.uiPanel3.AutoSize = true;
             this.uiPanel3.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.uiPanel3.BackColor = System.Drawing.SystemColors.Control;
             this.uiPanel3.Controls.Add(this.txtFirstName);
@@ -206,7 +212,7 @@
             this.uiPanel3.Name = "uiPanel3";
             this.uiPanel3.Radius = 10;
             this.uiPanel3.RectColor = System.Drawing.Color.White;
-            this.uiPanel3.Size = new System.Drawing.Size(582, 62);
+            this.uiPanel3.Size = new System.Drawing.Size(608, 62);
             this.uiPanel3.Style = Sunny.UI.UIStyle.Custom;
             this.uiPanel3.StyleCustomMode = true;
             this.uiPanel3.TabIndex = 2;
@@ -230,7 +236,7 @@
             this.txtFirstName.Radius = 40;
             this.txtFirstName.RectColor = System.Drawing.SystemColors.Control;
             this.txtFirstName.ShowText = false;
-            this.txtFirstName.Size = new System.Drawing.Size(373, 46);
+            this.txtFirstName.Size = new System.Drawing.Size(362, 46);
             this.txtFirstName.Style = Sunny.UI.UIStyle.Custom;
             this.txtFirstName.StyleCustomMode = true;
             this.txtFirstName.TabIndex = 64;
@@ -240,6 +246,7 @@
             this.txtFirstName.WatermarkActiveColor = System.Drawing.Color.White;
             this.txtFirstName.WatermarkColor = System.Drawing.Color.DarkGray;
             this.txtFirstName.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            this.txtFirstName.Validating += new System.ComponentModel.CancelEventHandler(this.txtFirstName_Validating);
             // 
             // uiSymbolLabel1
             // 
@@ -270,7 +277,6 @@
             // 
             // uiPanel4
             // 
-            this.uiPanel4.AutoSize = true;
             this.uiPanel4.BackColor = System.Drawing.SystemColors.Control;
             this.uiPanel4.Controls.Add(this.txtLastName);
             this.uiPanel4.Controls.Add(this.label2);
@@ -282,7 +288,7 @@
             this.uiPanel4.Name = "uiPanel4";
             this.uiPanel4.Radius = 10;
             this.uiPanel4.RectColor = System.Drawing.Color.White;
-            this.uiPanel4.Size = new System.Drawing.Size(582, 63);
+            this.uiPanel4.Size = new System.Drawing.Size(608, 63);
             this.uiPanel4.Style = Sunny.UI.UIStyle.Custom;
             this.uiPanel4.StyleCustomMode = true;
             this.uiPanel4.TabIndex = 78;
@@ -307,7 +313,7 @@
             this.txtLastName.Radius = 40;
             this.txtLastName.RectColor = System.Drawing.SystemColors.Control;
             this.txtLastName.ShowText = false;
-            this.txtLastName.Size = new System.Drawing.Size(373, 46);
+            this.txtLastName.Size = new System.Drawing.Size(362, 46);
             this.txtLastName.Style = Sunny.UI.UIStyle.Custom;
             this.txtLastName.StyleCustomMode = true;
             this.txtLastName.TabIndex = 66;
@@ -317,6 +323,7 @@
             this.txtLastName.WatermarkActiveColor = System.Drawing.Color.White;
             this.txtLastName.WatermarkColor = System.Drawing.Color.DarkGray;
             this.txtLastName.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            this.txtLastName.Validating += new System.ComponentModel.CancelEventHandler(this.txtLastName_Validating);
             // 
             // uiSymbolLabel2
             // 
@@ -347,7 +354,6 @@
             // 
             // uiPanel5
             // 
-            this.uiPanel5.AutoSize = true;
             this.uiPanel5.BackColor = System.Drawing.SystemColors.Control;
             this.uiPanel5.Controls.Add(this.txtNewPass);
             this.uiPanel5.Controls.Add(this.label3);
@@ -359,7 +365,7 @@
             this.uiPanel5.Name = "uiPanel5";
             this.uiPanel5.Radius = 10;
             this.uiPanel5.RectColor = System.Drawing.Color.White;
-            this.uiPanel5.Size = new System.Drawing.Size(582, 63);
+            this.uiPanel5.Size = new System.Drawing.Size(608, 63);
             this.uiPanel5.Style = Sunny.UI.UIStyle.Custom;
             this.uiPanel5.StyleCustomMode = true;
             this.uiPanel5.TabIndex = 79;
@@ -372,7 +378,7 @@
             this.txtNewPass.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtNewPass.BackColor = System.Drawing.Color.White;
-            this.txtNewPass.Controls.Add(this.pictureBox5);
+            this.txtNewPass.Controls.Add(this.pbEye);
             this.txtNewPass.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtNewPass.FillColor = System.Drawing.SystemColors.Control;
             this.txtNewPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -385,7 +391,7 @@
             this.txtNewPass.Radius = 40;
             this.txtNewPass.RectColor = System.Drawing.SystemColors.Control;
             this.txtNewPass.ShowText = false;
-            this.txtNewPass.Size = new System.Drawing.Size(368, 46);
+            this.txtNewPass.Size = new System.Drawing.Size(357, 46);
             this.txtNewPass.Style = Sunny.UI.UIStyle.Custom;
             this.txtNewPass.StyleCustomMode = true;
             this.txtNewPass.TabIndex = 69;
@@ -394,17 +400,19 @@
             this.txtNewPass.WatermarkActiveColor = System.Drawing.Color.White;
             this.txtNewPass.WatermarkColor = System.Drawing.Color.DarkGray;
             this.txtNewPass.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            this.txtNewPass.Validating += new System.ComponentModel.CancelEventHandler(this.txtNewPass_Validating);
             // 
-            // pictureBox5
+            // pbEye
             // 
-            this.pictureBox5.BackColor = System.Drawing.SystemColors.Control;
-            this.pictureBox5.Image = global::Supermarket.Properties.Resources.eye_svgrepo_com;
-            this.pictureBox5.Location = new System.Drawing.Point(11, 12);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(23, 28);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox5.TabIndex = 41;
-            this.pictureBox5.TabStop = false;
+            this.pbEye.BackColor = System.Drawing.SystemColors.Control;
+            this.pbEye.Image = global::Supermarket.Properties.Resources.eye_svgrepo_com;
+            this.pbEye.Location = new System.Drawing.Point(11, 12);
+            this.pbEye.Name = "pbEye";
+            this.pbEye.Size = new System.Drawing.Size(23, 28);
+            this.pbEye.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbEye.TabIndex = 41;
+            this.pbEye.TabStop = false;
+            this.pbEye.Click += new System.EventHandler(this.pbEye_Click);
             // 
             // label3
             // 
@@ -420,10 +428,9 @@
             // 
             // uiPanel6
             // 
-            this.uiPanel6.AutoSize = true;
             this.uiPanel6.BackColor = System.Drawing.SystemColors.Control;
+            this.uiPanel6.Controls.Add(this.txtCPass);
             this.uiPanel6.Controls.Add(this.label4);
-            this.uiPanel6.Controls.Add(this.txtComPass);
             this.uiPanel6.FillColor = System.Drawing.Color.White;
             this.uiPanel6.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
             this.uiPanel6.Location = new System.Drawing.Point(4, 223);
@@ -432,13 +439,54 @@
             this.uiPanel6.Name = "uiPanel6";
             this.uiPanel6.Radius = 10;
             this.uiPanel6.RectColor = System.Drawing.Color.White;
-            this.uiPanel6.Size = new System.Drawing.Size(582, 62);
+            this.uiPanel6.Size = new System.Drawing.Size(604, 59);
             this.uiPanel6.Style = Sunny.UI.UIStyle.Custom;
             this.uiPanel6.StyleCustomMode = true;
             this.uiPanel6.TabIndex = 80;
             this.uiPanel6.Text = null;
             this.uiPanel6.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.uiPanel6.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            // 
+            // txtCPass
+            // 
+            this.txtCPass.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtCPass.BackColor = System.Drawing.Color.White;
+            this.txtCPass.Controls.Add(this.pbEye2);
+            this.txtCPass.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtCPass.FillColor = System.Drawing.SystemColors.Control;
+            this.txtCPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCPass.Location = new System.Drawing.Point(211, 13);
+            this.txtCPass.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtCPass.MinimumSize = new System.Drawing.Size(1, 16);
+            this.txtCPass.Name = "txtCPass";
+            this.txtCPass.Padding = new System.Windows.Forms.Padding(50, 0, 5, 0);
+            this.txtCPass.PasswordChar = '●';
+            this.txtCPass.Radius = 40;
+            this.txtCPass.RectColor = System.Drawing.SystemColors.Control;
+            this.txtCPass.ShowText = false;
+            this.txtCPass.Size = new System.Drawing.Size(357, 46);
+            this.txtCPass.Style = Sunny.UI.UIStyle.Custom;
+            this.txtCPass.StyleCustomMode = true;
+            this.txtCPass.TabIndex = 71;
+            this.txtCPass.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.txtCPass.Watermark = "";
+            this.txtCPass.WatermarkActiveColor = System.Drawing.Color.White;
+            this.txtCPass.WatermarkColor = System.Drawing.Color.DarkGray;
+            this.txtCPass.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            this.txtCPass.Validating += new System.ComponentModel.CancelEventHandler(this.txtCPass_Validating);
+            // 
+            // pbEye2
+            // 
+            this.pbEye2.BackColor = System.Drawing.SystemColors.Control;
+            this.pbEye2.Image = global::Supermarket.Properties.Resources.eye_svgrepo_com;
+            this.pbEye2.Location = new System.Drawing.Point(11, 12);
+            this.pbEye2.Name = "pbEye2";
+            this.pbEye2.Size = new System.Drawing.Size(23, 28);
+            this.pbEye2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbEye2.TabIndex = 41;
+            this.pbEye2.TabStop = false;
+            this.pbEye2.Click += new System.EventHandler(this.pbEye2_Click);
             // 
             // label4
             // 
@@ -451,6 +499,286 @@
             this.label4.Size = new System.Drawing.Size(195, 28);
             this.label4.TabIndex = 70;
             this.label4.Text = "Confirm Password";
+            // 
+            // uiPanel7
+            // 
+            this.uiPanel7.BackColor = System.Drawing.SystemColors.Control;
+            this.uiPanel7.Controls.Add(this.txtEmail);
+            this.uiPanel7.Controls.Add(this.label5);
+            this.uiPanel7.FillColor = System.Drawing.Color.White;
+            this.uiPanel7.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
+            this.uiPanel7.Location = new System.Drawing.Point(4, 292);
+            this.uiPanel7.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.uiPanel7.MinimumSize = new System.Drawing.Size(1, 1);
+            this.uiPanel7.Name = "uiPanel7";
+            this.uiPanel7.Radius = 10;
+            this.uiPanel7.RectColor = System.Drawing.Color.White;
+            this.uiPanel7.Size = new System.Drawing.Size(608, 62);
+            this.uiPanel7.Style = Sunny.UI.UIStyle.Custom;
+            this.uiPanel7.StyleCustomMode = true;
+            this.uiPanel7.TabIndex = 81;
+            this.uiPanel7.Text = null;
+            this.uiPanel7.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.uiPanel7.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            // 
+            // txtEmail
+            // 
+            this.txtEmail.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtEmail.BackColor = System.Drawing.Color.White;
+            this.txtEmail.Controls.Add(this.pictureBox7);
+            this.txtEmail.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtEmail.FillColor = System.Drawing.SystemColors.Control;
+            this.txtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmail.Location = new System.Drawing.Point(210, 11);
+            this.txtEmail.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtEmail.MinimumSize = new System.Drawing.Size(1, 16);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Padding = new System.Windows.Forms.Padding(50, 0, 5, 0);
+            this.txtEmail.Radius = 40;
+            this.txtEmail.RectColor = System.Drawing.SystemColors.Control;
+            this.txtEmail.ShowText = false;
+            this.txtEmail.Size = new System.Drawing.Size(357, 46);
+            this.txtEmail.Style = Sunny.UI.UIStyle.Custom;
+            this.txtEmail.StyleCustomMode = true;
+            this.txtEmail.TabIndex = 72;
+            this.txtEmail.Text = "yisakabrahamk@gemail.com";
+            this.txtEmail.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.txtEmail.Watermark = "";
+            this.txtEmail.WatermarkActiveColor = System.Drawing.Color.White;
+            this.txtEmail.WatermarkColor = System.Drawing.Color.DarkGray;
+            this.txtEmail.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            this.txtEmail.Validating += new System.ComponentModel.CancelEventHandler(this.txtEmail_Validating);
+            // 
+            // pictureBox7
+            // 
+            this.pictureBox7.BackColor = System.Drawing.SystemColors.Control;
+            this.pictureBox7.Image = global::Supermarket.Properties.Resources.email_svgrepo_com;
+            this.pictureBox7.Location = new System.Drawing.Point(11, 10);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(23, 28);
+            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox7.TabIndex = 45;
+            this.pictureBox7.TabStop = false;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.White;
+            this.label5.Font = new System.Drawing.Font("Microsoft YaHei", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.Gray;
+            this.label5.Location = new System.Drawing.Point(8, 21);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(68, 28);
+            this.label5.TabIndex = 73;
+            this.label5.Text = "Email";
+            // 
+            // uiPanel8
+            // 
+            this.uiPanel8.BackColor = System.Drawing.SystemColors.Control;
+            this.uiPanel8.Controls.Add(this.txtPhone);
+            this.uiPanel8.Controls.Add(this.label6);
+            this.uiPanel8.FillColor = System.Drawing.Color.White;
+            this.uiPanel8.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
+            this.uiPanel8.Location = new System.Drawing.Point(4, 364);
+            this.uiPanel8.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.uiPanel8.MinimumSize = new System.Drawing.Size(1, 1);
+            this.uiPanel8.Name = "uiPanel8";
+            this.uiPanel8.Radius = 10;
+            this.uiPanel8.RectColor = System.Drawing.Color.White;
+            this.uiPanel8.Size = new System.Drawing.Size(608, 62);
+            this.uiPanel8.Style = Sunny.UI.UIStyle.Custom;
+            this.uiPanel8.StyleCustomMode = true;
+            this.uiPanel8.TabIndex = 82;
+            this.uiPanel8.Text = null;
+            this.uiPanel8.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.uiPanel8.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            // 
+            // txtPhone
+            // 
+            this.txtPhone.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtPhone.BackColor = System.Drawing.Color.White;
+            this.txtPhone.Controls.Add(this.uiSymbolLabel4);
+            this.txtPhone.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtPhone.DoubleValue = 932900261D;
+            this.txtPhone.FillColor = System.Drawing.SystemColors.Control;
+            this.txtPhone.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPhone.IntValue = 932900261;
+            this.txtPhone.Location = new System.Drawing.Point(205, 11);
+            this.txtPhone.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtPhone.MinimumSize = new System.Drawing.Size(1, 16);
+            this.txtPhone.Name = "txtPhone";
+            this.txtPhone.Padding = new System.Windows.Forms.Padding(50, 0, 5, 0);
+            this.txtPhone.Radius = 40;
+            this.txtPhone.RectColor = System.Drawing.SystemColors.Control;
+            this.txtPhone.ShowText = false;
+            this.txtPhone.Size = new System.Drawing.Size(362, 46);
+            this.txtPhone.Style = Sunny.UI.UIStyle.Custom;
+            this.txtPhone.StyleCustomMode = true;
+            this.txtPhone.TabIndex = 74;
+            this.txtPhone.Text = "0932900261";
+            this.txtPhone.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.txtPhone.Watermark = "";
+            this.txtPhone.WatermarkActiveColor = System.Drawing.Color.White;
+            this.txtPhone.WatermarkColor = System.Drawing.Color.DarkGray;
+            this.txtPhone.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            this.txtPhone.Validating += new System.ComponentModel.CancelEventHandler(this.txtPhone_Validating);
+            // 
+            // uiSymbolLabel4
+            // 
+            this.uiSymbolLabel4.BackColor = System.Drawing.SystemColors.Control;
+            this.uiSymbolLabel4.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
+            this.uiSymbolLabel4.Location = new System.Drawing.Point(9, 11);
+            this.uiSymbolLabel4.MinimumSize = new System.Drawing.Size(1, 1);
+            this.uiSymbolLabel4.Name = "uiSymbolLabel4";
+            this.uiSymbolLabel4.Padding = new System.Windows.Forms.Padding(28, 0, 0, 0);
+            this.uiSymbolLabel4.Size = new System.Drawing.Size(33, 28);
+            this.uiSymbolLabel4.Style = Sunny.UI.UIStyle.Custom;
+            this.uiSymbolLabel4.StyleCustomMode = true;
+            this.uiSymbolLabel4.Symbol = 362112;
+            this.uiSymbolLabel4.TabIndex = 54;
+            this.uiSymbolLabel4.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.White;
+            this.label6.Font = new System.Drawing.Font("Microsoft YaHei", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.Gray;
+            this.label6.Location = new System.Drawing.Point(10, 22);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(76, 28);
+            this.label6.TabIndex = 75;
+            this.label6.Text = "Phone";
+            // 
+            // uiPanel9
+            // 
+            this.uiPanel9.BackColor = System.Drawing.SystemColors.Control;
+            this.uiPanel9.Controls.Add(this.txtLocation);
+            this.uiPanel9.Controls.Add(this.label7);
+            this.uiPanel9.FillColor = System.Drawing.Color.White;
+            this.uiPanel9.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
+            this.uiPanel9.Location = new System.Drawing.Point(4, 436);
+            this.uiPanel9.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.uiPanel9.MinimumSize = new System.Drawing.Size(1, 1);
+            this.uiPanel9.Name = "uiPanel9";
+            this.uiPanel9.Radius = 10;
+            this.uiPanel9.RectColor = System.Drawing.Color.White;
+            this.uiPanel9.Size = new System.Drawing.Size(608, 61);
+            this.uiPanel9.Style = Sunny.UI.UIStyle.Custom;
+            this.uiPanel9.StyleCustomMode = true;
+            this.uiPanel9.TabIndex = 84;
+            this.uiPanel9.Text = null;
+            this.uiPanel9.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.uiPanel9.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            // 
+            // txtLocation
+            // 
+            this.txtLocation.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtLocation.BackColor = System.Drawing.Color.White;
+            this.txtLocation.Controls.Add(this.uiSymbolLabel3);
+            this.txtLocation.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtLocation.FillColor = System.Drawing.SystemColors.Control;
+            this.txtLocation.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtLocation.Location = new System.Drawing.Point(205, 10);
+            this.txtLocation.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtLocation.MinimumSize = new System.Drawing.Size(1, 16);
+            this.txtLocation.Name = "txtLocation";
+            this.txtLocation.Padding = new System.Windows.Forms.Padding(50, 0, 5, 0);
+            this.txtLocation.Radius = 40;
+            this.txtLocation.RectColor = System.Drawing.SystemColors.Control;
+            this.txtLocation.ShowText = false;
+            this.txtLocation.Size = new System.Drawing.Size(362, 46);
+            this.txtLocation.Style = Sunny.UI.UIStyle.Custom;
+            this.txtLocation.StyleCustomMode = true;
+            this.txtLocation.TabIndex = 76;
+            this.txtLocation.Text = "Addis Abeba";
+            this.txtLocation.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.txtLocation.Watermark = "";
+            this.txtLocation.WatermarkActiveColor = System.Drawing.Color.White;
+            this.txtLocation.WatermarkColor = System.Drawing.Color.DarkGray;
+            this.txtLocation.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            this.txtLocation.Validating += new System.ComponentModel.CancelEventHandler(this.txtLocation_Validating);
+            // 
+            // uiSymbolLabel3
+            // 
+            this.uiSymbolLabel3.BackColor = System.Drawing.SystemColors.Control;
+            this.uiSymbolLabel3.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
+            this.uiSymbolLabel3.Location = new System.Drawing.Point(4, 11);
+            this.uiSymbolLabel3.MinimumSize = new System.Drawing.Size(1, 1);
+            this.uiSymbolLabel3.Name = "uiSymbolLabel3";
+            this.uiSymbolLabel3.Padding = new System.Windows.Forms.Padding(28, 0, 0, 0);
+            this.uiSymbolLabel3.Size = new System.Drawing.Size(43, 28);
+            this.uiSymbolLabel3.Style = Sunny.UI.UIStyle.Custom;
+            this.uiSymbolLabel3.StyleCustomMode = true;
+            this.uiSymbolLabel3.Symbol = 62137;
+            this.uiSymbolLabel3.TabIndex = 53;
+            this.uiSymbolLabel3.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.White;
+            this.label7.Font = new System.Drawing.Font("Microsoft YaHei", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.Gray;
+            this.label7.Location = new System.Drawing.Point(7, 21);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(99, 28);
+            this.label7.TabIndex = 77;
+            this.label7.Text = "Location";
+            // 
+            // btnClear
+            // 
+            this.btnClear.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnClear.BackColor = System.Drawing.SystemColors.Control;
+            this.btnClear.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnClear.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
+            this.btnClear.Font = new System.Drawing.Font("Microsoft YaHei", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClear.Location = new System.Drawing.Point(217, 651);
+            this.btnClear.MinimumSize = new System.Drawing.Size(1, 1);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Radius = 40;
+            this.btnClear.RectColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(5)))), ((int)(((byte)(71)))), ((int)(((byte)(2)))));
+            this.btnClear.Size = new System.Drawing.Size(128, 44);
+            this.btnClear.Style = Sunny.UI.UIStyle.Custom;
+            this.btnClear.StyleCustomMode = true;
+            this.btnClear.TabIndex = 63;
+            this.btnClear.Text = "Clear";
+            this.btnClear.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
+            // 
+            // btnUpdate
+            // 
+            this.btnUpdate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnUpdate.BackColor = System.Drawing.SystemColors.Control;
+            this.btnUpdate.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnUpdate.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
+            this.btnUpdate.Font = new System.Drawing.Font("Microsoft YaHei", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpdate.Location = new System.Drawing.Point(392, 651);
+            this.btnUpdate.MinimumSize = new System.Drawing.Size(1, 1);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Radius = 40;
+            this.btnUpdate.RectColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(5)))), ((int)(((byte)(71)))), ((int)(((byte)(2)))));
+            this.btnUpdate.Size = new System.Drawing.Size(140, 44);
+            this.btnUpdate.Style = Sunny.UI.UIStyle.Custom;
+            this.btnUpdate.StyleCustomMode = true;
+            this.btnUpdate.TabIndex = 62;
+            this.btnUpdate.Text = "Update";
+            this.btnUpdate.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.BackColor = System.Drawing.SystemColors.Control;
+            this.pictureBox6.Image = global::Supermarket.Properties.Resources.eye_svgrepo_com;
+            this.pictureBox6.Location = new System.Drawing.Point(11, 12);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(23, 28);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox6.TabIndex = 41;
+            this.pictureBox6.TabStop = false;
             // 
             // txtComPass
             // 
@@ -480,283 +808,9 @@
             this.txtComPass.WatermarkColor = System.Drawing.Color.DarkGray;
             this.txtComPass.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
-            // pictureBox6
+            // errorProvider1
             // 
-            this.pictureBox6.BackColor = System.Drawing.SystemColors.Control;
-            this.pictureBox6.Image = global::Supermarket.Properties.Resources.eye_svgrepo_com;
-            this.pictureBox6.Location = new System.Drawing.Point(11, 12);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(23, 28);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox6.TabIndex = 41;
-            this.pictureBox6.TabStop = false;
-            // 
-            // uiPanel7
-            // 
-            this.uiPanel7.AutoSize = true;
-            this.uiPanel7.BackColor = System.Drawing.SystemColors.Control;
-            this.uiPanel7.Controls.Add(this.txtEmail);
-            this.uiPanel7.Controls.Add(this.label5);
-            this.uiPanel7.FillColor = System.Drawing.Color.White;
-            this.uiPanel7.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
-            this.uiPanel7.Location = new System.Drawing.Point(4, 295);
-            this.uiPanel7.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.uiPanel7.MinimumSize = new System.Drawing.Size(1, 1);
-            this.uiPanel7.Name = "uiPanel7";
-            this.uiPanel7.Radius = 10;
-            this.uiPanel7.RectColor = System.Drawing.Color.White;
-            this.uiPanel7.Size = new System.Drawing.Size(582, 62);
-            this.uiPanel7.Style = Sunny.UI.UIStyle.Custom;
-            this.uiPanel7.StyleCustomMode = true;
-            this.uiPanel7.TabIndex = 81;
-            this.uiPanel7.Text = null;
-            this.uiPanel7.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            this.uiPanel7.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
-            // 
-            // txtEmail
-            // 
-            this.txtEmail.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtEmail.BackColor = System.Drawing.Color.White;
-            this.txtEmail.Controls.Add(this.pictureBox7);
-            this.txtEmail.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtEmail.FillColor = System.Drawing.SystemColors.Control;
-            this.txtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmail.Location = new System.Drawing.Point(210, 11);
-            this.txtEmail.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtEmail.MinimumSize = new System.Drawing.Size(1, 16);
-            this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Padding = new System.Windows.Forms.Padding(50, 0, 5, 0);
-            this.txtEmail.Radius = 40;
-            this.txtEmail.RectColor = System.Drawing.SystemColors.Control;
-            this.txtEmail.ShowText = false;
-            this.txtEmail.Size = new System.Drawing.Size(368, 46);
-            this.txtEmail.Style = Sunny.UI.UIStyle.Custom;
-            this.txtEmail.StyleCustomMode = true;
-            this.txtEmail.TabIndex = 72;
-            this.txtEmail.Text = "yisakabrahamk@gemail.com";
-            this.txtEmail.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
-            this.txtEmail.Watermark = "";
-            this.txtEmail.WatermarkActiveColor = System.Drawing.Color.White;
-            this.txtEmail.WatermarkColor = System.Drawing.Color.DarkGray;
-            this.txtEmail.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
-            // 
-            // pictureBox7
-            // 
-            this.pictureBox7.BackColor = System.Drawing.SystemColors.Control;
-            this.pictureBox7.Image = global::Supermarket.Properties.Resources.email_svgrepo_com;
-            this.pictureBox7.Location = new System.Drawing.Point(9, 13);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(23, 28);
-            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox7.TabIndex = 45;
-            this.pictureBox7.TabStop = false;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.White;
-            this.label5.Font = new System.Drawing.Font("Microsoft YaHei", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.Gray;
-            this.label5.Location = new System.Drawing.Point(8, 21);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(68, 28);
-            this.label5.TabIndex = 73;
-            this.label5.Text = "Email";
-            // 
-            // uiPanel8
-            // 
-            this.uiPanel8.AutoSize = true;
-            this.uiPanel8.BackColor = System.Drawing.SystemColors.Control;
-            this.uiPanel8.Controls.Add(this.txtPhone);
-            this.uiPanel8.Controls.Add(this.label6);
-            this.uiPanel8.FillColor = System.Drawing.Color.White;
-            this.uiPanel8.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
-            this.uiPanel8.Location = new System.Drawing.Point(4, 367);
-            this.uiPanel8.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.uiPanel8.MinimumSize = new System.Drawing.Size(1, 1);
-            this.uiPanel8.Name = "uiPanel8";
-            this.uiPanel8.Radius = 10;
-            this.uiPanel8.RectColor = System.Drawing.Color.White;
-            this.uiPanel8.Size = new System.Drawing.Size(582, 62);
-            this.uiPanel8.Style = Sunny.UI.UIStyle.Custom;
-            this.uiPanel8.StyleCustomMode = true;
-            this.uiPanel8.TabIndex = 82;
-            this.uiPanel8.Text = null;
-            this.uiPanel8.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            this.uiPanel8.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
-            // 
-            // txtPhone
-            // 
-            this.txtPhone.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtPhone.BackColor = System.Drawing.Color.White;
-            this.txtPhone.Controls.Add(this.uiSymbolLabel4);
-            this.txtPhone.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtPhone.DoubleValue = 932900261D;
-            this.txtPhone.FillColor = System.Drawing.SystemColors.Control;
-            this.txtPhone.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPhone.IntValue = 932900261;
-            this.txtPhone.Location = new System.Drawing.Point(205, 11);
-            this.txtPhone.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtPhone.MinimumSize = new System.Drawing.Size(1, 16);
-            this.txtPhone.Name = "txtPhone";
-            this.txtPhone.Padding = new System.Windows.Forms.Padding(50, 0, 5, 0);
-            this.txtPhone.Radius = 40;
-            this.txtPhone.RectColor = System.Drawing.SystemColors.Control;
-            this.txtPhone.ShowText = false;
-            this.txtPhone.Size = new System.Drawing.Size(373, 46);
-            this.txtPhone.Style = Sunny.UI.UIStyle.Custom;
-            this.txtPhone.StyleCustomMode = true;
-            this.txtPhone.TabIndex = 74;
-            this.txtPhone.Text = "0932900261";
-            this.txtPhone.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
-            this.txtPhone.Watermark = "";
-            this.txtPhone.WatermarkActiveColor = System.Drawing.Color.White;
-            this.txtPhone.WatermarkColor = System.Drawing.Color.DarkGray;
-            this.txtPhone.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
-            // 
-            // uiSymbolLabel4
-            // 
-            this.uiSymbolLabel4.BackColor = System.Drawing.SystemColors.Control;
-            this.uiSymbolLabel4.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
-            this.uiSymbolLabel4.Location = new System.Drawing.Point(5, 11);
-            this.uiSymbolLabel4.MinimumSize = new System.Drawing.Size(1, 1);
-            this.uiSymbolLabel4.Name = "uiSymbolLabel4";
-            this.uiSymbolLabel4.Padding = new System.Windows.Forms.Padding(28, 0, 0, 0);
-            this.uiSymbolLabel4.Size = new System.Drawing.Size(43, 28);
-            this.uiSymbolLabel4.Style = Sunny.UI.UIStyle.Custom;
-            this.uiSymbolLabel4.StyleCustomMode = true;
-            this.uiSymbolLabel4.Symbol = 362112;
-            this.uiSymbolLabel4.TabIndex = 54;
-            this.uiSymbolLabel4.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.White;
-            this.label6.Font = new System.Drawing.Font("Microsoft YaHei", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.Gray;
-            this.label6.Location = new System.Drawing.Point(10, 22);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(76, 28);
-            this.label6.TabIndex = 75;
-            this.label6.Text = "Phone";
-            // 
-            // uiPanel9
-            // 
-            this.uiPanel9.AutoSize = true;
-            this.uiPanel9.BackColor = System.Drawing.SystemColors.Control;
-            this.uiPanel9.Controls.Add(this.txtLocation);
-            this.uiPanel9.Controls.Add(this.label7);
-            this.uiPanel9.FillColor = System.Drawing.Color.White;
-            this.uiPanel9.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
-            this.uiPanel9.Location = new System.Drawing.Point(4, 439);
-            this.uiPanel9.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.uiPanel9.MinimumSize = new System.Drawing.Size(1, 1);
-            this.uiPanel9.Name = "uiPanel9";
-            this.uiPanel9.Radius = 10;
-            this.uiPanel9.RectColor = System.Drawing.Color.White;
-            this.uiPanel9.Size = new System.Drawing.Size(582, 61);
-            this.uiPanel9.Style = Sunny.UI.UIStyle.Custom;
-            this.uiPanel9.StyleCustomMode = true;
-            this.uiPanel9.TabIndex = 84;
-            this.uiPanel9.Text = null;
-            this.uiPanel9.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            this.uiPanel9.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
-            // 
-            // txtLocation
-            // 
-            this.txtLocation.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtLocation.BackColor = System.Drawing.Color.White;
-            this.txtLocation.Controls.Add(this.uiSymbolLabel3);
-            this.txtLocation.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtLocation.FillColor = System.Drawing.SystemColors.Control;
-            this.txtLocation.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtLocation.Location = new System.Drawing.Point(205, 10);
-            this.txtLocation.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtLocation.MinimumSize = new System.Drawing.Size(1, 16);
-            this.txtLocation.Name = "txtLocation";
-            this.txtLocation.Padding = new System.Windows.Forms.Padding(50, 0, 5, 0);
-            this.txtLocation.Radius = 40;
-            this.txtLocation.RectColor = System.Drawing.SystemColors.Control;
-            this.txtLocation.ShowText = false;
-            this.txtLocation.Size = new System.Drawing.Size(373, 46);
-            this.txtLocation.Style = Sunny.UI.UIStyle.Custom;
-            this.txtLocation.StyleCustomMode = true;
-            this.txtLocation.TabIndex = 76;
-            this.txtLocation.Text = "Addis Abeba";
-            this.txtLocation.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
-            this.txtLocation.Watermark = "";
-            this.txtLocation.WatermarkActiveColor = System.Drawing.Color.White;
-            this.txtLocation.WatermarkColor = System.Drawing.Color.DarkGray;
-            this.txtLocation.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
-            // 
-            // uiSymbolLabel3
-            // 
-            this.uiSymbolLabel3.BackColor = System.Drawing.SystemColors.Control;
-            this.uiSymbolLabel3.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
-            this.uiSymbolLabel3.Location = new System.Drawing.Point(4, 11);
-            this.uiSymbolLabel3.MinimumSize = new System.Drawing.Size(1, 1);
-            this.uiSymbolLabel3.Name = "uiSymbolLabel3";
-            this.uiSymbolLabel3.Padding = new System.Windows.Forms.Padding(28, 0, 0, 0);
-            this.uiSymbolLabel3.Size = new System.Drawing.Size(43, 28);
-            this.uiSymbolLabel3.Style = Sunny.UI.UIStyle.Custom;
-            this.uiSymbolLabel3.StyleCustomMode = true;
-            this.uiSymbolLabel3.Symbol = 62137;
-            this.uiSymbolLabel3.TabIndex = 53;
-            this.uiSymbolLabel3.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.Color.White;
-            this.label7.Font = new System.Drawing.Font("Microsoft YaHei", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.Gray;
-            this.label7.Location = new System.Drawing.Point(7, 21);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(99, 28);
-            this.label7.TabIndex = 77;
-            this.label7.Text = "Location";
-            // 
-            // uiButton1
-            // 
-            this.uiButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.uiButton1.BackColor = System.Drawing.SystemColors.Control;
-            this.uiButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.uiButton1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
-            this.uiButton1.Font = new System.Drawing.Font("Microsoft YaHei", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uiButton1.Location = new System.Drawing.Point(217, 651);
-            this.uiButton1.MinimumSize = new System.Drawing.Size(1, 1);
-            this.uiButton1.Name = "uiButton1";
-            this.uiButton1.Radius = 40;
-            this.uiButton1.RectColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(5)))), ((int)(((byte)(71)))), ((int)(((byte)(2)))));
-            this.uiButton1.Size = new System.Drawing.Size(128, 44);
-            this.uiButton1.Style = Sunny.UI.UIStyle.Custom;
-            this.uiButton1.StyleCustomMode = true;
-            this.uiButton1.TabIndex = 63;
-            this.uiButton1.Text = "Clear";
-            this.uiButton1.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
-            // 
-            // btnLogin
-            // 
-            this.btnLogin.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnLogin.BackColor = System.Drawing.SystemColors.Control;
-            this.btnLogin.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnLogin.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
-            this.btnLogin.Font = new System.Drawing.Font("Microsoft YaHei", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogin.Location = new System.Drawing.Point(392, 651);
-            this.btnLogin.MinimumSize = new System.Drawing.Size(1, 1);
-            this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Radius = 40;
-            this.btnLogin.RectColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(5)))), ((int)(((byte)(71)))), ((int)(((byte)(2)))));
-            this.btnLogin.Size = new System.Drawing.Size(140, 44);
-            this.btnLogin.Style = Sunny.UI.UIStyle.Custom;
-            this.btnLogin.StyleCustomMode = true;
-            this.btnLogin.TabIndex = 62;
-            this.btnLogin.Text = "Update";
-            this.btnLogin.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            this.errorProvider1.ContainerControl = this;
             // 
             // SettingForm
             // 
@@ -773,7 +827,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.uiPanel10.ResumeLayout(false);
             this.flowLayoutPanel1.ResumeLayout(false);
-            this.flowLayoutPanel1.PerformLayout();
             this.uiPanel3.ResumeLayout(false);
             this.uiPanel3.PerformLayout();
             this.txtFirstName.ResumeLayout(false);
@@ -783,11 +836,11 @@
             this.uiPanel5.ResumeLayout(false);
             this.uiPanel5.PerformLayout();
             this.txtNewPass.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbEye)).EndInit();
             this.uiPanel6.ResumeLayout(false);
             this.uiPanel6.PerformLayout();
-            this.txtComPass.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            this.txtCPass.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pbEye2)).EndInit();
             this.uiPanel7.ResumeLayout(false);
             this.uiPanel7.PerformLayout();
             this.txtEmail.ResumeLayout(false);
@@ -798,6 +851,9 @@
             this.uiPanel9.ResumeLayout(false);
             this.uiPanel9.PerformLayout();
             this.txtLocation.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            this.txtComPass.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -819,12 +875,8 @@
         private System.Windows.Forms.Label label2;
         private Sunny.UI.UIPanel uiPanel5;
         private Sunny.UI.UITextBox txtNewPass;
-        private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.PictureBox pbEye;
         private System.Windows.Forms.Label label3;
-        private Sunny.UI.UIPanel uiPanel6;
-        private System.Windows.Forms.Label label4;
-        private Sunny.UI.UITextBox txtComPass;
-        private System.Windows.Forms.PictureBox pictureBox6;
         private Sunny.UI.UIPanel uiPanel7;
         private Sunny.UI.UITextBox txtEmail;
         private System.Windows.Forms.PictureBox pictureBox7;
@@ -837,7 +889,14 @@
         private Sunny.UI.UITextBox txtLocation;
         private Sunny.UI.UISymbolLabel uiSymbolLabel3;
         private System.Windows.Forms.Label label7;
-        private Sunny.UI.UIButton uiButton1;
-        private Sunny.UI.UIButton btnLogin;
+        private Sunny.UI.UIButton btnClear;
+        private Sunny.UI.UIButton btnUpdate;
+        private Sunny.UI.UIPanel uiPanel6;
+        private Sunny.UI.UITextBox txtCPass;
+        private System.Windows.Forms.PictureBox pbEye2;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.PictureBox pictureBox6;
+        private Sunny.UI.UITextBox txtComPass;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

@@ -1,23 +1,28 @@
-﻿using Sunny.UI;
+﻿using Org.BouncyCastle.Asn1.Ocsp;
+using Sunny.UI;
+using Supermarket.Migrations;
 using Supermarket.Model;
 using Supermarket.View.User_Controls.SignInControls;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.Entity;
 using System.Drawing;
 using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Transaction = Supermarket.Model.Transaction;
 
 namespace Supermarket.View.Forms
 {
     public partial class InvoiceForm : Form
     {
         Form casherForm;
-        public InvoiceForm(Form casherForm)
+        Model.Casher casher;
+        public InvoiceForm(Form casherForm, Model.Casher casher)
         {
             this.casherForm = casherForm;
             InitializeComponent();
@@ -27,6 +32,7 @@ namespace Supermarket.View.Forms
                 //Reduce Graphics Flicker with Double Buffering for Forms and Controls
                 refreshSize();
             };
+            this.casher = casher;
         }
 
         private void tableLayoutPanel1_Resize(object sender, EventArgs e)
@@ -129,7 +135,14 @@ namespace Supermarket.View.Forms
 
         private void txtCash__TextChanged(object sender, EventArgs e)
         {
-            calculateSummary();
+            if(Double.TryParse(txtCash.Texts,out double cash)||txtCash.Texts==""||txtCash.Texts==null && lblTotalQuantity.Text!="0")
+            {
+                calculateSummary();
+            }
+            else
+            {
+                UIMessageBox.ShowInfo("Enter valid cash amount.", true, true);
+            }
         }
 
         private void loadAllProduct()
@@ -139,6 +152,8 @@ namespace Supermarket.View.Forms
                 var products = context.products.ToList();
                 foreach (Product product in products)
                 {
+                    if (product.Quantity == 0)
+                        continue;
                     ProductViewCard productViewCard = new ProductViewCard(product);
                     flowLayoutPanel1.Controls.Add(productViewCard);
                     productViewCard.Show();
@@ -160,6 +175,144 @@ namespace Supermarket.View.Forms
                         refreshSize();
                     };
                 }
+            }
+        }
+
+        private void txtSearch_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Return)
+            {
+                if(txtSearch.Text == "" || txtSearch.Text == null || txtSearch.Text == " ")
+                {
+                    loadSearchProductData();
+                }
+            }
+        }
+
+        private void loadSearchProductData()
+        {
+            int numberOfCard = flowLayoutPanel1.Controls.Count;
+            for (int i = 0; i < numberOfCard; i++)
+                flowLayoutPanel1.Controls[0].Dispose();
+            var products = Product.Search(txtSearch.Texts);
+            if(products != null)
+            {
+                foreach (Product product in products)
+                {
+                    if (product.Quantity == 0)
+                        continue;
+                    ProductViewCard productViewCard = new ProductViewCard(product);
+                    flowLayoutPanel1.Controls.Add(productViewCard);
+                    productViewCard.Show();
+                    productViewCard.ButtonAdd.Click += (object se, EventArgs ee) =>
+                    {
+                        CartView cartView = new CartView(product);
+                        flowLayoutPanel2.Controls.Add(cartView);
+                        cartView.Show();
+                        cartView.PictureBoxDelete.Click += (object see, EventArgs eee) =>
+                        {
+                            cartView.Dispose();
+                            calculateSummary();
+                        };
+                        cartView.UpDownQuantity.ValueChanged += (object see, int value) =>
+                        {
+                            calculateSummary();
+                        };
+                        calculateSummary();
+                        refreshSize();
+                    };
+                }
+            }
+            else
+            {
+                UIMessageBox.ShowInfo("No result found.", true, true);
+            }
+        }
+
+        private void slSearch_Click(object sender, EventArgs e)
+        {
+            loadSearchProductData();
+        }
+
+        private void btnPurchase_Click(object sender, EventArgs e)
+        {
+            if (lblTotalQuantity.Text != "0")
+            {
+                decimal changeVal=-1;
+                try
+                {
+                    changeVal = Decimal.Parse(lblChange.Text, NumberStyles.Currency);
+                }
+                catch (Exception ee)
+                {
+
+                }
+                if(changeVal >= 0)
+                {
+                    // after passing error and pre conditions
+                    Transaction t = addTransaction();
+                    UIMessageBox.ShowInfo("Transaction added successfully.", true, true);
+                    loadSearchProductData();
+                    updateCartData();
+                }
+                else
+                {
+                    UIMessageBox.ShowInfo("The cash is not enough.", true, true);
+                }
+            }
+            else
+            {
+                UIMessageBox.ShowInfo("No product is added into the cart.", true, true);
+            }
+        }
+
+        Transaction addTransaction()
+        {
+            Transaction transaction = new Transaction();
+            transaction.Quantity= int.Parse(lblTotalQuantity.Text, NumberStyles.Integer);
+            transaction.Subtotal= double.Parse(lblSubtotal.Text, NumberStyles.Currency);
+            transaction.Tax = double.Parse(lblTax.Text, NumberStyles.Currency);
+            transaction.Total = double.Parse(lblTotal.Text, NumberStyles.Currency);
+            transaction.PaidAmount= double.Parse(txtCash.Texts);
+            transaction.Change= double.Parse(lblChange.Text, NumberStyles.Currency);
+            transaction.PurchaseDate = DateTime.Now;
+            using (Context context = new Context())
+            {
+                DbContextTransaction dbTransaction = context.Database.BeginTransaction();
+                transaction.Casher = context.Cashers.Find(casher.Id);
+                context.Transactions.Add(transaction);
+                foreach (CartView cartView in flowLayoutPanel2.Controls)
+                {
+                    TransactionDetail transactionDetail = new TransactionDetail();
+                    transactionDetail.Total = cartView.total;
+                    transactionDetail.Tax = cartView.tax;
+                    transactionDetail.Subtotal = cartView.subtotal;
+                    transactionDetail.Quantity = cartView.UpDownQuantity.Value;
+                    transactionDetail.Transaction = context.Transactions.Find(transaction.Id);
+                    transactionDetail.product = context.products.Find(cartView.product.Id);
+                    context.TransactionDetails.Add(transactionDetail);
+                }
+                context.SaveChanges();
+                dbTransaction.Commit();
+            }
+            return transaction;
+        }
+
+        void removeCart()
+        {
+            int numberOfCart = flowLayoutPanel2.Controls.Count;
+            for (int i = 0; i < numberOfCart; i++)
+                flowLayoutPanel2.Controls[0].Dispose();
+        }
+
+        void updateCartData()
+        {
+            //this is called after a product purchase button is clicked
+            foreach (CartView cartView in flowLayoutPanel2.Controls)
+            {
+                cartView.Quantity-=cartView.UpDownQuantity.Value;
+                if (cartView.Quantity == 0)
+                    cartView.Dispose();
             }
         }
     }

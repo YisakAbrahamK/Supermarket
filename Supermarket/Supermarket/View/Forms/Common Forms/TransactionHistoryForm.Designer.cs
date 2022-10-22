@@ -33,9 +33,9 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.pnlSearchTran = new System.Windows.Forms.Panel();
-            this.uiSymbolLabel3 = new Sunny.UI.UISymbolLabel();
+            this.slSearch = new Sunny.UI.UISymbolLabel();
             this.uiPanel4 = new Sunny.UI.UIPanel();
-            this.rjDatePicker3 = new RJCodeAdvance.RJControls.RJDatePicker();
+            this.rjDatePicker2 = new RJCodeAdvance.RJControls.RJDatePicker();
             this.uiPanel1 = new Sunny.UI.UIPanel();
             this.rjDatePicker1 = new RJCodeAdvance.RJControls.RJDatePicker();
             this.label1 = new System.Windows.Forms.Label();
@@ -43,35 +43,15 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.uiPanel2 = new Sunny.UI.UIPanel();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
-            this.transactionDetailViewCard4 = new Supermarket.View.User_Controls.SignInControls.TransactionDetailViewCard();
-            this.transactionDetailViewCard1 = new Supermarket.View.User_Controls.SignInControls.TransactionDetailViewCard();
-            this.transactionDetailViewCard2 = new Supermarket.View.User_Controls.SignInControls.TransactionDetailViewCard();
-            this.transactionDetailViewCard3 = new Supermarket.View.User_Controls.SignInControls.TransactionDetailViewCard();
             this.label8 = new System.Windows.Forms.Label();
-            this.transactionCard1 = new Supermarket.View.User_Controls.TransactionCard();
-            this.transactionCard2 = new Supermarket.View.User_Controls.TransactionCard();
-            this.transactionCard3 = new Supermarket.View.User_Controls.TransactionCard();
-            this.transactionCard4 = new Supermarket.View.User_Controls.TransactionCard();
-            this.transactionCard5 = new Supermarket.View.User_Controls.TransactionCard();
-            this.transactionCard6 = new Supermarket.View.User_Controls.TransactionCard();
-            this.transactionCard7 = new Supermarket.View.User_Controls.TransactionCard();
-            this.transactionCard8 = new Supermarket.View.User_Controls.TransactionCard();
-            this.transactionCard9 = new Supermarket.View.User_Controls.TransactionCard();
-            this.transactionCard10 = new Supermarket.View.User_Controls.TransactionCard();
-            this.transactionCard11 = new Supermarket.View.User_Controls.TransactionCard();
-            this.transactionCard12 = new Supermarket.View.User_Controls.TransactionCard();
-            this.transactionCard13 = new Supermarket.View.User_Controls.TransactionCard();
-            this.transactionCard14 = new Supermarket.View.User_Controls.TransactionCard();
             this.panel1.SuspendLayout();
             this.uiTableLayoutPanel1.SuspendLayout();
             this.panel2.SuspendLayout();
-            this.flowLayoutPanel1.SuspendLayout();
             this.pnlSearchTran.SuspendLayout();
             this.uiPanel4.SuspendLayout();
             this.uiPanel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.uiPanel2.SuspendLayout();
-            this.flowLayoutPanel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -112,20 +92,6 @@
             // flowLayoutPanel1
             // 
             this.flowLayoutPanel1.AutoScroll = true;
-            this.flowLayoutPanel1.Controls.Add(this.transactionCard1);
-            this.flowLayoutPanel1.Controls.Add(this.transactionCard2);
-            this.flowLayoutPanel1.Controls.Add(this.transactionCard3);
-            this.flowLayoutPanel1.Controls.Add(this.transactionCard4);
-            this.flowLayoutPanel1.Controls.Add(this.transactionCard5);
-            this.flowLayoutPanel1.Controls.Add(this.transactionCard6);
-            this.flowLayoutPanel1.Controls.Add(this.transactionCard7);
-            this.flowLayoutPanel1.Controls.Add(this.transactionCard8);
-            this.flowLayoutPanel1.Controls.Add(this.transactionCard9);
-            this.flowLayoutPanel1.Controls.Add(this.transactionCard10);
-            this.flowLayoutPanel1.Controls.Add(this.transactionCard11);
-            this.flowLayoutPanel1.Controls.Add(this.transactionCard12);
-            this.flowLayoutPanel1.Controls.Add(this.transactionCard13);
-            this.flowLayoutPanel1.Controls.Add(this.transactionCard14);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 100);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
@@ -134,7 +100,7 @@
             // 
             // pnlSearchTran
             // 
-            this.pnlSearchTran.Controls.Add(this.uiSymbolLabel3);
+            this.pnlSearchTran.Controls.Add(this.slSearch);
             this.pnlSearchTran.Controls.Add(this.uiPanel4);
             this.pnlSearchTran.Controls.Add(this.uiPanel1);
             this.pnlSearchTran.Controls.Add(this.label1);
@@ -145,30 +111,30 @@
             this.pnlSearchTran.Size = new System.Drawing.Size(786, 100);
             this.pnlSearchTran.TabIndex = 1;
             // 
-            // uiSymbolLabel3
+            // slSearch
             // 
-            this.uiSymbolLabel3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.uiSymbolLabel3.BackColor = System.Drawing.SystemColors.Control;
-            this.uiSymbolLabel3.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
-            this.uiSymbolLabel3.ForeColor = System.Drawing.Color.White;
-            this.uiSymbolLabel3.Location = new System.Drawing.Point(366, 34);
-            this.uiSymbolLabel3.MinimumSize = new System.Drawing.Size(1, 1);
-            this.uiSymbolLabel3.Name = "uiSymbolLabel3";
-            this.uiSymbolLabel3.Padding = new System.Windows.Forms.Padding(44, 0, 0, 0);
-            this.uiSymbolLabel3.Size = new System.Drawing.Size(35, 34);
-            this.uiSymbolLabel3.Style = Sunny.UI.UIStyle.Custom;
-            this.uiSymbolLabel3.StyleCustomMode = true;
-            this.uiSymbolLabel3.Symbol = 61442;
-            this.uiSymbolLabel3.SymbolColor = System.Drawing.Color.Black;
-            this.uiSymbolLabel3.SymbolSize = 40;
-            this.uiSymbolLabel3.TabIndex = 58;
-            this.uiSymbolLabel3.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
-            this.uiSymbolLabel3.Click += new System.EventHandler(this.uiSymbolLabel3_Click);
+            this.slSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.slSearch.BackColor = System.Drawing.SystemColors.Control;
+            this.slSearch.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
+            this.slSearch.ForeColor = System.Drawing.Color.White;
+            this.slSearch.Location = new System.Drawing.Point(366, 34);
+            this.slSearch.MinimumSize = new System.Drawing.Size(1, 1);
+            this.slSearch.Name = "slSearch";
+            this.slSearch.Padding = new System.Windows.Forms.Padding(44, 0, 0, 0);
+            this.slSearch.Size = new System.Drawing.Size(35, 34);
+            this.slSearch.Style = Sunny.UI.UIStyle.Custom;
+            this.slSearch.StyleCustomMode = true;
+            this.slSearch.Symbol = 61442;
+            this.slSearch.SymbolColor = System.Drawing.Color.Black;
+            this.slSearch.SymbolSize = 40;
+            this.slSearch.TabIndex = 58;
+            this.slSearch.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            this.slSearch.Click += new System.EventHandler(this.slSearch_Click);
             // 
             // uiPanel4
             // 
             this.uiPanel4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.uiPanel4.Controls.Add(this.rjDatePicker3);
+            this.uiPanel4.Controls.Add(this.rjDatePicker2);
             this.uiPanel4.FillColor = System.Drawing.Color.DarkSlateGray;
             this.uiPanel4.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
             this.uiPanel4.Location = new System.Drawing.Point(622, 27);
@@ -185,21 +151,22 @@
             this.uiPanel4.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.uiPanel4.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
-            // rjDatePicker3
+            // rjDatePicker2
             // 
-            this.rjDatePicker3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.rjDatePicker3.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.rjDatePicker3.BorderSize = 0;
-            this.rjDatePicker3.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjDatePicker3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjDatePicker3.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.rjDatePicker3.Location = new System.Drawing.Point(16, 6);
-            this.rjDatePicker3.MinimumSize = new System.Drawing.Size(4, 35);
-            this.rjDatePicker3.Name = "rjDatePicker3";
-            this.rjDatePicker3.Size = new System.Drawing.Size(116, 35);
-            this.rjDatePicker3.SkinColor = System.Drawing.Color.DarkSlateGray;
-            this.rjDatePicker3.TabIndex = 46;
-            this.rjDatePicker3.TextColor = System.Drawing.Color.White;
+            this.rjDatePicker2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.rjDatePicker2.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.rjDatePicker2.BorderSize = 0;
+            this.rjDatePicker2.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rjDatePicker2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rjDatePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.rjDatePicker2.Location = new System.Drawing.Point(16, 6);
+            this.rjDatePicker2.MinimumSize = new System.Drawing.Size(4, 35);
+            this.rjDatePicker2.Name = "rjDatePicker2";
+            this.rjDatePicker2.Size = new System.Drawing.Size(116, 35);
+            this.rjDatePicker2.SkinColor = System.Drawing.Color.DarkSlateGray;
+            this.rjDatePicker2.TabIndex = 46;
+            this.rjDatePicker2.TextColor = System.Drawing.Color.White;
+            this.rjDatePicker2.ValueChanged += new System.EventHandler(this.rjDatePicker2_ValueChanged);
             // 
             // uiPanel1
             // 
@@ -236,6 +203,7 @@
             this.rjDatePicker1.SkinColor = System.Drawing.Color.DarkSlateGray;
             this.rjDatePicker1.TabIndex = 46;
             this.rjDatePicker1.TextColor = System.Drawing.Color.White;
+            this.rjDatePicker1.ValueChanged += new System.EventHandler(this.rjDatePicker1_ValueChanged);
             // 
             // label1
             // 
@@ -271,6 +239,7 @@
             this.txtSearch.TabIndex = 44;
             this.txtSearch.Texts = "";
             this.txtSearch.UnderlinedStyle = false;
+            this.txtSearch.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSearch_KeyPress);
             this.txtSearch.Resize += new System.EventHandler(this.txtSearch_Resize);
             // 
             // panel3
@@ -312,46 +281,10 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.flowLayoutPanel2.AutoScroll = true;
             this.flowLayoutPanel2.BackColor = System.Drawing.SystemColors.Control;
-            this.flowLayoutPanel2.Controls.Add(this.transactionDetailViewCard4);
-            this.flowLayoutPanel2.Controls.Add(this.transactionDetailViewCard1);
-            this.flowLayoutPanel2.Controls.Add(this.transactionDetailViewCard2);
-            this.flowLayoutPanel2.Controls.Add(this.transactionDetailViewCard3);
             this.flowLayoutPanel2.Location = new System.Drawing.Point(24, 103);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
             this.flowLayoutPanel2.Size = new System.Drawing.Size(381, 574);
             this.flowLayoutPanel2.TabIndex = 46;
-            // 
-            // transactionDetailViewCard4
-            // 
-            this.transactionDetailViewCard4.Location = new System.Drawing.Point(5, 5);
-            this.transactionDetailViewCard4.Margin = new System.Windows.Forms.Padding(5);
-            this.transactionDetailViewCard4.Name = "transactionDetailViewCard4";
-            this.transactionDetailViewCard4.Size = new System.Drawing.Size(346, 189);
-            this.transactionDetailViewCard4.TabIndex = 3;
-            // 
-            // transactionDetailViewCard1
-            // 
-            this.transactionDetailViewCard1.Location = new System.Drawing.Point(5, 204);
-            this.transactionDetailViewCard1.Margin = new System.Windows.Forms.Padding(5);
-            this.transactionDetailViewCard1.Name = "transactionDetailViewCard1";
-            this.transactionDetailViewCard1.Size = new System.Drawing.Size(346, 189);
-            this.transactionDetailViewCard1.TabIndex = 0;
-            // 
-            // transactionDetailViewCard2
-            // 
-            this.transactionDetailViewCard2.Location = new System.Drawing.Point(5, 403);
-            this.transactionDetailViewCard2.Margin = new System.Windows.Forms.Padding(5);
-            this.transactionDetailViewCard2.Name = "transactionDetailViewCard2";
-            this.transactionDetailViewCard2.Size = new System.Drawing.Size(346, 189);
-            this.transactionDetailViewCard2.TabIndex = 1;
-            // 
-            // transactionDetailViewCard3
-            // 
-            this.transactionDetailViewCard3.Location = new System.Drawing.Point(5, 602);
-            this.transactionDetailViewCard3.Margin = new System.Windows.Forms.Padding(5);
-            this.transactionDetailViewCard3.Name = "transactionDetailViewCard3";
-            this.transactionDetailViewCard3.Size = new System.Drawing.Size(346, 189);
-            this.transactionDetailViewCard3.TabIndex = 2;
             // 
             // label8
             // 
@@ -367,105 +300,7 @@
             this.label8.Text = "Detail";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // transactionCard1
-            // 
-            this.transactionCard1.Location = new System.Drawing.Point(3, 3);
-            this.transactionCard1.Name = "transactionCard1";
-            this.transactionCard1.Size = new System.Drawing.Size(780, 162);
-            this.transactionCard1.TabIndex = 0;
-            // 
-            // transactionCard2
-            // 
-            this.transactionCard2.Location = new System.Drawing.Point(3, 171);
-            this.transactionCard2.Name = "transactionCard2";
-            this.transactionCard2.Size = new System.Drawing.Size(780, 162);
-            this.transactionCard2.TabIndex = 1;
-            // 
-            // transactionCard3
-            // 
-            this.transactionCard3.Location = new System.Drawing.Point(3, 339);
-            this.transactionCard3.Name = "transactionCard3";
-            this.transactionCard3.Size = new System.Drawing.Size(780, 162);
-            this.transactionCard3.TabIndex = 2;
-            // 
-            // transactionCard4
-            // 
-            this.transactionCard4.Location = new System.Drawing.Point(3, 507);
-            this.transactionCard4.Name = "transactionCard4";
-            this.transactionCard4.Size = new System.Drawing.Size(780, 162);
-            this.transactionCard4.TabIndex = 3;
-            // 
-            // transactionCard5
-            // 
-            this.transactionCard5.Location = new System.Drawing.Point(3, 675);
-            this.transactionCard5.Name = "transactionCard5";
-            this.transactionCard5.Size = new System.Drawing.Size(780, 162);
-            this.transactionCard5.TabIndex = 4;
-            // 
-            // transactionCard6
-            // 
-            this.transactionCard6.Location = new System.Drawing.Point(3, 843);
-            this.transactionCard6.Name = "transactionCard6";
-            this.transactionCard6.Size = new System.Drawing.Size(780, 162);
-            this.transactionCard6.TabIndex = 5;
-            // 
-            // transactionCard7
-            // 
-            this.transactionCard7.Location = new System.Drawing.Point(3, 1011);
-            this.transactionCard7.Name = "transactionCard7";
-            this.transactionCard7.Size = new System.Drawing.Size(780, 162);
-            this.transactionCard7.TabIndex = 6;
-            // 
-            // transactionCard8
-            // 
-            this.transactionCard8.Location = new System.Drawing.Point(3, 1179);
-            this.transactionCard8.Name = "transactionCard8";
-            this.transactionCard8.Size = new System.Drawing.Size(780, 162);
-            this.transactionCard8.TabIndex = 7;
-            // 
-            // transactionCard9
-            // 
-            this.transactionCard9.Location = new System.Drawing.Point(3, 1347);
-            this.transactionCard9.Name = "transactionCard9";
-            this.transactionCard9.Size = new System.Drawing.Size(780, 162);
-            this.transactionCard9.TabIndex = 8;
-            // 
-            // transactionCard10
-            // 
-            this.transactionCard10.Location = new System.Drawing.Point(3, 1515);
-            this.transactionCard10.Name = "transactionCard10";
-            this.transactionCard10.Size = new System.Drawing.Size(780, 162);
-            this.transactionCard10.TabIndex = 9;
-            // 
-            // transactionCard11
-            // 
-            this.transactionCard11.Location = new System.Drawing.Point(3, 1683);
-            this.transactionCard11.Name = "transactionCard11";
-            this.transactionCard11.Size = new System.Drawing.Size(780, 162);
-            this.transactionCard11.TabIndex = 10;
-            // 
-            // transactionCard12
-            // 
-            this.transactionCard12.Location = new System.Drawing.Point(3, 1851);
-            this.transactionCard12.Name = "transactionCard12";
-            this.transactionCard12.Size = new System.Drawing.Size(780, 162);
-            this.transactionCard12.TabIndex = 11;
-            // 
-            // transactionCard13
-            // 
-            this.transactionCard13.Location = new System.Drawing.Point(3, 2019);
-            this.transactionCard13.Name = "transactionCard13";
-            this.transactionCard13.Size = new System.Drawing.Size(780, 162);
-            this.transactionCard13.TabIndex = 12;
-            // 
-            // transactionCard14
-            // 
-            this.transactionCard14.Location = new System.Drawing.Point(3, 2187);
-            this.transactionCard14.Name = "transactionCard14";
-            this.transactionCard14.Size = new System.Drawing.Size(780, 162);
-            this.transactionCard14.TabIndex = 13;
-            // 
-            // CashierTransactionHistoryForm
+            // TransactionHistoryForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -473,13 +308,12 @@
             this.ClientSize = new System.Drawing.Size(1212, 734);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "CashierTransactionHistoryForm";
+            this.Name = "TransactionHistoryForm";
             this.Text = "CashierHistoryForm";
             this.Load += new System.EventHandler(this.CashierTransactionHistoryForm_Load);
             this.panel1.ResumeLayout(false);
             this.uiTableLayoutPanel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
-            this.flowLayoutPanel1.ResumeLayout(false);
             this.pnlSearchTran.ResumeLayout(false);
             this.pnlSearchTran.PerformLayout();
             this.uiPanel4.ResumeLayout(false);
@@ -487,7 +321,6 @@
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.uiPanel2.ResumeLayout(false);
-            this.flowLayoutPanel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -504,29 +337,11 @@
         private Sunny.UI.UIPanel uiPanel2;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
-        private User_Controls.SignInControls.TransactionDetailViewCard transactionDetailViewCard1;
-        private User_Controls.SignInControls.TransactionDetailViewCard transactionDetailViewCard4;
-        private User_Controls.SignInControls.TransactionDetailViewCard transactionDetailViewCard2;
-        private User_Controls.SignInControls.TransactionDetailViewCard transactionDetailViewCard3;
         private System.Windows.Forms.Label label1;
         private RJCodeAdvance.RJControls.RJDatePicker rjDatePicker1;
         private Sunny.UI.UIPanel uiPanel4;
-        private RJCodeAdvance.RJControls.RJDatePicker rjDatePicker3;
+        private RJCodeAdvance.RJControls.RJDatePicker rjDatePicker2;
         private Sunny.UI.UIPanel uiPanel1;
-        private Sunny.UI.UISymbolLabel uiSymbolLabel3;
-        private User_Controls.TransactionCard transactionCard1;
-        private User_Controls.TransactionCard transactionCard2;
-        private User_Controls.TransactionCard transactionCard3;
-        private User_Controls.TransactionCard transactionCard4;
-        private User_Controls.TransactionCard transactionCard5;
-        private User_Controls.TransactionCard transactionCard6;
-        private User_Controls.TransactionCard transactionCard7;
-        private User_Controls.TransactionCard transactionCard8;
-        private User_Controls.TransactionCard transactionCard9;
-        private User_Controls.TransactionCard transactionCard10;
-        private User_Controls.TransactionCard transactionCard11;
-        private User_Controls.TransactionCard transactionCard12;
-        private User_Controls.TransactionCard transactionCard13;
-        private User_Controls.TransactionCard transactionCard14;
+        private Sunny.UI.UISymbolLabel slSearch;
     }
 }

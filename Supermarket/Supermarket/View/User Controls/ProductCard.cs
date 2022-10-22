@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Supermarket.Model;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,21 @@ namespace Supermarket.View.User_Controls
 {
     public partial class ProductCard : UserControl
     {
-        public ProductCard()
+        public Product product { get; set; }
+
+        public PictureBox picBoxDelete
+        {
+            get { return picDelete; }
+        }
+
+
+        public ProductCard(Product product)
         {
             InitializeComponent();
+            this.product = product;
+            lblName.Text=product.Name;
+            lblPrice.Text= string.Format("{0:C}", product.Price);
+            lblUpc.Text = product.UPC;
         }
 
         private void saaCheckBox1_CheckChanged(object sender, EventArgs e)

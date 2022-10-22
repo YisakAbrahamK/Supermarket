@@ -34,7 +34,7 @@
             this.uiPanel2 = new Sunny.UI.UIPanel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.uiPanel3 = new Sunny.UI.UIPanel();
-            this.picExit = new System.Windows.Forms.PictureBox();
+            this.picExitToLogin = new System.Windows.Forms.PictureBox();
             this.uiPanel5 = new Sunny.UI.UIPanel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.pnlDashbord = new Sunny.UI.UIPanel();
@@ -60,7 +60,7 @@
             this.uiPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.uiPanel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picExit)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picExitToLogin)).BeginInit();
             this.uiPanel5.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             this.pnlDashbord.SuspendLayout();
@@ -139,7 +139,7 @@
             // 
             this.uiPanel3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.uiPanel3.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.uiPanel3.Controls.Add(this.picExit);
+            this.uiPanel3.Controls.Add(this.picExitToLogin);
             this.uiPanel3.FillColor = System.Drawing.Color.DarkSlateGray;
             this.uiPanel3.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
             this.uiPanel3.Location = new System.Drawing.Point(56, 719);
@@ -156,17 +156,18 @@
             this.uiPanel3.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.uiPanel3.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
-            // picExit
+            // picExitToLogin
             // 
-            this.picExit.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.picExit.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.picExit.Image = global::Supermarket.Properties.Resources.signout;
-            this.picExit.Location = new System.Drawing.Point(9, 19);
-            this.picExit.Name = "picExit";
-            this.picExit.Size = new System.Drawing.Size(56, 33);
-            this.picExit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picExit.TabIndex = 9;
-            this.picExit.TabStop = false;
+            this.picExitToLogin.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.picExitToLogin.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.picExitToLogin.Image = global::Supermarket.Properties.Resources.signout;
+            this.picExitToLogin.Location = new System.Drawing.Point(9, 19);
+            this.picExitToLogin.Name = "picExitToLogin";
+            this.picExitToLogin.Size = new System.Drawing.Size(56, 33);
+            this.picExitToLogin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picExitToLogin.TabIndex = 9;
+            this.picExitToLogin.TabStop = false;
+            this.picExitToLogin.Click += new System.EventHandler(this.picExitToLogin_Click);
             // 
             // uiPanel5
             // 
@@ -542,7 +543,7 @@
             this.uiPanel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.uiPanel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.picExit)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picExitToLogin)).EndInit();
             this.uiPanel5.ResumeLayout(false);
             this.flowLayoutPanel1.ResumeLayout(false);
             this.pnlDashbord.ResumeLayout(false);
@@ -570,7 +571,7 @@
         private Sunny.UI.UIPanel uiPanel2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private Sunny.UI.UIPanel uiPanel3;
-        private System.Windows.Forms.PictureBox picExit;
+        private System.Windows.Forms.PictureBox picExitToLogin;
         private Sunny.UI.UIPanel uiPanel5;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private Sunny.UI.UIPanel pnlDashbord;

@@ -64,8 +64,10 @@ namespace Supermarket.View.User_Controls.SignInControls
                 Admin admin = Admin.CheckAdmin(txtEmail.Text, txtPassword.Text);
                 if(admin!=null)
                 {
-                    AdminForm adminForm = new AdminForm(admin);
+                    AdminForm adminForm = new AdminForm(admin, (LoginForm)this.FindForm());
                     adminForm.Show();
+                    pnlContainer.FindForm().Hide();
+                    txtPassword.Text = String.Empty; // to prevent a user with a access to the app not to get the password by loging out.
                 }
                 else
                 {
@@ -77,8 +79,10 @@ namespace Supermarket.View.User_Controls.SignInControls
                 Casher casher = Casher.CheckCasher(txtEmail.Text, txtPassword.Text);
                 if (casher != null)
                 {
-                    View.Forms.CashierForm cashierForm = new CashierForm(casher);
+                    View.Forms.CashierForm cashierForm = new CashierForm(casher, (LoginForm)this.FindForm());
                     cashierForm.Show();
+                    pnlContainer.FindForm().Hide();
+                    txtPassword.Text = String.Empty; // to prevent a user with a access to the app not to get the password by loging out.
                 }
                 else
                 {
@@ -87,9 +91,34 @@ namespace Supermarket.View.User_Controls.SignInControls
             }
         }
 
-        private void cbRole_SelectedIndexChanged(object sender, EventArgs e)
+        private void txtEmail_Validating(object sender, CancelEventArgs e)
         {
+            if (txtEmail.Text != null && txtEmail.Text != String.Empty )
+            {
+                if (CustomValid.isValidEmail(txtEmail.Text) == false)
+                {
+                    errorProvider1.SetError(txtEmail, "Enter valid email.");
+                }
+                else
+                {
+                    errorProvider1.SetError(txtEmail, string.Empty);
+                }
+            }
+        }
 
+        private void txtPassword_Validating(object sender, CancelEventArgs e)
+        {
+            if (txtPassword.Text != null && txtPassword.Text!= String.Empty)
+            {
+                if (CustomValid.isValidPass(txtPassword.Text) == false)
+                {
+                    errorProvider1.SetError(txtPassword, "Enter valid pass (7 char).");
+                }
+                else
+                {
+                    errorProvider1.SetError(txtPassword, string.Empty);
+                }
+            }
         }
     }
 }

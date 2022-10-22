@@ -18,15 +18,16 @@ namespace Supermarket.View.Forms
         InvoiceForm invoiceForm;
         TransactionHistoryForm cashierTransactionHistoryForm;
         SettingForm settingForm;
-        Model.Casher LogedinCasher;
-
-        public CashierForm(Model.Casher LogedinCasher)
+        public Model.Casher LogedinCasher { get; set; }
+        LoginForm loginForm;
+        public CashierForm(Model.Casher LogedinCasher,LoginForm loginForm)
         {
             InitializeComponent();
-            invoiceForm = new InvoiceForm(this);
-            cashierTransactionHistoryForm = new TransactionHistoryForm(this);
+            invoiceForm = new InvoiceForm(this, LogedinCasher);
+            cashierTransactionHistoryForm = new TransactionHistoryForm(this,"Casher",LogedinCasher);
             settingForm = new SettingForm(this,LogedinCasher);
             this.LogedinCasher= LogedinCasher;
+            this.loginForm= loginForm;
         }
 
         private void CashierForm_Load(object sender, EventArgs e)
@@ -145,5 +146,10 @@ namespace Supermarket.View.Forms
         }
 
 
+        private void pbBackToLogin_Click(object sender, EventArgs e)
+        {
+            loginForm.Show();
+            this.Dispose();
+        }
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Supermarket.Model;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,16 @@ namespace Supermarket.View.User_Controls
 {
     public partial class ExpCard : UserControl
     {
-        public ExpCard()
+        public Product Product { get; set; }
+        public ExpCard(Product product)
         {
             InitializeComponent();
+            this.Product = product;
+            lblExpDate.Text= product.ExpiredDate.ToShortDateString();
+            lblName.Text= product.Name;
+            lblShelfNumber.Text = product.ShelfNumber.ToString();
+            lblUpc.Text= product.UPC.ToString();
+            lblRdate.Text= product.ExpiredDate.Subtract(DateTime.Now).Days.ToString();
         }
     }
 }

@@ -21,6 +21,17 @@ namespace Supermarket.View.User_Controls.SignInControls
         public double total { get; set; } = 0;
         public double tax { get; set; } = 0;
         public double subtotal { get; set; } = 0;
+        public int Quantity {
+            set
+            {
+                lblAQuantity.Text = value.ToString();
+                product.Quantity=value;
+            }
+            get
+            {
+                return int.Parse(lblAQuantity.Text);
+            }
+        }
 
         public Product product;
 
@@ -50,7 +61,7 @@ namespace Supermarket.View.User_Controls.SignInControls
             InitializeComponent();
             this.product = product;
             lblProductName.Text = product.Name;
-            lblUPC.Text = product.UPC.ToString();
+            lblAQuantity.Text = product.Quantity.ToString();
             lblTotal.Text = string.Format("{0:C}", ((product.Price) + (product.Price * (product.Tax / 100))));
             lblSubtotal.Text = string.Format("{0:C}", product.Price);
             calculateValues();
@@ -59,7 +70,17 @@ namespace Supermarket.View.User_Controls.SignInControls
 
         private void iudQuantity_ValueChanged(object sender, int value)
         {
-            calculateValues();
+            if(value <= 0)
+            {
+                iudQuantity.Value = 1;
+            }else if(value > product.Quantity)
+            {
+                iudQuantity.Value= product.Quantity;
+            }
+            else
+            {
+                calculateValues();
+            }
         }
 
         private void calculateValues()

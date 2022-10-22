@@ -107,6 +107,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CustomValid.cs" />
     <Compile Include="Migrations\202210161117360_Transaction_TransactionDetail_Product.cs" />
     <Compile Include="Migrations\202210161117360_Transaction_TransactionDetail_Product.designer.cs">
       <DependentUpon>202210161117360_Transaction_TransactionDetail_Product.cs</DependentUpon>
@@ -134,6 +135,10 @@
     <Compile Include="Migrations\202210170819437_for_test2.cs" />
     <Compile Include="Migrations\202210170819437_for_test2.designer.cs">
       <DependentUpon>202210170819437_for_test2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202210202203521_TransactionDetail_Transaction_Casher_Admin.cs" />
+    <Compile Include="Migrations\202210202203521_TransactionDetail_Transaction_Casher_Admin.designer.cs">
+      <DependentUpon>202210202203521_TransactionDetail_Transaction_Casher_Admin.cs</DependentUpon>
     </Compile>
     <Compile Include="Model\Admin.cs" />
     <Compile Include="Model\Casher.cs" />
@@ -326,6 +331,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202210170819437_for_test2.resx">
       <DependentUpon>202210170819437_for_test2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202210202203521_TransactionDetail_Transaction_Casher_Admin.resx">
+      <DependentUpon>202210202203521_TransactionDetail_Transaction_Casher_Admin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Forms\AdminView\Admin Form Subcomponents\CasherForm.resx">
       <DependentUpon>CasherForm.cs</DependentUpon>

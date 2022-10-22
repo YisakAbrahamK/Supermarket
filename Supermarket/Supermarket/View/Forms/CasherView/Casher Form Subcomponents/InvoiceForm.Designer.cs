@@ -32,7 +32,7 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.uiSymbolLabel3 = new Sunny.UI.UISymbolLabel();
+            this.slSearch = new Sunny.UI.UISymbolLabel();
             this.txtSearch = new RJCodeAdvance.RJControls.RJTextBox();
             this.panel7 = new System.Windows.Forms.Panel();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
@@ -67,7 +67,7 @@
             this.label13 = new System.Windows.Forms.Label();
             this.saaLine6 = new SaaUI.SaaLine();
             this.label8 = new System.Windows.Forms.Label();
-            this.btnLogin = new RJCodeAdvance.RJControls.RJButton();
+            this.btnPurchase = new RJCodeAdvance.RJControls.RJButton();
             this.uiSymbolLabel1 = new Sunny.UI.UISymbolLabel();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -128,7 +128,7 @@
             // 
             // panel6
             // 
-            this.panel6.Controls.Add(this.uiSymbolLabel3);
+            this.panel6.Controls.Add(this.slSearch);
             this.panel6.Controls.Add(this.txtSearch);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel6.Location = new System.Drawing.Point(0, 0);
@@ -136,24 +136,25 @@
             this.panel6.Size = new System.Drawing.Size(439, 77);
             this.panel6.TabIndex = 0;
             // 
-            // uiSymbolLabel3
+            // slSearch
             // 
-            this.uiSymbolLabel3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.uiSymbolLabel3.BackColor = System.Drawing.SystemColors.Control;
-            this.uiSymbolLabel3.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
-            this.uiSymbolLabel3.ForeColor = System.Drawing.Color.White;
-            this.uiSymbolLabel3.Location = new System.Drawing.Point(365, 20);
-            this.uiSymbolLabel3.MinimumSize = new System.Drawing.Size(1, 1);
-            this.uiSymbolLabel3.Name = "uiSymbolLabel3";
-            this.uiSymbolLabel3.Padding = new System.Windows.Forms.Padding(44, 0, 0, 0);
-            this.uiSymbolLabel3.Size = new System.Drawing.Size(35, 34);
-            this.uiSymbolLabel3.Style = Sunny.UI.UIStyle.Custom;
-            this.uiSymbolLabel3.StyleCustomMode = true;
-            this.uiSymbolLabel3.Symbol = 61442;
-            this.uiSymbolLabel3.SymbolColor = System.Drawing.Color.Black;
-            this.uiSymbolLabel3.SymbolSize = 40;
-            this.uiSymbolLabel3.TabIndex = 57;
-            this.uiSymbolLabel3.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            this.slSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.slSearch.BackColor = System.Drawing.SystemColors.Control;
+            this.slSearch.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
+            this.slSearch.ForeColor = System.Drawing.Color.White;
+            this.slSearch.Location = new System.Drawing.Point(365, 20);
+            this.slSearch.MinimumSize = new System.Drawing.Size(1, 1);
+            this.slSearch.Name = "slSearch";
+            this.slSearch.Padding = new System.Windows.Forms.Padding(44, 0, 0, 0);
+            this.slSearch.Size = new System.Drawing.Size(35, 34);
+            this.slSearch.Style = Sunny.UI.UIStyle.Custom;
+            this.slSearch.StyleCustomMode = true;
+            this.slSearch.Symbol = 61442;
+            this.slSearch.SymbolColor = System.Drawing.Color.Black;
+            this.slSearch.SymbolSize = 40;
+            this.slSearch.TabIndex = 57;
+            this.slSearch.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            this.slSearch.Click += new System.EventHandler(this.slSearch_Click);
             // 
             // txtSearch
             // 
@@ -178,6 +179,7 @@
             this.txtSearch.TabIndex = 44;
             this.txtSearch.Texts = "";
             this.txtSearch.UnderlinedStyle = false;
+            this.txtSearch.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSearch_KeyPress);
             // 
             // panel7
             // 
@@ -247,7 +249,7 @@
             this.uiPanel2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.uiPanel2.Controls.Add(this.flowLayoutPanel3);
             this.uiPanel2.Controls.Add(this.label8);
-            this.uiPanel2.Controls.Add(this.btnLogin);
+            this.uiPanel2.Controls.Add(this.btnPurchase);
             this.uiPanel2.FillColor = System.Drawing.SystemColors.Control;
             this.uiPanel2.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
             this.uiPanel2.Location = new System.Drawing.Point(3, 77);
@@ -679,25 +681,26 @@
             this.label8.Text = "Summary";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // btnLogin
+            // btnPurchase
             // 
-            this.btnLogin.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnLogin.BackColor = System.Drawing.Color.Green;
-            this.btnLogin.BackgroundColor = System.Drawing.Color.Green;
-            this.btnLogin.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnLogin.BorderRadius = 20;
-            this.btnLogin.BorderSize = 0;
-            this.btnLogin.FlatAppearance.BorderSize = 0;
-            this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogin.ForeColor = System.Drawing.Color.White;
-            this.btnLogin.Location = new System.Drawing.Point(69, 585);
-            this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(199, 52);
-            this.btnLogin.TabIndex = 41;
-            this.btnLogin.Text = "Purchase";
-            this.btnLogin.TextColor = System.Drawing.Color.White;
-            this.btnLogin.UseVisualStyleBackColor = false;
+            this.btnPurchase.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnPurchase.BackColor = System.Drawing.Color.Green;
+            this.btnPurchase.BackgroundColor = System.Drawing.Color.Green;
+            this.btnPurchase.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnPurchase.BorderRadius = 20;
+            this.btnPurchase.BorderSize = 0;
+            this.btnPurchase.FlatAppearance.BorderSize = 0;
+            this.btnPurchase.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPurchase.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPurchase.ForeColor = System.Drawing.Color.White;
+            this.btnPurchase.Location = new System.Drawing.Point(69, 585);
+            this.btnPurchase.Name = "btnPurchase";
+            this.btnPurchase.Size = new System.Drawing.Size(199, 52);
+            this.btnPurchase.TabIndex = 41;
+            this.btnPurchase.Text = "Purchase";
+            this.btnPurchase.TextColor = System.Drawing.Color.White;
+            this.btnPurchase.UseVisualStyleBackColor = false;
+            this.btnPurchase.Click += new System.EventHandler(this.btnPurchase_Click);
             // 
             // uiSymbolLabel1
             // 
@@ -766,7 +769,7 @@
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
         private System.Windows.Forms.Panel panel8;
         private Sunny.UI.UISymbolLabel uiSymbolLabel2;
-        private Sunny.UI.UISymbolLabel uiSymbolLabel3;
+        private Sunny.UI.UISymbolLabel slSearch;
         private System.Windows.Forms.Panel panel1;
         private Sunny.UI.UISymbolLabel uiSymbolLabel1;
         private Sunny.UI.UIPanel uiPanel2;
@@ -795,7 +798,7 @@
         private System.Windows.Forms.Label label13;
         private SaaUI.SaaLine saaLine6;
         private System.Windows.Forms.Label label8;
-        private RJCodeAdvance.RJControls.RJButton btnLogin;
+        private RJCodeAdvance.RJControls.RJButton btnPurchase;
         private User_Controls.SignInControls.CartView cartView1;
         private User_Controls.SignInControls.CartView cartView2;
         private User_Controls.SignInControls.CartView cartView3;

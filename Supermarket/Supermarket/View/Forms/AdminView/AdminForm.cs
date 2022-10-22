@@ -22,17 +22,18 @@ namespace Supermarket.View.Forms.Admin
         ExpdateForm expdateForm;
         DashbordForm dashbordForm;
         Model.Admin LogedinAdmin;
-
-        public AdminForm(Model.Admin LogedinAdmin)
+        LoginForm loginForm;
+        public AdminForm(Model.Admin LogedinAdmin,LoginForm loginForm)
         {
             InitializeComponent();
             casherForm = new CasherForm(this);
             settingForm = new SettingForm(this,LogedinAdmin);
-            transactionHistoryForm = new TransactionHistoryForm(this);
+            transactionHistoryForm = new TransactionHistoryForm(this,"Admin",LogedinAdmin);
             productForm = new ProductForm(this);
             expdateForm = new ExpdateForm(this);
             dashbordForm = new DashbordForm(this);
             this.LogedinAdmin = LogedinAdmin;
+            this.loginForm = loginForm;
         }
 
         private void AdminForm_Load(object sender, EventArgs e)
@@ -181,6 +182,12 @@ namespace Supermarket.View.Forms.Admin
         private void pnlContainer_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void picExitToLogin_Click(object sender, EventArgs e)
+        {
+            loginForm.Show();
+            this.Dispose();
         }
     }
 }
