@@ -3,11 +3,11 @@
 
 # Contributors 💻
 It's a project developed with school colleagues for school project using winform. 
-- [@yisakabrahamk](https://www.github.com/yisakabrahamk) 👨‍💻
-- [@jakobSolomon](https://github.com/jakobSolomon) 👨‍💻
+- [@Yisakabrahamk](https://www.github.com/yisakabrahamk) 👨‍💻
+- [@JakobSolomon](https://github.com/jakobSolomon) 👨‍💻
 - [@YYared10](https://github.com/YYared10)👨‍💻
 - [@Zekoglass](https://github.com/Zekoglass) 👨‍💻
-- [@yonatan456](https://github.com/yonatan456) 👨‍💻
+- [@Yonatan456](https://github.com/yonatan456) 👨‍💻
 
 # Functionality ⚙️
 ### Administrator functionality
