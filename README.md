@@ -2,7 +2,7 @@
 <img src="https://user-images.githubusercontent.com/107458880/198831489-c9d9529f-8dcf-4157-8b71-41c62c751c8e.gif " width="230" height="230">
 
 # Contributors 💻
-It's a project developed with school colleagues for school project using winform. 
+A project developed with school colleagues for school project using winform. 
 - [@Yisakabrahamk](https://www.github.com/yisakabrahamk) 👨‍💻
 - [@JakobSolomon](https://github.com/jakobSolomon) 👨‍💻
 - [@YYared10](https://github.com/YYared10)👨‍💻
